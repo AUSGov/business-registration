@@ -1,0 +1,319 @@
+﻿<fieldset id="divWhereYourBusinessOperate">
+    <legend class="larger">Will your activities be carried out in Australia?</legend>
+
+    <div class="radio-toggle col11">
+        <label class="label-left" for="in-australia-yes">
+            <input id="in-australia-yes" type="radio" value="336" name="act-in-australia">
+            <span>Yes</span>
+        </label>
+        <label class="label-right" for="in-australia-no">
+            <input id="in-australia-no" type="radio" value="337" name="act-in-australia">
+            <span>No </span>
+        </label>
+    </div>
+
+    <div class="col11" id="divIndirectTaxZone" style="display: none">
+        <h3>Are you making supplies connected with the Indirect Tax Zone?</h3>
+        <div class="radio-toggle">
+            <label class="on label-left" for="rdIndirectTaxYes"><input id="rdIndirectTaxYes" type="radio" name="rdIndirectTax"><span>Yes</span></label>
+            <label class="off label-right" for="rdIndirectTaxNo"><input id="rdIndirectTaxNo" type="radio" name="rdIndirectTax"><span>No</span></label>
+        </div>
+    </div>
+
+    <div class="col11" id="divGSTOnly" style="display: none">
+        <h3>Are you applying for a ‘GST Only’ registration?</h3>
+        <div class="radio-toggle">
+            <label class="on label-left" for="rdGSTOnlyYes"><input id="rdGSTOnlyYes" type="radio" name="rdGSTOnly"><span>Yes</span></label>
+            <label class="off label-right" for="rdGSTOnlyNo"><input id="rdGSTOnlyNo" type="radio" name="rdGSTOnly"><span>No</span></label>
+        </div>
+    </div>
+
+    <div id="divEligible1" class="result-container validation" style="display: none">
+        <div class="grid-row">
+            <div class="col1">
+                <img src="img/ico-tick-green.png" alt="Success">
+            </div>
+            <div class="col11 last">
+                <h3>You can continue to apply</h3>
+            </div>
+        </div>
+    </div>
+
+    <div id="divNotEntitled1" class="result-container validation col12 outcome" style="display: none;">
+        <div class="grid-row">
+            <div class="col1">
+                <img src="img/ico-exclamation-orange.png" alt="Warning">
+            </div>
+            <div class="col11 last">
+                <h3 id="hEntitledTitle">You are not entitled to an ABN</h3>
+                <div id="divEntitledMessage">
+                    <p>To be entitled to an ABN:</p>
+                    <ul>
+                        <li>you must be carrying on an enterprise in Australia, or </li>
+                        <li>in the course of carrying on an enterprise, you make supplies connected with Australia.</li>
+                    </ul>
+                    <p></p>
+                    <p>A supply of goods is connected with Australia if the goods are any of the following: </p>
+                    <ul>
+                        <li>delivered or made available in Australia to the purchaser</li>
+                        <li>removed from Australia, or</li>
+                        <li>brought to Australia, provided the seller either imports the goods into Australia or installs or assembles the goods in Australia.</li>
+                        <li>A supply of real property is connected with Australia if the real property or the land to which the property relates is in Australia.</li>
+                        <li>A supply of something other than goods or property is connected with Australia if any of the following apply: </li>
+                        <li>the thing is done in Australia</li>
+                        <li>the seller makes the supply through an enterprise they carry on in Australia, or </li>
+                        <li>the supply is of a right or option to purchase something that would be connected with Australia.</li>
+                    </ul>
+                    <p></p>
+                    <p>On the basis of information you have provided, you have not shown that you are carrying on an enterprise in Australia, or in the course of carrying on an enterprise you make supplies connected with Australia. As a result you are not entitled to an ABN.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</fieldset>
+
+<div id="divStartedBusiness" style="display: none;">
+    <fieldset>
+        <legend class="larger">Have you started your business or taken steps to start it?</legend>
+        <div class="grid-row">
+            <div class="col11">
+                <p class="no-margin-top">If you're just thinking about starting a business, you're not yet entitled to an ABN.</p>
+            </div>
+            <div class="col1 last">
+                <a href=""><img class="help-icon" src="img/ico-help-form.png" alt="Help with question" /></a>
+            </div>
+        </div>
+        <div class="radio-toggle col11">
+            <label class="on label-left" for="rdStartedYes"><input id="rdStartedYes" type="radio" name="startedYet"><span>Yes</span></label>
+            <label class="off label-right" for="rdStartedNo"><input id="rdStartedNo" type="radio" name="startedYet"><span>No</span></label>
+        </div>
+        <div id="divNotStartedMessage" class="result-container validation" style="display: none">
+            <div class="grid-row">
+                <div class="col1">
+                    <img src="img/ico-exclamation-orange.png" alt="Warning">
+                </div>
+                <div class="col11 last">
+                    <h3>You're not entitled to an ABN</h3>
+                    <p>To be entitled to an ABN, you must be carrying on an enterprise or have undertaken sufficient activities to set up an enterprise.  Commencement activities require more than an intention to carry on an enterprise. You must have taken appropriate steps that show a commitment to starting an enterprise.</p>
+                    <p>Commencement activities are those activities that are usually undertaken to start an enterprise. These could include:</p>
+                    <ul>
+                        <li>consulting with financial or business advisors</li>
+                        <li>completing a business plan and/or financial projections</li>
+                        <li>applying for finance</li><li>conducting feasibility studies</li>
+                        <li>leasing or purchasing premises or equipment for the business</li>
+                        <li>obtaining any relevant licences to operate</li>
+                        <li>registering a patent/copyright</li>
+                        <li>advertising your business.</li>
+                        </ul>
+                    <p></p>
+                    <p>On the basis of the information you have provided, you have not shown that you have undertaken sufficient activities to commence carrying on an enterprise. As a result you are not entitled to an ABN.</p>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+</div>
+
+<div id="divBusinessFunction" style="display: none;">
+    <hr />
+
+    <fieldset id="divWhatYouWillDo">
+        <legend class="larger">What is the nature of your activity?</legend>
+
+        <div class="grid-row grid-row-no-line custom-controls clearfix">
+            <div class="col11">
+			    <p>
+				    <input type="radio" id="whatBusinessWillDoApprentice" name="whatBusinessWillDo" />
+				    <label for="whatBusinessWillDoApprentice">Apprentice</label>
+			    </p>
+            </div>
+            <div class="col1 last">
+                <a href=""><img class="help-icon" src="img/ico-help-form.png" alt="Help with question" /></a>
+            </div>
+        </div>
+
+        <div class="grid-row grid-row-no-line custom-controls clearfix">
+            <div class="col11 last">
+			    <p>
+				    <input type="radio" id="whatBusinessWillDoBusiness" name="whatBusinessWillDo" />
+				    <label for="whatBusinessWillDoBusiness">In the form of a business</label>
+			    </p>
+            </div>
+        </div>
+
+        <div class="grid-row grid-row-no-line custom-controls clearfix">
+            <div class="col11 last">
+			    <p>
+				    <input type="radio" id="whatBusinessWillDoRent" name="whatBusinessWillDo" />
+				    <label for="whatBusinessWillDoRent">Renting or leasing out a residential property</label>
+			    </p>
+            </div>
+        </div>
+
+        <div class="grid-row grid-row-no-line custom-controls nopadding clearfix">
+            <div class="col11">
+			    <p>
+				    <input type="radio" id="whatBusinessWillDoLicence" name="whatBusinessWillDo" />
+				    <label for="whatBusinessWillDoLicence">In the form of a licence, lease or other grant of an interest in property</label>
+			    </p>
+            </div>
+            <div class="col1 last">
+                <a href=""><img class="help-icon" src="img/ico-help-form.png" alt="Help with question" /></a>
+            </div>
+        </div>
+
+        <div class="grid-row grid-row-no-line custom-controls clearfix">
+            <div class="col11 last">
+			    <p>
+				    <input type="radio" id="whatBusinessWillDoCommercial" name="whatBusinessWillDo" />
+				    <label for="whatBusinessWillDoCommercial">One-off commercial transactions not done in the course of a business</label>
+			    </p>
+            </div>
+        </div>
+
+        <div id="divNotEntitledApprentice" class="result-container validation" style="display: none">
+            <div class="grid-row">
+                <div class="col1">
+                    <img src="img/ico-exclamation-orange.png" alt="Warning">
+                </div>
+                <div class="col11 last">
+                    <h3>You are not entitled to an ABN</h3>
+                    <p>Apprentices are required to work under the direction, control and supervision of their employer to learn their trade and as such they are considered employees for taxation and superannuation purposes. Therefore, you are not entitled to an ABN.</p>                </div>
+            </div>
+        </div>
+
+        <div id="divFormOfBusiness" class="col11" style="display: none;">
+            <h3>Are you doing things that are consistent with running a business (use the help icon to see the list of what we look for)?</h3>
+            <div class="radio-toggle">
+                <label class="on label-left" for="rdRunBusinessYes"><input id="rdRunBusinessYes" type="radio" name="rdRunBusiness"><span>Yes</span></label>
+                <label class="off label-right" for="rdRunBusinessNo"><input id="rdRunBusinessNo" type="radio" name="rdRunBusiness"><span>No</span></label>
+            </div>
+        </div>
+
+        <div id="divNotEntitledBusiness" class="result-container validation" style="display: none">
+            <div class="grid-row">
+                <div class="col1">
+                    <img src="img/ico-exclamation-orange.png" alt="Warning">
+                </div>
+                <div class="col11 last">
+                    <h3>You're not entitled to an ABN</h3>
+                    <p>To be entitled to an ABN:</p>
+                    <ul>
+                        <li>you must be carrying on an enterprise in Australia, or </li>
+                        <li>in the course of carrying on an enterprise, you make supplies connected with Australia.</li>
+                    </ul>
+                    <p></p>
+                    <p>An enterprise, among other things, is an activity or series of activities done in the form of a business.</p>
+                    <p>To determine whether an activity, or series of activities, amounts to a business, the activity needs to be considered against the main indicators of a business. These include:</p>
+                    <ul>
+                        <li>an intention to engage in commercial activity</li>
+                        <li>an intention to make a profit from the activity</li>
+                        <li>the recurrent or regular nature of the activity</li>
+                        <li>the activity is carried on in a similar manner to that of other businesses in the same or similar trades</li>
+                        <li>the activity is systematic, organised and carried on in a businesslike manner and records are kept</li>
+                        <li>the activities are of a reasonable size and scale</li>
+                        <li>a business plan exists</li><li>the entity has relevant knowledge or skill.</li>
+                    </ul>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+
+        <div id="divRenting" class="col11" style="display: none;">
+            <h3>Are you renting out residential property on a regular or continuous basis?</h3>
+            <div class="radio-toggle">
+                <label class="on label-left" for="rdRentingYes"><input id="rdRentingYes" type="radio" name="rdRenting"><span>Yes</span></label>
+                <label class="off label-right" for="rdRentingNo"><input id="rdRentingNo" type="radio" name="rdRenting"><span>No</span></label>
+            </div>
+        </div>
+
+        <div id="divNotEntitledRenting" class="result-container validation" style="display: none">
+            <div class="grid-row">
+                <div class="col1">
+                    <img src="img/ico-exclamation-orange.png" alt="Warning">
+                </div>
+                <div class="col11 last">
+                    <h3>You're not entitled to an ABN</h3>
+                    <p>To be entitled to an ABN you must be carrying on an enterprise in Australia, or in the course of carrying on an enterprise you make supplies connected with Australia. An enterprise, among other things, is an activity or series of activities done in the form of a lease, licence or other grant of an interest in property on a regular or continuous basis.</p>
+                    <p>The term property covers tangible assets such as land, cars and boats, as well as intangible assets such as copyrights and patents.</p>
+                    <p>To be an enterprise, a lease, licence or other grant of an interest in property must have a reasonable expectation of profit or gain and must be done on a regular or continuous basis.</p>
+                    <p>An activity is:</p>
+                    <ul>
+                        <li>‘regular’ if it is repeated at reasonably close intervals</li>
+                        <li>‘continuous’ if there is no significant cessation or interruption to the activity.</li>
+                    </ul>
+                    <p></p>
+                    <p>On the basis of the information you have provided, you have not shown that you are carrying on an enterprise in the form of a lease, licence or other grant of an interest in property on a regular or continuous basis. As a result you are not entitled to an ABN.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="divLicence" class="col11" style="display: none;">
+            <h3>Are the activities on a regular or continuous basis?</h3>
+            <div class="radio-toggle">
+                <label class="on label-left" for="rdLicenceYes"><input id="rdLicenceYes" type="radio" name="rdLicence"><span>Yes</span></label>
+                <label class="off label-right" for="rdLicenceNo"><input id="rdLicenceNo" type="radio" name="rdLicence"><span>No</span></label>
+            </div>
+        </div>
+
+        <div id="divNotEntitledLicence" class="result-container validation" style="display: none">
+            <div class="grid-row">
+                <div class="col1">
+                    <img src="img/ico-exclamation-orange.png" alt="Warning">
+                </div>
+                <div class="col11 last">
+                    <h3>You're not entitled to an ABN</h3>
+                    <p>To be entitled to an ABN you must be carrying on an enterprise in Australia, or in the course of carrying on an enterprise you make supplies connected with Australia. An enterprise, among other things, is an activity or series of activities done in the form of a lease, licence or other grant of an interest in property on a regular or continuous basis.</p>
+                    <p>The term property covers tangible assets such as land, cars and boats, as well as intangible assets such as copyrights and patents.</p>
+                    <p>To be an enterprise, a lease, licence or other grant of an interest in property must have a reasonable expectation of profit or gain and must be done on a regular or continuous basis.</p>
+                    <p>An activity is:</p>
+                    <ul>
+                        <li>‘regular’ if it is repeated at reasonably close intervals</li><li>‘continuous’ if there is no significant cessation or interruption to the activity.</li>
+                    </ul>
+                    <p></p>
+                    <p>On the basis of the information you have provided, you have not shown that you are carrying on an enterprise in the form of a lease, licence or other grant of an interest in property on a regular or continuous basis. As a result you are not entitled to an ABN.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="divCommercial" class="col11" style="display: none;">
+            <h3>Do you expect to make a profit or gain from your activity?</h3>
+            <div class="radio-toggle">
+                <label class="on label-left" for="rdCommercialYes"><input id="rdCommercialYes" type="radio" name="rdCommercial"><span>Yes</span></label>
+                <label class="off label-right" for="rdCommercialNo"><input id="rdCommercialNo" type="radio" name="rdCommercial"><span>No</span></label>
+            </div>
+        </div>
+
+        <div id="divNotEntitledCommercial" class="result-container validation" style="display: none">
+            <div class="grid-row">
+                <div class="col1">
+                    <img src="img/ico-exclamation-orange.png" alt="Warning">
+                </div>
+                <div class="col11 last">
+                    <h3>You're not entitled to an ABN</h3>
+                    <p>To be entitled to an ABN:</p>
+                    <ul>
+                        <li>you must be carrying on an enterprise in Australia, or</li>
+                        <li>in the course of carrying on an enterprise you make supplies connected with Australia.</li>
+                    </ul>
+                    <p></p>
+                    <p>An enterprise, among other things, is an activity or series of activities done in the form of an adventure or a concern in the nature of trade.</p>
+                    <p>An adventure or a concern in the nature of trade relates to transactions of a commercial nature, which have the characteristics of a business deal and are entered into for profit making, but are not part of the activities of an on-going business. They can include isolated or one-off transactions, for example the sale of real property.</p>
+                    <p>On the basis of the information you have provided, you have not shown that you are carrying on an enterprise in the form of an adventure or a concern in the nature of trade. As a result you are not entitled to an ABN.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="divEligible2" class="result-container validation" style="display: none">
+            <div class="grid-row">
+                <div class="col1">
+                    <img src="img/ico-tick-green.png" alt="Success">
+                </div>
+                <div class="col11 last">
+                    <h3>You are entitled to an ABN</h3>
+                </div>
+            </div>
+        </div>
+
+    </fieldset>
+</div>

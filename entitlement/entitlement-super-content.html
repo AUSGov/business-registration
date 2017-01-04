@@ -1,0 +1,223 @@
+﻿<div id="divOtherIncorporated">
+    <fieldset>
+        <legend class="larger">Select your superannuation type from the following options</legend>
+
+        <div class="grid-row custom-controls clearfix">
+            <div class="col11">
+                <p>
+                    <input type="radio" id="superATO" name="superType" />
+                    <label for="superATO">ATO Regulated Self-Managed Superannuation Fund</label>
+                </p>
+            </div>
+            <!-- div class="col1 last">
+                <a href=""><img class="help-icon" src="img/ico-help-form.png" alt="Help with question" /></a>
+            </div -->
+        </div>
+
+        <div class="grid-row custom-controls clearfix">
+            <div class="col11 last">
+                <p>
+                    <input type="radio" id="superAPRA" name="superType" />
+                    <label for="superAPRA">APRA Regulated Fund</label>
+                </p>
+            </div>
+        </div>
+
+        <div class="grid-row custom-controls clearfix">
+            <div class="col11 last">
+                <p>
+                    <input type="radio" id="superNonReg" name="superType" />
+                    <label for="superNonReg">Non-Regulated Superannuation Fund</label>
+                </p>
+            </div>
+        </div>
+
+        <div class="grid-row custom-controls clearfix">
+            <div class="col11 last">
+                <p>
+                    <input type="radio" id="superPooled" name="superType" />
+                    <label for="superPooled">Pooled Superannuation Trust</label>
+                </p>
+            </div>
+        </div>
+
+        <div class="grid-row custom-controls clearfix">
+            <div class="col11">
+                <p>
+                    <input type="radio" id="superDeposit" name="superType" />
+                    <label for="superDeposit">Approved Deposit Fund</label>
+                </p>
+            </div>
+            <!-- div class="col1 last">
+                <a href=""><img class="help-icon" src="img/ico-help-form.png" alt="Help with question" /></a>
+            </div -->
+        </div>
+
+        <div id="superQuestion" style="display: none;">
+            <h3 id="APRAQ">Will the fund elect to be regulated by the Australian Prudential Regulation Authority (APRA)?</h3>
+            <h3 id="pooledQ">Has the trustee of the unit trust given APRA a confirmation in writing of its intention for the trust to be treated as a pooled superannuation trust?</h3>
+            <h3 id="depositQ">Is the fund maintained for purposes approved by the Australian Prudential Regulation Authority (APRA)?</h3>
+            <h3 id="nonRegQ">Will the fund elect to be regulated by the Australian Prudential Regulation Authority (APRA) or the Commissioner of Taxation?</h3>
+            <div class="radio-toggle">
+                <label class="on label-left" for="rdSuperYes"><input id="rdSuperYes" type="radio" name="rdSuper"><span>Yes</span></label>
+                <label class="off label-right" for="rdSuperNo"><input id="rdSuperNo" type="radio" name="rdSuper"><span>No</span></label>
+            </div>
+        </div>
+
+        <div id="divNotEligibleSuper" class="result-container validation col12 outcome" style="display: none;">
+            <div class="grid-row">
+                <div class="col1">
+                    <img src="img/ico-exclamation-orange.png" alt="Warning">
+                </div>
+                <div id="other-msgs" class="col11 last">
+                    <h3>You are not entitled to an ABN</h3>
+                    <div id="msgAPRA">
+                        <p>A superannuation fund is:</p>
+                        <ul>
+                            <li>an indefinitely continuing fund whose sole purpose is to provide super benefits to members upon reaching a prescribed age, or upon their retirement, death or other cessation of employment, or</li>
+                            <li>a public sector super scheme.</li>
+                       </ul>
+                        <p>For an APRA regulated super fund to exist the fund must have governing rules, hold assets and have a trustee. The trustee must be a constitutional corporation unless the governing rules provide that the sole purpose of the fund is the provision of old age pensions. The trustee must hold a Registrable Superannuation Entity licence.</p>
+                        <p>Based on the information you have provided, the Registrar is not satisfied that you are an APRA regulated super fund. As a result you are not entitled to an ABN.</p>
+                    </div>
+                    <div id="msgPooled">
+                        <p>A pooled superannuation trust is a resident unit trust that is used for investing assets of super funds, approved deposit funds, pooled super trusts and life insurance companies.  A pooled super trust must have a trustee that is a constitutional corporation.</p>
+                        <p>Pooled super trusts are regulated by the Australian Prudential Regulation Authority (APRA). The trustee of a pooled super trust must give APRA a confirmation in writing of its intention for the trust be treated as a pooled super trust.</p>
+                        <p>Based on the information you have provided, the Registrar is not satisfied that you are a pooled super trust. As a result you are not entitled to an ABN.</p>
+                    </div>
+                    <div id="msgDeposit">
+                        <p>An approved deposit fund is a fund that is an indefinitely continuing fund, and is maintained for approved purposes by a Registrable Superannuation Entity licensee that is a constitutional corporation.</p>
+                        <p>An approved deposit fund can receive, hold and invest certain types of rollovers until such funds are withdrawn or a condition of release is satisfied.</p>
+                        <p>Based on the information you have provided, the Registrar is not satisfied that you are an approved deposit fund. As a result you are not entitled to an ABN.</p>
+                    </div>
+                    <div id="msgNonReg">
+                        <p>A superannuation fund is:</p>
+                        <ul>
+                            <li>an indefinitely continuing fund whose sole purpose is to provide super benefits to members upon reaching a prescribed age, or upon their retirement, death or other cessation of employment, or</li>
+                            <li>a public sector super scheme.</li>
+                        </ul>
+                        <p>For a super fund to exist the fund must have governing rules, hold assets and have at least one trustee.</p>
+                        <p>A super fund is non-regulated if it has not made an election to be regulated by the Australian Prudential Regulation Authority (APRA) or the Australian Taxation Office. If you intend to be regulated, you will need to apply as a self-managed super fund or an APRA regulated super fund.</p>
+                        <p>An exempt public sector super scheme is exempt from regulation.</p>
+                        <p>Based on the information you have provided, the Registrar is not satisfied that you are a non-regulated super fund. As a result you are not entitled to an ABN.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="divEligibleSuper" class="result-container validation" style="display: none">
+            <div class="grid-row">
+                <div class="col1">
+                    <img src="img/ico-tick-green.png" alt="Success">
+                </div>
+                <div class="col11 last">
+                    <h3>You are entitled to an ABN</h3>
+                </div>
+            </div>
+        </div>
+
+    </fieldset>
+</div>
+
+<fieldset id="divATORegulated" style="display: none;">
+    <legend class="larger">Is the fund an indefinitely continuing fund?</legend>
+
+    <div class="radio-toggle col11 last">
+        <label class="label-left" for="rdContinuingYes">
+            <input id="rdContinuingYes" type="radio" value="336" name="rdContinuing">
+            <span>Yes</span>
+        </label>
+        <label class="label-right" for="rdContinuingNo">
+            <input id="rdContinuingNo" type="radio" value="337" name="rdContinuing">
+            <span>No</span>
+        </label>
+    </div>
+
+    <div class="col11 last" id="divTerm" style="display: none">
+        <h3>Is the fund’s sole purpose to provide superannuation benefits to members upon reaching a prescribed age or upon their retirement, death, or other cessation of employment?</h3>
+        <div class="radio-toggle">
+            <label class="on label-left" for="rdTermYes"><input id="rdTermYes" type="radio" name="rdTerm"><span>Yes</span></label>
+            <label class="off label-right" for="rdTermNo"><input id="rdTermNo" type="radio" name="rdTerm"><span>No</span></label>
+        </div>
+    </div>
+
+    <div id="divAssetsValue" class="col11 last" style="display: none;">
+        <h3>What is the value of assets held by the fund?</h3>
+
+        <div class="grid-row custom-controls clearfix">
+            <div class="col11 last">
+                <p>
+                    <input type="radio" id="rdZero" name="rdAssets" />
+                    <label for="rdZero">$0</label>
+                </p>
+            </div>
+        </div>
+
+        <div class="grid-row custom-controls clearfix">
+            <div class="col11 last">
+                <p>
+                    <input type="radio" id="upToTen" name="rdAssets" />
+                    <label for="upToTen">$1 - $10,000</label>
+                </p>
+            </div>
+        </div>
+
+        <div class="grid-row custom-controls clearfix">
+            <div class="col11 last">
+                <p>
+                    <input type="radio" id="tenPlus" name="rdAssets" />
+                    <label for="tenPlus">$10,000 +</label>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col11 last" id="divGoverning" style="display: none">
+        <h3>Does the fund have governing rules?</h3>
+        <div class="radio-toggle">
+            <label class="on label-left" for="rdGoverningYes"><input id="rdGoverningYes" type="radio" name="rdGoverning"><span>Yes</span></label>
+            <label class="off label-right" for="rdGoverningNo"><input id="rdGoverningNo" type="radio" name="rdGoverning"><span>No</span></label>
+        </div>
+    </div>
+
+    <div id="divEligibleATO" class="result-container validation" style="display: none">
+        <div class="grid-row">
+            <div class="col1">
+                <img src="img/ico-tick-green.png" alt="Success">
+            </div>
+            <div class="col11 last">
+                <h3>You are entitled to an ABN</h3>
+            </div>
+        </div>
+    </div>
+
+    <div id="divNotEligibleATO" class="result-container validation col12 outcome" style="display: none;">
+        <div class="grid-row">
+            <div class="col1">
+                <img src="img/ico-exclamation-orange.png" alt="Warning">
+            </div>
+            <div id="ato-msgs" class="col11 last">
+                <h3>You are not entitled to an ABN</h3>
+                <div id="msgContinuing">
+                    <p>A self-managed superannuation fund is an indefinitely continuing fund whose sole purpose is to provide super benefits to members upon reaching a prescribed age, or upon their retirement, death or other cessation of employment.</p>
+                    <p>In order to be an indefinitely continuing fund, the fund must not be one which will terminate or be wound up after a specified period.</p>
+                    <p>As you have indicated that the fund is not an indefinitely continuing fund, the Registrar is not satisfied that you are a self-managed super fund. As a result you are not entitled to an ABN.</p>
+                </div>
+                <div id="msgTerm">
+                    <p>A self-managed superannuation fund is an indefinitely continuing fund whose sole purpose is to provide super benefits to members upon reaching a prescribed age, or upon their retirement, death or other cessation of employment.</p>
+                    <p>As you have indicated that the fund’s sole purpose is not to provide super benefits to members, the Registrar is not satisfied that you are a self-managed super fund. As a result you are not entitled to an ABN.</p>
+                </div>
+                <div id="msgNoAssets">
+                    <p>A self-managed superannuation fund is an indefinitely continuing fund whose sole purpose is to provide super benefits to members upon reaching a prescribed age, or upon their retirement, death or other cessation of employment.</p>
+                    <p>For a self-managed super fund to exist it must, among other things, set aside assets for the purpose of providing super benefits to its members.</p>
+                    <p>As you have indicated that the fund has not set aside assets for the purpose of providing super benefits to its members, the Registrar is not satisfied that you are a self-managed super fund. As a result you are not entitled to an ABN.</p>
+                </div>
+                <div id="msgGoverning">
+                    <p>A self-managed superannuation fund is an indefinitely continuing fund whose sole purpose is to provide super benefits to members upon reaching a prescribed age, or upon their retirement, death or other cessation of employment.</p>
+                    <p>For a self-managed super fund to exist it must, among other things, have governing rules. The governing rules are the rules contained in a trust instrument, other document or legislation - or combination of them - or any unwritten rules governing the establishment or operation of the fund. The term ‘trust deed’ is commonly used to refer to the governing rules.</p>
+                    <p>As you have indicated that the fund does not have any governing rules, the Registrar is not satisfied that the you are a self-managed super fund. As a result you are not entitled to an ABN.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</fieldset>
