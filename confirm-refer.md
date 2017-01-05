@@ -193,7 +193,7 @@ layout: default
 			</tr>
 			<tr>
 				<td class="field-name">Business Address</td>
-				<td class="input-value">100 Abbett St, Scarborough, WA, Australia, 6019</td>
+				<td class="input-value">100 Abbett St, Scarborough, NSW, Australia, 2019</td>
 			</tr>
 		</tbody>
 	</table>
@@ -275,7 +275,7 @@ layout: default
 			</tr>
 			<tr>
 				<td class="field-name">Home Address</td>
-				<td class="input-value">100 Abbett St, Scarborough, WA, Australia, 6019</td>
+				<td class="input-value">100 Abbett St, Scarborough, NSW, Australia, 2019</td>
 			</tr>
 		</tbody>
 	</table>
