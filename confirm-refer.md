@@ -372,7 +372,7 @@ layout: default
 	</div>
 	<div class="grid-row custom-controls clearfix">
 		<div>
-			<p><strong>Service NSW</strong> is conducting a trial with businesses in your area. From the information you have provided, you may be elligible to participate. By sharing the data you enter here, you will be able to monitor the progress of your applications and assist Service NSW to provide additional services from the their website.</p>
+			<p><strong>Service NSW</strong> is conducting a trial with businesses in your area. From the information you have provided, you may be eligible to participate. By sharing the data you enter here, you will be able to monitor the progress of your applications and assist Service NSW to provide additional services from the their website.</p>
 			<fieldset>
 				<legend>Will you allow Service NSW to access your data?</legend>
 				<div class="radio-toggle">
