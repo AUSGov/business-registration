@@ -1120,7 +1120,7 @@ td.help a.cd-btn:focus,
 		&:hover, &:focus, &:active {
 			background-color: transparent;
 			color: black;
-			text-decoration: underline;
+			// text-decoration: underline;
 		}
 
 		/* open state of first descendant link within a top level navigation item */
@@ -1131,8 +1131,14 @@ td.help a.cd-btn:focus,
 		}
 	}
 	
-	span {
+	> span {
 		display: block;
+	}
+	
+	span.fa {
+		font-size: 125%;
+		color: #000;
+		vertical-align: middle;
 	}
 }
 

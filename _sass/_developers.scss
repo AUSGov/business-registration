@@ -19,6 +19,25 @@
 	// padding-right:1rem;
 // }
 
+
+button.ico-edit {
+    float: right;
+    font-size: 1rem !important;
+    color: #fff;
+    padding: 7px !important;
+    padding-left: 30px !important;
+    font-weight: normal !important;
+    background: url(../img/ico-edit.png) 2px 2px no-repeat #444;
+    background-size: 25px;
+    border-radius: 25px;
+    border-color: #999;
+    
+    &:hover, &:focus {
+        background: url(../img/ico-edit.png) 2px 2px no-repeat #000;
+        background-size: 25px;
+    }
+}
+
 .validation-summary-valid {
     display: none;
 }
