@@ -10,31 +10,6 @@ layout: default
 	<div class="sub-section-content">
 		<div class="grid-row clearfix">
 			<div class="col6">
-				<!-- <div class="grid-row">
-				<h3>Registration details</h3>
-					<p><strong>CORPORATION PTY LTD</strong><br />
-					<strong>ACN:</strong> 48123456789<br />
-					<strong>ABN:</strong> 123456789</p>
-				</div> -->
-				<div class="grid-row">
-					<div class="col10 last">
-						<div class="">
-							<h3>Previously registered</h3>
-							<p><strong>CORPORATION PTY LTD</strong><br />
-							<strong>ACN:</strong> 48123456789<br />
-							<strong>ABN:</strong> 123456789</p>
-							<ul style="list-style: none; margin-left: -40px">
-								<li><span class="fa fa-check" style="color: green; font-size:150%; margin-right: 5px"></span> Australian Business Number (ABN)</li>
-								<li><span class="fa fa-check" style="color: green; font-size:150%; margin-right: 5px"></span> Australian Company</li>
-								<li><span class="fa fa-check" style="color: green; font-size:150%; margin-right: 5px"></span> Business Name</li>
-								<li><span class="fa fa-check" style="color: green; font-size:150%; margin-right: 5px"></span> Goods and Services Tax (GST)</li>
-								<li><span class="fa fa-check" style="color: green; font-size:150%; margin-right: 5px"></span> AUSKey</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col6 last">
 				<h3>Add registrations</h3>
 				<div class="custom-controls">
 					<p>
@@ -66,7 +41,33 @@ layout: default
 						<label for="auskey">AUSKey&nbsp;<a class="cd-btn help" href="#"><span>more information</span></a></label>
 					</p>
 				</div>
-			</div>					</div><!-- grid-row -->
+			</div>
+			<div class="col6 last">
+				<!-- <div class="grid-row">
+				<h3>Registration details</h3>
+					<p><strong>CORPORATION PTY LTD</strong><br />
+					<strong>ACN:</strong> 48123456789<br />
+					<strong>ABN:</strong> 123456789</p>
+				</div> -->
+				<div class="grid-row">
+					<div class="col10 last">
+						<div class="">
+							<h3>Previously registered</h3>
+							<p><strong>CORPORATION PTY LTD</strong><br />
+							<strong>ACN:</strong> 48123456789<br />
+							<strong>ABN:</strong> 123456789</p>
+							<ul style="list-style: none; margin-left: -40px">
+								<li><span class="fa fa-check" style="color: green; font-size:150%; margin-right: 5px"></span> Australian Business Number (ABN)</li>
+								<li><span class="fa fa-check" style="color: green; font-size:150%; margin-right: 5px"></span> Australian Company</li>
+								<li><span class="fa fa-check" style="color: green; font-size:150%; margin-right: 5px"></span> Business Name</li>
+								<li><span class="fa fa-check" style="color: green; font-size:150%; margin-right: 5px"></span> Goods and Services Tax (GST)</li>
+								<li><span class="fa fa-check" style="color: green; font-size:150%; margin-right: 5px"></span> AUSKey</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- grid-row -->
 		<div class="controls-content">
 			<button type="button" id="start-applying" class="btn btn-default next">Next</button>
 		</div><!-- controls-content -->

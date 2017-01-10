@@ -4,17 +4,19 @@ layout: default
 ---
 <div class="progress-container">
 	<div class="progress-bar">
-		<span id="progress-percent" style="width: 40%"></span>
+		<span id="progress-percent" role="progressbar" aria-valuetext="step 3 of 5 steps" style="width:48.25%"></span>
 	</div><!-- meter -->
+
 	<ul class="section-nav">
-		<li class="done"><a href="entitlement.html"><span>1</span><br>Getting<br> started</a></li>
-		<li class="done"><a href="business-names-05.html"><span>2</span><br>Business<br> name</a></li>
-		<li class="active"><span>3</span><br>Business<br> details</li>
-		<li><span>4</span><br>Taxation<br>details</li>
-		<li><span>5</span><br>Confirm<br> application</li>
-		<li><span>6</span><br>Payment<br> &amp; submit</li>
+		<li class="bookend"><a href="register"><span>‹</span><br>Select<br> registrations<span class="visually-hidden"> (completed)</span></a></li>
+		<li class="done" style="width: 15.3%"><a href="entitlement"><span class="visually-hidden">Step </span><span>1</span><br>Getting<br> started <span class="visually-hidden"> (completed)</span></a></li>
+		<li class="done" style="width: 15.3%"><a href="business-names"><span class="visually-hidden">Step </span><span>2</span><br>Business<br> name <span class="visually-hidden"> (completed)</span></a></li>
+		<li class="active" style="width: 15.3%"><span class="visually-hidden">Step </span><span>3</span><br>Business<br> details <span class="visually-hidden"> (current step)</span></li>
+		<li style="width: 15.3%"><span class="visually-hidden">Step </span><span>4</span><br>Confirm<br> application <span class="visually-hidden"> (not completed)</span></li>
+		<li style="width: 15.3%"><span class="visually-hidden">Step </span><span>5</span><br>Pay<br> &amp; submit <span class="visually-hidden"> (not completed)</span></li>
+		<li class="bookend right"><a href="dashboard"><span>›</span><br>Application<br> summary</a></li>
 	</ul>
-</div><!-- progress-container -->
+</div>
 <h1 id="heading" tabindex="-1">3. Business details <span>(Step 3 of 6)</span></h1>
 <p>All fields are required unless marked as optional.</p>
 
@@ -76,7 +78,7 @@ layout: default
 					<p><button type="button" class="btn btn-default">Add another contact</button></p>
 				</div><!-- col -->
 				<div class="col1 last">
-					<a href="#"><img class="help-icon" src="img/ico-help-form.png" alt="Help with question" /></a>
+					 <a class="cd-btn help" href="#help"><span>Help information</span></a>
 				</div>
 			</div><!-- grid-row -->
 			<div class="showhide-target col12" style="display: none">
@@ -203,7 +205,7 @@ layout: default
 					</p>
 				</div>                       
 				<div class="col1 last">
-					<a href="#"><img class="help-icon" src="img/ico-help-form.png" alt="Help with question" /></a>
+					 <a class="cd-btn help" href="#help"><span>Help information</span></a>
 				</div>
 			</div><!-- grid-row -->
 
@@ -231,7 +233,7 @@ layout: default
 					</p>
 				</div><!-- col -->
 				<div class="col1 last">
-					<a href="#"><img class="help-icon" src="img/ico-help-form.png" alt="Help with question" /></a>
+					 <a class="cd-btn help" href="#help"><span>Help information</span></a>
 				</div>
 			</div><!-- grid-row -->
 
@@ -247,7 +249,7 @@ layout: default
 					</div>
 				</div><!-- col -->
 				<div class="col1 last">
-					<a href="#"><img class="help-icon" src="img/ico-help-form.png" alt="Help with question" /></a>
+					 <a class="cd-btn help" href="#help"><span>Help information</span></a>
 				</div>
 			</div><!-- grid-row -->
 
@@ -264,7 +266,7 @@ layout: default
 					</p>
 				</div><!-- col -->
 				<div class="col1 last">
-					<a href="#"><img class="help-icon" src="img/ico-help-form.png" alt="Help with question" /></a>
+					 <a class="cd-btn help" href="#help"><span>Help information</span></a>
 				</div>
 			</div><!-- grid-row -->
 
@@ -281,7 +283,7 @@ layout: default
 					</p>
 				</div><!-- col -->
 				<div class="col1 last">
-					<a href="#"><img class="help-icon" src="img/ico-help-form.png" alt="Help with question" /></a>
+					 <a class="cd-btn help" href="#help"><span>Help information</span></a>
 				</div>
 			</div><!-- grid-row -->
 
@@ -298,7 +300,7 @@ layout: default
 					</p>
 				</div><!-- col -->
 				<div class="col1 last">
-					<a href="#"><img class="help-icon" src="img/ico-help-form.png" alt="Help with question" /></a>
+					 <a class="cd-btn help" href="#help"><span>Help information</span></a>
 				</div>
 			</div><!-- grid-row -->
 
@@ -315,7 +317,7 @@ layout: default
 					</p>
 				</div><!-- col -->
 				<div class="col1 last">
-					<a href="#"><img class="help-icon" src="img/ico-help-form.png" alt="Help with question" /></a>
+					 <a class="cd-btn help" href="#help"><span>Help information</span></a>
 				</div>
 			</div><!-- grid-row -->
 
@@ -332,7 +334,7 @@ layout: default
 					</p>
 				</div><!-- col -->
 				<div class="col1 last">
-					<a href="#"><img class="help-icon" src="img/ico-help-form.png" alt="Help with question" /></a>
+					 <a class="cd-btn help" href="#help"><span>Help information</span></a>
 				</div>
 			</div><!-- grid-row -->
 
@@ -349,7 +351,7 @@ layout: default
 					</p>
 				</div><!-- col -->
 				<div class="col1 last">
-					<a href="#"><img class="help-icon" src="img/ico-help-form.png" alt="Help with question" /></a>
+					 <a class="cd-btn help" href="#help"><span>Help information</span></a>
 				</div>
 			</div><!-- grid-row -->
 		</fieldset>
@@ -377,7 +379,7 @@ layout: default
 					<input id="start-date" type="date" />
 				</div><!-- col -->
 				<div class="col1 last">
-					<a href="#"><img class="help-icon" src="img/ico-help-form.png" alt="Help with question" /></a>
+					 <a class="cd-btn help" href="#help"><span>Help information</span></a>
 				</div>
 			</div><!-- grid-row -->
 			<div id="divAbnEnddate">
@@ -413,7 +415,7 @@ layout: default
 						<input id="business-activity" type="text" placeholder="Start typing activity">
 					</div>
 					<div class="col1 last">
-						<a href="#"><img class="help-icon" src="img/ico-help-form.png" alt="Help with question" /></a>
+						 <a class="cd-btn help" href="#help"><span>Help information</span></a>
 					</div>
 				</div>
 			</div>
@@ -525,7 +527,7 @@ layout: default
 					<input id="mobile-phone" type="phone">
 				</div><!-- col -->
 				<div class="col1 last">
-					<a href="#"><img class="help-icon" src="img/ico-help-form.png" alt="Help with question" /></a>
+					 <a class="cd-btn help" href="#help"><span>Help information</span></a>
 				</div>
 			</div><!-- grid-row -->
 			

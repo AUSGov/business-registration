@@ -3,14 +3,14 @@ title: Taxation details
 layout: default
 ---
 
-	<style>
-		div.slider {
-			display: inline-block;
-			vertical-align: middle;
-			width: 50%;
-			margin-left:20px;
-		}
-	</style>
+<style>
+	div.slider {
+		display: inline-block;
+		vertical-align: middle;
+		width: 50%;
+		margin-left:20px;
+	}
+</style>
 	
 <div class="progress-container">
 	<div class="progress-bar">
