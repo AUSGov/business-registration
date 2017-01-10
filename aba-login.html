@@ -1,0 +1,19 @@
+<!doctype html>
+<head>
+</head>
+<body>
+	<div style="width: 1185px; margin: 40px auto">
+		<img src="img/aba-login.png" style="cursor: pointer" onclick="linkRegistrations()" />
+	</div>
+	<script>
+		function linkRegistrations() {
+			if (document.referrer.indexOf("register")>=0) {
+				location.href = "register-existing-alt?s=1";
+			}
+			else
+			{
+				location.href = "register-existing";
+			}
+		}
+	</script>
+</body>
