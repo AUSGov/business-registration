@@ -156,7 +156,7 @@ layout: default
 <div id="modal-message" style="display: none;">
 	<h3>Existing business</h3>
 	<div class="content">
-		<p>You have not elected to register for an Australian Business Number (ABN). If this is because you are applying for additional registrations for an existing business, you be redirected to <em>website.com</em> to authenticate with your AUSKey credentials.</p>
+		<p>You have not elected to register for an Australian Business Number (ABN). If this is because you are applying for additional registrations for an existing business, you be redirected to authenticate with your AUSKey credentials.</p>
 		<p>Are you applying for additional registrations for an existing business?</p>
 		<button id="existing-yes" class="btn btn-default">Yes</button> <button class="btn" id="existing-no">No</button>
 	</div>
