@@ -96,6 +96,7 @@ header {
 	/* Gov logo */
 	.gov {
 		margin-top: 50px;
+        float: left;
 	
 		span {
 			border: 0;
@@ -115,6 +116,10 @@ header {
 			background-size: cover;
 			margin-top: 0;
 		}
+        a:focus {
+            outline: 1px dotted #000;
+            outline-offset: 4px;
+        }
 	}
 	
 	nav {
@@ -167,7 +172,7 @@ header {
 }
 
 div.environment {
-	width: 1220px;
+	max-width: 1220px;
 	margin: 0 auto;
 	padding-left: 2%;
 	
@@ -252,6 +257,11 @@ footer {
 			background: transparent;
 			padding: 0 !important;
 		}
+
+        a:focus {
+            outline: 1px dotted #bbb;
+            outline-offset: 2px;
+        }
 		
 		.social {
 			float: left;
@@ -520,11 +530,16 @@ footer {
 // ------------------------------------------------------------------------------------------------------
 
 .registration-tip {
-  background: $process-alert url(../img/ico-tip-26.png) no-repeat 1em 1em;
-  border-radius: 6px;
-  -webkit-border-radius: 6px;
-  padding: 0.1em 2em 0.25em 3em;
-  margin: 0 0 1.5em 0;
+    background: $process-alert url(../img/ico-tip-26.png) no-repeat 1em 1em;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    padding: 0.1em 2em 0.25em 3em;
+    margin: 0 0 1.5em 0;
+
+    h2 {
+        margin-top: 15px;
+        font-size: 110%;
+    }
 }
 
 .grid-row + .registration-tip
@@ -734,20 +749,26 @@ select.registration-duration {
   font-size: 1.15rem;
   display: inline;
   border: 1px solid red #cccccc;
-  width: 130px;
+  width: 150px;
 }
 
 .result-container {
 	&.validation {
-		padding: 1em;
+		padding: 1em 0;
+        width: 100%;
+        margin-bottom: 1em;
 
 		img {
 			width: 36px;
 			margin: 1em 0 0 1em;
 		}
+
+        h3 {
+            margin: 1em 0.5em 0.5em;
+        }
 	}
 
-	main.confirmation & {
+	.confirmation & {
 		background-color: white;
 		border: 1px solid $gray-bg;
 	}
@@ -789,6 +810,10 @@ select.registration-duration {
 	td {
 	  vertical-align: top;
 	  line-height: 1.8em;
+
+      span.fa-plus-square, span.fa-minus-square {
+          color: #367ab3;
+      }
 	}
 	th {
 		background-color: white;
@@ -955,6 +980,7 @@ select.registration-duration {
 
 	legend {
 		font-size: 170%;
+        padding-bottom: 0.5em;
 	}
 }
 

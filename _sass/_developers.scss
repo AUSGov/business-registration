@@ -1,6 +1,120 @@
 // ----- Developers use for additions or overrides. UI team then refactor this into appropriate SASS file
 // ------------------------------------------------------------------------------------------------------
 
+// BGA style boxes:
+*, *:before, *:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+ul.block-menu {
+	list-style: none;
+	margin-top: 50px;
+	margin-bottom: 80px;
+	padding-left: 0;
+
+    li {
+	    width: 45%;
+	    display: inline-block;
+	    float: left;
+	    padding: 0 .75rem 1.5rem;
+
+        a, a:hover, a:focus {
+	        min-height: 300px;
+	        display: block;
+	        border: 1px solid #254f90;
+	        background-color: transparent;
+	        color: #000;
+	        padding: 2rem;
+	        text-decoration: none;
+	        text-align: left;
+        }
+		
+		a:focus {
+			outline: 2px solid #254f90;
+		}
+
+        p {
+	        font-size: 1rem;
+	        font-family:open_sansregular,helvetica,arial,sans-serif;
+	        margin: 0;
+        }
+
+        h2 {
+	        margin: 0;
+        }
+
+        &.plan a {
+	        border-top: 10px solid #339585;
+        }
+
+        &.run a {
+	        border-top: 10px solid #214d94;
+        }
+
+        &.assistance a {
+	        border-top: 10px solid #3d2b97;
+        }
+    }
+}
+		
+@media only screen and (max-width: 960px) {
+	ul.block-menu li {
+		width: 50%;
+	}
+}
+
+@media only screen and (max-width: 640px) {
+	ul.block-menu li {
+		width: 100%;
+	}
+}
+		
+div.flag {
+	display: table;
+	width:100%;
+	margin-bottom: 1.5rem;
+    
+    .body {
+	    display: table-cell;
+	    vertical-align: middle;
+    }
+
+    .image {
+	    display: table-cell;
+	    vertical-align: middle;
+    
+        .fa {
+	        margin-right: .75rem;
+	        width: 64px;
+	        height: 64px;
+	        border-radius: 50%;
+
+            &.topic.start {
+	            color: #fff;
+	            font-size: 3rem;
+	            padding: .46rem 0 0 1.16rem;
+	            background-color: #339585;
+            }
+		
+            &.topic.run {
+	            color: #fff;
+	            font-size: 2.55rem;
+	            padding: .8rem 0 0 .5rem;
+	            background-color: #254f90;
+            }
+		
+            &.topic.assistance {
+	            color: #fff;
+	            font-size: 2.55rem;
+	            padding: 10px 0 0 11.5px;
+	            background-color: #3d2b97;
+            }
+        }
+    }
+}
+
 /* Chat now button */
 // footer a.chat-now {
 	// background: url(../img/chat.png) 1rem center no-repeat;
@@ -19,6 +133,15 @@
 	// padding-right:1rem;
 // }
 
+.validation-summary-valid {
+    display: none;
+}
+.validation-summary-errors {
+    display: block;
+}
+.date {
+    width: 10em !important;
+}
 
 button.ico-edit {
     float: right;
@@ -36,16 +159,6 @@ button.ico-edit {
         background: url(../img/ico-edit.png) 2px 2px no-repeat #000;
         background-size: 25px;
     }
-}
-
-.validation-summary-valid {
-    display: none;
-}
-.validation-summary-errors {
-    display: block;
-}
-.date {
-    width: 10em !important;
 }
 
 /* 

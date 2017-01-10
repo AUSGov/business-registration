@@ -59,8 +59,12 @@ ul.section-nav, ul.section-nav-4, ul.section-nav-5 {
 			position: relative;
 
             &.right {
-                background-position-y: 8px;
+                background-position-y: -996px;
 			    float: right;
+
+                span {
+                    margin-left: 5px;
+                }
             }
 
             span {
@@ -99,7 +103,7 @@ ul.section-nav-5 li {
 }
 
 .progress-bar {
-    height: 20px;  /* Can be anything */
+    height: 32px;  /* Can be anything */
     position: relative;
     display: block;
     clear: both;
@@ -1009,7 +1013,7 @@ a.help {
     background-position: 0 0;
 	// background-size: 30px;
     padding: 0 0 0 30px;
-    height: 30px;
+    height: 34px;
     display: inline-block;
     text-align: left;
     margin: -7px 0 0 0;
@@ -1039,7 +1043,7 @@ a.help {
     .col1.last &, .col2.last &, legend.has-help &, div.has-help &, h3.has-help & {
 	    margin-top: 0;
 	    //background-size: 34px;
-	    height: 30px;
+	    height: 34px;
 	    padding: 0 0 0 30px;
     }
 
