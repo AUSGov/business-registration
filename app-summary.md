@@ -321,6 +321,9 @@ layout: default
 			case 1:
 				$("#99").block({
 					message: "Updating...",
+					css: {
+						padding: '10px'
+					},
 					overlayCSS: {
                         backgroundColor: '#bbb',
                         borderRadius: '10px'
