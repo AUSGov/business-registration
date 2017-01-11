@@ -1,6 +1,30 @@
 // ----- Developers use for additions or overrides. UI team then refactor this into appropriate SASS file
 // ------------------------------------------------------------------------------------------------------
 
+a.refresh {
+
+	margin-right: 24px;
+	font-weight: normal;
+
+	span.fa {
+		background-color: #555;
+		padding: 7px;
+		border-radius: 50px;
+		color: #eee;
+		font-size: 125%;
+		margin-right: 4px;
+		font-weight: 100;
+	}
+	
+	&:hover, &:focus {
+		background-color: transparent;
+		
+		span.fa {
+			background-color: #000;
+		}
+	}
+}
+
 // BGA style boxes:
 *, *:before, *:after {
 	-webkit-box-sizing: border-box;
