@@ -320,7 +320,7 @@ layout: default
 		switch(++count) {
 			case 1:
 				$("#99").block({
-					message: "Updating...",
+					message: '<p id="loading-status" role="progressbar" aria-valuetext="loading">Loading <img class="loading-ellipsis" src="img/ellipsis.gif" /></p>',
 					css: {
 						padding: '10px'
 					},
@@ -347,7 +347,10 @@ layout: default
 			
 			case 2:
 				$("#99").block({
-					message: "Updating...",
+					message: '<p id="loading-status" role="progressbar" aria-valuetext="loading">Loading <img class="loading-ellipsis" src="img/ellipsis.gif" /></p>',
+					css: {
+						padding: '10px'
+					},
 					overlayCSS: {
                         backgroundColor: '#bbb',
                         borderRadius: '10px'
@@ -371,7 +374,10 @@ layout: default
 			
 			case 3:
 				$("#99").block({
-					message: "Updating...",
+					message: '<p id="loading-status" role="progressbar" aria-valuetext="loading">Loading <img class="loading-ellipsis" src="img/ellipsis.gif" /></p>',
+					css: {
+						padding: '10px'
+					},
 					overlayCSS: {
                         backgroundColor: '#bbb',
                         borderRadius: '10px'
