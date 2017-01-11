@@ -312,7 +312,7 @@ layout: default
         </div>
     </div>
 </div>
-<script src="scripts/jquery.blockui.js"></script>
+<script src="scripts/jquery.blockUI.js"></script>
 <script>
 	$(document).ready(function() {
 		window.setTimeout(function() {
