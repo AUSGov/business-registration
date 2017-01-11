@@ -197,14 +197,9 @@ layout: default
     <table>
         <caption>
             Application reference: <strong>#1701-AA-0099-L</strong><br>
-            <span id="app-status" class="app-status">Payment in progress since 11 Jan 2017 09:39</span>
-            <span class="controls" style="display: none;">
-                <a href="javascript:void(0);" class="edit" style="display: none;">Resume</a>
-                &nbsp;
-                <a href="javascript:void(0);" class="remove" style="display: none;">Delete</a>
-            </span>
-			<span id="app-update" style="display: none; float:right; margin-top: -8px; font-weight: bold">
-				<span style="color: red; vertical-align: text-top">*</span> Status changed: <button class="btn btn-large refresh" type="button" onclick="refresh()">Refresh</button>
+            <span id="app-status" class="app-status">Payment in progress since 11 Jan 2017 09:39</span>  <span id="status-change" style="font-weight: bold; display: none;">*** Status changed ***</span>
+			<span id="app-update" class="controls" style="display: none;">
+				<a class="refresh" href="javascript:void(0)" onclick="refresh()"><span class="fa fa-refresh"></span>Refresh</a>
 			</span>
         </caption>
         <thead>
@@ -316,7 +311,7 @@ layout: default
 <script>
 	$(document).ready(function() {
 		window.setTimeout(function() {
-			$("#app-update").fadeIn("fast");
+			$("#app-update, #status-change").fadeIn("fast");
 		}, 5000);
 	});
 	
@@ -340,9 +335,9 @@ layout: default
 						'<td>Not submitted</td><td class=""><span class="">&nbsp;</span></td></tr>');
 					$("#app-status").html("ABN in progress since 11 Jan 09:41");
 					$("#99").unblock();
-					$("#app-update").fadeOut("fast");
+					$("#app-update, #status-change").fadeOut("fast");
 					window.setTimeout(function() {
-						$("#app-update").fadeIn("fast");
+						$("#app-update, #status-change").fadeIn("fast");
 					}, 10000);
 				}, 2000);
 				break;
@@ -364,9 +359,9 @@ layout: default
 						'<td>In progress</td><td class=""><span class="">&nbsp;</span></td></tr>');
 					$("#app-status").html("Business name in progress since 11 Jan 09:46");
 					$("#99").unblock();
-					$("#app-update").fadeOut("fast");
+					$("#app-update, #status-change").fadeOut("fast");
 					window.setTimeout(function() {
-						$("#app-update").fadeIn("fast");
+						$("#app-update, #status-change").fadeIn("fast");
 					}, 10000);
 				}, 2000);
 				break;
@@ -388,7 +383,7 @@ layout: default
 						'<td><a href="#">Download certificate (PDF)</a></td><td class=""><span class="">&nbsp;</span></td></tr>');
 					$("#app-status").html("Application complete 11 Jan 09:53");
 					$("#99").unblock();
-					$("#app-update").fadeOut("fast");
+					$("#app-update, #status-change").fadeOut("fast");
 				}, 2000);
 				break;
 		}
