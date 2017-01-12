@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign in | business.gov.au</title>
+		<script src="//register.business.gov.au/scripts/jquery-2.1.1.js"></script>
+		<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700">
+		<link href="//www.business.gov.au/areas/business/assets/bundle1.css" rel="stylesheet">
+		<link href="//www.business.gov.au/areas/business/assets/bundle2.css" rel="stylesheet">
+		<link href="css/identity.css" rel="stylesheet">
+    </head>
+    <body>
+		<header>
+			<!-- ~/Areas/Business/Views/Navigation/Mega.cshtml -->
+			<nav class="business-navigation-mega">
+				<div class="MegaMenu" role="menubar">
+					<div class="row">
+						<div class="mobile-logo">
+							<a href="/"><strong>business</strong>.gov.au</a> 
+						</div>
+						<a href="/" class="left logo">
+							<img src="https://www.business.gov.au/Areas/Business/Assets/App/header-logo.png" alt="Business.gov.au logo">
+						</a>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<main>
+			<h1>{{ page.title }}</h1>
+			<div class="row">
+				{{ content }}
+			</div>
+		</main>
+		{% include footer.html %}
+	</body>
+</html>
