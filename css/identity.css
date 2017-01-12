@@ -328,7 +328,7 @@ a.help span {
 
 @media only screen and (max-width: 768px) {
 	.accountButton {
-		font-size: 90% !important;
+		font-size: 85% !important;
 		margin-right: .15em !important;
 	}
 }
