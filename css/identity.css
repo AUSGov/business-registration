@@ -1,17 +1,38 @@
 /* Styles for dynamically inserted content */
 @font-face {
-    font-family: 'open_sansregular';
-    src: url('OpenSans-Regular.ttf') format('truetype');
+    font-family: 'open_sanslight';
+    src: url('../fonts/opensans-light-webfont.eot');
+    src: url('../fonts/opensans-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/opensans-light-webfont.woff2') format('woff2'),
+         url('../fonts/opensans-light-webfont.woff') format('woff'),
+         url('../fonts/opensans-light-webfont.ttf') format('truetype'),
+         url('../fonts/opensans-light-webfont.svg#open_sansregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('../fonts/opensans-regular-webfont.eot');
+    src: url('../fonts/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/opensans-regular-webfont.woff2') format('woff2'),
+         url('../fonts/opensans-regular-webfont.woff') format('woff'),
+         url('../fonts/opensans-regular-webfont.ttf') format('truetype'),
+         url('../fonts/opensans-regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+	font-family: open_sansregular, helvetica, arial, sans-serif;
+}
+
 /* set container properties */
 #api {
 	width:71.25rem;
 	font-weight: 300;
 	width: 100%;
 	padding: 5px;
-	margin: 0 auto;
+	margin: 0 auto 80px;
 }
 
 #api {
@@ -22,28 +43,37 @@ h1 {
 	margin-left: 33%;
 }
 
+#api label {
+	font-size: 1.2rem;
+	font-weight: normal;	
+}
+
 #api .attrEntry label, #api .entry-item > label, #api .password-label {
-	font-family: open_sansregular;
 	margin-left: -300px;
 	width: 280px;
 	display: inline-block;
 	text-align: right;
-	margin-right: 10px;
+	margin-right: 3%;
+}
+
+#api .password-label {
+	padding-bottom: 25px;
 }
 
 #api .password-label label {
 	display: block;
+	margin-top:15px;
+}
+
+#api .password-label a {
+	position: absolute;
+	margin-top:10px;
+	margin-left: 4%;
 }
 
 /* remove bullet points */
 #api ul li {
 	list-style: none;
-}
-
-/* input/label/button styles - based on SOBRS styles */
-#api label {
-	font-size: 1.2em;
-	font-weight: 600;
 }
 
 #api input {
@@ -102,7 +132,7 @@ h1 {
 	color: #367ab3;
 	cursor: pointer;
 	line-height: 1em;
-	font-size: 100% !important;
+	font-size: 100%;
 	padding: 0.72em 1em;
 	text-align: center;
 	text-decoration: none !important;
@@ -128,6 +158,7 @@ a#createAccount {
 
 #api .buttons {
 	margin-top: 15px;
+	margin-left: 1%;
 }
 
 #api div.buttons button:first-child {				
@@ -188,7 +219,7 @@ a#createAccount {
 }
 
 button.accountButton {
-	min-width: 8em;
+	min-width: 6em;
 }
 
 button#TwitterExchange, button#TwitterExchange:hover, button#TwitterExchange:focus {
@@ -198,7 +229,7 @@ button#TwitterExchange, button#TwitterExchange:hover, button#TwitterExchange:foc
 	background-position: center left;
 	color: #FFF;
 	text-align: left;
-	padding: 8px 10px 8px 40px;
+	padding: 8px 5px 8px 35px;
 }
 button#TwitterExchange:hover, button#TwitterExchange:focus {
 	background-color: #1B3B7C;
@@ -211,7 +242,7 @@ button#LinkedInExchange, button#LinkedInExchange:hover, button#LinkedInExchange:
 	background-position: left center;
 	color: #FFF;
 	text-align: left;
-	padding: 8px 10px 8px 40px;
+	padding: 8px 5px 8px 35px;
 }
 button#LinkedInExchange:hover, button#LinkedInExchange:focus {
 	background-color: #005795;
@@ -224,7 +255,7 @@ button#FacebookExchange, button#FacebookExchange:hover, button#FacebookExchange:
 	background-position: left center;
 	color: #FFF;
 	text-align: left;
-	padding: 8px 10px 8px 40px;
+	padding: 8px 5px 8px 35px;
 }
 button#FacebookExchange:hover, button#FacebookExchange:focus {
 	background-color:#1B3B7C;
@@ -237,7 +268,7 @@ button#GoogleExchange, button#GoogleExchange:hover, button#GoogleExchange:focus 
 	background-position: 3px center;
 	color: #FFF;
 	text-align: left;
-	padding: 8px 10px 8px 40px;
+	padding: 8px 5px 8px 35px;
 }
 button#GoogleExchange:hover, button#GoogleExchange:focus {
 	background-color:#BC2E21;
@@ -250,7 +281,7 @@ button#MicrosoftAccountExchange, button#MicrosoftAccountExchange:hover, button#M
 	background-position: left center;
 	color: #FFF;
 	text-align: left;
-	padding: 8px 10px 8px 40px;
+	padding: 8px 5px 8px 35px;
 }
 button#MicrosoftAccountExchange:hover {
 	background-color:#1387D2;
@@ -295,7 +326,7 @@ div#api.error-page-content > div {
 
 .localAccount .create {
 	position: absolute;
-	bottom: 11rem;
+	bottom: 11.5rem;
 }
 
 [aria-hidden=true], a.helpLink {
@@ -323,4 +354,61 @@ div#api.error-page-content > div {
 
 a.help span {
 	display: none;
+}
+
+@media only screen and (max-width: 768px) {
+	.accountButton {
+		font-size: 90% !important;
+		margin-right: .15em !important;
+	}
+}
+
+@media only screen and (max-width: 640px) {
+	body {
+		font-size: 90%;
+	}
+	
+	h1 {
+		margin-left: 20px;
+	}
+	
+	h2 {
+		font-size: 1.2rem;
+	}
+	
+	#api {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	
+	#api .attrEntry label, #api .entry-item > label, #api .password-label {
+		margin-left: 0;
+		width: auto;
+		display: block;
+		text-align: left;
+		margin-right: auto;
+	}
+	
+	#api .password-label a {
+		position: relative;
+		margin-top: auto;
+		margin-left: 0;
+	}
+	
+	.localAccount .create {
+		bottom: 17rem;
+	}
+	
+	button.accountButton {
+		min-width: auto;
+		padding: 20px !important;
+	}
+	
+	#api .social-label {
+		display: none;
+	}
+	
+	#api input {
+		width: 100% !important;
+	}
 }
