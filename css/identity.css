@@ -65,12 +65,6 @@ h1 {
 	margin-top:15px;
 }
 
-#api .password-label a {
-	position: absolute;
-	margin-top:10px;
-	margin-left: 4%;
-}
-
 /* remove bullet points */
 #api ul li {
 	list-style: none;
