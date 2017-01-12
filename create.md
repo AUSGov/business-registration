@@ -104,3 +104,10 @@ layout: identity
 		</div>
 	</div>
 </div>
+<script>
+	$(document).ready(function() {
+		window.setTimeout(function() {
+			$("[placeholder]").removeAttr("placeholder");
+		}, 10);
+	});
+</script>

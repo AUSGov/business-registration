@@ -69,6 +69,7 @@ layout: identity
 			$("button.accountButton").each(function() {
 				$(this).html('<span class="social-label">' + $(this).html().replace(/Sign in with /g, "") + '</span>');
 			});
+			$("[placeholder]").removeAttr("placeholder");
 		}, 10);
 	});
 </script>
