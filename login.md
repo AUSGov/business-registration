@@ -67,7 +67,7 @@ layout: identity
 	$(document).ready(function() {
 		window.setTimeout(function() {
 			$("button.accountButton").each(function() {
-				$(this).html($(this).html().replace(/Sign in with /g, ""));
+				$(this).html('<span class="social-label">' + $(this).html().replace(/Sign in with /g, "") + '</span>');
 			});
 		}, 10);
 	});
