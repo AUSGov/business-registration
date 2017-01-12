@@ -1,0 +1,326 @@
+/* Styles for dynamically inserted content */
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('OpenSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/* set container properties */
+#api {
+	width:71.25rem;
+	font-weight: 300;
+	width: 100%;
+	padding: 5px;
+	margin: 0 auto;
+}
+
+#api {
+	padding-left: 33%;
+}
+
+h1 {
+	margin-left: 33%;
+}
+
+#api .attrEntry label, #api .entry-item > label, #api .password-label {
+	font-family: open_sansregular;
+	margin-left: -300px;
+	width: 280px;
+	display: inline-block;
+	text-align: right;
+	margin-right: 10px;
+}
+
+#api .password-label label {
+	display: block;
+}
+
+/* remove bullet points */
+#api ul li {
+	list-style: none;
+}
+
+/* input/label/button styles - based on SOBRS styles */
+#api label {
+	font-size: 1.2em;
+	font-weight: 600;
+}
+
+#api input {
+	height: auto;
+	font-size: 1.2em;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	color: #666666;
+	border: 1px solid #BBBBBB !important;
+	width: 85%;
+	display: inline-block;
+	max-width: 24em;
+	margin: 0.4em 0.25em 0.4em 0;
+	padding: 0.4em 0.25em;
+}
+
+#api input:hover, #api input:focus {
+	-webkit-box-shadow: 0 0 8px 1px rgba(0,0,0,0.2);
+	box-shadow: 0 0 8px 1px rgba(0,0,0,0.2);
+}
+
+#api input:focus {
+	background-color: #fff79b;
+}
+
+#api .entry-item input#password {
+	vertical-align: top;
+}
+
+/* Hide unnecessary input placeholders */
+:placeholder {
+	color: transparent;
+}
+::-webkit-input-placeholder {
+	color: transparent;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+	color: transparent;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+	color: transparent;
+}
+
+:-ms-input-placeholder {  
+	color: transparent;
+}
+
+#api button, a#createAccount {
+	transition: none;
+	background-color: white;
+	border: 1px solid #367ab3;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	color: #367ab3;
+	cursor: pointer;
+	line-height: 1em;
+	font-size: 100% !important;
+	padding: 0.72em 1em;
+	text-align: center;
+	text-decoration: none !important;
+	white-space: nowrap;
+	display: inline-block;
+	white-space: nowrap;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	font-weight: 300;
+	margin-right: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+a#createAccount {
+	padding: 0.5em;
+}
+
+#api .buttons {
+	margin-top: 15px;
+}
+
+#api div.buttons button:first-child {				
+	background: #4f8fe6;
+	background: -moz-linear-gradient(top, #4f8fe6 0%, #367ab3 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, #4f8fe6), color-stop(100%, #367ab3));
+	background: -webkit-linear-gradient(top, #4f8fe6 0%, #367ab3 100%);
+	background: -o-linear-gradient(top, #4f8fe6 0%, #367ab3 100%);
+	background: -ms-linear-gradient(top, #4f8fe6 0%, #367ab3 100%);
+	background: linear-gradient(to bottom, #4f8fe6 0%, #367ab3 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4f8fe6', endColorstr='#367ab3', GradientType=0 );
+	color: #fff;
+	border: 1px solid #367ab3;
+	font-weight: 600;
+	margin-right: 0;
+}
+
+#api button:hover, #api button:focus, #api button:active,
+#api div.buttons button:hover,
+#api div.buttons button:focus,
+#api div.buttons button:active {
+	transition: none;
+	background: #000;
+	border: 1px solid #000;
+	color: #fff;
+	-webkit-box-shadow: 0 0 2px 0 rgba(47,45,43,0.5);
+	box-shadow: 0 0 2px 0 rgba(47,45,43,0.75);
+}
+
+#api button:disabled,
+#api div.buttons button:disabled {
+	border: 1px solid #B0B0B0;
+	background: white;
+	color: #656565;
+	cursor: not-allowed;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	pointer-events: none;
+	font-weight: 400;
+}
+		
+/* validation styles - based on default styles */		
+.attrEntry.validate input:invalid {
+	border-radius: 4px;
+	background-color: #fce8e8;
+}
+.attrEntry .error.itemLevel {
+	color: #cb2027;
+	font-size: .9em;
+}
+.attrEntry .error.itemLevel p {
+	margin: 0;
+}
+
+/* social media login buttons - extended from existing styles */
+#api .intro + ul li {
+	display: inline-block;
+}
+
+button.accountButton {
+	min-width: 8em;
+}
+
+button#TwitterExchange, button#TwitterExchange:hover, button#TwitterExchange:focus {
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAdVBMVEVgqd3///9Ypdtdp9xaptxSotpQodlNn9lWo9pUo9rX6Pa+2vGTw+iLvuZlqt79/P7K4PO62O+y0+6hyutysuD2+fzi7vne6/fT5PTE3fKs0O2lzeuZx+l7tuJqrd71+Pzz9vzn8PnQ4/SCueSAueNsrt9InNh7sQwBAAAAwklEQVQ4y92PRw6EMAwAXeIkdBbY3uv/n7gSAoLDD5hbPCPZgZVihEgYgNSUpmfS7bfbtHS2nReyL2Qoc+yp8ZRAwCEWjgGAPQ7sssKoAGsWBrrgyMZCwD77Uel+59E3Tt14xZ7qlY7BRf1CDgeMKMw8sBXGlKxWtLGvHCgkQ80m0YHpjjq4sQ74pn1mISLJVSAMiwJO98l/TWSNF1eGKzqKfZ7Vj0mnHHwodpP+WIYlZP373DTtVWxYr2FD3pOBdfIHhOAHYHQI9VgAAAAASUVORK5CYII=);
+	background-color: #3B5B9C;
+	background-repeat: no-repeat;
+	background-position: center left;
+	color: #FFF;
+	text-align: left;
+	padding: 8px 10px 8px 40px;
+}
+button#TwitterExchange:hover, button#TwitterExchange:focus {
+	background-color: #1B3B7C;
+}
+
+button#LinkedInExchange, button#LinkedInExchange:hover, button#LinkedInExchange:focus {
+	background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAb1BMVEUAe7b///8AdrMklscAc7EAeLUAcbB5ttifzeMqmckAdLIAaqz7+/6PxeAShr0CgLkAba4nmMctksTv9Puw1eij0OWGvNtfrNJNo80YjMAeib/D4vGt3Oy82+yfzOOCvtyJvdx3tddirtI/ncoxmMj9KsrQAAAAw0lEQVQ4y9WSVw7DIAxAG8CkjJDVzO5x/zMWk0RNJaB/kfo+sGUeCMvstgI4J7F9aS5NxSLnTWLpZVDgexTqIiycUNBhgTxRyCKPYJ3dl7sITCkO+FyLXaWU310DscASOesf3ahWChGJ5cb4ASO5Joiu2EegWEmZa1c3yUwOHmHNuQgJup4CgF8YlKpcMhKvkNmb1REz6hdetsyziIBldv8lpH8ouGm28zQFCu2SOSAXlJYGYCgpFThEMFPm/zCryja8Acy7CRfMrcKPAAAAAElFTkSuQmCC);
+	background-color:#0077B5;
+	background-repeat: no-repeat;
+	background-position: left center;
+	color: #FFF;
+	text-align: left;
+	padding: 8px 10px 8px 40px;
+}
+button#LinkedInExchange:hover, button#LinkedInExchange:focus {
+	background-color: #005795;
+}
+
+button#FacebookExchange, button#FacebookExchange:hover, button#FacebookExchange:focus {
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAaVBMVEU7W5z///85Wps3WJsiRo8xU5fw8vYyUpY0VZiAj70pS5OBkb0vUpb7+fwsTpTR1ud6irllerBPaqX09fnx8vfs7fSQoMZxg7VsgLNGY6FCX58ZP4v++/7r7vTZ3OupstGIlsFWcalDYaCK3qwDAAAAnklEQVQ4y+XQyw7CIBAFUBgc5VUoWGtb3/7/RyoYkyZAiSsXvdt7kstA/hRg/B0GpZ6byQ3Dw0NBaH+lMYRle3T0kwayACRdBrr/gnN+QtpQWv8cR4DswiUAjozlz4RdF8AmlnmwjaDQImoZwQkRedoToUS7D+ColGoTwQidx8oEQDMHN1MBva5MOL70SCHuE1TOhOpHrRt0FWAOP4IX8PsG2qEOR30AAAAASUVORK5CYII=);
+	background-color:#3B5B9C;
+	background-repeat: no-repeat;
+	background-position: left center;
+	color: #FFF;
+	text-align: left;
+	padding: 8px 10px 8px 40px;
+}
+button#FacebookExchange:hover, button#FacebookExchange:focus {
+	background-color:#1B3B7C;
+}
+
+button#GoogleExchange, button#GoogleExchange:hover, button#GoogleExchange:focus {
+	background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAb1BMVEXcTkH////cTD/bSj3ZQDLYOyzaRDbeV0vbSDrZPS/66Obyv7rsnpfpkorjcWfgZlvXOCr++Pj5393haFz88/L88fD67Or319T1zsv1zsrxuLPuqaLuqKLoi4LlfXTgYlbWMyTWMiPwtrHwta/fXVH/sCIIAAAAmElEQVQ4y+2RyQ7DIBBDMcwAIXvovqXb/39jRaX0AEmr5px3tSV7PGLhX6TVRFpN61l9zPNS6kn9gDcXO67zDnCnO2BCiNIyMtgKKJgyY2zQ68JEDtqju0nFTcOsxPUMw1GDDUqt+tY51/YNVlhvacTgEfCDIY0Q/lkBSg4RaUmmDo4/JdMzHy1Q2ejMeCj6PrXQP5+1MI8X0Y4HL4c826EAAAAASUVORK5CYII=);
+	background-color:#DC4E41;
+	background-repeat: no-repeat;
+	background-position: 3px center;
+	color: #FFF;
+	text-align: left;
+	padding: 8px 10px 8px 40px;
+}
+button#GoogleExchange:hover, button#GoogleExchange:focus {
+	background-color:#BC2E21;
+}
+
+button#MicrosoftAccountExchange, button#MicrosoftAccountExchange:hover, button#MicrosoftAccountExchange:focus {
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAPFBMVEU1pe/////t+v4uoe5btvNixPVVwfUsoe9tyfXU7/y95vu24vrd9f5NtfLH6/ys3/o/sPE6qfD2/f+f2vnAysuQAAAAaElEQVQ4y93SORKAIAwFUEGCsoT1/nd1JkkDFhY24qt+8VMkk20lu6DAaVBOBsVKsuO8aYo08IqlYyxoRTQExfyKheRIgu5Yl4KoVhSUgNOhoiYRsmb5g2u+LtzXDNOhjKgoAZ9/8k8uZWsGqcIav5wAAAAASUVORK5CYII=);
+	background-color: #33A7F2;
+	background-repeat: no-repeat;
+	background-position: left center;
+	color: #FFF;
+	text-align: left;
+	padding: 8px 10px 8px 40px;
+}
+button#MicrosoftAccountExchange:hover {
+	background-color:#1387D2;
+}
+
+/* error page spacing */
+div#api.error-page-content > div {
+    margin-top: 1em;
+    /* line-height: 2em; */
+}
+
+
+/* miscellaneous tweaks to improve layout */
+.password-label label {
+	display: inline;
+}
+
+#api a {
+	margin-left:10px;
+	font-weight: normal;
+}
+
+#api a:hover, #api a:focus, #api a:active {
+    background-color: #000;
+    color: white;
+    outline: none;
+    text-decoration: none;
+}
+
+.localAccount .divider, .working {
+	display: none;
+}
+
+/* Move create account link to top of form */
+.localAccount {
+	position: relative;
+}
+
+.localAccount .intro {
+	margin-bottom: 60px;
+}
+
+.localAccount .create {
+	position: absolute;
+	bottom: 11rem;
+}
+
+[aria-hidden=true], a.helpLink {
+	display: none;
+}
+
+#api a.help {
+    background-image: url(sprite-info.png);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    padding: 0 0 0 30px;
+    height: 34px;
+    display: inline-block;
+    text-align: left;
+    margin: -4px 4px 0 4px;
+    vertical-align: middle;
+    border: 2px solid transparent;
+}
+
+#api a.help:hover {
+	background-color: transparent;
+	background-position: 0 -100px;
+}
+
+a.help span {
+	display: none;
+}
