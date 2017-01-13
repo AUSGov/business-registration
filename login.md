@@ -65,11 +65,23 @@ layout: identity
 
 <script>
 	$(document).ready(function() {
+		var help = [
+			"Help text social login blah blah blah.",
+			"Help text existing acount blah blah blah."
+		];
 		window.setTimeout(function() {
 			$("button.accountButton").each(function() {
 				$(this).html('<span class="social-label">' + $(this).html().replace(/Sign in with /g, "") + '</span>');
 			});
 			$("[placeholder]").removeAttr("placeholder");
+			$("div.intro h2").append(' <a class="cd-btn help" href="javascript:void(0)"><span>more information</span></a>');
+			$("a.help").each(function(ind, val) {
+				$(val).parent().after('<p class="help" style="display: none;">' + help[ind] + '</p>');
+				$(val).click(function() {
+					$(this).parent().next().show();
+					$(this).hide();
+				});
+			});
 		}, 10);
 	});
 </script>

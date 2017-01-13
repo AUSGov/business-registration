@@ -106,8 +106,19 @@ layout: identity
 </div>
 <script>
 	$(document).ready(function() {
+		var help = [
+			"Help text verification code blah blah."
+		];
 		window.setTimeout(function() {
 			$("[placeholder]").removeAttr("placeholder");
+			$("div.buttons.verify").append('<a id="help-' + this.id + '" class="cd-btn help" href="#"><span>more information</span></a>');
+			$("a.help").each(function(ind, val) {
+				$(val).parent().after('<p class="help" style="display: none;">' + help[ind] + '</p>');
+				$(val).click(function() {
+					$(this).parent().next().show();
+					$(this).hide();
+				});
+			});
 		}, 10);
 	});
 </script>
