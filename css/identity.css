@@ -326,6 +326,13 @@ a.help span {
 	display: none;
 }
 
+p.help {
+	padding: 15px;
+    background: #efe8cb url(../img/ico-tip-26.png) no-repeat 15px 15px;
+    padding-left: 50px;
+    border-radius: 5px;
+}
+
 @media only screen and (max-width: 768px) {
 	.accountButton {
 		font-size: 85% !important;
