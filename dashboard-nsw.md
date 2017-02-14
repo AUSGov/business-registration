@@ -265,7 +265,7 @@ layout: default
 </tr></tbody>
     </table>
     <div class="referrer">
-		<p>You have consented to allow <strong>Service NSW</strong> access to the information you entered into this website. You can monitor the progress of these applications from their website. Click on the following link for <a href="https://www.service.nsw.gov.au/referral?code=nswgov&reference=5388d841-f6ce-4723-85ad-16050db67a89">more information</a></p>
+		<p>You have consented to allow <strong>Service NSW</strong> access to the information you entered into this website for this application. You can monitor the progress of these registrations from their website. Click on the following link for <a href="https://www.service.nsw.gov.au/referral?code=nswgov&reference=5388d841-f6ce-4723-85ad-16050db67a89">more information</a></p>
 	</div>
 </div><div class="dashboard-container" id="298">
     <table>
