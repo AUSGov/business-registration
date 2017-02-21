@@ -1,6 +1,54 @@
 // ----- Developers use for additions or overrides. UI team then refactor this into appropriate SASS file
 // ------------------------------------------------------------------------------------------------------
 
+li.sub-menu {
+	background-color: #f5c14d;
+	margin: 0 -9px -10px;
+	padding-left: 10px;
+	border-radius: 0 0 5px 5px;
+	
+	> a, a:link, a:visited {
+		color: #3179b5;
+		font-weight: bold;
+		
+		span:before {
+			color: #3179b5;
+			margin-left: 10px;
+		}
+	}
+}
+
+ul.sub-nav-reveal {
+	display: none;
+	
+	> li {
+		padding-left: 15px;
+		
+		a, a:link, a:visited {
+			color: #3179b5;
+			font-weight: normal;
+		}
+	}
+}
+
+li.sub-menu:hover > ul.sub-nav-reveal,
+li.sub-menu a:focus + ul.sub-nav-reveal,
+ul.sub-nav:focus {
+	display: inline-block;
+}
+
+div.sub-nav {
+	width: 220px;
+	
+	li.sub-menu {
+		margin-right: -19px;
+		
+		ul li {
+			margin-right: -15px;
+		}
+	}
+}
+
 a.refresh {
 
 	margin-right: 24px;
