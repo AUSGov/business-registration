@@ -2,15 +2,18 @@
 // ------------------------------------------------------------------------------------------------------
 
 li.sub-menu {
-	background-color: #f5c14d;
 	margin: 0 -9px -10px;
 	padding-left: 10px;
 	border-radius: 0 0 5px 5px;
 	
-	> a, a:link, a:visited {
+	> a, > a:link, > a:visited {
+		background-color: #f5c14d;
 		color: #3179b5;
 		font-weight: bold;
-		
+		width: 220px;
+		margin-left: -11px;
+		padding-left: 19px;
+			
 		span:before {
 			color: #3179b5;
 			margin-left: 10px;
@@ -20,13 +23,13 @@ li.sub-menu {
 
 ul.sub-nav-reveal {
 	display: none;
+	background-color: #3179b5;
 	
 	> li {
 		padding-left: 15px;
 		
 		a, a:link, a:visited {
-			color: #3179b5;
-			font-weight: normal;
+			color: #fff;
 		}
 	}
 }
