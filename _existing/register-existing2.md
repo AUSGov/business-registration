@@ -160,7 +160,7 @@ layout: default
 				</tr>
 				<tr>
 					<td><span class="fa fa-plus orange"></span></td>
-					<td class="field-name bold">John Smith <em>(added)</em></td>
+					<td class="field-name bold">John Smith</td>
 				</tr>
 			</tbody>
 		</table>
