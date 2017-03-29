@@ -71,8 +71,8 @@ layout: default
 					<td class="input-value">Business Pty Ltd</td>
 				</tr>
 				<tr>
-					<td width="50%" class="field-name bold">Australian Business Number (ABN)</td>
-					<td width="50%" class="input-value">44 123 456 789</td>
+					<td width="40%" class="field-name bold">Australian Business Number (ABN)</td>
+					<td width="60%" class="input-value">44 123 456 789</td>
 				</tr>
 			</tbody>
 		</table>
@@ -195,7 +195,7 @@ layout: default
 				</tr>
 			</tbody>
 		</table>
-		<p><button class="btn btn-inline ajax-button" type="button">Authorise user</button></p>
+		<p><button class="btn btn-inline ajax-button" type="button">Add user</button></p>
 		<div class="controls-container">
 			<div class="controls-content">
 				<button class="btn previous" type="button">Previous</button>
