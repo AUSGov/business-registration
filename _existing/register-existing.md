@@ -105,6 +105,35 @@ layout: default
 	</div>
 </div>
 <div id="business-details" class="sub-section-container">
+	<h2>Tax registrations</h2>
+	<div class="sub-section-content">
+		<h3>Currently registered for</h3>
+		<ul style="list-style: none; margin-left: -40px">
+			<li><span class="fa fa-check green" style="font-size:150%; margin-right: 5px"></span> Goods and Services Tax (GST)</li>
+			<li><span class="fa fa-check green" style="font-size:150%; margin-right: 5px"></span> Pay As You Go (PAYG) withholding</li>
+		</ul>
+		<h3>Registrations added</h3>
+		<ul style="list-style: none; margin-left: -40px">
+			<li><span class="fa fa-plus orange" style="font-size:150%; margin-right: 5px"></span> Fringe Benefts Tax (FBT)</li>
+			<li><span class="fa fa-plus orange" style="font-size:150%; margin-right: 5px"></span> Wine Equalisation Tax (WET)</li>
+		</ul>
+		<p>
+			<button class="btn btn-inline ajax-button" name="siK7g1V63Y7Ocf8CW33zhMWDHiJMq4jQTs6iCiAoHSA=" type="button" value="__cvg__SzM0Ch6cIAEU6k0Xke772IPiCB/02C3kcwsv8QysvjLFh1IY25HF+2mH5Y2atCnz">Add registration</button>
+			<select>
+				<option>--- select registration ---</option>
+				<option>Luxury Car Tax (LCT)</option>
+				<option>Fuel Tax Credits (FTC)</option>
+			</select>
+		</p>
+		<div class="controls-container">
+			<div class="controls-content">
+				<button class="btn previous" type="button">Previous</button>
+				<button class="btn btn-default next" id="next-cd-btn" type="button">Confirm and continue</button>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="business-details" class="sub-section-container">
 	<h2>Authorised contacts</h2>
 	<div class="sub-section-content">
 		<div class="sub-section-content">
@@ -169,35 +198,6 @@ layout: default
 				</p>
 			</div>
 		</div>
-		<div class="controls-container">
-			<div class="controls-content">
-				<button class="btn previous" type="button">Previous</button>
-				<button class="btn btn-default next" id="next-cd-btn" type="button">Confirm and continue</button>
-			</div>
-		</div>
-	</div>
-</div>
-<div id="business-details" class="sub-section-container">
-	<h2>Tax registrations</h2>
-	<div class="sub-section-content">
-		<h3>Currently registered for</h3>
-		<ul style="list-style: none; margin-left: -40px">
-			<li><span class="fa fa-check green" style="font-size:150%; margin-right: 5px"></span> Goods and Services Tax (GST)</li>
-			<li><span class="fa fa-check green" style="font-size:150%; margin-right: 5px"></span> Pay As You Go (PAYG) withholding</li>
-		</ul>
-		<h3>Registrations added</h3>
-		<ul style="list-style: none; margin-left: -40px">
-			<li><span class="fa fa-plus orange" style="font-size:150%; margin-right: 5px"></span> Fringe Benefts Tax (FBT)</li>
-			<li><span class="fa fa-plus orange" style="font-size:150%; margin-right: 5px"></span> Wine Equalisation Tax (WET)</li>
-		</ul>
-		<p>
-			<button class="btn btn-inline ajax-button" name="siK7g1V63Y7Ocf8CW33zhMWDHiJMq4jQTs6iCiAoHSA=" type="button" value="__cvg__SzM0Ch6cIAEU6k0Xke772IPiCB/02C3kcwsv8QysvjLFh1IY25HF+2mH5Y2atCnz">Add registration</button>
-			<select>
-				<option>--- select registration ---</option>
-				<option>Luxury Car Tax (LCT)</option>
-				<option>Fuel Tax Credits (FTC)</option>
-			</select>
-		</p>
 		<div class="controls-container">
 			<div class="controls-content">
 				<button class="btn previous" type="button">Previous</button>
