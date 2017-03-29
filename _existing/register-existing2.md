@@ -187,11 +187,11 @@ layout: default
 			<tbody>
 				<tr>
 					<td width="5%"><span class="fa fa-plus orange"></span></td>
-					<td width="90%" class="field-name">Tax registrations added: <strong>FBT, WET</strong></td>
+					<td width="95%" class="field-name">Tax registrations added: <strong>FBT, WET</strong></td>
 				</tr>
 				<tr>
 					<td width="5%"><span class="fa fa-plus orange"></span></td>
-					<td width="90%" class="field-name">Authorisation added for: <strong>John Smith</strong></td>
+					<td width="95%" class="field-name">Authorisation added for: <strong>John Smith</strong></td>
 				</tr>
 			</tbody>
 		</table>
