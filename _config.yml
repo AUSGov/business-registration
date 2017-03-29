@@ -29,6 +29,8 @@ collections:
         output: true
     help-me-decide:
         output: true
+    existing:
+        output: true
 
 # Build settings
 markdown: kramdown
