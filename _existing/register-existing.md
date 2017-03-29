@@ -49,7 +49,7 @@ layout: default
 </style>
 <h1 id="heading" tabindex="-1">{{ page.title }}</h1>
 <p class="intro"><strong>Welcome to the Australian Government Business Registration Service.</strong></p>
-<p>Here you can apply for additinal registrations and authorisations for your business.<a class="cd-btn help" href="#"><span>more information</span></a></p>
+<p>Here you can apply for additional registrations and authorisations for your business.<a class="cd-btn help" href="#"><span>more information</span></a></p>
 <div id="business-details" class="sub-section-container sub-section-open">
 	<h2>Business details</h2>
 	<div class="sub-section-content">
