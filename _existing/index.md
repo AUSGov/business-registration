@@ -42,7 +42,7 @@ layout: default-no-nav
 						<span class="fa topic run fa-gears"></span>
 					</div>
 					<div class="body">
-						<h2>Authorise</h2>
+						<h2>My access</h2>
 					</div>
 				</div>
 				<p>Already registered your business and want create a new AUSKey or link your MyGov account?</p>
