@@ -1,5 +1,5 @@
 ---
-title: Business registration
+title: My business
 layout: default
 ---
 <style>
