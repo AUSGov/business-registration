@@ -63,14 +63,14 @@ layout: default
 			</thead>
 			<tbody>
 				<tr>
-					<td width="5%">&nbsp;</td>
-					<td width="30%" class="field-name bold">Australian Business Number (ABN)</td>
-					<td width="65%" class="input-value">44 123 456 789</td>
-				</tr>
-				<tr>
 					<td>&nbsp;</td>
 					<td class="field-name bold">Organisation name</td>
 					<td class="input-value">Business Pty Ltd</td>
+				</tr>
+				<tr>
+					<td width="5%">&nbsp;</td>
+					<td width="30%" class="field-name bold">Australian Business Number (ABN)</td>
+					<td width="65%" class="input-value">44 123 456 789</td>
 				</tr>
 			</tbody>
 		</table>
