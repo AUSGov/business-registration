@@ -129,6 +129,10 @@ ul.block-menu {
         &.assistance a {
 	        border-top: 10px solid #3d2b97;
         }
+
+        &.register a {
+            border-top: 10px solid #c62c2a;
+        }
     }
 }
 		
@@ -183,6 +187,13 @@ div.flag {
 	            font-size: 2.55rem;
 	            padding: 10px 0 0 11.5px;
 	            background-color: #3d2b97;
+            }
+
+            &.topic.register {
+	            color: #fff;
+	            font-size: 2.55rem;
+	            padding: 13px 0 0 19px;
+	            background-color: #c62c2a;
             }
         }
     }

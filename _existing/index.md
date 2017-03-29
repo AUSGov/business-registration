@@ -7,11 +7,11 @@ layout: default-no-nav
 	<h1>Business registration</h1>
 	<p class="byline">Your business and tax registrations in one place</p>
 	<ul class="block-menu clearfix">
-		<li class="run">
+		<li class="plan">
 			<a href="../register.html">
 				<div class="flag">
 					<div class="image">
-						<span class="fa topic run fa-gears"></span>
+						<span class="fa topic start fa-lightbulb-o"></span>
 					</div>
 					<div class="body">
 						<h2>New business</h2>
@@ -35,11 +35,11 @@ layout: default-no-nav
 				<p>Apply for additional tax registrations and authorisations here!</p>
 			</a>
 		</li>
-		<li class="run">
+		<li class="register">
 			<a href="#">
 				<div class="flag">
 					<div class="image">
-						<span class="fa topic run fa-gears"></span>
+						<span class="fa topic register fa-unlock-alt"></span>
 					</div>
 					<div class="body">
 						<h2>My access</h2>
