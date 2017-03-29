@@ -76,7 +76,26 @@ layout: default
 				</tr>
 			</tbody>
 		</table>
-		<h3 class="larger">Contact details</h3>
+		<h3 class="larger">Contact details <button type="button" class="btn btn-default ico-edit" data-changepath="/registration/businessdetails?appId=1029&amp;s=1">Edit</button></h3>
+		<table id="contact-details">
+			<thead class="visuallyhidden">
+				<tr>
+					<th>Field item</th>
+					<th>Input value</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td width="50%" class="field-name bold">Business address</td>
+					<td width="50%" class="input-value">100 Abbett St, Scarborough, WA, Australia, 6019</td>
+				</tr>
+				<tr>
+					<td class="field-name bold">Postal address <em>(modified)</em></td>
+					<td class="input-value">PO Box 9999 Scarborough, WA, 6019</td>
+				</tr>
+			</tbody>
+		</table>
+		<h3>Authorised contacts <button type="button" class="btn btn-default ico-edit" data-changepath="/registration/businessdetails?appId=1029&amp;s=1">Edit</button></h3>
 		<table id="contact-details">
 			<thead class="visuallyhidden">
 				<tr>
@@ -86,21 +105,12 @@ layout: default
 			</thead>
 			<tbody>
 				<tr>
-					<td width="5%">&nbsp;</td>
-					<td width="25%" class="field-name bold">Business address</td>
-					<td width="50%" class="input-value">100 Abbett St, Scarborough, WA, Australia, 6019</td>
-					<td width="20%">
-						<button type="button" class="btn btn-default ico-edit" data-changepath="/registration/businessdetails?appId=1029&amp;s=1">Edit</button>
-					</td>
+					<td width="30%" class="field-name bold">Fred Nerk</td>
+					<td width="70%" class="input-value">Director</td>
 				</tr>
 				<tr>
-					<td><span class="fa fa-pencil orange"></span></td>
-					<td class="field-name bold">Postal address <em>(modified)</em></td>
-					<td class="input-value">PO Box 9999 Scarborough, WA, 6019</td>
-					<td>
-						<button type="button" class="btn btn-default ico-edit" data-changepath="/registration/businessdetails?appId=1029&amp;s=1">Edit</button>
-						<button type="button" class="btn btn-default ico-edit" data-changepath="/registration/businessdetails?appId=1029&amp;s=1">Undo</button>
-					</td>
+					<td class="field-name bold">John Smith</td>
+					<td class="input-value">Secretary</td>
 				</tr>
 			</tbody>
 		</table>
@@ -117,63 +127,24 @@ layout: default
 					<td width="5%"><span class="fa fa-check green"></span></td>
 					<td width="45%">Goods and Services Tax (GST)</td>
 					<td width="5%"><span class="fa fa-plus orange"></span></td>
-					<td width="40%">Fringe Benefits Tax (FBT)</td>
-					<td width="5%">
-						<button type="button" class="btn btn-default ico-edit" data-changepath="/registration/businessdetails?appId=1029&amp;s=1">Undo</button>
-					</td>
+					<td width="45%">Fringe Benefits Tax (FBT)</td>
 				</tr>
 				<tr>
 					<td><span class="fa fa-check green"></span></td>
 					<td>Pay As You Go (PAYG) withholding</td>
 					<td><span class="fa fa-plus orange"></span></td>
 					<td>Wine Equalisation Tax (WET)</td>
-					<td>
-						<button type="button" class="btn btn-default ico-edit" data-changepath="/registration/businessdetails?appId=1029&amp;s=1">Undo</button>
-					</td>
 				</tr>
 			</tbody>
 		</table>
 		<p>
 			<button class="btn btn-inline ajax-button" type="button">Add registration</button>
-			<select>
+			<select style="width: 240px">
 				<option>--- select registration ---</option>
 				<option>Luxury Car Tax (LCT)</option>
 				<option>Fuel Tax Credits (FTC)</option>
 			</select>
 		</p>
-		<h3>Authorised contacts</h3>
-		<table id="contact-details">
-			<thead class="visuallyhidden">
-				<tr>
-					<th colspan="2">Field item</th>
-					<th colspan="2">Input value</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td width="5%">&nbsp;</td>
-					<td width="25%" class="field-name bold">Fred Nerk</td>
-					<td width="50%" class="input-value">Director</td>
-					<td width="20%"><button type="button" class="btn btn-default ico-edit" data-changepath="/registration/businessdetails?appId=1029&amp;s=1">Edit</button></td>
-				</tr>
-				<tr>
-					<td><span class="fa fa-pencil orange"></span></td>
-					<td class="field-name bold">John Smith <em>(modified)</em></td>
-					<td class="input-value">Secretary</td>
-					<td>
-						<button type="button" class="btn btn-default ico-edit" data-changepath="/registration/businessdetails?appId=1029&amp;s=1">Undo</button>
-						<button type="button" class="btn btn-default ico-edit" data-changepath="/registration/businessdetails?appId=1029&amp;s=1">Edit</button>
-					</td>
-				</tr>
-				<tr>
-					<td><span class="fa fa-minus red"></span></td>
-					<td class="field-name bold">Charles Windsor <em>(removed)</em></td>
-					<td class="input-value">Secretary</td>
-					<td><button type="button" class="btn btn-default ico-edit" data-changepath="/registration/businessdetails?appId=1029&amp;s=1">Undo</button></td>
-				</tr>
-			</tbody>
-		</table>
-		<p><button class="btn btn-inline ajax-button" type="button">Add contact</button></p>
 		<h3>Government credentials</h3>
 		<table id="contact-details">
 			<thead class="visuallyhidden">
@@ -185,13 +156,11 @@ layout: default
 			<tbody>
 				<tr>
 					<td width="5%"><span class="fa fa-check green"></span></td>
-					<td width="85%" class="field-name bold">Fred Nerk</td>
-					<td width="10%">&nbsp;</td>
+					<td width="95%" class="field-name bold">Fred Nerk</td>
 				</tr>
 				<tr>
 					<td><span class="fa fa-plus orange"></span></td>
 					<td class="field-name bold">John Smith <em>(added)</em></td>
-					<td><button type="button" class="btn btn-default ico-edit" data-changepath="/registration/businessdetails?appId=1029&amp;s=1">Undo</button></td>
 				</tr>
 			</tbody>
 		</table>
@@ -217,20 +186,8 @@ layout: default
 			</thead>
 			<tbody>
 				<tr>
-					<td width="5%"><span class="fa fa-pencil orange"></span></td>
-					<td width="90%" class="field-name">Postal address modified.</td>
-				</tr>
-				<tr>
 					<td width="5%"><span class="fa fa-plus orange"></span></td>
 					<td width="90%" class="field-name">Tax registrations added: <strong>FBT, WET</strong></td>
-				</tr>
-				<tr>
-					<td width="5%"><span class="fa fa-pencil orange"></span></td>
-					<td width="90%" class="field-name">Authorised contact <strong>John Smith</strong> modified.</td>
-				</tr>
-				<tr>
-					<td width="5%"><span class="fa fa-minus red"></span></td>
-					<td width="90%" class="field-name">Authorised contact <strong>Charles Windsor</strong> removed.</td>
 				</tr>
 				<tr>
 					<td width="5%"><span class="fa fa-plus orange"></span></td>
