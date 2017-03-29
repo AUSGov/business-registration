@@ -331,10 +331,6 @@ layout: default
 		</div>
 	</div>
 </div>
-<script src="{{ site.baseurl }}/scripts/jquery-1.11.3.min.js"></script>
-<script src="{{ site.baseurl }}/scripts/functions.js"></script>
-<script src="{{ site.baseurl }}/scripts/jquery-accessibleMegaMenu.js"></script>
-
 <script type="text/javascript">
 	$(document).ready(function () {
 	
