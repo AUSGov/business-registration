@@ -349,8 +349,6 @@ layout: default
 <script src="scripts/jquery-ui.min.js"></script>
 <script src="scripts/jquery.collapse.js"></script>
 <script src="scripts/jquery-toggleslide.js"></script>
-<script src="scripts/functions.js"></script>
-<script src="scripts/jquery-accessibleMegaMenu.js"></script>
 
 <script>
 	$(document).ready(function() {

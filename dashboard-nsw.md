@@ -433,8 +433,6 @@ layout: default
 
 <script src="scripts/jquery-1.11.3.min.js"></script>
 <script src="scripts/jquery.collapse.js"></script>
-<script src="scripts/functions.js"></script>
-<script src="scripts/jquery-accessibleMegaMenu.js"></script>
 <script src="scripts/clipboard.min.js"></script>
 
 <script>

@@ -61,7 +61,6 @@ layout: default
 <script src="../scripts/PrintThis.js"></script>
 <script src="../scripts/HelpMeDecideBusinessStructure.js"></script>
 <script src="../scripts/main-b.js?v=1"></script>
-<script src="../scripts/functions.js"></script>
 
 <script>
 	jQuery(document).ready(function ($) {

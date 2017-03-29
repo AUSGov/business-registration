@@ -142,10 +142,6 @@ layout: default
 	</div>
 </div>
 
-<script src="/scripts/jquery-1.11.3.min.js"></script>
-<script src="/scripts/functions.js"></script>
-<script src="/scripts/jquery-accessibleMegaMenu.js"></script>
-
 <script type="text/javascript">
 	$(document).ready(function () {
 	
