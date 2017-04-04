@@ -338,7 +338,7 @@ layout: default
 		</div>
 </div>
 
-<div id="ftc-form">
+<div id="ftc-form" style="display: none">
 	<h2 class="margin4">Fuel Tax Credits (FTC)</h2>
 	<div>
 		<div class="grid-row">
