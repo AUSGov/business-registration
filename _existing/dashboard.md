@@ -1,6 +1,6 @@
 ---
 title: Application summary
-layout: default-no-nav
+layout: default
 ---
 <style>
     a.dismiss span {
