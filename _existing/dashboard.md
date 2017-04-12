@@ -358,8 +358,6 @@ layout: default
     </div>
 </div>
 
-
-<script type="text/javascript" src="{{ site.baseurl }}/scripts/functions.js"></script>
 <script type="text/javascript" src="/scripts/clipboard.min.js"></script>
 
 <script type="text/javascript">
