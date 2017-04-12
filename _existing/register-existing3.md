@@ -186,7 +186,7 @@ layout: default
 		</div>
 		<div class="controls-container">
 			<div class="controls-content">
-				<button class="btn btn-default next" id="next-cd-btn" type="button">Confirm and submit</button>
+				<button class="btn btn-default next" id="next-cd-btn" type="button" onclick="location.href='dashboard'">Confirm and submit</button>
 			</div>
 		</div>
 	</div>
@@ -465,4 +465,3 @@ layout: default
 	});
 	
 </script>
-
