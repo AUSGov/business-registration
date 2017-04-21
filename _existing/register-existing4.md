@@ -685,7 +685,7 @@ layout: default
 		<button class="btn cancel ajax-button" type="button" id="cancel-assoc">Cancel</button>
 	</div>
 </div>
-<script src="{{ site.baseurl }}/scripts/jquery.blockui.js"></script>
+<script src="{{ site.baseurl }}/scripts/jquery.blockUI.js"></script>
 <script type="text/javascript">
 	function scrollToAndFocus(id) {
 		scrollToTargetElement(id);
