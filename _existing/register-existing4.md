@@ -82,21 +82,41 @@ layout: default
 	.retrieve {
 		display: none;
 	}
-	
+/*	
 	table tbody:nth-child(n+1) tr:first-child td {
 		border-top: 4px solid #e7e7e7;
 	}
-	
+*/	
 	button span.fa-user {
 		margin-right: 10px;
 		font-size: 125%;
 	}
+	button.ico-remove {
+		float: right;
+		font-size: 1rem !important;
+		color: #fff;
+		padding: 7px !important;
+		padding-left: 30px !important;
+		margin-left: 2px;
+		font-weight: normal !important;
+		background: url(../img/sprite-trash.png) 2px 2px no-repeat #444;
+		background-size: 25px;
+		border-radius: 25px;
+		border-color: #999;		
+	}
+	
+	button.ico-remove:hover, button.ico-remove:focus {
+		background: url(../img/sprite-trash.png) 2px 2px no-repeat #000;
+		background-size: 25px;
+	}
+
 </style>
 <h1 id="heading" tabindex="-1">{{ page.title }}</h1>
-<p class="intro"><strong>Welcome to the Australian Government Business Registration Service.</strong></p>
-<p>Here you can apply for additional registrations and authorisations for your business.<a class="cd-btn help" href="#"><span>more information</span></a></p>
 <div class="confirmation">
 	<div id="main">
+		<p class="intro"><strong>Welcome to the Australian Government Business Registration Service.</strong></p>
+		<p>Here you can apply for additional registrations and authorisations for your business.<a class="cd-btn help" href="#"><span>more information</span></a></p>
+		<h3>Business details</h3>
 		<table id="business-details">
 			<thead class="visuallyhidden">
 				<tr>
@@ -105,9 +125,6 @@ layout: default
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-					<th colspan="2">Business details</th>
-				</tr>
 				<tr>
 					<td width="25%" class="field-name bold">ABN</td>
 					<td width="75%" class="input-value">44 123 456 789</td>
@@ -128,44 +145,23 @@ layout: default
 				</tr>
 			</tbody>
 		</table>
-		<div id="available-regos" class="margin-bottom">
-			<h3>Available registrations</h3>
-			<div class="grid-row">
-				<div class="col6">
-					<ul>
-						<li>Goods and Services Tax (GST)</li>
-						<li>Pay As You Go (PAYG) Withholding</li>
-						<li>Fringe Benefits Tax (FBT)</li>
-					</ul>
-				</div>
-				<div class="col6 last">
-					<ul>
-						<li>Luxury Car Tax (LCT)</li>
-						<li>Fuel Tax Credits (FTC)</li>
-						<li>Wine Equalisation Tax (WET)</li>
-					</ul>
-				</div>
-			</div>
-			<div class="margin-top-075">
-				<button id="btn-apply" class="btn btn-inline ajax-button" type="button">Apply</button>
-			</div>
-		</div>
+		<h3>Tax registrations</h3>
+		<p id="no-regos-added">None added</p>
 		<div id="rego-display" style="display: none;">
-			<table>
+			<table class="margin-bottom-075">
 				<thead class="visuallyhidden">
 					<tr>
 						<th>Field item</th>
 						<th>Input value</th>
 					</tr>
 				</thead>
-				<tbody>
+				<tbody id="gst-display" style="display: none;">
 					<tr>
-						<th style="vertical-align: middle">Tax registrations</th>
-						<th><button type="button" id="edit-rego" class="btn btn-default ico-edit">Edit</button></th>
-					</tr>
-					<tr>
-						<td class="field-name bold">Goods &amp; Services Tax (GST)</td>
-						<td><span class="fa fa-check green"></span> Added</td>
+						<th style="vertical-align: middle"><span class="fa fa-check green"></span> Goods &amp; Services Tax (GST)</th>
+						<th>
+							<button type="button" id="delete-gst" class="btn btn-default ico-remove">Remove</button>
+							<button type="button" id="edit-gst" class="btn btn-default ico-edit">Edit</button>
+						</th>
 					</tr>
 					<tr>
 						<td class="field-name">Registration start date</td>
@@ -188,10 +184,13 @@ layout: default
 						<td class="input-value">No</td>
 					</tr>
 				</tbody>
-				<tbody>
+				<tbody id="payg-display" style="display: none;">
 					<tr>
-						<td class="field-name bold">Pay As You Go (PAYG) Withholding</td>
-						<td><span class="fa fa-check green"></span> Added</td>
+						<th style="vertical-align: middle"><span class="fa fa-check green"></span> Pay As You Go (PAYG) Withholding</th>
+						<th>
+							<button type="button" id="delete-payg" class="btn btn-default ico-remove">Remove</button>
+							<button type="button" id="edit-payg" class="btn btn-default ico-edit">Edit</button>
+						</th>
 					</tr>
 					<tr>
 						<td class="field-name">Registration start date</td>
@@ -216,17 +215,26 @@ layout: default
                 </tbody>
 			</table>
 		</div>
+		<div class="grid-row clearfix">
+			<div class="col12 last">
+				<select id="rego-select" style="width: 320px">
+					<option value="">--- select registration ---</option>
+					<option id="opt-gst" value="gst">Goods and Services Tax (GST)</option>
+					<option id="opt-payg" value="payg">Pay As You Go (PAYG) Withholding</option>
+					<option>Fringe Benefits Tax (FBT)</option>
+					<option>Luxury Car Tax (LCT)</option>
+					<option>Fuel Tax Credits (FTC)</option>
+					<option>Wine Equalisation Tax (WET)</option>
+				</select>
+				<button id="btn-apply" class="btn btn-inline ajax-button" type="button" disabled>Apply</button>
+			</div>
+		</div>
 		<div id="authorisations">
+			<h3>Authorisations</h3>
 			<div>
-				<div id="none-added">
-					<h3>Authorisations</h3>
-					<p>None added</p>
-					<div class="margin-top-075">
-						<button id="btn-add-auth" class="btn btn-inline ajax-button" type="button">Add authorisations</button>
-					</div>
-				</div>
+				<p id="none-added">None added</p>
 				<div id="auth-display" class="margin-top-075" style="display: none;">
-					<table>
+					<table class="margin-bottom-075">
 						<thead class="visuallyhidden">
 							<tr>
 								<th>Field item</th>
@@ -235,12 +243,11 @@ layout: default
 						</thead>
 						<tbody>
 							<tr>
-								<th style="vertical-align: middle">Authorisations</th>
-								<th><button type="button" id="edit-auth" class="btn btn-default ico-edit">Edit</button></th>
-							</tr>
-							<tr>
-								<td class="field-name"><span class="fa fa-user blue"></span> <strong>Fred Albert Nerk</strong></td>
-								<td class="input-value"><span class="fa fa-check green"></span> Added</td>
+								<th style="vertical-align: middle"><span class="fa fa-user blue"></span> Fred Albert Nerk</th>
+								<th>
+									<button type="button" id="delete-rego" class="btn btn-default ico-remove">Remove</button>
+									<button type="button" id="edit-auth" class="btn btn-default ico-edit">Edit</button>
+								</th>
 							</tr>
 							<tr>
 								<td class="field-name">Associate type</td>
@@ -265,8 +272,11 @@ layout: default
 						</tbody>
 						<tbody>
 							<tr>
-								<td class="field-name"><span class="fa fa-user blue"></span> <strong>Simon Arthur Bourke</strong></td>
-								<td class="input-value"><span class="fa fa-check green"></span> Added</td>
+								<th style="vertical-align: middle"><span class="fa fa-user blue"></span> Simon Arthur Bourke</th>
+								<th>
+									<button type="button" id="delete-rego" class="btn btn-default ico-remove">Remove</button>
+									<button type="button" id="edit-auth" class="btn btn-default ico-edit">Edit</button>
+								</th>
 							</tr>
 							<tr>
 								<td class="field-name">Associate type</td>
@@ -291,6 +301,16 @@ layout: default
 						</tbody>
 					</table>
 				</div>
+				<div class="margin-top-075">
+					<button id="btn-add-auth" class="btn btn-inline ajax-button" type="button">Add authorisation</button>
+				</div>
+			</div>
+		</div>
+		<div id="contacts" style="display: none">
+			<h3>Authorised contacts</h3>
+			<p>You may enter details here of persons authorised to be contacted by the Autralian Taxation Office (ATO) regarding your application.</p>
+			<div class="margin-top-075">
+				<button id="btn-add-contact" class="btn btn-inline ajax-button" type="button">Add contact</button>
 			</div>
 		</div>
 		<div id="declaration" style="display: none;">
@@ -335,101 +355,11 @@ layout: default
 				</div>
 			</div>
 		</div>
-		<div>
-			<div class="dashboard-container" style="display: none;">
-				<table>
-				<caption>
-					Recent applications<br>
-					
-					<div class="app-status"><p>Submitted on 12 Apr 2017 09:16</p></div>
-					<span class="controls">
-						<a href="javascript:void(0);" class="edit" style="display: none;">Resume</a>
-						&nbsp;
-						<a href="javascript:void(0);" class="remove" style="display: none;">Delete</a>
-						&nbsp;
-						<a href="javascript:void(0);" class="refresh"><span class="fa fa-refresh"></span>Status update</a>
-					</span>
-				</caption>
-				<thead>
-				<tr>
-					<th class="status-item">Registration item</th>
-					<th class="status-detail">Detail</th>
-					<th class="status-information" colspan="2">Status</th>
-				</tr>
-				</thead>
-				<tbody>
-					<tr class="rego">
-						<td class="waiting"><span class="visuallyhidden">In progress-</span>FBT</td>
-						<td class="status-waiting"></td>
-						<td class="">
-							<span>
-								<a class="more" href="#">In progress</a>
-							</span>
-						</td>
-						<td class=""><span class="fa fa-plus-square">&nbsp;</span></td>
-					</tr>
-					<tr class="rego">
-						<td class="waiting"><span class="visuallyhidden">In progress-</span>WET</td>
-						<td class="status-waiting"></td>
-						<td class="">
-							<span>
-								<a class="more" href="#">In progress</a>
-							</span>
-						</td>
-						<td class=""><span class="fa fa-plus-square">&nbsp;</span></td>
-					</tr>
-					<tr class="rego">
-						<td class="waiting"><span class="visuallyhidden">In progress-</span>AUSKey</td>
-						<td class="status-waiting">John Smith</td>
-						<td class="">
-							<span>
-								<a class="more" href="#">In progress</a>
-							</span>
-						</td>
-						<td class=""><span class="fa fa-plus-square">&nbsp;</span></td>
-					</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>
 	</div>
 </div>
-<div id="tax-form" style="display: none">
-	<fieldset class="">
-		<legend class="larger">Tax registrations</legend>
-		<div class="grid-row custom-controls clearfix">
-			<div class="col6">
-				<p>
-					<input id="gst-cb" name="gst-cb" type="checkbox" value="true">
-					<label class="has-help" for="gst-cb" id="type-gst">Goods and Services Tax (GST)<a class="cd-btn help" href="#help-gst"><span>Help - Goods &amp; Services Tax (GST) </span></a></label>
-				</p>
-				<p>
-					<input id="payg-cb" name="payg-cb" type="checkbox" value="true">
-					<label class="has-help" for="payg-cb" id="type-payg">Pay As You Go (PAYG) Withholding<a class="cd-btn help" href="#help-payg"><span>Help - Pay As You Go (PAYG) Withholding </span></a></label>
-				</p>
-				<p>
-					<input id="fbt-cb" name="fbt-cb" type="checkbox" value="true"><input name="RegistrationTypesViewModel.SelectedRegistrationTypes[5].Selected" type="hidden" value="false">
-					<label class="has-help" for="fbt-cb" id="type-fbt">Fringe Benefits Tax (FBT)<a class="cd-btn help" href="#help-selectregistrationsfbt"><span>Help - Fringe Benefits Tax (FBT)</span></a></label>
-				</p>
-			</div>
-			<div class="col6 last">
-				<p>
-					<input id="lct-cb" name="lct-cb" type="checkbox" value="true">
-					<label class="has-help" for="lct-cb" id="type-gst">Luxury Car Tax (LCT)<a class="cd-btn help" href="#help-gst"><span>Help - Goods &amp; Services Tax (GST) </span></a></label>
-				</p>
-				<p>
-					<input id="ftc-cb" name="ftc-cb" type="checkbox" value="true">
-					<label class="has-help" for="ftc-cb" id="type-payg">Fuel Tax Credits (FTC)<a class="cd-btn help" href="#help-payg"><span>Help - Pay As You Go (PAYG) Withholding </span></a></label>
-				</p>
-				<p>
-					<input id="wet-cb" name="wet-cb" type="checkbox" value="true">
-					<label class="has-help" for="wet-cb" id="type-wet">Wine Equalisation Tax (WET)<a class="cd-btn help" href="#help-selectregistrationsfbt"><span>Help - Fringe Benefits Tax (FBT)</span></a></label>
-				</p>
-			</div>
-		</div>
-	</fieldset>
-	<fieldset id="gst-form" class="margin-top-075" style="display: none;">
-		<legend class="margin4 larger">Goods &amp; Services Tax (GST)</legend>
+<div id="gst-form" style="display: none">
+	<fieldset class="margin-top-075">
+		<legend class="larger">Goods &amp; Services Tax (GST)</legend>
 		<div class="grid-row">
 			<div class="col4">
 				<label class="input-right" for="GstDetails_RegistrationDate">What is the start date of your GST registration? <span class="field-note nowrap">(dd/mm/yyyy)</span></label>
@@ -444,15 +374,27 @@ layout: default
 			<div class="col4">
 				<label for="gst-turnover" class="input-right">What is your annual GST turnover? <a class="cd-btn help" href="#help-taxationgstdetailsgstturnover"><span>Help - GST turnover</span></a></label>
 			</div>
-			<div class="col8 last">
-				<select id="gst-turnover">
-					<option value="">--- select turnover ---</option>
-					<option>$0 - $74,999</option>
-					<option>$75,000 - $149,999</option>
-					<option>$150,000 - $1,999,999</option>
-					<option>$2,000,000 - $19,999,999</option>
-					<option>$20 million and over</option>
-				</select>
+				<div class="col8 last custom-controls">
+					<p>
+						<input id="GstDetails_GstTurnoverTypes_0_" name="GstDetails.GstTurnover" type="radio" value="Item074999">
+						<label for="GstDetails_GstTurnoverTypes_0_" id="gst_turnover_label_0">$0 - $74,999</label>
+					</p>
+					<p>
+						<input id="GstDetails_GstTurnoverTypes_1_" name="GstDetails.GstTurnover" type="radio" value="Item75000149999">
+						<label for="GstDetails_GstTurnoverTypes_1_" id="gst_turnover_label_1">$75,000 - $149,999</label>
+					</p>
+					<p>
+						<input id="GstDetails_GstTurnoverTypes_2_" name="GstDetails.GstTurnover" type="radio" value="Item1500001999999">
+						<label for="GstDetails_GstTurnoverTypes_2_" id="gst_turnover_label_2">$150,000 - $1,999,999</label>
+					</p>
+					<p>
+						<input id="GstDetails_GstTurnoverTypes_3_" name="GstDetails.GstTurnover" type="radio" value="Item200000019999999">
+						<label for="GstDetails_GstTurnoverTypes_3_" id="gst_turnover_label_3">$2,000,000 - $19,999,999</label>
+					</p>
+					<p>
+						<input id="GstDetails_GstTurnoverTypes_4_" name="GstDetails.GstTurnover" type="radio" value="Item20MillionAndover">
+						<label for="GstDetails_GstTurnoverTypes_4_" id="gst_turnover_label_4">$20 million and over</label>
+					</p>
 			</div>
 		</fieldset>
 
@@ -569,8 +511,14 @@ layout: default
 			</div>
 		</fieldset>
 	</fieldset>
-	<fieldset id="payg-form" style="display: none;">
-		<legend class="margin4 larger">Pay As You Go (PAYG) Withholding</legend>
+	<div class="controls-container">
+		<button id="gst-save" class="btn btn-default ajax-button" type="button">Save</button>
+		<button id="gst-cancel" class="btn ajax-button" type="button">Cancel</button>
+	</div>
+</div>
+<div id="payg-form" style="display: none;">
+	<fieldset>
+		<legend class="larger">Pay As You Go (PAYG) Withholding</legend>
 		<div class="grid-row">
 			<div class="col4">
 				<label class="input-right" for="PaygDetails_RegistrationDate">What is the start date of your PAYG registration? <span class="field-note nowrap">(dd/mm/yyyy)</span></label>
@@ -642,145 +590,102 @@ layout: default
 		</fieldset>
 	</fieldset>
 	<div class="controls-container">
-		<button id="btn-save" class="btn btn-default ajax-button" type="button">Save</button>
-		<button id="btn-cancel" class="btn ajax-button" type="button">Cancel</button>
+		<button id="payg-save" class="btn btn-default ajax-button" type="button">Save</button>
+		<button id="payg-cancel" class="btn ajax-button" type="button">Cancel</button>
 	</div>
 </div>
-<div id="auth-form" style="display: none;">
-	<div id="associate-form" style="display: none;">
-		<fieldset id="Associates_PersonAssociate_Roles">
-			<legend class="margin4 has-help larger">Associate details</legend>
-			<div class="grid-row">
-				<div class="col4">
-					<label class="input-right" for="associate-type">Associate type</label>
-				</div>
-				<div class="col7">
-					<select id="associate-type">
-						<option value="">--- please select ---</option>
-						<option>Trustee</option>
-						<option>Public officer</option>
-						<option>Director</option>
-						<option>Partner</option>
-						<option>Office bearer of a club / association</option>
-					</select>
-				</div>
+<div id="associate-form" style="display: none;">
+	<fieldset id="Associates_PersonAssociate_Roles">
+		<legend class="has-help larger">Associate details</legend>
+		<div class="grid-row">
+			<div class="col4">
+				<label class="input-right" for="associate-type">Associate type</label>
 			</div>
-			<div class="grid-row">
-				<div class="col4">
-					<label class="input-right" for="Associates_PersonAssociate_GivenName">Given name</label>
-				</div>
-				<div class="col8 last">
-					<input id="Associates_PersonAssociate_GivenName" name="Associates.PersonAssociate.GivenName" type="text" value=""> 
-					
-				</div>
+			<div class="col7">
+				<select id="associate-type">
+					<option value="">--- please select ---</option>
+					<option>Trustee</option>
+					<option>Public officer</option>
+					<option>Director</option>
+					<option>Partner</option>
+					<option>Office bearer of a club / association</option>
+				</select>
 			</div>
-
-			<div class="grid-row">
-				<div class="col4">
-					<label class="input-right" for="Associates_PersonAssociate_OtherName">Other given name <span class="field-note optional">(optional)</span></label>
-				</div>
-				<div class="col8 last">
-					<input id="Associates_PersonAssociate_OtherName" name="Associates.PersonAssociate.OtherName" type="text" value=""> 
-					
-				</div>
-			</div>
-
-			<div class="grid-row">
-				<div class="col4">
-					<label class="input-right" for="Associates_PersonAssociate_FamilyName">Family name</label>
-				</div>
-				<div class="col8 last">
-					<input id="Associates_PersonAssociate_FamilyName" name="Associates.PersonAssociate.FamilyName" type="text" value=""> 
-					
-				</div>
-			</div>
-
-			<div class="grid-row">
-				<div class="col4">
-					<label class="input-right" for="Associates_PersonAssociate_TaxFileNumber">Tax File Number <span class="field-note optional">(optional)</span></label>
-				</div>
-				<div class="col8 last">
-					<input id="Associates_PersonAssociate_TaxFileNumber" name="Associates.PersonAssociate.TaxFileNumber" type="number" value=""> <a class="cd-btn help" href="#help-businessdetailspersondetailstaxfilenumber"><span>Help - Tax File Number (TFN)</span></a>
-					
-				</div>
-			</div>
-
-			<div class="grid-row">
-				<div class="col4">
-					<label class="input-right" for="Associates_PersonAssociate_DateOfBirth">Date of birth</label>
-				</div>
-				<div class="col8 last">
-					<input class="date hasDatepicker" data-val="true" data-val-date="The field DateOfBirth must be a date." id="Associates_PersonAssociate_DateOfBirth" name="Associates.PersonAssociate.DateOfBirth" type="text" value=""><button type="button" class="ui-datepicker-trigger"><span class="fa fa-calendar"></span></button>                    
-				</div>
-			</div>
-			<div class="grid-row">
-				<div class="col4">
-					<label class="input-right" for="ContactDetails_Email">Email</label>
-				</div>
-				<div class="col8 last">
-					<input id="ContactDetails_Email" name="ContactDetails.Email" type="email" value="email@email.com"> <a class="cd-btn help" href="#help-companydetailscontactdetailsemail"><span>Help - Email address</span></a>
-					
-				</div>
-			</div>
-			<div class="grid-row">
-				<div class="col4">
-					<label class="input-right" for="AuthorisedContacts_AuthorisedContact_BusinessHoursPhone">Phone number</label>
-				</div>
-				<div class="col8 last">
-					<input id="AuthorisedContacts_AuthorisedContact_BusinessHoursPhone" name="AuthorisedContacts.AuthorisedContact.BusinessHoursPhone" type="text" value=""> 
-					
-				</div>
-			</div>
-			
-		</fieldset>
-		<div class="margin4 controls-content margin-bottom">
-			<button class="btn btn-default ajax-button" id="add-person" type="button">Add</button>
-			<button class="btn cancel ajax-button" type="button" id="cancel-assoc">Cancel</button>
 		</div>
+		<div class="grid-row">
+			<div class="col4">
+				<label class="input-right" for="Associates_PersonAssociate_GivenName">Given name</label>
+			</div>
+			<div class="col8 last">
+				<input id="Associates_PersonAssociate_GivenName" name="Associates.PersonAssociate.GivenName" type="text" value=""> 
+				
+			</div>
+		</div>
+
+		<div class="grid-row">
+			<div class="col4">
+				<label class="input-right" for="Associates_PersonAssociate_OtherName">Other given name <span class="field-note optional">(optional)</span></label>
+			</div>
+			<div class="col8 last">
+				<input id="Associates_PersonAssociate_OtherName" name="Associates.PersonAssociate.OtherName" type="text" value=""> 
+				
+			</div>
+		</div>
+
+		<div class="grid-row">
+			<div class="col4">
+				<label class="input-right" for="Associates_PersonAssociate_FamilyName">Family name</label>
+			</div>
+			<div class="col8 last">
+				<input id="Associates_PersonAssociate_FamilyName" name="Associates.PersonAssociate.FamilyName" type="text" value=""> 
+				
+			</div>
+		</div>
+
+		<div class="grid-row">
+			<div class="col4">
+				<label class="input-right" for="Associates_PersonAssociate_TaxFileNumber">Tax File Number <span class="field-note optional">(optional)</span></label>
+			</div>
+			<div class="col8 last">
+				<input id="Associates_PersonAssociate_TaxFileNumber" name="Associates.PersonAssociate.TaxFileNumber" type="number" value=""> <a class="cd-btn help" href="#help-businessdetailspersondetailstaxfilenumber"><span>Help - Tax File Number (TFN)</span></a>
+				
+			</div>
+		</div>
+
+		<div class="grid-row">
+			<div class="col4">
+				<label class="input-right" for="Associates_PersonAssociate_DateOfBirth">Date of birth</label>
+			</div>
+			<div class="col8 last">
+				<input class="date hasDatepicker" data-val="true" data-val-date="The field DateOfBirth must be a date." id="Associates_PersonAssociate_DateOfBirth" name="Associates.PersonAssociate.DateOfBirth" type="text" value=""><button type="button" class="ui-datepicker-trigger"><span class="fa fa-calendar"></span></button>                    
+			</div>
+		</div>
+		<div class="grid-row">
+			<div class="col4">
+				<label class="input-right" for="ContactDetails_Email">Email</label>
+			</div>
+			<div class="col8 last">
+				<input id="ContactDetails_Email" name="ContactDetails.Email" type="email" value="email@email.com"> <a class="cd-btn help" href="#help-companydetailscontactdetailsemail"><span>Help - Email address</span></a>
+				
+			</div>
+		</div>
+		<div class="grid-row">
+			<div class="col4">
+				<label class="input-right" for="AuthorisedContacts_AuthorisedContact_BusinessHoursPhone">Phone number</label>
+			</div>
+			<div class="col8 last">
+				<input id="AuthorisedContacts_AuthorisedContact_BusinessHoursPhone" name="AuthorisedContacts.AuthorisedContact.BusinessHoursPhone" type="text" value=""> 
+				
+			</div>
+		</div>
+		
+	</fieldset>
+	<div class="controls-content margin-bottom">
+		<button class="btn btn-default ajax-button" id="add-person" type="button">Add</button>
+		<button class="btn cancel ajax-button" type="button" id="cancel-assoc">Cancel</button>
 	</div>
-	<div id="assoc-summary">
-		<div class="cart-container" id="added-associates" style="display: none;">
-			<div class="result-row ">
-				<div class="result-cell cell-icon">
-					<span class="fa fa-user blue"></span>
-				</div>
-				<div class="result-cell cell-detail">
-					<h3>Fred Albert Nerk</h3>
-					<p>Director</p>
-				</div>
-				<div class="result-cell cell-action">
-					<a class="edit ajax-link" href="" data-ajax-action="LHX3HqVtY2Ci74OFTbxWNMuoaDvhnBmczk2RHNqtI8A="><span>Edit</span></a>
-					<input value="false" data-val="true" data-val-required="The IsEdit field is required." id="Associates_Associates_0__IsEdit" name="Associates.Associates[0].IsEdit" type="hidden">
-					&nbsp;
-					<a id="LinkRemoveAssociate0" class="remove" href="" onclick="javascript:void(0);" data-ajax-action="RemoveAssociate" data-ajax-id="wQ1U7sFMOpq0RPiqsBiFdQ=="><span>Remove</span></a>
-				</div>
-			</div>
-			<div class="result-row ">
-				<div class="result-cell cell-icon">
-					<span class="fa fa-user blue"></span>
-				</div>
-				<div class="result-cell cell-detail">
-					<h3>Simon Arthur Bourke</h3>
-					<p>Public Officer</p>
-				</div>
-				<div class="result-cell cell-action">
-					<a class="edit ajax-link" href="" data-ajax-action="LHX3HqVtY2Ci74OFTbxWNMuoaDvhnBmczk2RHNqtI8A="><span>Edit</span></a>
-					<input value="false" data-val="true" data-val-required="The IsEdit field is required." id="Associates_Associates_0__IsEdit" name="Associates.Associates[0].IsEdit" type="hidden">
-					&nbsp;
-					<a id="LinkRemoveAssociate0" class="remove" href="" onclick="javascript:void(0);" data-ajax-action="RemoveAssociate" data-ajax-id="wQ1U7sFMOpq0RPiqsBiFdQ=="><span>Remove</span></a>
-				</div>
-			</div>
-		</div>
-		<div class="margin-top-075 margin-bottom">
-			<button id="add-assoc" class="btn"><span class="fa fa-user blue"></span> Add associate</button>
-		</div>
-	</div>
-	<div class="controls-container">
-        <button class="btn btn-default ajax-button" id="save-persons" type="button">Save</button>
-        <button class="btn cancel ajax-button" type="button" id="cancel-persons">Cancel</button>
-    </div>
 </div>
-<script src="{{ site.baseurl }}/scripts/jquery.blockUI.js"></script>
+<script src="{{ site.baseurl }}/scripts/jquery.blockui.js"></script>
 <script type="text/javascript">
 	function scrollToAndFocus(id) {
 		scrollToTargetElement(id);
@@ -807,30 +712,81 @@ layout: default
 			$(".retrieve").show();
 		}, 5000);
 		
-		$("#btn-apply, #edit-rego").click(function() {
-			$("#main").hide();
-			$("#tax-form").show('fast');
+		$("#rego-select").change(function(){
+			if ($(this).val() == "")
+				$("#btn-apply").attr("disabled", true);
+			else
+				$("#btn-apply").removeAttr("disabled");
+		});
+		
+		$("#btn-apply").click(function() {
+			switch ($("#rego-select").val()) {
+				case "gst":
+					$("#main").hide();
+					$("#gst-form").show('fast');
+					break;
+				case "payg":
+					$("#main").hide();
+					$("#payg-form").show('fast');
+					break;
+			}
 		});
 
 		$("#btn-add-auth, #edit-auth").click(function() {
 			$("#main").hide();
-			$("#auth-form").show('fast');
+			$("#associate-form").show('fast');
 		});
 		
-		$("#btn-cancel, #btn-save").click(function() {
-			$("#tax-form").hide();
-			$("#available-regos").hide();
+		$("#edit-gst").click(function(){
+			$("#main").hide();
+			$("#gst-form").show('fast');
+		});
+		
+		$("#gst-save").click(function() {
+			$("#gst-form").hide();
+			$("#no-regos-added").hide();
 			$("#rego-display").show();
+			$("#contacts").show();
 			$("#declaration").show();
+			$("#gst-display").show();
 			$("#tax-declaration").show();
+			$("#opt-gst").remove();
 			$("#main").show();
 			scrollToAndFocus("#rego-display");
 		});
 		
-		$("#cancel-persons, #save-persons").click(function() {
-			$("#auth-form").hide();
+		$("#gst-cancel").click(function() {
+			$("#gst-form").hide();
+			$("#main").show();
+		});
+				
+		$("#edit-payg").click(function(){
+			$("#main").hide();
+			$("#payg-form").show('fast');
+		});
+				
+		$("#payg-save").click(function() {
+			$("#payg-form").hide();
+			$("#no-regos-added").hide();
+			$("#rego-display").show();
+			$("#contacts").show();
+			$("#declaration").show();
+			$("#payg-display").show();
+			$("#tax-declaration").show();
+			$("#opt-payg").remove();
+			$("#main").show();
+			scrollToAndFocus("#rego-display");
+		});
+		
+		$("#payg-cancel").click(function() {
+			$("#payg-form").hide();
+			$("#main").show();
+		});
+		$("#add-person, #cancel-assoc").click(function() {
+			$("#associate-form").hide();
 			$("#none-added").hide();
 			$("#auth-display").show();
+			$("#contacts").show();
 			$("#declaration").show();
 			$("#auskey-declaration").show();
 			$("#main").show();
@@ -851,19 +807,6 @@ layout: default
 			} else {
 				$("#payg-form").hide('fast');
 			}
-		});
-		
-		$("#add-assoc").click(function() {
-			$("#assoc-summary").hide();
-			$("#save-persons, #cancel-persons").attr("disabled", true);
-			$("#associate-form").show("fast");
-		});
-		
-		$("#add-person, #cancel-assoc").click(function() {
-			$("#associate-form").hide();
-			$("#added-associates").show();
-			$("#save-persons, #cancel-persons").removeAttr("disabled");
-			$("#assoc-summary").show('fast');
 		});
 	});
 
