@@ -79,14 +79,15 @@ layout: default
 		margin-top: .5em;
 		width: 80%;
 	}
+
 	.retrieve {
 		display: none;
 	}
-/*	
-	table tbody:nth-child(n+1) tr:first-child td {
+
+	table tbody:nth-of-type(n+2) tr:first-child td {
 		border-top: 4px solid #e7e7e7;
 	}
-*/	
+	
 	button span.fa-user {
 		margin-right: 10px;
 		font-size: 125%;
@@ -108,6 +109,22 @@ layout: default
 	button.ico-remove:hover, button.ico-remove:focus {
 		background: url(../img/sprite-trash.png) 2px 2px no-repeat #000;
 		background-size: 25px;
+	}
+	
+	#registrations {
+		position: relative;
+	}
+	
+	#rego-select {
+		width:320px;
+		background-color: #eee;
+	}
+	
+	span.select-spinner:before {
+		position: absolute;
+		content: url('{{ site.baseurl }}/img/ajax-loader.gif');
+		left: -25px;
+		top: 18px;
 	}
 
 </style>
@@ -131,12 +148,12 @@ layout: default
 				</tr>
 				<tr>
 					<td class="field-name bold">Entity name</td>
-					<td class="input-value"><span class="retrieve">Really Awesome Business Pty Ltd</span></td>
+					<td class="input-value"><span class="spinner"><img src="{{ site.baseurl }}/img/ajax-loader.gif" alt="loading" /> </span><span class="retrieve">Really Awesome Business Pty Ltd</span></td>
 				</tr>
 				<tr>
 					<td class="field-name bold top">Current tax registrations</td>
 					<td class="input-value">
-						<p class="retrieve" style="margin: 0">None currently registered.</p>
+						<p style="margin: 0"><span class="spinner"><img src="{{ site.baseurl }}/img/ajax-loader.gif" alt="loading" /> </span><span class="retrieve">None currently registered.</span></p>
 						<!-- <ul class="reg-list retrieve">
 							<li><span class="fa fa-check green"></span> Goods and Services Tax (GST)</li>
 							<li><span class="fa fa-check green"></span> Pay As You Go (PAYG) withholding</li>
@@ -215,10 +232,11 @@ layout: default
                 </tbody>
 			</table>
 		</div>
-		<div class="grid-row clearfix">
+		<div id="registrations" class="grid-row clearfix">
 			<div class="col12 last">
-				<select id="rego-select" style="width: 320px">
-					<option value="">--- select registration ---</option>
+				<span class="select-spinner"></span>
+				<select id="rego-select" disabled>
+					<option id="opt-noopt" value="">loading details</option>
 					<option id="opt-gst" value="gst">Goods and Services Tax (GST)</option>
 					<option id="opt-payg" value="payg">Pay As You Go (PAYG) Withholding</option>
 					<option>Fringe Benefits Tax (FBT)</option>
@@ -241,11 +259,11 @@ layout: default
 								<th>Input value</th>
 							</tr>
 						</thead>
-						<tbody>
+						<tbody id="ass1" style="display: none;">
 							<tr>
 								<th style="vertical-align: middle"><span class="fa fa-user blue"></span> Fred Albert Nerk</th>
 								<th>
-									<button type="button" id="delete-rego" class="btn btn-default ico-remove">Remove</button>
+									<button type="button" id="delete-ass1" class="btn btn-default ico-remove">Remove</button>
 									<button type="button" id="edit-auth" class="btn btn-default ico-edit">Edit</button>
 								</th>
 							</tr>
@@ -270,11 +288,11 @@ layout: default
 								<td class="input-value">55555555</td>
 							</tr>
 						</tbody>
-						<tbody>
+						<tbody id="ass2" style="display: none;">
 							<tr>
 								<th style="vertical-align: middle"><span class="fa fa-user blue"></span> Simon Arthur Bourke</th>
 								<th>
-									<button type="button" id="delete-rego" class="btn btn-default ico-remove">Remove</button>
+									<button type="button" id="delete-ass2" class="btn btn-default ico-remove">Remove</button>
 									<button type="button" id="edit-auth" class="btn btn-default ico-edit">Edit</button>
 								</th>
 							</tr>
@@ -302,7 +320,7 @@ layout: default
 					</table>
 				</div>
 				<div class="margin-top-075">
-					<button id="btn-add-auth" class="btn btn-inline ajax-button" type="button">Add authorisation</button>
+					<button id="btn-add-auth" class="btn btn-inline ajax-button" type="button" disabled>Add authorisation</button>
 				</div>
 			</div>
 		</div>
@@ -685,6 +703,37 @@ layout: default
 		<button class="btn cancel ajax-button" type="button" id="cancel-assoc">Cancel</button>
 	</div>
 </div>
+<div id="dialogOne" style="display:none;">
+	<h1>Confirm remove</h1> 
+	<p>Are you sure you want remove the application?</p> 
+	<input id="remove-gst" type="button" class="btn btn-default" value="Yes, remove"/> 
+	<a href="#" class="margin-left-075" onclick='visionaustralia.closeDialog("dialogOne");'>Cancel</a>
+</div>
+<div id="dialogTwo" style="display:none;">
+	<h1>Confirm remove</h1> 
+	<p>Are you sure you want remove the application?</p> 
+	<input id="remove-payg" type="button" class="btn btn-default" value="Yes, remove"/> 
+	<a href="#" class="margin-left-075" onclick='visionaustralia.closeDialog("dialogTwo");'>Cancel</a>
+</div>
+<div id="dialogThree" style="display:none;">
+	<h1>Confirm remove</h1> 
+	<p>Are you sure you want remove the associate?</p> 
+	<input id="remove-ass1" type="button" class="btn btn-default" value="Yes, remove"/> 
+	<a href="#" class="margin-left-075" onclick='visionaustralia.closeDialog("dialogThree");'>Cancel</a>
+</div>
+<div id="dialogFour" style="display:none;">
+	<h1>Confirm remove</h1> 
+	<p>Are you sure you want remove the associate?</p> 
+	<input id="remove-ass2" type="button" class="btn btn-default" value="Yes, remove"/> 
+	<a href="#" class="margin-left-075" onclick='visionaustralia.closeDialog("dialogFour");'>Cancel</a>
+</div>
+<script src="{{ site.baseurl }}/scripts/vadialog.js"></script> 
+<script type="text/javascript">
+	visionaustralia.addDialog("delete-gst", "dialogOne");
+	visionaustralia.addDialog("delete-payg", "dialogTwo");
+	visionaustralia.addDialog("delete-ass1", "dialogThree");
+	visionaustralia.addDialog("delete-ass2", "dialogFour");
+</script>
 <script src="{{ site.baseurl }}/scripts/jquery.blockUI.js"></script>
 <script type="text/javascript">
 	function scrollToAndFocus(id) {
@@ -697,20 +746,24 @@ layout: default
 	
 	$(document).ready(function () {
 	
-		$("#business-details").block({
-			message: '<p id="loading-status" role="progressbar" aria-valuetext="loading">Retrieving ABN details <img class="loading-ellipsis" src="{{ site.baseurl }}/img/ellipsis.gif" /></p>',
-			css: {
-				padding: "10px"
-			},
-			overlayCSS: {
-				backgroundColor: '#bbb',
-				borderRadius: '10px'
-			}
-		});
+		//$("#business-details").block({
+		//	message: '<p id="loading-status" role="progressbar" aria-valuetext="loading">Retrieving ABN details <img class="loading-ellipsis" src="{{ site.baseurl }}/img/ellipsis.gif" /></p>',
+		//	css: {
+		//		padding: "10px"
+		//	},
+		//	overlayCSS: {
+		//		backgroundColor: '#bbb',
+		//		borderRadius: '10px'
+		//	}
+		//});
 		window.setTimeout(function() {
-			$("#business-details").unblock();
-			$(".retrieve").show();
-		}, 5000);
+			// $("#business-details").unblock();
+			$(".retrieve").fadeIn('slow');
+			$(".spinner, .select-spinner").hide();
+			$("#opt-noopt").html("--- select registration ---");
+			$("#rego-select").removeAttr("disabled").css("background-color", "#fff");
+			$("#btn-add-auth").removeAttr("disabled");
+		}, 4000);
 		
 		$("#rego-select").change(function(){
 			if ($(this).val() == "")
@@ -750,7 +803,8 @@ layout: default
 			$("#declaration").show();
 			$("#gst-display").show();
 			$("#tax-declaration").show();
-			$("#opt-gst").remove();
+			$("#opt-gst").hide();
+			$("#rego-select").val("");
 			$("#main").show();
 			scrollToAndFocus("#rego-display");
 		});
@@ -773,7 +827,8 @@ layout: default
 			$("#declaration").show();
 			$("#payg-display").show();
 			$("#tax-declaration").show();
-			$("#opt-payg").remove();
+			$("#opt-payg").hide();
+			$("#rego-select").val("");
 			$("#main").show();
 			scrollToAndFocus("#rego-display");
 		});
@@ -790,6 +845,7 @@ layout: default
 			$("#declaration").show();
 			$("#auskey-declaration").show();
 			$("#main").show();
+			$("#auth-display table tbody:hidden").first().show();
 			scrollToAndFocus("#auth-display");
 		});
 
@@ -806,6 +862,66 @@ layout: default
 				$("#payg-form").show('fast');
 			} else {
 				$("#payg-form").hide('fast');
+			}
+		});
+		
+		$("#remove-gst").click(function() {
+			visionaustralia.closeDialog("dialogOne");
+			$("#gst-display").hide();
+			$("#opt-gst").show();
+			if (!$("#payg-display").is(":visible")) {
+				$("#no-regos-added").show();
+				$("#rego-display").hide();
+				if ($("#none-added").is(":visible")) {
+					$("#declaration").hide();
+				}
+				$("#tax-declaration").hide();
+				$("#main").show();
+			}
+		});
+		
+		$("#remove-payg").click(function() {
+			visionaustralia.closeDialog("dialogTwo");
+			$("#payg-display").hide();
+			$("#opt-payg").show();
+			if (!$("#gst-display").is(":visible")) {
+				$("#no-regos-added").show();
+				$("#rego-display").hide();
+				if ($("#none-added").is(":visible")) {
+					$("#declaration").hide();
+				}
+				$("#tax-declaration").hide();
+				$("#main").show();
+			}
+		});
+		
+		$("#remove-ass1").click(function() {
+			visionaustralia.closeDialog("dialogThree");
+			$("#ass1").hide();
+			if (!$("#ass2").is(":visible")) {
+				$("#none-added").show();
+				$("#contacts").hide();
+				$("#auth-display").hide();
+				if ($("#no-regos-added").is(":visible")) {
+					$("#declaration").hide();
+				}
+				$("#auskey-declaration").hide();
+				$("#main").show();
+			}
+		});
+		
+		$("#remove-ass2").click(function() {
+			visionaustralia.closeDialog("dialogFour");
+			$("#ass2").hide();
+			if (!$("#ass1").is(":visible")) {
+				$("#none-added").show();
+				$("#contacts").hide();
+				$("#auth-display").hide();
+				if ($("#no-regos-added").is(":visible")) {
+					$("#declaration").hide();
+				}
+				$("#auskey-declaration").hide();
+				$("#main").show();
 			}
 		});
 	});
