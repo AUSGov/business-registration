@@ -141,9 +141,8 @@ visionaustralia.addDialog = function (linkId, dialogId,fBeforeOpen,fForCloseButt
 
 			ev.preventDefault();
 			
-        }//end open ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
-		
-		
+        }//end open
+
 		function close(){
 			if(!isOpen)return;
 			isOpen = false;
