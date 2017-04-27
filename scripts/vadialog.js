@@ -54,7 +54,7 @@ visionaustralia.addDialog = function (linkId, dialogId,fBeforeOpen,fForCloseButt
             shadow = $('<div class="vashadow"></div>');
             dialog = $('<div class="vadialog"></div>');
 			
-			var path = "img"
+			var path = "/img"
             
             var closeButton = $('<button class="vaCloseButton" aria-label="Close dialog"><img src="' + path + '/ico-close.png" alt="Close" /></button>');
 			var startCentinel = $('<span class="vaOffscreen" tabindex="0"></span>');
