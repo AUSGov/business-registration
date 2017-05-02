@@ -875,8 +875,10 @@ layout: default
 		
 	</fieldset>
 	<div class="controls-content margin-bottom">
+	    <div class="controls-container">
 		<button class="btn btn-default ajax-button" id="add-contact" type="button">Add</button>
 		<button class="btn cancel ajax-button" type="button" id="cancel-contact">Cancel</button>
+	    </div>
 	</div>
 </div>
 <div id="dialogOne" style="display:none;">
