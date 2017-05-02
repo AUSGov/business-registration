@@ -788,7 +788,7 @@ layout: default
 		<table>
 			<tbody>
 			        <tr>
-				<td colspan="3">Existing contacts</td>
+				<th colspan="3">Existing contacts</th>
 				</tr>
 				<tr>
 					<td>Fred Nerk</td>
