@@ -787,6 +787,9 @@ layout: default
 		<p>You can enter a new contact or copy and modify the details from an existing contact.</p>
 		<table>
 			<tbody>
+			        <tr>
+				<td colspan="3">Existing contacts</td>
+				</tr>
 				<tr>
 					<td>Fred Nerk</td>
 					<td>Accountant</td>
@@ -799,7 +802,7 @@ layout: default
 				</tr>
 			</tbody>
 		</table>
-		<h3 class="margin4">Authorised contact details</h3>
+		<h3 class="margin4">Contact details</h3>
 		<div class="grid-row">
 			<div class="col4">
 				<label class="input-right" for="Associates_PersonAssociate_GivenName">Given name</label>
