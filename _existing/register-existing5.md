@@ -169,7 +169,8 @@ layout: default
 		display: inline !important;
 	 }
 
-	 ul.btn-list > li > button:hover > span.fa {
+	 ul.btn-list > li > button:hover > span.fa,
+	 ul.btn-list > li > button:focus > span.fa {
 		margin-left: 10px;
 	}
 
