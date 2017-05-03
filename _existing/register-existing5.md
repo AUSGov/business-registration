@@ -149,15 +149,15 @@ layout: default
 	 }
 	 
 	 ul.btn-list > li > button {
-		border: 1px solid transparent;
-		background-color: transparent;
+		border: 1px solid #eee;
+		background-color: #f0f0f0;
+		border-radius: 5px;
 	 }
 	 
 	 ul.btn-list > li > button:hover,
 	 ul.btn-list > li > button:focus {
 		border: 1px solid #aaa;
 		background-color: #ddd;
-		border-radius: 5px;
 	 }
 	 
 	 ul.btn-list > li > button:hover > span,
@@ -426,12 +426,28 @@ layout: default
 				</ul>
 			</div>
 			<p>Please complete the declaration to submit your changes.</p>
+			<div class="grid-row">
+				<div class="col4">
+					<p class="input-right"><strong>Person making the declaration</strong></p>
+				</div>
+				<div class="col8 last">
+					<p>Michael Anthony Ross</p>
+				</div>
+			</div>
+			<div class="grid-row clearfix">
+				<div class="col4">
+					<label class="input-right">Position held</label>
+				</div>
+				<div class="col8 last">
+					<input type="text" id="position" value="Director" disabled/>
+				</div>
+			</div>
 			<div id="ajax-container-for-declaration">
 				<div class="declaration-wrapper margin-top-075">
 					<div class="grid-row">
 						<fieldset class="custom-controls">
 							<!-- <legend class="larger no-padding">Tax Registrations</legend> -->
-							<p>I, <strong>Michael Anthony Ross</strong>, declare that:</p>
+							<p>I declare that:</p>
 							<p class="custom-controls">
 								<input data-val="true" data-val-required="The ATOTrueAndCorrectCheckBox field is required." id="ATOTrueAndCorrectCheckBox" name="ATOTrueAndCorrectCheckBox" type="checkbox" value="true" disabled><input name="ATOTrueAndCorrectCheckBox" type="hidden" value="false">
 								<label id="ato-trueandcorrect-check" for="ATOTrueAndCorrectCheckBox">The information provided in this application is true and correct. </label>
@@ -783,12 +799,12 @@ layout: default
 </div>
 <div id="contact-form" class="confirmation" style="display: none;">
 	<fieldset id="Associates_PersonAssociate_Roles">
-		<legend class="has-help larger">Authorised contact</legend>
+		<legend class="larger">Authorised contact</legend>
 		<p>You can enter a new contact or copy and modify the details from an existing contact.</p>
 		<table>
 			<tbody>
-			        <tr>
-				<th colspan="3">Existing contacts</th>
+				<tr>
+					<th colspan="3">Existing contacts</th>
 				</tr>
 				<tr>
 					<td>Fred Nerk</td>
@@ -1007,6 +1023,7 @@ layout: default
 			// $("#decl-types").show();
 			// $("#next-cd-btn").removeAttr("disabled");
 			$("#ATOTrueAndCorrectCheckBox").removeAttr("disabled");
+			$("#position").removeAttr("disabled");
 			$("#declaration").removeClass("disabled");
 			$("#gst-display").show();
 			$("#opt-gst").hide();
@@ -1029,6 +1046,7 @@ layout: default
 			// $("#decl-types").show();
 			// $("#next-cd-btn").removeAttr("disabled");
 			$("#ATOTrueAndCorrectCheckBox").removeAttr("disabled");
+			$("#position").removeAttr("disabled");
 			$("#declaration").removeClass("disabled");
 			$("#fbt-display").show();
 			$("#opt-fbt").hide();
@@ -1053,6 +1071,7 @@ layout: default
 			$("#rego-display").show();
 			$("#contacts").show();
 			$("#ATOTrueAndCorrectCheckBox").removeAttr("disabled");
+			$("#position").removeAttr("disabled");
 			$("#declaration").removeClass("disabled");
 			$("#payg-display").show();
 			$("#tax-declaration").show();
@@ -1072,6 +1091,7 @@ layout: default
 			$("#no-regos-added").hide();
 			$("#rego-display").show();
 			$("#ATOTrueAndCorrectCheckBox").removeAttr("disabled");
+			$("#position").removeAttr("disabled");
 			$("#declaration").removeClass("disabled");
 			$("#ftc-display").show();
 			$("#tax-declaration").show();
