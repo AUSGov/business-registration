@@ -144,8 +144,12 @@ layout: default
 		text-decoration: underline;
 	 }
 	 
+	 ul.btn-list {
+	     list-style-type: none;
+	 }
+	 
 	 ul.btn-list li {
-		margin-left: -12px;
+		margin-left: -40px;
 	 }
 	 
 	 ul.btn-list > li > button {
@@ -436,7 +440,7 @@ layout: default
 			</div>
 			<div class="grid-row clearfix">
 				<div class="col4">
-					<label class="input-right">Position held</label>
+					<label class="input-right" for="position">Position held</label>
 				</div>
 				<div class="col8 last">
 					<input type="text" id="position" value="Director" disabled/>
