@@ -428,7 +428,7 @@ layout: default
 			<p>Please complete the declaration to submit your changes.</p>
 			<div class="grid-row">
 				<div class="col4">
-					<p class="input-right"><strong>Person making the declaration</strong></p>
+					<label class="input-right">Person making the declaration</label>
 				</div>
 				<div class="col8 last">
 					<p>Michael Anthony Ross</p>
