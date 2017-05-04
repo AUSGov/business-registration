@@ -36,7 +36,7 @@ layout: default-no-nav
 			</a>
 		</li>
 		<li class="register">
-			<a href="#">
+			<a href="register-auskey">
 				<div class="flag">
 					<div class="image">
 						<span class="fa topic register fa-unlock-alt"></span>
