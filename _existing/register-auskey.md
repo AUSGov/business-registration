@@ -91,8 +91,8 @@ layout: default
 		<h2>Access required</h2>
 		<div class="sub-section-content">
 			<h3>Applying for an AUSkey</h3>
-			<p>You can either apply for a new AUSkey for yourself if your business has not been issued with an AUSkey before, or you can use your AUSkey credentials to apply for additional AUSkeys on behalf of other business associates.</p>
-			<p>Make your selection below then click continue and you will be redirected to the appropriate login screen to validate your identity if required.</p>
+			<p>You can either apply for a new AUSkey for yourself, if your business has not been issued with an AUSkey before, or you can use your AUSkey credentials to apply for additional AUSkeys on behalf of other business associates.</p>
+			<p>Make your selection then click &apos;Continue&apos; and you will be redirected to the appropriate login screen to validate your identity if required.</p>
 			<div class="grid-row">
 				<div class="col4">
 					<label class="input-right" for="auskey-type">Are you applying for a new AUSkey for yourself or on behalf of other business associate(s)?</label>
@@ -578,7 +578,7 @@ layout: default
 				$("#body-content").hide();
 				$("#b2c-login").show();
 			} else {
-				$("header, .top-banner, .environment, #body-content").hide();
+				$("header, footer, .top-banner, .environment, #body-content").hide();
 				$("#vanguard").show();
 				$(document.body).scrollTop(0);
 			}
@@ -587,7 +587,7 @@ layout: default
 		$("#b2c-login, #vanguard").click(function() {
 			$(this).hide();
 			$(".nav-item > a > span").html('mike.ross@business.com <span class="fa fa-bars"></span>');
-			$("header, .top-banner, .environment, #body-content").show();
+			$("header, footer, .top-banner, .environment, #body-content").show();
 			$("#body-content").show();
 			$("#access-details").removeClass("sub-section-open");
 			$("#abn-section").addClass("sub-section-open");
