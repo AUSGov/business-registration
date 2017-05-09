@@ -234,7 +234,8 @@ layout: default
 			<div id="rego-content">
 				<h4>Current registrations</h4>
 				<p>The following tax roles have already been registered with the Australian Taxation Office (ATO):</p>
-				<ul class="reg-list">
+				<p id="no-registrations" style="display: none;">There are no registrations for this branch.</p>
+				<ul id="reg-list" class="reg-list">
 					<li><span class="fa fa-check green"></span> Goods &amp; Services Tax</li>
 				</ul>
 				<div id="rego-display" style="display: none;">
@@ -345,6 +346,10 @@ layout: default
 				<p>Select from the following to apply for the associated tax registration:</p>
 				<table class="btn-list" style="width: inherit">
 					<tbody>
+						<tr id="opt-gst" style="display: none;">
+							<td>Goods and Services Tax (GST)</td>
+							<td><button type="button" id="apply-gst" class="btn btn-default ico-edit" style="float: none;">Add</button></td>
+						</tr>
 						<tr id="opt-payg">
 							<td>Pay As You Go (PAYG) Withholding</td>
 							<td><button type="button" id="apply-payg" class="btn btn-default ico-edit" style="float: none;">Add</button></td>
@@ -1014,6 +1019,12 @@ layout: default
 			}
 		});
 		
+		$("#apply-gst, #edit-gst").click(function() {
+			scrollToAndFocus("body");
+			$("#main").hide();
+			$("#gst-form").show('fast');
+		});
+		
 		$("#apply-payg, #edit-payg").click(function() {
 			scrollToAndFocus("body");
 			$("#main").hide();
@@ -1302,9 +1313,14 @@ layout: default
 			$("#rego-update-msg").hide();
 			$("#branch-div .branch-spinner").css("display", "inline-block");
 			window.setTimeout(function() {
+				$("#opt-gst").show();
+				$("#no-registrations").show();
+				$("#reg-list").hide();
 				$("#branch-div .branch-spinner").hide();
 				$("#rego-update-msg").show();
-				$("#rego-content").slideDown();
+				$("#rego-content").slideDown(function() {
+					scrollToAndFocus("#all-content");
+				});
 			}, 3000);
 		});
 		
