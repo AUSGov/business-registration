@@ -144,14 +144,10 @@ layout: default
 		text-decoration: underline;
 	 }
 	 
-	 ul.btn-list {
-	     list-style-type: none;
-	 }
-	 
 	 ul.btn-list li {
-		margin-left: -40px;
+		margin-left: -12px;
 	 }
-	 
+	 /*
 	 ul.btn-list > li > button {
 		border: 1px solid #eee;
 		background-color: #f0f0f0;
@@ -169,18 +165,27 @@ layout: default
 		display: inline !important;
 	 }
 
-	 ul.btn-list > li > button:hover > span.fa,
-	 ul.btn-list > li > button:focus > span.fa {
+	ul.btn-list > li > button:hover > span.fa,
+	ul.btn-list > li > button:focus > span.fa {
 		margin-left: 10px;
+	}
+	*/
+	
+	.branch-spinner img {
+		width: 24px;
+	}
+
+	.btn-list tr td {
+		vertical-align: middle;
 	}
 
 </style>
 <h1 id="heading" tabindex="-1">{{ page.title }}</h1>
 <div class="confirmation">
-	<div id="main">
+	<div id="main" style="min-height: 500px;">
 		<p class="intro"><strong>Welcome to the Australian Government Business Registration Service.</strong></p>
 		<p>Here you can apply for additional registrations and authorisations for your business.<a class="cd-btn help" href="#"><span>more information</span></a></p>
-		<h3>Business details</h3>
+		<h3>Additional tax registrations</h3>
 		<table id="business-details">
 			<thead class="visuallyhidden">
 				<tr>
@@ -209,264 +214,274 @@ layout: default
 				</tr>
 			</tbody>
 		</table>
-		<h3 id="taxreg-heading">Tax registrations</h3>
-		<h4>Current registrations</h4>
-		<p>The following roles have already been registered with the Australian Taxation Office (ATO):</p>
-		<ul class="reg-list">
-			<li><span class="fa fa-check green"></span> Goods &amp; Services Tax</li>
-		</ul>
-		<div id="rego-display" style="display: none;">
-			<h4>Registrations added</h4>
-			<p>You have provided details to apply for the following tax roles:</p>
-			<table>
-				<thead class="visuallyhidden">
-					<tr>
-						<th>Field item</th>
-						<th>Input value</th>
-					</tr>
-				</thead>
-				<tbody id="gst-display" style="display: none;">
-					<tr>
-						<th style="vertical-align: middle"><span class="fa fa-plus orange"></span> Goods &amp; Services Tax (GST)</th>
-						<th>
-							<button type="button" id="delete-gst" class="btn btn-default ico-remove">Remove</button>
-							<button type="button" id="edit-gst" class="btn btn-default ico-edit">Edit</button>
-						</th>
-					</tr>
-					<tr>
-						<td class="field-name">Registration start date</td>
-						<td class="input-value">18/04/2017</td>
-					</tr>
-					<tr>
-						<td class="field-name">Turnover</td>
-						<td class="input-value">$0 - $74,999</td>
-					</tr>
-					<tr>
-						<td class="field-name">Lodgement frequency</td>
-						<td class="input-value">Annually</td>
-					</tr>
-					<tr>
-						<td class="field-name">Accounting method</td>
-						<td class="input-value">Accrual</td>
-					</tr>
-					<tr>
-						<td class="field-name">Import goods?</td>
-						<td class="input-value">No</td>
-					</tr>
-				</tbody>
-				<tbody id="payg-display" style="display: none;">
-					<tr>
-						<th style="vertical-align: middle"><span class="fa fa-plus orange"></span> Pay As You Go (PAYG) Withholding</th>
-						<th>
-							<button type="button" id="delete-payg" class="btn btn-default ico-remove">Remove</button>
-							<button type="button" id="edit-payg" class="btn btn-default ico-edit">Edit</button>
-						</th>
-					</tr>
-					<tr>
-						<td class="field-name">Registration start date</td>
-						<td class="input-value">18/04/2017</td>
-					</tr>
-					<tr>
-						<td class="field-name">Number of employees</td>
-						<td class="input-value">12</td>
-					</tr>
-					<tr>
-						<td class="field-name">Annual witholding amount</td>
-						<td class="input-value">$2,000,000</td>
-					</tr>
-					<tr>
-						<td class="field-name">Payment summary report method</td>
-						<td class="input-value">Electronic</td>
-					</tr>
-					<tr>
-						<td class="field-name">Royalties, dividends, interest or investment body</td>
-						<td class="input-value">No</td>
-					</tr>
-                </tbody>
-				<tbody id="fbt-display" style="display: none;">
-					<tr>
-						<th style="vertical-align: middle"><span class="fa fa-plus orange"></span> Fringe Benefits Tax (FBT)</th>
-						<th>
-							<button type="button" id="delete-fbt" class="btn btn-default ico-remove">Remove</button>
-							<button type="button" id="edit-fbt" class="btn btn-default ico-edit">Edit</button>
-						</th>
-					</tr>
-					<tr>
-						<td class="field-name">Registration start date</td>
-						<td class="input-value">18/04/2017</td>
-					</tr>
-                </tbody>
-				<tbody id="ftc-display" style="display: none;">
-					<tr>
-						<th style="vertical-align: middle"><span class="fa fa-plus orange"></span> Fuel Tax Credits (FTC)</th>
-						<th>
-							<button type="button" id="delete-ftc" class="btn btn-default ico-remove">Remove</button>
-							<button type="button" id="edit-ftc" class="btn btn-default ico-edit">Edit</button>
-						</th>
-					</tr>
-					<tr>
-						<td class="field-name">Registration start date</td>
-						<td class="input-value">5/04/2017</td>
-					</tr>
-					<tr>
-						<td class="field-name">Heavy vehicles on public roads?</td>
-						<td class="input-value">Yes</td>
-					</tr>
-					<tr>
-						<td class="field-name">Fuel type(s)</td>
-						<td class="input-value">Petrol</td>
-					</tr>
-                </tbody>
-			</table>
-		</div>
-		<h4>Available registrations</h4>
-		<p>Select from the following to apply for the associated tax registration:</p>
-		<ul class="btn-list">
-			<li id="opt-payg"><button id="apply-payg">Pay As You Go (PAYG) Withholding <span class="fa fa-plus orange" style="display: none"></span><span class="orange" style="display: none;"><strong> add</strong></span></button></li>
-			<li id="opt-fbt"><button id="apply-fbt">Fringe Benefits Tax (FBT)  <span class="fa fa-plus orange" style="display: none"></span><span class="orange" style="display: none;"><strong> add</strong></span></button></li>
-			<li><button>Luxury Car Tax (LCT)  <span class="fa fa-plus orange" style="display: none"></span><span class="orange" style="display: none;"><strong> add</strong></span></button></li>
-			<li id="opt-ftc"><button id="apply-ftc">Fuel Tax Credits (FTC)  <span class="fa fa-plus orange" style="display: none"></span><span class="orange" style="display: none;"><strong> add</strong></span></button></li>
-			<li><button>Wine Equalisation Tax (WET)  <span class="fa fa-plus orange" style="display: none"></span><span class="orange" style="display: none;"><strong> add</strong></span></button></li>
-		</ul>
-		<!-- <div id="registrations" class="grid-row clearfix">
-			<div class="col12 last">
-				<span class="select-spinner"></span>
-				<select id="rego-select" disabled>
-					<option id="opt-noopt" value="">loading details</option>
-					<option id="opt-gst" value="gst">Goods and Services Tax (GST)</option>
-					<option id="opt-payg" value="payg">Pay As You Go (PAYG) Withholding</option>
-					<option>Fringe Benefits Tax (FBT)</option>
-					<option>Luxury Car Tax (LCT)</option>
-					<option>Fuel Tax Credits (FTC)</option>
-					<option>Wine Equalisation Tax (WET)</option>
-				</select>
-				<button id="btn-apply" class="btn btn-inline ajax-button" type="button" disabled>Apply</button>
+		<div id="all-content" style="display: none;">
+			<h3 id="taxreg-heading">Tax registrations</h3>
+			<p>If your business has multiple branches you need to apply for the registrations for individual branches separately.</p>
+			<p class="label">Do you want to apply for registrations for a branch?</p>
+			<div class="radio-toggle clearfix" style="zoom: .8;">
+				<label class="on label-left" for="branchYes"><input id="branchYes" type="radio" name="register-branch"><span>Yes</span></label>
+				<label class="off label-right" for="branchNo"><input id="branchNo" type="radio" name="register-branch" checked><span>No</span></label>
 			</div>
-		</div> -->
-		<div id="contacts">
-			<h3>Authorised contacts</h3>
-			<div>
-				<p id="none-added">You may enter details here of persons authorised to be contacted by the Autralian Taxation Office (ATO) regarding your application.</p>
-				<div id="auth-display" class="margin-top-075" style="display: none;">
-					<table class="margin-bottom-075">
+			<div id="enter-branch" style="display: none">
+				<p>Enter the branch number in the field below and click "Retrieve" to update your existing registrations for the selected branch.</p>
+				<div id="branch-div">
+					<p><label for="branch">Branch number</label><br />
+					<input id="branch" type="text" style="width: 100px" /> <button id="branch-retrieve" class="btn btn-inline" type="button">Retrieve</button>
+					<span class="branch-spinner" style="display: none;"><img src="{{ site.baseurl }}/img/ajax-loader.gif" alt="loading" style="vertical-align: middle"/></span>
+					<span id="rego-update-msg" style="display: none;"><span class="fa fa-check green"></span> <span style=" font-size: 90%;">registrations updated</span></span></p>
+				</div>
+			</div>
+			<div id="rego-content">
+				<h4>Current registrations</h4>
+				<p>The following tax roles have already been registered with the Australian Taxation Office (ATO):</p>
+				<ul class="reg-list">
+					<li><span class="fa fa-check green"></span> Goods &amp; Services Tax</li>
+				</ul>
+				<div id="rego-display" style="display: none;">
+					<h4>Registrations added</h4>
+					<p>You have provided details to apply for the following tax roles:</p>
+					<table>
 						<thead class="visuallyhidden">
 							<tr>
 								<th>Field item</th>
 								<th>Input value</th>
 							</tr>
 						</thead>
-						<tbody id="ass1" style="display: none;">
+						<tbody id="gst-display" style="display: none;">
 							<tr>
-								<th style="vertical-align: middle"><span class="fa fa-user blue"></span> Fred Nerk</th>
+								<th style="vertical-align: middle"><span class="fa fa-plus orange"></span> Goods &amp; Services Tax (GST)</th>
 								<th>
-									<button type="button" id="delete-ass1" class="btn btn-default ico-remove">Remove</button>
-									<button type="button" id="edit-auth" class="btn btn-default ico-edit">Edit</button>
+									<button type="button" id="delete-gst" class="btn btn-default ico-remove">Remove</button>
+									<button type="button" id="edit-gst" class="btn btn-default ico-edit">Edit</button>
 								</th>
 							</tr>
 							<tr>
-								<td class="field-name">Position</td>
-								<td class="input-value">Accountant</td>
+								<td class="field-name">Registration start date</td>
+								<td class="input-value">18/04/2017</td>
 							</tr>
 							<tr>
-								<td class="field-name">Email</td>
-								<td class="input-value">fred@email.com</td>
+								<td class="field-name">Turnover</td>
+								<td class="input-value">$0 - $74,999</td>
 							</tr>
 							<tr>
-								<td class="field-name">Business hours phone</td>
-								<td class="input-value">55555555</td>
+								<td class="field-name">Lodgement frequency</td>
+								<td class="input-value">Annually</td>
 							</tr>
 							<tr>
-								<td class="field-name">Mobile</td>
-								<td class="input-value">66666666</td>
+								<td class="field-name">Accounting method</td>
+								<td class="input-value">Accrual</td>
 							</tr>
 							<tr>
-								<td class="field-name">After hours phone</td>
-								<td class="input-value">0455555555</td>
+								<td class="field-name">Import goods?</td>
+								<td class="input-value">No</td>
 							</tr>
 						</tbody>
-						<tbody id="ass2" style="display: none;">
+						<tbody id="payg-display" style="display: none;">
 							<tr>
-								<th style="vertical-align: middle"><span class="fa fa-user blue"></span> Simon Bourke</th>
+								<th style="vertical-align: middle"><span class="fa fa-plus orange"></span> Pay As You Go (PAYG) Withholding</th>
 								<th>
-									<button type="button" id="delete-ass2" class="btn btn-default ico-remove">Remove</button>
-									<button type="button" id="edit-auth" class="btn btn-default ico-edit">Edit</button>
+									<button type="button" id="delete-payg" class="btn btn-default ico-remove">Remove</button>
+									<button type="button" id="edit-payg" class="btn btn-default ico-edit">Edit</button>
 								</th>
 							</tr>
 							<tr>
-								<td class="field-name">Position</td>
-								<td class="input-value">Secretary</td>
+								<td class="field-name">Registration start date</td>
+								<td class="input-value">18/04/2017</td>
 							</tr>
 							<tr>
-								<td class="field-name">Email</td>
-								<td class="input-value">simon@email.com</td>
+								<td class="field-name">Number of employees</td>
+								<td class="input-value">12</td>
 							</tr>
 							<tr>
-								<td class="field-name">Business hours phone</td>
-								<td class="input-value">11111111</td>
+								<td class="field-name">Annual witholding amount</td>
+								<td class="input-value">$2,000,000</td>
 							</tr>
 							<tr>
-								<td class="field-name">Mobile</td>
-								<td class="input-value">22222222</td>
+								<td class="field-name">Payment summary report method</td>
+								<td class="input-value">Electronic</td>
 							</tr>
 							<tr>
-								<td class="field-name">After hours phone</td>
-								<td class="input-value">0433333333</td>
+								<td class="field-name">Royalties, dividends, interest or investment body</td>
+								<td class="input-value">No</td>
+							</tr>
+						</tbody>
+						<tbody id="fbt-display" style="display: none;">
+							<tr>
+								<th style="vertical-align: middle"><span class="fa fa-plus orange"></span> Fringe Benefits Tax (FBT)</th>
+								<th>
+									<button type="button" id="delete-fbt" class="btn btn-default ico-remove">Remove</button>
+									<button type="button" id="edit-fbt" class="btn btn-default ico-edit">Edit</button>
+								</th>
+							</tr>
+							<tr>
+								<td class="field-name">Registration start date</td>
+								<td class="input-value">18/04/2017</td>
+							</tr>
+						</tbody>
+						<tbody id="ftc-display" style="display: none;">
+							<tr>
+								<th style="vertical-align: middle"><span class="fa fa-plus orange"></span> Fuel Tax Credits (FTC)</th>
+								<th>
+									<button type="button" id="delete-ftc" class="btn btn-default ico-remove">Remove</button>
+									<button type="button" id="edit-ftc" class="btn btn-default ico-edit">Edit</button>
+								</th>
+							</tr>
+							<tr>
+								<td class="field-name">Registration start date</td>
+								<td class="input-value">5/04/2017</td>
+							</tr>
+							<tr>
+								<td class="field-name">Heavy vehicles on public roads?</td>
+								<td class="input-value">Yes</td>
+							</tr>
+							<tr>
+								<td class="field-name">Fuel type(s)</td>
+								<td class="input-value">Petrol</td>
 							</tr>
 						</tbody>
 					</table>
 				</div>
-				<div class="margin-top-075">
-					<button id="btn-add-contact" class="btn btn-inline ajax-button" type="button">Add contact</button>
+				<h4 id="available">Available registrations</h4>
+				<p>Select from the following to apply for the associated tax registration:</p>
+				<table class="btn-list" style="width: inherit">
+					<tbody>
+						<tr id="opt-payg">
+							<td>Pay As You Go (PAYG) Withholding</td>
+							<td><button type="button" id="apply-payg" class="btn btn-default ico-edit" style="float: none;">Add</button></td>
+						</tr>
+						<tr id="opt-fbt">
+							<td>Fringe Benefits Tax (FBT)</td>
+							<td><button type="button" id="apply-fbt" class="btn btn-default ico-edit" style="float: none;">Add</button></td>
+						</tr>
+						<tr>
+							<td>Luxury Car Tax (LCT)</td>
+							<td><button type="button" id="apply-lct" class="btn btn-default ico-edit" style="float: none;">Add</button></td>
+						</tr>
+						<tr id="opt-ftc">
+							<td>Fuel Tax Credits (FTC)</td>
+							<td><button type="button" id="apply-ftc" class="btn btn-default ico-edit" style="float: none;">Add</button></td>
+						</tr>
+						<tr>
+							<td>Wine Equalisation Tax (WET)</td>
+							<td><button type="button" id="apply-wet" class="btn btn-default ico-edit" style="float: none;">Add</button></td>
+						</tr>
+					</tbody>
+				</table>
+				<!-- <div id="registrations" class="grid-row clearfix">
+					<div class="col12 last">
+						<span class="select-spinner"></span>
+						<select id="rego-select" disabled>
+							<option id="opt-noopt" value="">loading details</option>
+							<option id="opt-gst" value="gst">Goods and Services Tax (GST)</option>
+							<option id="opt-payg" value="payg">Pay As You Go (PAYG) Withholding</option>
+							<option>Fringe Benefits Tax (FBT)</option>
+							<option>Luxury Car Tax (LCT)</option>
+							<option>Fuel Tax Credits (FTC)</option>
+							<option>Wine Equalisation Tax (WET)</option>
+						</select>
+						<button id="btn-apply" class="btn btn-inline ajax-button" type="button" disabled>Apply</button>
+					</div>
+				</div> -->
+				<div id="contacts" style="display: none;">
+					<h3>Authorised contacts</h3>
+					<div>
+						<p id="none-added">You may enter details here of a person authorised to be contacted by the Autralian Taxation Office (ATO) regarding your application.</p>
+						<div id="auth-display" class="margin-top-075" style="display: none;">
+							<table class="margin-bottom-075">
+								<thead class="visuallyhidden">
+									<tr>
+										<th>Field item</th>
+										<th>Input value</th>
+									</tr>
+								</thead>
+								<tbody id="ass1" style="display: none;">
+									<tr>
+										<th style="vertical-align: middle"><span class="fa fa-user blue"></span> Fred Nerk</th>
+										<th>
+											<button type="button" id="delete-ass1" class="btn btn-default ico-remove">Remove</button>
+											<button type="button" id="edit-auth" class="btn btn-default ico-edit">Edit</button>
+										</th>
+									</tr>
+									<tr>
+										<td class="field-name">Position</td>
+										<td class="input-value">Accountant</td>
+									</tr>
+									<tr>
+										<td class="field-name">Email</td>
+										<td class="input-value">fred@email.com</td>
+									</tr>
+									<tr>
+										<td class="field-name">Business hours phone</td>
+										<td class="input-value">55555555</td>
+									</tr>
+									<tr>
+										<td class="field-name">Mobile</td>
+										<td class="input-value">66666666</td>
+									</tr>
+									<tr>
+										<td class="field-name">After hours phone</td>
+										<td class="input-value">0455555555</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="margin-top-075">
+							<button id="btn-add-contact" class="btn btn-inline ajax-button" type="button">Add contact</button>
+						</div>
+					</div>
 				</div>
-			</div>
-		</div>
 
-		<div id="declaration" class="disabled">
-			<h3 class="larger">Declaration</h3>
-			<div id="decl-types" style="display: none;">
-				<p>The declaration below applies to your application for the following Australian Taxation Office (ATO) registrations:</p>
-				<ul>
-					<li id="gst-decl" style="display: none;">Goods &amp; Service Tax</li>
-					<li id="payg-decl" style="display: none;">Pay As You Go (PAYG) Withholding</li>
-				</ul>
-			</div>
-			<p>Please complete the declaration to submit your changes.</p>
-			<div class="grid-row">
-				<div class="col4">
-					<label class="input-right">Person making the declaration</label>
-				</div>
-				<div class="col8 last">
-					<p>Michael Anthony Ross</p>
-				</div>
-			</div>
-			<div class="grid-row clearfix">
-				<div class="col4">
-					<label class="input-right" for="position">Position held</label>
-				</div>
-				<div class="col8 last">
-					<input type="text" id="position" value="Director" disabled/>
-				</div>
-			</div>
-			<div id="ajax-container-for-declaration">
-				<div class="declaration-wrapper margin-top-075">
-					<div class="grid-row">
-						<fieldset class="custom-controls">
-							<!-- <legend class="larger no-padding">Tax Registrations</legend> -->
-							<p>I declare that:</p>
-							<p class="custom-controls">
-								<input data-val="true" data-val-required="The ATOTrueAndCorrectCheckBox field is required." id="ATOTrueAndCorrectCheckBox" name="ATOTrueAndCorrectCheckBox" type="checkbox" value="true" disabled><input name="ATOTrueAndCorrectCheckBox" type="hidden" value="false">
-								<label id="ato-trueandcorrect-check" for="ATOTrueAndCorrectCheckBox">The information provided in this application is true and correct. </label>
-							</p>
-						</fieldset>
+				<div id="declaration" style="display: none">
+					<h3 class="larger">Declaration</h3>
+					<div id="decl-types" style="display: none;">
+						<p>The declaration below applies to your application for the following Australian Taxation Office (ATO) registrations:</p>
+						<ul>
+							<li id="gst-decl" style="display: none;">Goods &amp; Service Tax</li>
+							<li id="payg-decl" style="display: none;">Pay As You Go (PAYG) Withholding</li>
+						</ul>
 					</div>
+					<p>Please complete the declaration to submit your changes.</p>
 					<div class="grid-row">
-						<h4>Privacy</h4>
-						<p>The information provided to the ABR and the ATO in this form may include personal information. Please refer to the <a href="https://abr.gov.au/General-information/Privacy/Privacy---abr-gov-au-website" target="_blank">ABR privacy policy <span class="visuallyhidden">(opens in new window)</span></a> for more information about how we handle your personal information, your rights to seek access to and correct personal information, and to complain about breaches of privacy.</p>
+						<div class="col4">
+							<label class="input-right">Person making the declaration</label>
+						</div>
+						<div class="col8 last">
+							<p>Michael Anthony Ross</p>
+						</div>
+					</div>
+					<div class="grid-row clearfix">
+						<div class="col4">
+							<label class="input-right" for="position">Position held</label>
+						</div>
+						<div class="col8 last">
+							<input type="text" id="position" value="Director" disabled/>
+						</div>
+					</div>
+					<div id="ajax-container-for-declaration">
+						<div class="declaration-wrapper margin-top-075">
+							<div class="grid-row">
+								<fieldset class="custom-controls">
+									<!-- <legend class="larger no-padding">Tax Registrations</legend> -->
+									<p>I declare that:</p>
+									<p class="custom-controls">
+										<input data-val="true" data-val-required="The ATOTrueAndCorrectCheckBox field is required." id="ATOTrueAndCorrectCheckBox" name="ATOTrueAndCorrectCheckBox" type="checkbox" value="true" disabled><input name="ATOTrueAndCorrectCheckBox" type="hidden" value="false">
+										<label id="ato-trueandcorrect-check" for="ATOTrueAndCorrectCheckBox">The information provided in this application is true and correct. </label>
+									</p>
+								</fieldset>
+							</div>
+							<div class="grid-row">
+								<h4>Privacy</h4>
+								<p>The information provided to the ABR and the ATO in this form may include personal information. Please refer to the <a href="https://abr.gov.au/General-information/Privacy/Privacy---abr-gov-au-website" target="_blank">ABR privacy policy <span class="visuallyhidden">(opens in new window)</span></a> for more information about how we handle your personal information, your rights to seek access to and correct personal information, and to complain about breaches of privacy.</p>
+							</div>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div>
-				<button class="btn btn-default next" id="next-cd-btn" type="button" disabled>Confirm and submit</button>
+				<div class="controls-container">
+					<div class="controls-content">
+						<button class="btn btn-default next" id="next-cd-btn" type="button" disabled>Confirm and submit</button>
+						<button class="btn" id="next-cd-btn" type="button">Save for later</button>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -920,12 +935,6 @@ layout: default
 	<input id="remove-ass1" type="button" class="btn btn-default" value="Yes, remove"/> 
 	<a href="#" class="margin-left-075" onclick='visionaustralia.closeDialog("dialogThree");'>Cancel</a>
 </div>
-<div id="dialogFour" style="display:none;">
-	<h1>Confirm remove</h1> 
-	<p>Are you sure you want remove the associate?</p> 
-	<input id="remove-ass2" type="button" class="btn btn-default" value="Yes, remove"/> 
-	<a href="#" class="margin-left-075" onclick='visionaustralia.closeDialog("dialogFour");'>Cancel</a>
-</div>
 <div id="dialogFive" style="display:none;">
 	<h1>Confirm remove</h1> 
 	<p>Are you sure you want remove the application?</p> 
@@ -970,12 +979,18 @@ layout: default
 		//		borderRadius: '10px'
 		//	}
 		//});
+		
+		$("footer").hide();
+		
 		window.setTimeout(function() {
 			// $("#business-details").unblock();
 			$(".retrieve").fadeIn('slow');
 			$(".spinner, .select-spinner").hide();
 			$("#opt-noopt").html("--- select registration ---");
 			$("#rego-select").removeAttr("disabled").css("background-color", "#fff");
+			$("#all-content").slideDown("slow", function() {
+				scrollToAndFocus("#all-content");
+			});
 		}, 4000);
 		
 		$("#rego-select").change(function(){
@@ -1000,21 +1015,25 @@ layout: default
 		});
 		
 		$("#apply-payg, #edit-payg").click(function() {
+			scrollToAndFocus("body");
 			$("#main").hide();
 			$("#payg-form").show('fast');
 		});
 
 		$("#apply-fbt, #edit-fbt").click(function() {
+			scrollToAndFocus("body");
 			$("#main").hide();
 			$("#fbt-form").show('fast');
 		});
 		
 		$("#apply-ftc, #edit-ftc").click(function() {
+			scrollToAndFocus("body");
 			$("#main").hide();
 			$("#ftc-form").show('fast');
 		});
 		
 		$("#edit-gst").click(function(){
+			scrollToAndFocus("body");
 			$("#main").hide();
 			$("#gst-form").show('fast');
 		});
@@ -1029,17 +1048,20 @@ layout: default
 			// $("#next-cd-btn").removeAttr("disabled");
 			$("#ATOTrueAndCorrectCheckBox").removeAttr("disabled");
 			$("#position").removeAttr("disabled");
-			$("#declaration").removeClass("disabled");
 			$("#gst-display").show();
 			$("#opt-gst").hide();
 			$("#rego-select").val("");
 			$("#main").show();
 			scrollToAndFocus("#taxreg-heading");
+			if (!$("#contacts").is(":visible"))
+				$("#contacts").slideDown("slow");
+			$("#declaration").show();
 		});
 		
 		$("#gst-cancel").click(function() {
 			$("#gst-form").hide();
 			$("#main").show();
+			scrollToAndFocus("#available");
 		});
 				
 		$("#fbt-save").click(function() {
@@ -1052,17 +1074,20 @@ layout: default
 			// $("#next-cd-btn").removeAttr("disabled");
 			$("#ATOTrueAndCorrectCheckBox").removeAttr("disabled");
 			$("#position").removeAttr("disabled");
-			$("#declaration").removeClass("disabled");
 			$("#fbt-display").show();
 			$("#opt-fbt").hide();
 			$("#rego-select").val("");
 			$("#main").show();
 			scrollToAndFocus("#taxreg-heading");
+			if (!$("#contacts").is(":visible"))
+				$("#contacts").slideDown("slow");
+			$("#declaration").show();
 		});
 		
 		$("#fbt-cancel").click(function() {
 			$("#fbt-form").hide();
 			$("#main").show();
+			scrollToAndFocus("#available");
 		});
 		
 		$("#edit-payg").click(function(){
@@ -1077,18 +1102,21 @@ layout: default
 			$("#contacts").show();
 			$("#ATOTrueAndCorrectCheckBox").removeAttr("disabled");
 			$("#position").removeAttr("disabled");
-			$("#declaration").removeClass("disabled");
 			$("#payg-display").show();
 			$("#tax-declaration").show();
 			$("#opt-payg").hide();
 			$("#rego-select").val("");
 			$("#main").show();
 			scrollToAndFocus("#taxreg-heading");
+			if (!$("#contacts").is(":visible"))
+				$("#contacts").slideDown("slow");
+			$("#declaration").show();
 		});
 		
 		$("#payg-cancel").click(function() {
 			$("#payg-form").hide();
 			$("#main").show();
+			scrollToAndFocus("#available");
 		});
 		
 		$("#ftc-save").click(function() {
@@ -1097,18 +1125,21 @@ layout: default
 			$("#rego-display").show();
 			$("#ATOTrueAndCorrectCheckBox").removeAttr("disabled");
 			$("#position").removeAttr("disabled");
-			$("#declaration").removeClass("disabled");
 			$("#ftc-display").show();
 			$("#tax-declaration").show();
 			$("#opt-ftc").hide();
 			$("#rego-select").val("");
 			$("#main").show();
 			scrollToAndFocus("#taxreg-heading");
+			if (!$("#contacts").is(":visible"))
+				$("#contacts").slideDown("slow");
+			$("#declaration").show();
 		});
 		
 		$("#ftc-cancel").click(function() {
 			$("#ftc-form").hide();
 			$("#main").show();
+			scrollToAndFocus("#available");
 		});
 		
 		$("#add-contact").click(function() {
@@ -1121,6 +1152,9 @@ layout: default
 			$("#main").show();
 			$("#auth-display table tbody:hidden").first().show();
 			scrollToAndFocus("#contacts");
+			if (!$("#contacts").is(":visible"))
+				$("#contacts").slideDown("slow");
+			$("#declaration").show();
 		});
 
 		$("#gst-cb").click(function() {
@@ -1145,10 +1179,13 @@ layout: default
 			$("#opt-gst").show();
 			$("#gst-decl").hide();
 			if ($("#rego-display table tbody:visible").length == 0) {
-				$("#declaration").addClass("disabled");
 				$("#no-regos-added").show();
 				$("#rego-display").hide();
 				$("#main").show();
+			}
+			if ($("#rego-display table tbody:visible").length == 0) {
+				$("#contacts").slideUp("fast");
+				$("#declaration").hide();
 			}
 		});
 		
@@ -1158,10 +1195,13 @@ layout: default
 			$("#opt-payg").show();
 			$("#payg-decl").hide();
 			if ($("#rego-display table tbody:visible").length == 0) {
-				$("#declaration").addClass("disabled");
 				$("#no-regos-added").show();
 				$("#rego-display").hide();
 				$("#main").show();
+			}
+			if ($("#rego-display table tbody:visible").length == 0) {
+				$("#contacts").slideUp("fast");
+				$("#declaration").hide();
 			}
 		});
 		
@@ -1171,10 +1211,13 @@ layout: default
 			$("#opt-fbt").show();
 			$("#fbt-decl").hide();
 			if ($("#rego-display table tbody:visible").length == 0) {
-				$("#declaration").addClass("disabled");
 				$("#no-regos-added").show();
 				$("#rego-display").hide();
 				$("#main").show();
+			}
+			if ($("#rego-display table tbody:visible").length == 0) {
+				$("#contacts").slideUp("fast");
+				$("#declaration").hide();
 			}
 		});
 		
@@ -1184,10 +1227,13 @@ layout: default
 			$("#opt-ftc").show();
 			$("#ftc-decl").hide();
 			if ($("#rego-display table tbody:visible").length == 0) {
-				$("#declaration").addClass("disabled");
 				$("#no-regos-added").show();
 				$("#rego-display").hide();
 				$("#main").show();
+			}
+			if ($("#rego-display table tbody:visible").length == 0) {
+				$("#contacts").slideUp("fast");
+				$("#declaration").hide();
 			}
 		});
 		
@@ -1197,10 +1243,19 @@ layout: default
 			$("#contact-form").show('fast');
 		});
 		
-		$("#add-contact, #cancel-contact").click(function() {
+		$("#add-contact").click(function() {
 			$(this).blur();
 			$("#contact-form").hide();
+			$(this).html("Save");
 			$("#main").show();
+			$("#btn-add-contact").hide();
+			scrollToAndFocus("#contacts")
+		});
+		
+		$("#cancel-contact").click(function() {
+			$("#contact-form").hide();
+			$("#main").show();
+			scrollToAndFocus("#contacts")
 		});
 
 		$("#ATOTrueAndCorrectCheckBox").click(function() {
@@ -1214,21 +1269,11 @@ layout: default
 		$("#remove-ass1").click(function() {
 			visionaustralia.closeDialog("dialogThree");
 			$("#ass1").hide();
-			if (!$("#ass2").is(":visible")) {
-				$("#none-added").show();
-				$("#auth-display").hide();
-				$("#main").show();
-			}
-		});
-		
-		$("#remove-ass2").click(function() {
-			visionaustralia.closeDialog("dialogFour");
-			$("#ass2").hide();
-			if (!$("#ass1").is(":visible")) {
-				$("#none-added").show();
-				$("#auth-display").hide();
-				$("#main").show();
-			}
+			$("#none-added").show();
+			$("#auth-display").hide();
+			$("#btn-add-contact").show();
+			$("#add-contact").html("Add");
+			$("#main").show();
 		});
 		
 		$("#copy-contact1").click(function() {
@@ -1249,6 +1294,25 @@ layout: default
 			$("#AuthorisedContacts_AuthorisedContact_BusinessHoursPhone1").val("22222222");
 			$("#AuthorisedContacts_AuthorisedContact_BusinessHoursPhone2").val("0433333333");
 			$("#ContactDetails_Email").val("simon@email.com");
+		});
+		
+		$("#branch-retrieve").click(function() {
+			$(this).blur();
+			$("#rego-content").slideUp("fast");
+			$("#rego-update-msg").hide();
+			$("#branch-div .branch-spinner").css("display", "inline-block");
+			window.setTimeout(function() {
+				$("#branch-div .branch-spinner").hide();
+				$("#rego-update-msg").show();
+				$("#rego-content").slideDown();
+			}, 3000);
+		});
+		
+		$("#branchYes").click(function() {
+			$("#enter-branch").show("fast");
+		});
+		$("#branchNo").click(function() {
+			$("#enter-branch").hide();
 		});
 	});
 

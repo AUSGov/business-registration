@@ -22,7 +22,7 @@ layout: default-no-nav
 			</a>
 		</li>
 		<li class="run">
-			<a href="aba-login.html">
+			<a href="tax-roles">
 				<div class="flag">
 					<div class="image">
 						<span class="fa topic run fa-gears"></span>
@@ -36,7 +36,7 @@ layout: default-no-nav
 			</a>
 		</li>
 		<li class="register">
-			<a href="register-auskey">
+			<a href="auskey">
 				<div class="flag">
 					<div class="image">
 						<span class="fa topic register fa-unlock-alt"></span>
