@@ -233,7 +233,7 @@ layout: default
 			</div>
 			<div id="rego-content">
 				<h4>Current registrations</h4>
-				<p>The following tax roles have already been registered with the Australian Taxation Office (ATO):</p>
+				<p id="reg-intro">The following tax roles have already been registered with the Australian Taxation Office (ATO):</p>
 				<p id="no-registrations" style="display: none;">There are no registrations for this branch.</p>
 				<ul id="reg-list" class="reg-list">
 					<li><span class="fa fa-check green"></span> Goods &amp; Services Tax</li>
@@ -1315,6 +1315,7 @@ layout: default
 			window.setTimeout(function() {
 				$("#opt-gst").show();
 				$("#no-registrations").show();
+				$("#reg-intro").hide();
 				$("#reg-list").hide();
 				$("#branch-div .branch-spinner").hide();
 				$("#rego-update-msg").show();
