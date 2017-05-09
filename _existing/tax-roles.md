@@ -4,7 +4,7 @@ layout: default
 ---
 <h1 id="heading" tabindex="-1">{{ page.title }}</h1>
 <p class="intro"><strong>Welcome to the Australian Government Business Registration Service.</strong></p>
-<p>Here you can apply for additional registrations and authorisations for your business.</p>
+<p>Here you can apply for additional registrations for your business.</p>
 
 <div class="grid-row clearfix">
     <div class="col7">
