@@ -176,123 +176,221 @@ layout: default
             </fieldset>
 		</form>
 	</div>
-<div class="dashboard-container" id="9513">
-    <table>
-        <caption>
-            Australian Business Number (ABN): <strong>44 987 654 321</strong><br>
-            
-            <div class="app-status"><p>Submitted on 12 Apr 2017 09:16</p></div>
-            <span class="controls">
-                <a href="javascript:void(0);" class="edit" style="display: none;">Resume</a>
-                &nbsp;
-                <a href="javascript:void(0);" class="remove" style="display: none;">Delete</a>
-                &nbsp;
-                <a href="javascript:void(0);" class="refresh"><span class="fa fa-refresh"></span>Status update</a>
-            </span>
-        </caption>
-        <thead>
-        <tr>
-            <th class="status-item">Registration item</th>
-            <th class="status-detail">Detail</th>
-            <th class="status-information" colspan="2">Status</th>
-        </tr>
-        </thead>
-        <tbody>
-			<tr class="rego">
-				<td class="waiting"><span class="visuallyhidden">In progress-</span>FBT</td>
-				<td class="status-waiting"></td>
-				<td class="">
-					<span>
-						<a class="more" href="#">In progress</a>
-					</span>
-				</td>
-				<td class=""><span class="fa fa-plus-square">&nbsp;</span></td>
-			</tr>
-			<tr class="rego">
-				<td class="waiting"><span class="visuallyhidden">In progress-</span>WET</td>
-				<td class="status-waiting"></td>
-				<td class="">
-					<span>
-						<a class="more" href="#">In progress</a>
-					</span>
-				</td>
-				<td class=""><span class="fa fa-plus-square">&nbsp;</span></td>
-			</tr>
-			<tr class="rego">
-				<td class="waiting"><span class="visuallyhidden">In progress-</span>AUSKey</td>
-				<td class="status-waiting">John Smith</td>
-				<td class="">
-					<span>
-						<a class="more" href="#">In progress</a>
-					</span>
-				</td>
-				<td class=""><span class="fa fa-plus-square">&nbsp;</span></td>
-			</tr>
-			</tbody>
-    </table>
-    <div class="referrer"></div>
-</div>
-    <div id="applicationResults"><div class="dashboard-container" id="9619">
-    <table>
-        <caption>Australian Business Number (ABN): <strong>44 123 456 789</strong><br>
-            
-            <div class="app-status"><p>Completed on 09 Apr 2017 16:18</p></div>
-            <span class="controls" style="display: none;">
-                <a href="javascript:void(0);" class="edit" style="display: none;">Resume</a>
-                &nbsp;
-                <a href="javascript:void(0);" class="remove" style="display: none;">Delete</a>
-                &nbsp;
-                <a href="javascript:void(0);" class="refresh" style="display: none;"><span class="fa fa-refresh"></span>Status update</a>
-            </span>
-        </caption>
-        <thead>
+<div id="submit">
+	<div class="dashboard-container" id="9513">
+		<table>
+			<caption>
+				Australian Business Number (ABN): <strong>44 987 654 321</strong><br>
+				
+				<div class="app-status"><p>Submitted on 12 Apr 2017 09:16</p></div>
+				<span class="controls">
+					<a href="register-existing5" class="edit">Reapply</a>
+					&nbsp;
+					<a href="javascript:void(0);" class="remove" style="display: none;">Delete</a>
+					&nbsp;
+					<a href="javascript:void(0);" class="refresh" style="display: none;"><span class="fa fa-refresh"></span>Status update</a>
+				</span>
+			</caption>
+			<thead>
 			<tr>
 				<th class="status-item">Registration item</th>
 				<th class="status-detail">Detail</th>
 				<th class="status-information" colspan="2">Status</th>
 			</tr>
-        </thead>
-        <tbody>
-			
-			<tr class="rego">
-				<td class="registered"><span class="visuallyhidden">Successful-</span>AUSKey</td>
-				<td class="status-waiting">Fred Aurthur Nerk<br>Reference number: 
-        <span class="abn2">0000020799</span> 
-        <button class="btn btn-copy">Copy</button></td>
-				<td class="">
-					<span>
-						<a class="more" href="#">Successful</a>
-					</span>
-				</td>
-				<td class=""><span class="fa fa-plus-square">&nbsp;</span></td>
-			</tr>
-			<tr class="rego">
-				<td class="registered"><span class="visuallyhidden">Successful-</span>AUSKey</td>
-				<td class="status-waiting">John Cecil Smith<br>Reference number: 
-        <span class="abn2">0000020882</span> 
-        <button class="btn btn-copy">Copy</button></td>
-				<td class="">
-					<span>
-						<a class="more" href="#">Successful</a>
-					</span>
-				</td>
-				<td class=""><span class="fa fa-plus-square">&nbsp;</span></td>
-			</tr>
-			<tr class="rego">
-				<td class="registered"><span class="visuallyhidden">Successful-</span>AUSKey</td>
-				<td class="status-waiting">Bryan Anthony James<br>Reference number: 
-        <span class="abn2">0000020895</span> 
-        <button class="btn btn-copy">Copy</button></td>
-				<td class="">
-					<span>
-						<a class="more" href="#">Successful</a>
-					</span>
-				</td>
-				<td class=""><span class="fa fa-plus-square">&nbsp;</span></td>
-			</tr>
-		</tbody>
-	</table>
-	<div class="referrer"></div>
+			</thead>
+			<tbody>
+				<tr class="rego" onclick="$(this).next().toggle('fast')">
+					<td class="declined"><span class="visuallyhidden">Unsuccessful-</span>GST</td>
+					<td class="status-waiting"></td>
+					<td class="">
+						<span>
+							<a class="more" href="javascript:void(0)">Unsuccessful</a>
+						</span>
+					</td>
+					<td class=""><span class="fa fa-plus-square">&nbsp;</span></td>
+				</tr>
+				<tr style="display: table-row;" class="extra" style="display: none">
+					<td>&nbsp;</td>
+					<td colspan="3">
+						<p>Your Goods and Services Tax (GST) registration has been unsuccessful:</p>
+						<ul>
+							 <li>Error with application for some reason.</li>
+						</ul>
+						<p>You can correct the errors and resubmit the application by using the <strong>Reapply</strong> button above.</p>
+					</td>
+				</tr>
+				<tr class="rego" onclick="$(this).next().toggle('fast')">
+					<td class="declined"><span class="visuallyhidden">Unsuccessful-</span>WET</td>
+					<td class="status-waiting"></td>
+					<td class="">
+						<span>
+							<a class="more" href="javascript:void(0)">Unsuccessful</a>
+						</span>
+					</td>
+					<td class=""><span class="fa fa-plus-square">&nbsp;</span></td>
+				</tr>
+				<tr style="display: table-row;" class="extra" style="display: none">
+					<td>&nbsp;</td>
+					<td colspan="3">
+						<p>Your Wine Equalisation Tax (WET) registration has been unsuccessful:</p>
+						<ul>
+							 <li>Error with application for some reason.</li>
+						</ul>
+						<p>You can correct the errors and resubmit the application by using the <strong>Reapply</strong> button above.</p>
+					</td>
+				</tr>
+				</tbody>
+		</table>
+		<div class="referrer"></div>
+	</div>
+	<div class="dashboard-container">
+		<table>
+			<caption>Australian Business Number (ABN): <strong>44 123 456 789</strong><br>
+				
+				<div class="app-status"><p>Not submitted</p></div>
+				<span class="controls">
+					<a href="javascript:void(0);" class="edit">Resume</a>
+					&nbsp;
+					<a href="javascript:void(0);" class="remove" style="display: none;">Delete</a>
+					&nbsp;
+					<a href="javascript:void(0);" class="refresh" style="display: none;"><span class="fa fa-refresh"></span>Status update</a>
+				</span>
+			</caption>
+			<thead>
+				<tr>
+					<th class="status-item">Registration item</th>
+					<th class="status-detail">Detail</th>
+					<th class="status-information" colspan="2">Status</th>
+				</tr>
+			</thead>
+			<tbody>
+				
+				<tr>
+					<td>&nbsp;</td>
+					<td colspan="3">No registrations added.</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="referrer"></div>
+	</div>
+</div>
+<div id="not-submitted">
+	<div class="dashboard-container">
+		<table>
+			<caption>Australian Business Number (ABN): <strong>44 123 456 789</strong><br>
+				
+				<div class="app-status"><p>Not submitted</p></div>
+				<span class="controls">
+					<a href="javascript:void(0);" class="edit">Resume</a>
+					&nbsp;
+					<a href="javascript:void(0);" class="remove" style="display: none;">Delete</a>
+					&nbsp;
+					<a href="javascript:void(0);" class="refresh" style="display: none;"><span class="fa fa-refresh"></span>Status update</a>
+				</span>
+			</caption>
+			<thead>
+				<tr>
+					<th class="status-item">Registration item</th>
+					<th class="status-detail">Detail</th>
+					<th class="status-information" colspan="2">Status</th>
+				</tr>
+			</thead>
+			<tbody>
+				
+				<tr class="rego">
+					<td class="editing"><span class="visuallyhidden">Not submitted-</span>GST</td>
+					<td class="status-waiting"></td>
+					<td class="">
+						<span>Not submitted</span>
+					</td>
+					<td class="">&nbsp;</td>
+				</tr>
+				<tr class="rego">
+					<td class="editing"><span class="visuallyhidden">Not submitted-</span>PAYG</td>
+					<td class="status-waiting"></td>
+					<td class="">
+						<span>Not submitted</span>
+					</td>
+					<td class="">&nbsp;</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="referrer"></div>
+	</div>
+	<div class="dashboard-container" id="9619">
+		<table>
+			<caption>Australian Business Number (ABN): <strong>44 123 456 789</strong><br>
+				
+				<div class="app-status"><p>Submitted on 09 Apr 2017 16:18</p></div>
+				<span class="controls" style="display: none;">
+					<a href="javascript:void(0);" class="edit" style="display: none;">Resume</a>
+					&nbsp;
+					<a href="javascript:void(0);" class="remove" style="display: none;">Delete</a>
+					&nbsp;
+					<a href="javascript:void(0);" class="refresh" style="display: none;"><span class="fa fa-refresh"></span>Status update</a>
+				</span>
+			</caption>
+			<thead>
+				<tr>
+					<th class="status-item">Registration item</th>
+					<th class="status-detail">Detail</th>
+					<th class="status-information" colspan="2">Status</th>
+				</tr>
+			</thead>
+			<tbody>
+				
+				<tr class="rego" onclick="$(this).next().toggle('fast')">
+					<td class="registered"><span class="visuallyhidden">Submitted-</span>AUSKey</td>
+					<td class="status-waiting">Fred Aurthur Nerk</td>
+					<td class="">
+						<span>
+							<a class="more" href="javascript:void(0)">Submitted</a>
+						</span>
+					</td>
+					<td class=""><span class="fa fa-plus-square">&nbsp;</span></td>
+				</tr>
+				<tr style="display: table-row;" class="extra" style="display: none">
+					<td>&nbsp;</td>
+					<td colspan="3">
+						<p>Your registration has been submitted. Check with the ATO to see if it was successful.</p>
+					</td>
+				</tr>
+				<tr class="rego" onclick="$(this).next().toggle('fast')">
+					<td class="registered"><span class="visuallyhidden">Submitted-</span>AUSKey</td>
+					<td class="status-waiting">John Cecil Smith</td>
+					<td class="">
+						<span>
+							<a class="more" href="javascript:void(0)">Submitted</a>
+						</span>
+					</td>
+					<td class=""><span class="fa fa-plus-square">&nbsp;</span></td>
+				</tr>
+				<tr style="display: table-row;" class="extra" style="display: none">
+					<td>&nbsp;</td>
+					<td colspan="3">
+						<p>Your registration has been submitted. Check with the ATO to see if it was successful.</p>
+					</td>
+				</tr>
+				<tr class="rego" onclick="$(this).next().toggle('fast')">
+					<td class="registered"><span class="visuallyhidden">Submitted-</span>AUSKey</td>
+					<td class="status-waiting">Bryan Anthony James</td>
+					<td class="">
+						<span>
+							<a class="more" href="javascript:void(0)">Submitted</a>
+						</span>
+					</td>
+					<td class=""><span class="fa fa-plus-square">&nbsp;</span></td>
+				</tr>
+				<tr style="display: table-row;" class="extra" style="display: none">
+					<td>&nbsp;</td>
+					<td colspan="3">
+						<p>Your registration has been submitted. Check with the ATO to see if it was successful.</p>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="referrer"></div>
+	</div>
 </div>
 <div class="dashboard-container" id="9476">
     <table>
@@ -315,39 +413,59 @@ layout: default
             <th class="status-information" colspan="2">Status</th>
         </tr>
         </thead>
-        <tbody><tr class="rego">
-				<td class="registered"><span class="visuallyhidden">Successful-</span>GST</td>
+        <tbody>
+			<tr class="rego" onclick="$(this).next().toggle('fast')">
+				<td class="registered"><span class="visuallyhidden">Submitted-</span>GST</td>
 				<td class="status-waiting"></td>
 				<td class="">
 					<span>
-						<a class="more" href="#">Successful</a>
+						<a class="more" href="javascript:void(0)">Submitted</a>
 					</span>
 				</td>
 				<td class=""><span class="fa fa-plus-square">&nbsp;</span></td>
 			</tr>
-			<tr class="rego">
-				<td class="registered"><span class="visuallyhidden">Successful-</span>LCT</td>
+			<tr style="display: table-row;" class="extra" style="display: none">
+				<td>&nbsp;</td>
+				<td colspan="3">
+					<p>Your registration has been submitted. Check with the ATO to see if it was successful.</p>
+				</td>
+			</tr>
+			<tr class="rego" onclick="$(this).next().toggle('fast')">
+				<td class="registered"><span class="visuallyhidden">Submitted-</span>LCT</td>
 				<td class="status-waiting"></td>
 				<td class="">
 					<span>
-						<a class="more" href="#">Successful</a>
+						<a class="more" href="javascript:void(0)">Submitted</a>
 					</span>
 				</td>
 				<td class=""><span class="fa fa-plus-square">&nbsp;</span></td>
 			</tr>
-			<tr class="rego">
-				<td class="registered"><span class="visuallyhidden">Successful-</span>FTC</td>
+			<tr style="display: table-row;" class="extra" style="display: none">
+				<td>&nbsp;</td>
+				<td colspan="3">
+					<p>Your registration has been submitted. Check with the ATO to see if it was successful.</p>
+				</td>
+			</tr>
+			<tr class="rego" onclick="$(this).next().toggle('fast')">
+				<td class="registered"><span class="visuallyhidden">Submitted-</span>FTC</td>
 				<td class="status-waiting"></td>
 				<td class="">
 					<span>
-						<a class="more" href="#">Successful</a>
+						<a class="more" href="javascript:void(0)">Submitted</a>
 					</span>
 				</td>
 				<td class=""><span class="fa fa-plus-square">&nbsp;</span></td>
-			</tr></tbody>
+				<tr style="display: table-row;" class="extra" style="display: none">
+					<td>&nbsp;</td>
+					<td colspan="3">
+						<p>Your registration has been submitted. Check with the ATO to see if it was successful.</p>
+					</td>
+				</tr>
+			</tr>
+		</tbody>
     </table>
     <div class="referrer"></div>
-</div></div>
+</div>
 <div id="pager" class="card" style="">
         <div class="grid-row">
             <p>
@@ -361,13 +479,28 @@ layout: default
 <script type="text/javascript" src="/scripts/clipboard.min.js"></script>
 
 <script type="text/javascript">
-    $("#show-adv").click(function () {
-		$("#advanced-search").toggle('fast');
-		if ($("#advanced-search:visible").length)
-			$("#show-adv").html("Hide advanced options");
-		else
-			$("#show-adv").html("Show advanced options");
-		$(this).blur();
+	$(document).ready(function() {
+	
+		var qryStr = getUrlVars();
+		if (qryStr.action == "submit") {
+			$("#submit").show();
+			$("#not-submitted").hide();
+		} else {
+			$("#submit").hide();
+			$("#not-submitted").show();
+		}
+	
+		$("#show-adv").click(function () {
+			$("#advanced-search").toggle('fast');
+			if ($("#advanced-search:visible").length)
+				$("#show-adv").html("Hide advanced options");
+			else
+				$("#show-adv").html("Show advanced options");
+			$(this).blur();
+		});
+	
+		
+	
 	});
 </script>
 

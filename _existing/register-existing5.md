@@ -483,8 +483,8 @@ layout: default
 				</div>
 				<div class="controls-container">
 					<div class="controls-content">
-						<button class="btn btn-default next" id="next-cd-btn" type="button" disabled>Confirm and submit</button>
-						<button class="btn" id="next-cd-btn" type="button">Save for later</button>
+						<button class="btn btn-default next" id="next-cd-btn" type="button" onclick="location.href='dashboard?action=submit'" disabled>Confirm and submit</button>
+						<button class="btn" id="next-cd-btn" type="button" onclick="location.href='dashboard?action=save'">Save for later</button>
 					</div>
 				</div>
 			</div>
