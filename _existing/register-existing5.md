@@ -1309,8 +1309,6 @@ layout: default
 		
 		$("#branch-retrieve").click(function() {
 			$(this).blur();
-			$("#rego-content").slideUp("fast");
-			$("#rego-update-msg").hide();
 			$("#branch-div .branch-spinner").css("display", "inline-block");
 			window.setTimeout(function() {
 				$("#opt-gst").show();
@@ -1326,10 +1324,18 @@ layout: default
 		});
 		
 		$("#branchYes").click(function() {
-			$("#enter-branch").show("fast");
+			$("#rego-update-msg").hide();
+
+			$("#rego-content").slideUp("fast", function() {
+				$("#enter-branch").show("fast");
+			});
 		});
 		$("#branchNo").click(function() {
-			$("#enter-branch").hide();
+			$("#enter-branch").hide("fast", function() {
+				$("#rego-content").slideDown("fast", function() {
+					scrollToAndFocus("#all-content");
+				});
+			});
 		});
 	});
 
