@@ -176,6 +176,96 @@ layout: default
             </fieldset>
 		</form>
 	</div>
+<div id="add-auskeys" style="display: none">
+	<div class="dashboard-container" id="299">
+		<table>
+			<caption>Application reference: <strong>#1702-AA-0299-L</strong><br>
+				<div class="app-status"><p>Submitted on 09 May 2017 14:32</p></div>
+				<span class="controls">
+					<a href="javascript:void(0);" class="edit" style="display: none;">Resume</a>
+					&nbsp;
+					<a href="javascript:void(0);" class="remove" style="display: none;">Delete</a>
+					&nbsp;
+					<a href="javascript:void(0);" class="refresh"><span class="fa fa-refresh"></span>Status update</a>
+				</span>
+			</caption>
+			<thead>
+				<tr>
+					<th class="status-item">Registration item</th>
+					<th class="status-detail">Detail</th>
+					<th class="status-information" colspan="2">Status</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="rego" onclick="$(this).next().toggle('fast')">
+					<td class="waiting"><span class="visuallyhidden">Pending-</span>AUSkey</td>
+					<td class="status-waiting">Fred Albert Nerk</td>
+					<td class=""><a href="javascript:void(0)">Pending</a></td>
+					<td class=""><span class="fa fa-plus-square">&nbsp;</span></td>
+				</tr>
+				<tr style="display: table-row;" class="extra" style="display: none">
+					<td>&nbsp;</td>
+					<td colspan="3">
+						<p>Your registration has been submitted. Use the refresh button above to check on the status of your application.</p>
+					</td>
+				</tr>
+				<tr class="rego" onclick="$(this).next().toggle('fast')">
+					<td class="waiting"><span class="visuallyhidden">Pending-</span>AUSkey</td>
+					<td class="status-waiting">Simon Arthur Bourke</td>
+					<td class=""><a href="javascript:void(0)">Pending</a></td>
+					<td class=""><span class="fa fa-plus-square">&nbsp;</span></td>
+				</tr>
+				<tr style="display: table-row;" class="extra" style="display: none">
+					<td>&nbsp;</td>
+					<td colspan="3">
+						<p>Your registration has been submitted. Use the refresh button above to check on the status of your application.</p>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+		<div class="dashboard-container" id="9619">
+		<table>
+			<caption>Australian Business Number (ABN): <strong>44 123 456 789</strong><br>
+				
+				<div class="app-status"><p>Submitted on 09 Apr 2017 16:18</p></div>
+				<span class="controls" style="display: none;">
+					<a href="javascript:void(0);" class="edit" style="display: none;">Resume</a>
+					&nbsp;
+					<a href="javascript:void(0);" class="remove" style="display: none;">Delete</a>
+					&nbsp;
+					<a href="javascript:void(0);" class="refresh" style="display: none;"><span class="fa fa-refresh"></span>Status update</a>
+				</span>
+			</caption>
+			<thead>
+				<tr>
+					<th class="status-item">Registration item</th>
+					<th class="status-detail">Detail</th>
+					<th class="status-information" colspan="2">Status</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="rego" onclick="$(this).next().toggle('fast')">
+					<td class="registered"><span class="visuallyhidden">Submitted-</span>AUSKey</td>
+					<td class="status-waiting">John Cecil Smith</td>
+					<td class="">
+						<span>
+							<a class="more" href="javascript:void(0)">Submitted</a>
+						</span>
+					</td>
+					<td class=""><span class="fa fa-plus-square">&nbsp;</span></td>
+				</tr>
+				<tr style="display: table-row;" class="extra" style="display: none">
+					<td>&nbsp;</td>
+					<td colspan="3">
+						<p>Your registration has been submitted. Check with the ATO to see if it was successful.</p>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="referrer"></div>
+	</div>
+</div>
 <div id="submit">
 	<div class="dashboard-container" id="9513">
 		<table>
@@ -482,7 +572,12 @@ layout: default
 	$(document).ready(function() {
 	
 		var qryStr = getUrlVars();
-		if (qryStr.action == "submit") {
+		if (qryStr.type == "auskey") {
+			$("#add-auskeys").show();
+			$("#not-submitted").hide();
+			$("#submit").hide();
+		}
+		else if (qryStr.action == "submit") {
 			$("#submit").show();
 			$("#not-submitted").hide();
 		} else {
@@ -501,6 +596,26 @@ layout: default
 	
 		
 	
+	});
+		
+	/* Drop down settings menu */
+	$("nav").accessibleMegaMenu({
+		/* prefix for generated unique id attributes, which are required to indicate aria-owns, aria-controls and aria-labelledby */
+		uuidPrefix: "accessible-megamenu",
+		/* css class used to define the megamenu styling */
+		menuClass: "nav-menu",
+		/* css class for a top-level navigation item in the megamenu */
+		topNavItemClass: "nav-item",
+		/* css class for a megamenu panel */
+		panelClass: "sub-nav",
+		/* css class for a group of items within a megamenu panel */
+		panelGroupClass: "sub-nav-group",
+		/* css class for the hover state */
+		hoverClass: "hover",
+		/* css class for the focus state */
+		focusClass: "focus",
+		/* css class for the open state */
+		openClass: "open"
 	});
 </script>
 
