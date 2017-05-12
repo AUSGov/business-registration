@@ -184,7 +184,7 @@ layout: default
 <div class="confirmation">
 	<div id="main" style="min-height: 500px;">
 		<p class="intro"><strong>Welcome to the Australian Government Business Registration Service.</strong></p>
-		<p>Here you can apply for additional registrations and authorisations for your business.<a class="cd-btn help" href="#"><span>more information</span></a></p>
+		<p>Here you can apply for additional tax registrations for your business.<a class="cd-btn help" href="#"><span>more information</span></a></p>
 		<h3>Additional tax registrations</h3>
 		<table id="business-details">
 			<thead class="visuallyhidden">
@@ -226,9 +226,9 @@ layout: default
 				<p>Enter the branch number in the field below and click "Retrieve" to update your existing registrations for the selected branch.</p>
 				<div id="branch-div">
 					<p><label for="branch">Branch number</label><br />
-					<input id="branch" type="text" style="width: 100px" /> <button id="branch-retrieve" class="btn btn-inline" type="button">Retrieve</button>
+					<input id="branch" type="text" style="width: 100px" /> <button id="branch-retrieve" class="btn btn-inline" type="button">Retrieve</button> <button id="change-branch" type="button" class="btn btn-inline" type="button" style="display: none;">Change branch</button>
 					<span class="branch-spinner" style="display: none;"><img src="{{ site.baseurl }}/img/ajax-loader.gif" alt="loading" style="vertical-align: middle"/></span>
-					<span id="rego-update-msg" style="display: none;"><span class="fa fa-check green"></span> <span style=" font-size: 90%;">registrations updated</span></span></p>
+					<span id="rego-update-msg" style="display: none;"><span class="fa fa-check green"></span> <span style="font-size: 90%;">registrations updated</span></span></p>
 				</div>
 			</div>
 			<div id="rego-content">
@@ -483,8 +483,7 @@ layout: default
 				</div>
 				<div class="controls-container">
 					<div class="controls-content">
-						<button class="btn btn-default next" id="next-cd-btn" type="button" onclick="location.href='dashboard?action=submit'" disabled>Confirm and submit</button>
-						<button class="btn" id="next-cd-btn" type="button" onclick="location.href='dashboard?action=save'">Save for later</button>
+						<button class="btn btn-default next" id="next-cd-btn" type="button" onclick="location.href='dashboard?action=submit'" disabled>Submit application</button>
 					</div>
 				</div>
 			</div>
@@ -996,7 +995,7 @@ layout: default
 			$("#all-content").slideDown("slow", function() {
 				scrollToAndFocus("#all-content");
 			});
-		}, 4000);
+		}, 2500);
 		
 		$("#rego-select").change(function(){
 			if ($(this).val() == "")
@@ -1311,6 +1310,10 @@ layout: default
 			$(this).blur();
 			$("#branch-div .branch-spinner").css("display", "inline-block");
 			window.setTimeout(function() {
+				$("#branch").attr("readonly", true);
+				$(this).hide();
+				$("#branch-retrieve").hide();
+				$("#change-branch").show();
 				$("#opt-gst").show();
 				$("#no-registrations").show();
 				$("#reg-intro").hide();
@@ -1320,14 +1323,24 @@ layout: default
 				$("#rego-content").slideDown(function() {
 					scrollToAndFocus("#all-content");
 				});
-			}, 3000);
+			}, 2000);
+		});
+		
+		$("#change-branch").click(function() {
+			$("#branch").removeAttr("readonly");
+			$(this).hide();
+			$("#branch-retrieve").show();
+			$("#rego-update-msg").hide();
+			$("#rego-content").slideUp();
 		});
 		
 		$("#branchYes").click(function() {
 			$("#rego-update-msg").hide();
 
 			$("#rego-content").slideUp("fast", function() {
-				$("#enter-branch").show("fast");
+				$("#enter-branch").show("fast", function() {
+					window.scrollTo(0,document.body.scrollHeight);
+				});
 			});
 		});
 		$("#branchNo").click(function() {

@@ -212,8 +212,7 @@ layout: default
 </div>
 <div class="controls-container">
 	<div class="controls-content">
-		<button class="btn cancel" type="submit" onclick="location.href='index.html'">Previous</button>
-		<button class="btn btn-default" id="next-cd-btn" type="button">Submit</button>
+		<button class="btn btn-default" id="next-cd-btn" type="button" onclick="location.href='dashboard-b2c'">Submit application</button>
 	</div>
 </div>
 <script src="{{ site.baseurl }}/scripts/jquery-ui.min.js"></script>
@@ -242,7 +241,7 @@ layout: default
 			window.setTimeout(function() {
 				$("#abn-details .spinner").hide();
 				$("#entity-details").fadeIn("fast");
-			}, 3000);
+			}, 1500);
 		});
 		
 		$("input[name=auskey-type]").click(function() { $("#next-btn").removeAttr("disabled"); });
