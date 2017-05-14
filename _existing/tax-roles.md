@@ -17,8 +17,8 @@ layout: default
 			<p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
 			<p>Return to the <a href="index">home page</a></p>
         </div>
-		<p>Want to check the status of your previous applications?</p>
-		<p>Find them on your <button type="button" class="btn btn-small" onclick="location.href='dashboard'">Application summary</button></p>
+		<p style="font-size: 90%">Want to check the status of your previous applications?</p>
+		<p style="font-size: 90%">Find them on your <button type="button" class="btn btn-small" onclick="location.href='dashboard'">Application summary</button></p>
     </div>
 </div>
 <div class="grid-row clearfix">
