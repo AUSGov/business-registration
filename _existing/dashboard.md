@@ -228,7 +228,7 @@ layout: default
 		<table>
 			<caption>Australian Business Number (ABN): <strong>44 123 456 789</strong><br>
 				
-				<div class="app-status"><p>Submitted on 09 Apr 2017 16:18</p></div>
+				<div class="app-status"><p>Completed on 09 Apr 2017 16:18</p></div>
 				<span class="controls" style="display: none;">
 					<a href="javascript:void(0);" class="edit" style="display: none;">Resume</a>
 					&nbsp;
