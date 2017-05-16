@@ -3,6 +3,15 @@
 </head>
 <body>
 	<div style="width: 1185px; margin: 40px auto">
-		<img src="aba-login.png" style="cursor: pointer" onclick="location.href = 'register-existing5'" />
+		<img src="aba-login.png" style="cursor: pointer" onclick="nav();" />
 	</div>
+	<script>
+		function nav() {
+			if (location.search == "") {
+				location.href = "register-existing5";
+			} else {
+				location.href = location.search.split('=')[1];
+			}
+		}
+	</script>
 </body>
