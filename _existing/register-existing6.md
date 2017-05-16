@@ -137,6 +137,11 @@ layout: default
 		margin-left: -4px;
 	}
 	
+	button.ico-reload[disabled] span.fa.fa-refresh:before {
+		background-color: #ddd;
+		color: #fff;
+	}
+	
 	button.ico-remove:hover, button.ico-remove:focus {
 		background-color: #000;
 	}
@@ -233,6 +238,12 @@ layout: default
 					<td width="75%" class="input-value" style="vertical-align: middle;">44 123 456 789 <button type="button" id="reload-abn" class="btn ico-reload" style="display: none;"><span class="fa fa-refresh"></span> Reload</button></td>
 				</tr>
 				<tr>
+					<td class="field-name bold">Email address</td>
+					<td class="input-value">
+						<p style="margin: 0">mike.ross@business.com</p>
+					</td>
+				</tr>
+				<tr>
 					<td class="field-name bold"><label class="label-right" for="entity">Entity name</label></td>
 					<td class="input-value"><span class="spinner">
 						<img src="{{ site.baseurl }}/img/ajax-loader.gif" alt="loading" /> </span>
@@ -241,16 +252,6 @@ layout: default
 							<span class="field-note">Enter details manually, or use the Reload button to try again.</span>
 						</span>
 						<span class="retrieve2"><span class="fa fa-check green"></span> Really Awesome Business Pty Ltd</span>
-					</td>
-				</tr>
-				<tr id="entity-email">
-					<td class="field-name bold">Email address</td>
-					<td class="input-value">
-						<p style="margin: 0"><span class="spinner"><img src="{{ site.baseurl }}/img/ajax-loader.gif" alt="loading" /> </span><span class="retrieve"><span class="fa fa-check green"></span> mike.ross@business.com</span></p>
-						<!-- <ul class="reg-list retrieve">
-							<li><span class="fa fa-check green"></span> Goods and Services Tax (GST)</li>
-							<li><span class="fa fa-check green"></span> Pay As You Go (PAYG) withholding</li>
-						</ul> -->
 					</td>
 				</tr>
 			</tbody>
@@ -526,6 +527,7 @@ layout: default
 				<div class="controls-container">
 					<div class="controls-content">
 						<button class="btn btn-default next" id="next-cd-btn" type="button" onclick="location.href='dashboard?action=submit'" disabled>Submit application</button>
+						<button class="btn" id="save-btn" onclick="location.href='dashboard?action=submit'">Save for later</button>
 					</div>
 				</div>
 			</div>
@@ -1032,7 +1034,6 @@ layout: default
 			// $("#business-details").unblock();
 			$(".retrieve, .retrieve1").fadeIn('slow');
 			$(".spinner, .select-spinner").hide();
-			$("#entity-email").hide();
 			$("#opt-noopt").html("--- select registration ---");
 			$("#rego-select").removeAttr("disabled").css("background-color", "#fff");
 			$("#all-content").slideDown("slow");
@@ -1063,7 +1064,6 @@ layout: default
 		
 		$("#reload-abn").click(function() {
 			$(".retrieve, .retrieve1, .retrieve2").hide();
-			$("#entity-email").show();
 			//$("#all-content").slideUp("fast");
 			$("#reload-abn").attr("disabled", true);
 			$("#unknown").hide();

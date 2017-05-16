@@ -228,7 +228,7 @@ layout: default
 		<table>
 			<caption>Australian Business Number (ABN): <strong>44 123 456 789</strong><br>
 				
-				<div class="app-status"><p>Completed on 09 Apr 2017 16:18</p></div>
+				<div class="app-status"><p>Submitted on 09 Apr 2017 16:18</p></div>
 				<span class="controls" style="display: none;">
 					<a href="javascript:void(0);" class="edit" style="display: none;">Resume</a>
 					&nbsp;
@@ -272,7 +272,7 @@ layout: default
 			<caption>
 				Australian Business Number (ABN): <strong>44 987 654 321</strong><br>
 				
-				<div class="app-status"><p>Completed on 12 Apr 2017 09:16</p></div>
+				<div class="app-status"><p>Submitted on 12 Apr 2017 09:16</p></div>
 				<span class="controls">
 					<a href="register-existing5" class="edit">Reapply</a>
 					&nbsp;
@@ -411,7 +411,7 @@ layout: default
 		<table>
 			<caption>Australian Business Number (ABN): <strong>44 123 456 789</strong><br>
 				
-				<div class="app-status"><p>Completed on 09 Apr 2017 16:18</p></div>
+				<div class="app-status"><p>Submitted on 09 Apr 2017 16:18</p></div>
 				<span class="controls" style="display: none;">
 					<a href="javascript:void(0);" class="edit" style="display: none;">Resume</a>
 					&nbsp;
@@ -545,12 +545,12 @@ layout: default
 					</span>
 				</td>
 				<td class=""><span class="fa fa-plus-square">&nbsp;</span></td>
-			</tr>
-			<tr style="display: table-row;" class="extra" style="display: none">
-				<td>&nbsp;</td>
-				<td colspan="3">
-				<p>Your registration has been submitted. Check with the ATO to see if it was successful.</p>
-			</td>
+				<tr style="display: table-row;" class="extra" style="display: none">
+					<td>&nbsp;</td>
+					<td colspan="3">
+						<p>Your registration has been submitted. Check with the ATO to see if it was successful.</p>
+					</td>
+				</tr>
 			</tr>
 		</tbody>
     </table>

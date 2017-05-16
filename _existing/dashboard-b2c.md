@@ -195,7 +195,41 @@ layout: default
 </form>    </div>
 
     <div id="applicationResults">
-	<div class="dashboard-container" id="299">
+		<div id="not-submitted" class="dashboard-container">
+		<table>
+			<caption>Australian Business Number (ABN): <strong>44 123 456 789</strong><br>
+				
+				<div class="app-status"><p>Not submitted</p></div>
+				<span class="controls">
+					<a href="register-auskey-new" class="edit">Resume</a>
+					&nbsp;
+					<a href="javascript:void(0);" class="remove" style="display: none;">Delete</a>
+					&nbsp;
+					<a href="javascript:void(0);" class="refresh" style="display: none;"><span class="fa fa-refresh"></span>Status update</a>
+				</span>
+			</caption>
+			<thead>
+				<tr>
+					<th class="status-item">Registration item</th>
+					<th class="status-detail">Detail</th>
+					<th class="status-information" colspan="2">Status</th>
+				</tr>
+			</thead>
+			<tbody>
+				
+				<tr class="rego">
+					<td class="editing"><span class="visuallyhidden">Not submitted-</span>AUSkey</td>
+					<td class="status-waiting">ABN: 987654321</td>
+					<td class="">
+						<span>Not submitted</span>
+					</td>
+					<td class="">&nbsp;</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="referrer"></div>
+	</div>
+	<div id="submitted" class="dashboard-container">
     <table>
         <caption>Application reference: <strong>#1702-AA-0299-L</strong><br>
 			<div class="app-status"><p>Submitted on 09 May 2017 14:32</p></div>
@@ -402,6 +436,18 @@ layout: default
 <script src="{{ site.baseurl }}/scripts/clipboard.min.js"></script>
 
 <script>
+
+	$(document).ready(function() {
+		var qryStr = getUrlVars();
+		if (qryStr.action == "save") {
+			$("#submitted").hide();
+			$("#not-submitted").show();
+		} else {
+			$("#submitted").show();
+			$("#not-submitted").hide();
+		}
+	});
+
 	var clipboard = new Clipboard('.btn-copy');
 
 	clipboard.on('success', function (e) {

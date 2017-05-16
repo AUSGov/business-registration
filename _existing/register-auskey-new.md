@@ -213,6 +213,7 @@ layout: default
 <div class="controls-container">
 	<div class="controls-content">
 		<button class="btn btn-default" id="next-cd-btn" type="button" onclick="location.href='dashboard-b2c'">Submit application</button>
+		<button class="btn" type="button" onclick="location.href='dashboard-b2c?action=save'">Save for later</button>
 	</div>
 </div>
 <script src="{{ site.baseurl }}/scripts/jquery-ui.min.js"></script>

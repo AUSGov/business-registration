@@ -199,18 +199,14 @@ layout: default
 					<td width="75%" class="input-value">44 123 456 789</td>
 				</tr>
 				<tr>
-					<td class="field-name bold">Entity name</td>
-					<td class="input-value"><span class="spinner"><img src="{{ site.baseurl }}/img/ajax-loader.gif" alt="loading" /> </span><span class="retrieve">Really Awesome Business Pty Ltd</span></td>
-				</tr>
-				<tr>
 					<td class="field-name bold">Email address</td>
 					<td class="input-value">
-						<p style="margin: 0"><span class="spinner"><img src="{{ site.baseurl }}/img/ajax-loader.gif" alt="loading" /> </span><span class="retrieve">mike.ross@business.com</span></p>
-						<!-- <ul class="reg-list retrieve">
-							<li><span class="fa fa-check green"></span> Goods and Services Tax (GST)</li>
-							<li><span class="fa fa-check green"></span> Pay As You Go (PAYG) withholding</li>
-						</ul> -->
+						<p style="margin: 0">mike.ross@business.com</p>
 					</td>
+				</tr>
+				<tr>
+					<td class="field-name bold">Entity name</td>
+					<td class="input-value"><span class="spinner"><img src="{{ site.baseurl }}/img/ajax-loader.gif" alt="loading" /> </span><span class="retrieve">Really Awesome Business Pty Ltd</span></td>
 				</tr>
 			</tbody>
 		</table>
@@ -484,6 +480,7 @@ layout: default
 				<div class="controls-container">
 					<div class="controls-content">
 						<button class="btn btn-default next" id="next-cd-btn" type="button" onclick="location.href='dashboard?action=submit'" disabled>Submit application</button>
+						<button class="btn" id="save-for-later" type="button" onclick="location.href='dashboard?action=save'">Save for later</button>
 					</div>
 				</div>
 			</div>
