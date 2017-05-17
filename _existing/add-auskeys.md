@@ -231,8 +231,7 @@ layout: default
 					</table>
 				</div>
 				<div class="margin-top-075">
-					<button id="btn-add-auth" class="btn btn-inline ajax-button" type="button" disabled
-					>Add authorisation</button>
+					<button id="btn-add-auth" class="btn btn-inline ajax-button" type="button" disabled>Add authorisation</button>
 				</div>
 			</div>
 		</div>
@@ -283,6 +282,7 @@ layout: default
 		<div class="controls-container margin-top-075">
 			<div class="controls-content">
 				<button class="btn btn-default next" id="next-cd-btn" type="button" onclick="location.href='dashboard?type=auskey'" disabled>Submit application</button>
+				<button class="btn" type="button" onclick="location.href='dashboard?action=save&type=auskey'">Save for later</button>
 			</div>
 		</div>
 	</div>

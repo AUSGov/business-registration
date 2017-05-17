@@ -178,7 +178,7 @@ layout: default
 	</div>
 <div id="add-auskeys" style="display: none">
 	<div class="dashboard-container" id="299">
-		<table>
+		<table id="auskey-pending">
 			<caption>Application reference: <strong>#1702-AA-0299-L</strong><br>
 				<div class="app-status"><p>Submitted on 09 May 2017 14:32</p></div>
 				<span class="controls">
@@ -223,12 +223,51 @@ layout: default
 				</tr>
 			</tbody>
 		</table>
+		<table id="new-auskeys" style="display: none;">
+			<caption>Australian Business Number (ABN): <strong>44 123 456 789</strong><br>
+				
+				<div class="app-status"><p>Not submitted</p></div>
+				<span class="controls">
+					<a href="register-existing5" class="edit">Resume</a>
+					&nbsp;
+					<a href="javascript:void(0);" class="remove" style="display: none;">Delete</a>
+					&nbsp;
+					<a href="javascript:void(0);" class="refresh" style="display: none;"><span class="fa fa-refresh"></span>Status update</a>
+				</span>
+			</caption>
+			<thead>
+				<tr>
+					<th class="status-item">Registration item</th>
+					<th class="status-detail">Detail</th>
+					<th class="status-information" colspan="2">Status</th>
+				</tr>
+			</thead>
+			<tbody>
+				
+				<tr class="rego">
+					<td class="editing"><span class="visuallyhidden">Not submitted-</span>AUSkey</td>
+					<td class="status-waiting">Fred Albert Nerk</td>
+					<td class="">
+						<span>Not submitted</span>
+					</td>
+					<td class="">&nbsp;</td>
+				</tr>
+				<tr class="rego">
+					<td class="editing"><span class="visuallyhidden">Not submitted-</span>AUSkey</td>
+					<td class="status-waiting">Simon Arthur Bourke</td>
+					<td class="">
+						<span>Not submitted</span>
+					</td>
+					<td class="">&nbsp;</td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
 		<div class="dashboard-container" id="9619">
 		<table>
 			<caption>Australian Business Number (ABN): <strong>44 123 456 789</strong><br>
 				
-				<div class="app-status"><p>Submitted on 09 Apr 2017 16:18</p></div>
+				<div class="app-status"><p>Completed on 09 Apr 2017 16:18</p></div>
 				<span class="controls" style="display: none;">
 					<a href="javascript:void(0);" class="edit" style="display: none;">Resume</a>
 					&nbsp;
@@ -272,7 +311,7 @@ layout: default
 			<caption>
 				Australian Business Number (ABN): <strong>44 987 654 321</strong><br>
 				
-				<div class="app-status"><p>Submitted on 12 Apr 2017 09:16</p></div>
+				<div class="app-status"><p>Completed on 12 Apr 2017 09:16</p></div>
 				<span class="controls">
 					<a href="register-existing5" class="edit">Reapply</a>
 					&nbsp;
@@ -371,7 +410,7 @@ layout: default
 				
 				<div class="app-status"><p>Not submitted</p></div>
 				<span class="controls">
-					<a href="javascript:void(0);" class="edit">Resume</a>
+					<a href="register-existing5" class="edit">Resume</a>
 					&nbsp;
 					<a href="javascript:void(0);" class="remove" style="display: none;">Delete</a>
 					&nbsp;
@@ -411,7 +450,7 @@ layout: default
 		<table>
 			<caption>Australian Business Number (ABN): <strong>44 123 456 789</strong><br>
 				
-				<div class="app-status"><p>Submitted on 09 Apr 2017 16:18</p></div>
+				<div class="app-status"><p>Completed on 09 Apr 2017 16:18</p></div>
 				<span class="controls" style="display: none;">
 					<a href="javascript:void(0);" class="edit" style="display: none;">Resume</a>
 					&nbsp;
@@ -576,6 +615,10 @@ layout: default
 			$("#add-auskeys").show();
 			$("#not-submitted").hide();
 			$("#submit").hide();
+			if (qryStr.action == "save") {
+				$("#auskey-pending").hide();
+				$("#new-auskeys").show();
+			}
 		}
 		else if (qryStr.action == "submit") {
 			$("#submit").show();
