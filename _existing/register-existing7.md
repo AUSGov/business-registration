@@ -245,10 +245,10 @@ layout: default
 				</tr>
 				<tr>
 					<td class="field-name bold"><label class="label-right" for="entity">Entity details</label></td>
-					<td class="input-value"><span class="spinner">
+					<td class="input-value">
 						<span class="retrieve1"><span class="fa fa-times-circle red"></span> Unable to retrieve details! Use the reload button above to try again.</span>						
 						<span class="retrieve2 retrieve3"><span class="fa fa-check green"></span> Really Awesome Business Pty Ltd</span>
-						<img src="{{ site.baseurl }}/img/ajax-loader.gif" alt="loading" /> </span>
+						<span class="spinner"><img src="{{ site.baseurl }}/img/ajax-loader.gif" alt="loading" /> </span>
 					</td>
 				</tr>
 			</tbody>
