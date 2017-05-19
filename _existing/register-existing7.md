@@ -272,12 +272,15 @@ layout: default
 			</div>
 			<div id="rego-content">
 				<h4>Current registrations</h4>
-				<p id="reg-intro" style="display: none;">The following tax roles have already been registered with the Australian Taxation Office (ATO):</p>
-				<p id="no-registrations" style="display: none;">There are no registrations for this branch.</p>
-				<ul id="reg-list" class="reg-list">
-					<li id="current-gst" style="display: none"><span class="spinner"><img src="{{ site.baseurl }}/img/ajax-loader.gif" alt="loading" /> </span><span id="gst-text" style="display: none;"><span class="fa fa-check green"></span> Goods &amp; Services Tax</span></li>
-					<li id="unknown"><span class="fa fa-times-circle red"></span> Unable to load registrations! Use the refresh button above to retrieve this information.</li>
-				</ul>
+				<span id="reg-spinner" class="spinner"><img src="{{ site.baseurl }}/img/ajax-loader.gif" alt="loading" /></span>
+				<p id="no-registrations" style="display: none;"><span class="fa fa-check green"></span> There are no registrations for this branch.</p>
+				<p id="unknown"><span class="fa fa-times-circle red"></span> Unable to load registrations! Use the refresh button above to retrieve this information.</p>
+				<div id="reg-items" style="display: none;">
+					<p>The following tax roles have already been registered with the Australian Taxation Office (ATO):</p>
+					<ul id="reg-list" class="reg-list">
+						<li id="current-gst" style="display: none"><span id="gst-text" style="display: none;"><span class="fa fa-check green"></span> Goods &amp; Services Tax</span></li>
+					</ul>
+				</div>
 				<div id="rego-display" style="display: none;">
 					<h4>Registrations added</h4>
 					<p>You have provided details to apply for the following tax roles:</p>
@@ -1067,7 +1070,6 @@ layout: default
 			$(".spinner").show();
 			if ($("#all-content").is(":visible")) {
 				$("#unknown").hide();
-				$("#reg-intro").show();
 				$("#gst-text").hide();
 				$("#current-gst").show();
 			}
@@ -1078,7 +1080,8 @@ layout: default
 					$("#all-content").slideDown("slow");
 					$("#reload-abn").removeAttr("disabled");
 				} else {
-					$(".retrieve3").show("fast");
+					$(".retrieve3").fadeIn("slow");
+					$("#reg-items").slideDown("fast")
 					$("#gst-text").show();
 					$("#reload-abn").hide();
 					$("#opt-gst").hide();
@@ -1376,18 +1379,19 @@ layout: default
 		
 		$("#branch-retrieve").click(function() {
 			$(this).blur();
-			$("#branch-div .branch-spinner").css("display", "inline-block");
+			$("#reg-spinner").css("display", "inline-block");
+			$("#no-registrations, #unknown, #reg-items").hide();
 			window.setTimeout(function() {
 				$("#branch").attr("readonly", true);
 				$(this).hide();
 				$("#branch-retrieve").hide();
 				$("#change-branch").show();
 				$("#opt-gst").show();
-				$("#no-registrations").show();
-				$("#reg-intro").hide();
-				$("#reg-list").hide();
-				$("#branch-div .branch-spinner").hide();
-				$("#rego-update-msg").show();
+				$("#no-registrations").fadeIn("slow");
+				$("#reg-items").hide();
+				$("#reg-spinner").hide();
+				$("#reload-abn").hide();
+				//$("#rego-update-msg").show();
 				$("#rego-content").slideDown(function() {
 					scrollToAndFocus("#all-content");
 				});
@@ -1398,25 +1402,25 @@ layout: default
 			$("#branch").removeAttr("readonly");
 			$(this).hide();
 			$("#branch-retrieve").show();
-			$("#rego-update-msg").hide();
-			$("#rego-content").slideUp();
+			//$("#rego-update-msg").hide();
+			//$("#rego-content").slideUp();
 		});
 		
 		$("#branchYes").click(function() {
-			$("#rego-update-msg").hide();
+			// $("#rego-update-msg").hide();
 
-			$("#rego-content").slideUp("fast", function() {
+			//$("#rego-content").slideUp("fast", function() {
 				$("#enter-branch").show("fast", function() {
 					window.scrollTo(0,document.body.scrollHeight);
 				});
-			});
+			//});
 		});
 		$("#branchNo").click(function() {
-			$("#enter-branch").hide("fast", function() {
-				$("#rego-content").slideDown("fast", function() {
-					scrollToAndFocus("#all-content");
-				});
-			});
+			$("#enter-branch").hide("fast"); // , function() {
+				//$("#rego-content").slideDown("fast", function() {
+				//	scrollToAndFocus("#all-content");
+				//});
+			// });
 		});
 	});
 
