@@ -1381,22 +1381,28 @@ layout: default
 			$(this).blur();
 			$("#reg-spinner").css("display", "inline-block");
 			$("#no-registrations, #unknown, #reg-items").hide();
-			window.setTimeout(function() {
-				$("#branch").attr("readonly", true);
-				$(this).hide();
-				$("#branch-retrieve").hide();
-				$("#change-branch").show();
-				$("#opt-gst").show();
-				$("#no-registrations").fadeIn("slow");
-				$("#reg-items").hide();
-				$("#reg-spinner").hide();
-				$("#reload-abn").hide();
-				//$("#rego-update-msg").show();
-				$("#rego-content").slideDown(function() {
-					scrollToAndFocus("#all-content");
-				});
-			}, 2000);
+			if ($("#reload-abn").is(":visible")) {
+				window.setTimeout(retrieveBranch, 2000);
+			} else {
+				retrieveBranch();
+			}
 		});
+		
+		function retrieveBranch() {
+			$("#branch").attr("readonly", true);
+			$(this).hide();
+			$("#branch-retrieve").hide();
+			$("#change-branch").show();
+			$("#opt-gst").show();
+			$("#no-registrations").fadeIn("slow");
+			$("#reg-items").hide();
+			$("#reg-spinner").hide();
+			$("#reload-abn").hide();
+			//$("#rego-update-msg").show();
+			$("#rego-content").slideDown(function() {
+				scrollToAndFocus("#all-content");
+			});
+		}
 		
 		$("#change-branch").click(function() {
 			$("#branch").removeAttr("readonly");
