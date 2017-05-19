@@ -1379,12 +1379,15 @@ layout: default
 		
 		$("#branch-retrieve").click(function() {
 			$(this).blur();
-			$("#reg-spinner").css("display", "inline-block");
-			$("#no-registrations, #unknown, #reg-items").hide();
+			//$("#reg-spinner").css("display", "inline-block");
+			$("#no-registrations, #reg-items").hide();
+			$("#branch").attr("readonly", true);
+			$("#change-branch").show();
+			$(this).hide();
 			if ($("#reload-abn").is(":visible")) {
-				window.setTimeout(retrieveBranch, 2000);
+				$("#unknown").fadeIn("fast");
 			} else {
-				retrieveBranch();
+				$("#no-registrations").fadeIn("fast");
 			}
 		});
 		
