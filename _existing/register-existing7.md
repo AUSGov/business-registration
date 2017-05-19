@@ -1062,7 +1062,7 @@ layout: default
 		});
 		
 		$("#reload-abn").click(function() {
-			$(".retrieve, .retrieve1, .retrieve2").hide();
+			$(".retrieve, .retrieve1").hide();
 			$("#reload-abn").attr("disabled", true);
 			$(".spinner").show();
 			if ($("#all-content").is(":visible")) {
