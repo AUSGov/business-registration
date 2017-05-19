@@ -278,7 +278,7 @@ layout: default
 				<div id="reg-items" style="display: none;">
 					<p>The following tax roles have already been registered with the Australian Taxation Office (ATO):</p>
 					<ul id="reg-list" class="reg-list">
-						<li id="current-gst" style="display: none"><span id="gst-text" style="display: none;"><span class="fa fa-check green"></span> Goods &amp; Services Tax</span></li>
+						<li id="current-gst"><span id="gst-text"><span class="fa fa-check green"></span> Goods &amp; Services Tax</span></li>
 					</ul>
 				</div>
 				<div id="rego-display" style="display: none;">
@@ -1070,7 +1070,7 @@ layout: default
 			$(".spinner").show();
 			if ($("#all-content").is(":visible")) {
 				$("#unknown").hide();
-				$("#gst-text").hide();
+				//$("#gst-text").hide();
 				$("#current-gst").show();
 			}
 			window.setTimeout(function() {
@@ -1082,7 +1082,7 @@ layout: default
 				} else {
 					$(".retrieve3").fadeIn("slow");
 					$("#reg-items").slideDown("fast")
-					$("#gst-text").show();
+					//$("#gst-text").show();
 					$("#reload-abn").hide();
 					$("#opt-gst").hide();
 				}
@@ -1422,7 +1422,14 @@ layout: default
 			//});
 		});
 		$("#branchNo").click(function() {
-			$("#enter-branch").hide("fast"); // , function() {
+			$("#enter-branch").hide("fast");
+			$("#no-registrations, #unknown, #reg-items").hide();
+			if ($("#reload-abn").is(":visible")) {
+				$("#unknown").show();
+			} else {
+				$("#reg-items").show();
+			}
+			// , function() {
 				//$("#rego-content").slideDown("fast", function() {
 				//	scrollToAndFocus("#all-content");
 				//});
