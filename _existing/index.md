@@ -5,7 +5,7 @@ layout: default-no-nav
 <div class="feature-wrapper">
 
 	<h1>Business registration</h1>
-	<p class="byline">Your business and tax registrations in one place</p>
+	<p class="byline">Your business and tax registrations in one place.<a class="cd-btn help" href="#"><span>more information</span></a></p>
 	<ul class="block-menu clearfix">
 		<li class="plan">
 			<a href="../register.html">
@@ -17,8 +17,13 @@ layout: default-no-nav
 						<h2>New business</h2>
 					</div>
 				</div>
-				<p>Have all the information you need and ready to register?</p>
-				<p>Apply for your main business and tax registrations here!</p>
+				<p>Start here if you need to apply for:</p>
+				<ul style="list-style-type: disc">
+					<li>an ABN</li>
+					<li>a business name</li>
+					<li>a company or</li>
+					<li>tax registrations.</li>
+				</ul>
 			</a>
 		</li>
 		<li class="run">
@@ -28,11 +33,11 @@ layout: default-no-nav
 						<span class="fa topic run fa-gears"></span>
 					</div>
 					<div class="body">
-						<h2>My business</h2>
+						<h2>Taxes only</h2>
 					</div>
 				</div>
-				<p>Already have an ABN and an AUSKey or MyGov account linked to your business?</p>
-				<p>Apply for additional tax registrations here!</p>
+				<p>Already have an ABN and now need to apply for a tax registration?</p>
+				<p>Use your AUSkey or MyGov to login and register.</p>
 			</a>
 		</li>
 		<li class="register">
@@ -42,10 +47,10 @@ layout: default-no-nav
 						<span class="fa topic register fa-unlock-alt"></span>
 					</div>
 					<div class="body">
-						<h2>My access</h2>
+						<h2>AUSkey only</h2>
 					</div>
 				</div>
-				<p>Already registered your business and want to create a new AUSKey or AUSkeys for associates?</p>
+				<p>Already have an ABN and need one or more administrator AUSkeys?</p>
 				<p>Apply here!</p>
 			</a>
 		</li>
