@@ -220,7 +220,7 @@ layout: default
 							</tr>
 							<tr>
 								<td class="field-name">Tax File Number (TFN)</td>
-								<td class="input-value">987654321<span id="reg-issue" class="validation-red">*</span></td>
+								<td class="input-value"><span id="tfn-update">987654321</span><span id="reg-issue" class="validation-red">*</span></td>
 							</tr>
 							<tr>
 								<td class="field-name">Date of birth</td>
@@ -421,6 +421,7 @@ layout: default
 		$("#update-person").click(function() {
 			$("#status-icon").removeClass("red").addClass("orange").removeClass("fa-times").addClass("fa-plus");
 			$("#status-text").html("edited - ready to re-submit");
+			$("#tfn-update").html = "987654111";
 			$("#reg-issue").hide();
 			$("#associate-form").hide();
 			$("#declaration").show();
