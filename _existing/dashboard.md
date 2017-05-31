@@ -218,7 +218,7 @@ layout: default
 					<tr style="display: table-row;" class="extra" style="display: none">
 						<td>&nbsp;</td>
 						<td colspan="3">
-							<p>Your registration has been submitted. Check with the ATO to see if it was successful.</p>
+							<p>Your registration has been successful. Your activation code is blah blah  blah. Content.</p>
 						</td>
 					</tr>
 					<tr class="rego" onclick="$(this).next().toggle('fast')">
@@ -270,7 +270,7 @@ layout: default
 					<tr style="display: table-row;" class="extra" style="display: none">
 						<td>&nbsp;</td>
 						<td colspan="3">
-							<p>Your registration has been submitted. Check with the ATO to see if it was successful.</p>
+							<p>Your registration has been successful. Your activation code is blah blah  blah. Content.</p>
 						</td>
 					</tr>
 				</tbody>
