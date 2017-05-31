@@ -176,6 +176,82 @@ layout: default
             </fieldset>
 		</form>
 	</div>
+	<div id="resubmit" style="display: none;">
+		<div class="dashboard-container">
+			<table>
+				<caption>Australian Business Number (ABN): <strong>44 123 456 789</strong><br>
+					
+					<div class="app-status"><p>Not submitted</p></div>
+					<span class="controls">
+						<a href="resubmit-auskeys2" class="edit">Resume</a>
+						&nbsp;
+						<a href="javascript:void(0);" class="remove" style="display: none;">Delete</a>
+						&nbsp;
+						<a href="javascript:void(0);" class="refresh" style="display: none;"><span class="fa fa-refresh"></span>Status update</a>
+					</span>
+				</caption>
+				<thead>
+					<tr>
+						<th class="status-item">Registration item</th>
+						<th class="status-detail">Detail</th>
+						<th class="status-information" colspan="2">Status</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="rego" onclick="$(this).next().toggle('fast')">
+						<td class="registered"><span class="visuallyhidden">Submitted-</span>AUSKey</td>
+						<td class="status-waiting">Fred Albert Nerk</td>
+						<td class="">
+							<span>
+								<a class="more" href="javascript:void(0)">Submitted</a>
+							</span>
+						</td>
+						<td class=""><span class="fa fa-plus-square">&nbsp;</span></td>
+					</tr>
+					<tr style="display: table-row;" class="extra" style="display: none">
+						<td>&nbsp;</td>
+						<td colspan="3">
+							<p>Your registration has been submitted. Check with the ATO to see if it was successful.</p>
+						</td>
+					</tr>
+					<tr class="rego" onclick="$(this).next().toggle('fast')">
+						<td class="declined"><span class="visuallyhidden">Unsuccessful-</span>AUSkey</td>
+						<td class="status-waiting">Simon Arthur Bourke</td>
+						<td class="">
+							<span><a class="more" href="javascript:void(0)">Unsuccessful</a></span>
+						</td>
+						<td class=""><span class="fa fa-plus-square">&nbsp;</span></td>
+					</tr>
+					<tr style="display: table-row;" class="extra" style="display: none">
+						<td>&nbsp;</td>
+						<td colspan="3">
+							<p>Unfortunately your application was unable to be submitted due to the following errors:</p>
+							<ul>
+								<li>Invalid Tax File Number.</li>
+							</ul>
+							<p>You can re-submit your application by selecting the "Resume" button above and correcting the errors.</p>
+						</td>
+					</tr>
+					<tr class="rego" onclick="$(this).next().toggle('fast')">
+						<td class="registered"><span class="visuallyhidden">Submitted-</span>AUSKey</td>
+						<td class="status-waiting">Bryan Jeremy Cartright</td>
+						<td class="">
+							<span>
+								<a class="more" href="javascript:void(0)">Submitted</a>
+							</span>
+						</td>
+						<td class=""><span class="fa fa-plus-square">&nbsp;</span></td>
+					</tr>
+					<tr style="display: table-row;" class="extra" style="display: none">
+						<td>&nbsp;</td>
+						<td colspan="3">
+							<p>Your registration has been submitted. Check with the ATO to see if it was successful.</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
 <div id="add-auskeys" style="display: none">
 	<div class="dashboard-container" id="299">
 		<table id="auskey-pending">
@@ -623,6 +699,10 @@ layout: default
 		else if (qryStr.action == "submit") {
 			$("#submit").show();
 			$("#not-submitted").hide();
+		} else if (qryStr.action == "resubmit") {
+			$("#not-submitted").hide()
+			$("#9513").hide()
+			$("#resubmit").show()
 		} else {
 			$("#submit").hide();
 			$("#not-submitted").show();
