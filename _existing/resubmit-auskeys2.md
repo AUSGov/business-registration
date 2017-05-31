@@ -421,7 +421,7 @@ layout: default
 		$("#update-person").click(function() {
 			$("#status-icon").removeClass("red").addClass("orange").removeClass("fa-times").addClass("fa-plus");
 			$("#status-text").html("edited - ready to re-submit");
-			$("#tfn-update").html = "987654111";
+			$("#tfn-update").html($("#Associates_PersonAssociate_TaxFileNumber").val());
 			$("#reg-issue").hide();
 			$("#associate-form").hide();
 			$("#declaration").show();
