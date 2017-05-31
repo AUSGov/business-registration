@@ -181,7 +181,14 @@ layout: default
 			<table>
 				<caption>Australian Business Number (ABN): <strong>44 123 456 789</strong><br>
 					
-					<div class="app-status"><p>Not submitted</p></div>
+					<div class="app-status">
+						<p class="clickable" onclick="$(this).next().toggle()">
+							<a href="javascript:void(0)" class="more">Unsuccessful</a>&nbsp;<span class="fa fa-plus-square"></span>
+						</p>
+						<div class="extra-content" style="display: none;">
+							<p>You have submitted the application and at least one of your registrations has been unsuccessful. You can use the <strong>Resume</strong> button to go back and edit the unsuccessful registration(s) and resubmit them.</p>
+						</div>
+					</div>
 					<span class="controls">
 						<a href="resubmit-auskeys2" class="edit">Resume</a>
 						&nbsp;
@@ -217,6 +224,24 @@ layout: default
 					<tr class="rego" onclick="$(this).next().toggle('fast')">
 						<td class="declined"><span class="visuallyhidden">Unsuccessful-</span>AUSkey</td>
 						<td class="status-waiting">Simon Arthur Bourke</td>
+						<td class="">
+							<span><a class="more" href="javascript:void(0)">Unsuccessful</a></span>
+						</td>
+						<td class=""><span class="fa fa-plus-square">&nbsp;</span></td>
+					</tr>
+					<tr style="display: table-row;" class="extra" style="display: none">
+						<td>&nbsp;</td>
+						<td colspan="3">
+							<p>Unfortunately your application was unable to be submitted due to the following errors:</p>
+							<ul>
+								<li>Invalid Tax File Number.</li>
+							</ul>
+							<p>You can re-submit your application by selecting the "Resume" button above and correcting the errors.</p>
+						</td>
+					</tr>
+					<tr class="rego" onclick="$(this).next().toggle('fast')">
+						<td class="declined"><span class="visuallyhidden">Unsuccessful-</span>AUSkey</td>
+						<td class="status-waiting">Graham Alexander Carson</td>
 						<td class="">
 							<span><a class="more" href="javascript:void(0)">Unsuccessful</a></span>
 						</td>

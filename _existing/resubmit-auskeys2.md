@@ -128,7 +128,7 @@ layout: default
 	}
 	
 	#ass1 tr th,
-	#ass3 tr th {
+	#ass4 tr th {
 		border-bottom: 3px solid #fff;
 	}
 
@@ -147,7 +147,8 @@ layout: default
             <h2><a id="validationSummaryAnchor" tabindex="-1">Some of your registrations were unsuccessful:</a>
             </h2>
             <ul class="validation-message-errors">
-                        <li><a href="javascript:scrollToAndFocus('#ass2');">Simon Arthur Bourke: invalid Tax File Number</a></li>
+				<li><a href="javascript:scrollToAndFocus('#ass2');">Simon Arthur Bourke: invalid Tax File Number</a></li>
+				<li><a href="javascript:scrollToAndFocus('#ass3');">Graham Alexander Carson: invalid Tax File Number</a></li>
             </ul>
             <p><span class="validation-red">*</span> indicates areas that need to be checked.</p>
         </div>
@@ -198,7 +199,7 @@ layout: default
 								</th>
 							</tr>
 						</tbody>
-						<tbody id="ass3">
+						<tbody id="ass4">
 							<tr>
 								<th style="vertical-align: middle"><span class="fa fa-user blue"></span> Bryan Jeremy Cartright</th>
 								<th>
@@ -209,8 +210,8 @@ layout: default
 						<tbody id="ass2">
 							<tr>
 								<th style="vertical-align: middle"><span class="fa fa-user blue"></span> Simon Arthur Bourke</th>
-								<th>
-									<span class="fa fa-times red"></span> Unsuccessful - edit to correct errors and re-submit <button type="button" id="edit-auth" class="btn btn-default ico-edit">Edit</button>
+								<th id="update-status">
+									<span id="status-icon" class="fa fa-times red"></span> <span id="status-text">Unsuccessful - edit to correct errors and re-submit</span> <button type="button" id="edit-auth" class="btn btn-default ico-edit">Edit</button>
 								</th>
 							</tr>
 							<tr>
@@ -219,7 +220,7 @@ layout: default
 							</tr>
 							<tr>
 								<td class="field-name">Tax File Number (TFN)</td>
-								<td class="input-value">987654321<span class="validation-red">*</span></td>
+								<td class="input-value">987654321<span id="reg-issue" class="validation-red">*</span></td>
 							</tr>
 							<tr>
 								<td class="field-name">Date of birth</td>
@@ -234,11 +235,39 @@ layout: default
 								<td class="input-value">66666666</td>
 							</tr>
 						</tbody>
+						<tbody id="ass3">
+							<tr>
+								<th style="vertical-align: middle"><span class="fa fa-user blue"></span> Graham Alexander Carson</th>
+								<th>
+									<span class="fa fa-times red"></span> Unsuccessful - edit to correct errors and re-submit <button type="button" id="edit-auth" class="btn btn-default ico-edit">Edit</button>
+								</th>
+							</tr>
+							<tr>
+								<td class="field-name">Associate type</td>
+								<td class="input-value">Public officer</td>
+							</tr>
+							<tr>
+								<td class="field-name">Tax File Number (TFN)</td>
+								<td class="input-value">155255355<span class="validation-red">*</span></td>
+							</tr>
+							<tr>
+								<td class="field-name">Date of birth</td>
+								<td class="input-value">21/04/1972</td>
+							</tr>
+							<tr>
+								<td class="field-name">Email</td>
+								<td class="input-value">graham@email.com</td>
+							</tr>
+							<tr>
+								<td class="field-name">Phone number</td>
+								<td class="input-value">33333333</td>
+							</tr>
+						</tbody>
 					</table>
 				</div>
 			</div>
 		</div>
-		<div id="declaration">
+		<div id="declaration" style="display: none;">
 			<h3 class="larger">Declaration</h3>
 			<p>Please complete the declaration below to submit your changes.</p>
 			<div id="ajax-container-for-declaration">
@@ -282,7 +311,7 @@ layout: default
 				<select id="associate-type">
 					<option value="">--- please select ---</option>
 					<option>Trustee</option>
-					<option>Public officer</option>
+					<option selected>Public officer</option>
 					<option>Director</option>
 					<option>Partner</option>
 					<option>Office bearer of a club / association</option>
@@ -294,7 +323,7 @@ layout: default
 				<label class="input-right" for="Associates_PersonAssociate_GivenName">Given name</label>
 			</div>
 			<div class="col8 last">
-				<input id="Associates_PersonAssociate_GivenName" name="Associates.PersonAssociate.GivenName" type="text" value=""> 
+				<input id="Associates_PersonAssociate_GivenName" name="Associates.PersonAssociate.GivenName" type="text" value="Simon"> 
 				
 			</div>
 		</div>
@@ -304,7 +333,7 @@ layout: default
 				<label class="input-right" for="Associates_PersonAssociate_OtherName">Other given name <span class="field-note optional">(optional)</span></label>
 			</div>
 			<div class="col8 last">
-				<input id="Associates_PersonAssociate_OtherName" name="Associates.PersonAssociate.OtherName" type="text" value=""> 
+				<input id="Associates_PersonAssociate_OtherName" name="Associates.PersonAssociate.OtherName" type="text" value="Arthur"> 
 				
 			</div>
 		</div>
@@ -314,7 +343,7 @@ layout: default
 				<label class="input-right" for="Associates_PersonAssociate_FamilyName">Family name</label>
 			</div>
 			<div class="col8 last">
-				<input id="Associates_PersonAssociate_FamilyName" name="Associates.PersonAssociate.FamilyName" type="text" value=""> 
+				<input id="Associates_PersonAssociate_FamilyName" name="Associates.PersonAssociate.FamilyName" type="text" value="Bourke"> 
 				
 			</div>
 		</div>
@@ -324,7 +353,7 @@ layout: default
 				<label class="input-right" for="Associates_PersonAssociate_TaxFileNumber">Tax File Number <span class="field-note optional">(optional)</span></label>
 			</div>
 			<div class="col8 last">
-				<input id="Associates_PersonAssociate_TaxFileNumber" name="Associates.PersonAssociate.TaxFileNumber" type="number" value=""> <a class="cd-btn help" href="#help-businessdetailspersondetailstaxfilenumber"><span>Help - Tax File Number (TFN)</span></a>
+				<input id="Associates_PersonAssociate_TaxFileNumber" name="Associates.PersonAssociate.TaxFileNumber" type="number" value="987654321"> <a class="cd-btn help" href="#help-businessdetailspersondetailstaxfilenumber"><span>Help - Tax File Number (TFN)</span></a>
 				
 			</div>
 		</div>
@@ -334,7 +363,7 @@ layout: default
 				<label class="input-right" for="Associates_PersonAssociate_DateOfBirth">Date of birth</label>
 			</div>
 			<div class="col8 last">
-				<input class="date hasDatepicker" data-val="true" data-val-date="The field DateOfBirth must be a date." id="Associates_PersonAssociate_DateOfBirth" name="Associates.PersonAssociate.DateOfBirth" type="text" value=""><button type="button" class="ui-datepicker-trigger"><span class="fa fa-calendar"></span></button>                    
+				<input class="date hasDatepicker" data-val="true" data-val-date="The field DateOfBirth must be a date." id="Associates_PersonAssociate_DateOfBirth" name="Associates.PersonAssociate.DateOfBirth" type="text" value="27/09/1976"><button type="button" class="ui-datepicker-trigger"><span class="fa fa-calendar"></span></button>                    
 			</div>
 		</div>
 		<div class="grid-row">
@@ -342,7 +371,7 @@ layout: default
 				<label class="input-right" for="ContactDetails_Email">Email</label>
 			</div>
 			<div class="col8 last">
-				<input id="ContactDetails_Email" name="ContactDetails.Email" type="email" value="email@email.com"> <a class="cd-btn help" href="#help-companydetailscontactdetailsemail"><span>Help - Email address</span></a>
+				<input id="ContactDetails_Email" name="ContactDetails.Email" type="email" value="simon@email.com"> <a class="cd-btn help" href="#help-companydetailscontactdetailsemail"><span>Help - Email address</span></a>
 				
 			</div>
 		</div>
@@ -351,14 +380,14 @@ layout: default
 				<label class="input-right" for="AuthorisedContacts_AuthorisedContact_BusinessHoursPhone">Phone number</label>
 			</div>
 			<div class="col8 last">
-				<input id="AuthorisedContacts_AuthorisedContact_BusinessHoursPhone" name="AuthorisedContacts.AuthorisedContact.BusinessHoursPhone" type="text" value=""> 
+				<input id="AuthorisedContacts_AuthorisedContact_BusinessHoursPhone" name="AuthorisedContacts.AuthorisedContact.BusinessHoursPhone" type="text" value="66666666"> 
 				
 			</div>
 		</div>
 		
 	</fieldset>
 	<div class="controls-content margin-bottom">
-		<button class="btn btn-default ajax-button" id="add-person" type="button">Add</button>
+		<button class="btn btn-default ajax-button" id="update-person" type="button">Update</button>
 		<button class="btn cancel ajax-button" type="button" id="cancel-assoc">Cancel</button>
 	</div>
 </div>
@@ -388,6 +417,15 @@ layout: default
 		//});
 		
 		$("footer").hide();
+		
+		$("#update-person").click(function() {
+			$("#status-icon").removeClass("red").addClass("orange").removeClass("fa-times").addClass("fa-plus");
+			$("#status-text").html("edited - ready to re-submit");
+			$("#reg-issue").hide();
+			$("#associate-form").hide();
+			$("#declaration").show();
+			$("#main").show();
+		});
 		
 		
 		$("#rego-select").change(function(){
