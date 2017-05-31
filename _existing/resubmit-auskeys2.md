@@ -425,6 +425,7 @@ layout: default
 			$("#associate-form").hide();
 			$("#declaration").show();
 			$("#main").show();
+			scrollToAndFocus("#ass2");
 		});
 		
 		
