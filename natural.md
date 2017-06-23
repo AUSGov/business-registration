@@ -170,15 +170,15 @@ layout: default
 		$("#go-btn").click(function() {
 			var opt1 = $('#option1').html();
 			var opt2 = $('#option2').html();
-			if (opt1.startsWith("am"))
+			if (opt1.indexOf("am") == 0)
 				location.href = "register";
-			if (opt1.startsWith("have"))
+			if (opt1.indexOf("have") == 0)
 				location.href = "register?type=bn";
-			if (opt2.startsWith("apply for GST"))
+			if (opt2.indexOf("apply for GST") == 0)
 				location.href = "existing/tax-roles";
-			if (opt2.startsWith("apply for a bus"))
+			if (opt2.indexOf("apply for a bus") == 0)
 				location.href = "register?type=bn";
-			if (opt2.startsWith("apply for an Admin"))
+			if (opt2.indexOf("apply for an Admin") == 0)
 				location.href = "existing/auskey";
 		});
 
