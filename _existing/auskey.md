@@ -18,8 +18,8 @@ layout: default
     </div>
     <div class="col5 last">
         <div class="registration-tip">
-            <h2>Need an AUDkey for a tax agent or accountant?</h2>
-			<p>Already have an Administrator AUSkey but need an addtional AUSkey for your tax agent or accountant? This is called a Stadard AUSkey. You'll need to <a href="#">register for a Standard AUSkey</a> on the Australian Business Register (ABR) website.</p>
+            <h2>Need an AUSkey for a tax agent or accountant?</h2>
+			<p>Already have an Administrator AUSkey but need an addtional AUSkey for your tax agent or accountant? This is called a Standard AUSkey. You'll need to <a href="#">register for a Standard AUSkey</a> on the Australian Business Register (ABR) website.</p>
         </div>
 		<p style="font-size: 90%">Want to check on the status of your previous applications?</p>
 		<p style="font-size: 90%">View the application summary for your<br /><button type="button" class="btn btn-inline" onclick="location.href='dashboard-b2c'">New</button>or <button type="button" class="btn btn-inline" onclick="location.href='dashboard?type=auskey'" style="margin-left: 5px">Additional</button>AUSkey applications.</p>
