@@ -47,6 +47,14 @@ layout: default
 		border-bottom: 2px solid #3179b5;
 	}
 	
+	.natural-menu p.lang a.single,
+	.natural-menu p.lang a.single:hover,
+	.natural-menu p.lang a.single:focus {
+		border-bottom: none;
+		margin-right: none;
+		cursor: default;
+	}
+	
 	.natural-menu p.lang a:after {
 		position: absolute;
 		font: normal normal normal 14px/1 FontAwesome;
@@ -54,6 +62,10 @@ layout: default
 		content: "\f0d7";
 		margin-top: 4px;
 		margin-left: 5px;
+	}
+	
+	.natural-menu p.lang a.single:after {
+		display: none;
 	}
 	
 	ul.natural-options {
@@ -141,6 +153,8 @@ layout: default
 
 	$(document).ready(function() {
 		$("#option1, #option2").click(function() {
+			if ($(this).hasClass("single"))
+				return;
 			var other = this.id == "option1"?$("#options2"):$("#options1");
 			if (other.is(":visible"))
 				other.hide();
@@ -149,22 +163,24 @@ layout: default
 		$("ul.natural-options li").click(function() {
 			$(this).parent().find('li').removeClass('selected');
 			var option = $(this).find('a').html();
-			$(this).parent().prev().find('a').attr('class', this.className).html(option);
+			$(this).parent().prev().find('a').attr('class', $(this).attr('class')).html(option);
 			$(this).addClass('selected');
 			$(this).parent().fadeOut('fast');
 			if (this.id) {
+				var newopt = $("#options2 ." + this.id).first();
+				$("#options2 li").removeClass('selected');
+				$("#option2").html(newopt.find('a').html()).attr('class', newopt.attr("class"));
+				newopt.addClass("selected");
 				setopts(this.id);
-				if (!$("#option2").hasClass(this.id)) {
-					var newopt = $("#options2 ." + this.id).first();
-					$("#options2 li").removeClass('selected');
-					newopt.addClass("selected");
-					$("#option2").html(newopt.find('a').html()).attr('class', newopt.className);
-				}
 			}
 		});
 		function setopts(cls) {
 			$("#options2 li").hide();
 			$("#options2 ." + cls).show();
+			if ($("#options2 li." + cls).length == 1)
+				$("#option2").addClass("single");
+			else
+				$("#option2").removeClass("single");
 		}
 			
 		$("#go-btn").click(function() {
