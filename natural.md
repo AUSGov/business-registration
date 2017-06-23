@@ -74,12 +74,12 @@ layout: default
 		background-color: #fff;
 		box-shadow: 1px 1px 5px #ddd;
 		z-index: 1;
+		padding: 0;
 	}
 	
 	ul.natural-options li {
-		margin-left: -40px;
+		padding: 0;
 		cursor: pointer;
-		padding: 10px 40px 10px 10px;
 		display: block;
 	}
 	
@@ -87,8 +87,9 @@ layout: default
 		font: normal normal normal 14px/1 FontAwesome;
 		font-size: 120%;
 		content: "\f00c";
-		float: right;
-		margin-right: -33px;
+		position: absolute;
+		top: 9px;
+		right: 6px;
 	}
 	
 	ul.natural-options li:hover {
@@ -97,22 +98,25 @@ layout: default
 	
 	ul.natural-options li a {
 		text-decoration: none;
+		display: block;
+		padding: 10px 40px 10px 10px;
 	}
 	
 	ul.natural-options li a:hover,
 	ul.natural-options li a:focus {
-		background-color: inherit;
+		background-color: #ddd;
 		color: inherit;
 	}
 	
 	ul#options1 {
-		top: 6px;
-		left: 0;
+		/* top: 6px;
+		left: 0; */
+		margin-top: -7px;
 	}
 	
 	ul#options2 {
-		top: 41px;
-		left: -10px;
+		margin-top: -7px;
+		margin-left: -10px;
 	}
 </style>
 <div class="natural-menu">
