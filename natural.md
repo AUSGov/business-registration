@@ -64,6 +64,11 @@ layout: default
 		margin-left: 5px;
 	}
 	
+	.natural-menu p.lang a.active:after {
+		content: "\f0d8";
+		margin-top: 0;
+	}
+	
 	.natural-menu p.lang a.single:after {
 		display: none;
 	}
@@ -78,6 +83,7 @@ layout: default
 	}
 	
 	ul.natural-options li {
+		position: relative;
 		padding: 0;
 		cursor: pointer;
 		display: block;
@@ -156,20 +162,37 @@ layout: default
 <script>
 
 	$(document).ready(function() {
-		$("#option1, #option2").click(function() {
+		$("#option1, #option2").click(function(event) {
+			event.stopPropagation();
 			if ($(this).hasClass("single"))
 				return;
 			var other = this.id == "option1"?$("#options2"):$("#options1");
-			if (other.is(":visible"))
+			if (other.is(":visible")) {
 				other.hide();
-			$(this).parent().next().fadeToggle('fast');
+				other.prev().find("a").removeClass("active");
+			}
+			if ($(this).hasClass("active")) {
+				$(this).removeClass("active");
+				$(this).parent().next().fadeOut("fast");
+			}
+			else
+			{
+				$(this).addClass("active");
+				$(this).parent().next().fadeIn("fast");
+			}
 		});
-		$("ul.natural-options li").click(function() {
+		$(document.body).click(function() {
+			$("a.active").removeClass("active");
+			$("ul.natural-options").hide();
+		});
+		$("ul.natural-options li").click(function(event) {
+			event.stopPropagation();
 			$(this).parent().find('li').removeClass('selected');
 			var option = $(this).find('a').html();
 			$(this).parent().prev().find('a').attr('class', $(this).attr('class')).html(option);
 			$(this).addClass('selected');
 			$(this).parent().fadeOut('fast');
+			$(this).parent().prev().find("a").removeClass("active");
 			if (this.id) {
 				var newopt = $("#options2 ." + this.id).first();
 				$("#options2 li").removeClass('selected');
