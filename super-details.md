@@ -50,7 +50,7 @@ layout: default
 	<h2>Notice of election</h2>
 	<div class="sub-section-content">
 		<div class="grid-row">
-			<div class="col6">
+			<div class="col10">
 				<label for="pension-power" class="input">Do the governing rules provide that the sole or primary purpose of the fund is the provision of old age pensions (pension power)?</label>
 				<div class="radio-toggle">
 					<label class="on label-left" for="pension-power-yes"><input id="pension-power-yes" type="radio" name="pension-power" checked><span>Yes</span></label>
