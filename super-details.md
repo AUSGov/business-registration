@@ -50,11 +50,9 @@ layout: default
 	<h2>Notice of election</h2>
 	<div class="sub-section-content">
 		<div class="grid-row">
-			<div class="col4"><p class="no-margin-top">
-				<label for="pension-power" class="input-right">Do the governing rules provide that the sole or primary purpose of the fund is the provision of old age pensions (pension power)?</label></p>
-			</div>
-			<div class="col8 last">
-				<div class="radio-toggle" style="padding-top: 2rem;">
+			<div class="col6">
+				<label for="pension-power" class="input">Do the governing rules provide that the sole or primary purpose of the fund is the provision of old age pensions (pension power)?</label>
+				<div class="radio-toggle">
 					<label class="on label-left" for="pension-power-yes"><input id="pension-power-yes" type="radio" name="pension-power" checked><span>Yes</span></label>
 					<label class="off label-right" for="pension-power-no"><input id="pension-power-no" type="radio" name="pension-power"><span>No</span></label>
 				</div>
@@ -62,15 +60,17 @@ layout: default
 		</div>
 		<div class="confirmation">
 			<div class="grid-row">
-				<table>
+				<!-- <h3>Superannuation Industry (Supervision) Act 1993</h3> -->
+				<p class="label">I/We the trustee(s) or director(s) or secretary of the corporate trustee of <strong>Super Dooper Fund</strong>:</p>
+				<table class="no-margin">
 					<thead>
 						<tr>
-							<th colspan="2">Trustee / Director / Secretary</th>
+							<th colspan="2">Trustees</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<td class="field-name">Director</td>
+							<td class="field-name">Name</td>
 							<td class="input-value">John Albert Smith</td>
 						</tr>
 						<tr>
@@ -82,7 +82,7 @@ layout: default
 							<td class="input-value" style="border-bottom: 7px solid #e7e7e7;">17/7/1985</td>
 						</tr>
 						<tr>
-							<td class="field-name">Secretary</td>
+							<td class="field-name">Name</td>
 							<td class="input-value">Janice Isobel Carling</td>
 						</tr>
 						<tr>
@@ -94,7 +94,7 @@ layout: default
 							<td class="input-value" style="border-bottom: 7px solid #e7e7e7;">4/3/1982</td>
 						</tr>
 						<tr>
-							<td class="field-name">Trustee</td>
+							<td class="field-name">Company name</td>
 							<td class="input-value">Frittleweed Pty Ltd</td>
 						</tr>
 						<tr>
@@ -112,23 +112,22 @@ layout: default
 					</tbody>
 				</table>
 			</div>
-			<div class="grid-row custom-controls">
-				<p>
-					<input type="checkbox" value="declare" id="declare">
-					<label for="declare">I/We the trustee(s) or director(s) or secretary of the corporate trustee of <strong>Super Dooper Fund</strong> elect that the Superannuation Industry (Supervision) Act 1993 is to apply in relation to the superannuation fund, and understand that the election is irrevocable.</label>
-				</p>
-			</div>
+			<fieldset class="grid-row margin-bottom-075">
+				<div class="grid-row custom-controls">
+					<p>
+						<input type="checkbox" value="declare" id="declare">
+						<label for="declare">elect that the Superannuation Industry (Supervision) Act 1993 is to apply in relation to the superannuation fund, and understand that the election is irrevocable.</label>
+					</p>
+				</div>
+				<div class="grid-row">
+					<label for="election-date">Date of election</label>
+					<div>
+						<input type="date" id="election-date" class="date" />
+					</div>
+				</div>
+			</fieldset>
 		</div>
-		<fieldset class="grid-row" tabindex="-1">
-			<div class="grid-row">
-				<div class="col4">
-					<label for="election-date" class="input-right">Election date</label>
-				</div>
-				<div class="col7 last">
-					<input type="date" id="election-date" class="date" />
-				</div>
-			</div>
-		</fieldset>
+		
 		<div class="controls-container">
 			<div class="controls-content">
 				<button type="button" class="btn previous">Previous</button><button type="button" class="btn btn-default next">Save and continue</button>
