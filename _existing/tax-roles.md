@@ -26,8 +26,8 @@ layout: default
 				<li><a href="#">myGov</a>: Connect your ABN to an existing myGov account on the myGov website.</li>
 			</ul>
         </div>
-		<!-- <p style="font-size: 90%">Want to check the status of your previous applications?</p>
-		<p style="font-size: 90%">Find them on your <button type="button" class="btn btn-small" onclick="location.href='dashboard'">Application summary</button></p> -->
+		<p style="font-size: 90%">Want to check on the status of your previous applications?</p>
+		<p style="font-size: 90%">View the <button type="button" class="btn btn-small" onclick="location.href='dashboard'">application summary</button><br>for your existing applications.</p>
     </div>
 </div>
 <div class="grid-row clearfix">

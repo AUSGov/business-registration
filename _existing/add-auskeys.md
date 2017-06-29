@@ -172,7 +172,7 @@ layout: default
 						</thead>
 						<tbody id="ass1" style="display: none;">
 							<tr>
-								<th style="vertical-align: middle"><span class="fa fa-user blue"></span> Fred Albert Nerk</th>
+								<th style="vertical-align: middle"><span class="fa fa-user blue"></span> WALTER BOYLD</th>
 								<th>
 									<button type="button" id="delete-ass1" class="btn btn-default ico-remove">Remove</button>
 									<button type="button" id="edit-auth" class="btn btn-default ico-edit">Edit</button>
@@ -201,7 +201,7 @@ layout: default
 						</tbody>
 						<tbody id="ass2" style="display: none;">
 							<tr>
-								<th style="vertical-align: middle"><span class="fa fa-user blue"></span> Simon Arthur Bourke</th>
+								<th style="vertical-align: middle"><span class="fa fa-user blue"></span> SCOTT WARD</th>
 								<th>
 									<button type="button" id="delete-ass2" class="btn btn-default ico-remove">Remove</button>
 									<button type="button" id="edit-auth" class="btn btn-default ico-edit">Edit</button>
@@ -209,23 +209,23 @@ layout: default
 							</tr>
 							<tr>
 								<td class="field-name">Associate type</td>
-								<td class="input-value">Public officer</td>
+								<td class="input-value">Public Officer</td>
 							</tr>
 							<tr>
 								<td class="field-name">Tax File Number (TFN)</td>
-								<td class="input-value">987654321</td>
+								<td class="input-value">865414088</td>
 							</tr>
 							<tr>
 								<td class="field-name">Date of birth</td>
-								<td class="input-value">27/09/1976</td>
+								<td class="input-value">01/01/1988</td>
 							</tr>
 							<tr>
 								<td class="field-name">Email</td>
-								<td class="input-value">simon@email.com</td>
+								<td class="input-value">test@test.com</td>
 							</tr>
 							<tr>
 								<td class="field-name">Phone number</td>
-								<td class="input-value">66666666</td>
+								<td class="input-value">43214321</td>
 							</tr>
 						</tbody>
 					</table>
@@ -233,13 +233,6 @@ layout: default
 				<div class="margin-top-075">
 					<button id="btn-add-auth" class="btn btn-inline ajax-button" type="button" disabled>Add authorisation</button>
 				</div>
-			</div>
-		</div>
-		<div id="contacts" style="display: none">
-			<h3>Authorised contacts</h3>
-			<p>You may enter details here of persons authorised to be contacted by the Autralian Taxation Office (ATO) regarding your application.</p>
-			<div class="margin-top-075">
-				<button id="btn-add-contact" class="btn btn-inline ajax-button" type="button">Add contact</button>
 			</div>
 		</div>
 		<div id="declaration" style="display: none;">
@@ -291,49 +284,16 @@ layout: default
 	<fieldset id="Associates_PersonAssociate_Roles">
 		<legend class="has-help larger">Associate details</legend>
 		<div class="grid-row">
-			<div class="col4">
-				<label class="input-right" for="associate-type">Associate type</label>
-			</div>
-			<div class="col7">
-				<select id="associate-type">
-					<option value="">--- please select ---</option>
-					<option>Trustee</option>
-					<option>Public officer</option>
-					<option>Director</option>
-					<option>Partner</option>
-					<option>Office bearer of a club / association</option>
-				</select>
-			</div>
+            <div class="col4">
+                <label class="input-right" for="Associate_ApplyingEntityId">Business associate</label>
+            </div>
+            <div class="col8 last">
+			<select data-val="true" data-val-number="The field ApplyingEntityId must be a number." data-val-required="Business associate is required." id="Associate_ApplyingEntityId" name="Associate.ApplyingEntityId"><option value="">Please select...</option>
+				<option value="64">WALTER BOYLD - Public Officer</option>
+				<option value="65">SCOTT WARD - Director</option>
+			</select>
 		</div>
-		<div class="grid-row">
-			<div class="col4">
-				<label class="input-right" for="Associates_PersonAssociate_GivenName">Given name</label>
-			</div>
-			<div class="col8 last">
-				<input id="Associates_PersonAssociate_GivenName" name="Associates.PersonAssociate.GivenName" type="text" value=""> 
-				
-			</div>
-		</div>
-
-		<div class="grid-row">
-			<div class="col4">
-				<label class="input-right" for="Associates_PersonAssociate_OtherName">Other given name <span class="field-note optional">(optional)</span></label>
-			</div>
-			<div class="col8 last">
-				<input id="Associates_PersonAssociate_OtherName" name="Associates.PersonAssociate.OtherName" type="text" value=""> 
-				
-			</div>
-		</div>
-
-		<div class="grid-row">
-			<div class="col4">
-				<label class="input-right" for="Associates_PersonAssociate_FamilyName">Family name</label>
-			</div>
-			<div class="col8 last">
-				<input id="Associates_PersonAssociate_FamilyName" name="Associates.PersonAssociate.FamilyName" type="text" value=""> 
-				
-			</div>
-		</div>
+        </div>
 
 		<div class="grid-row">
 			<div class="col4">
@@ -364,7 +324,7 @@ layout: default
 		</div>
 		<div class="grid-row">
 			<div class="col4">
-				<label class="input-right" for="AuthorisedContacts_AuthorisedContact_BusinessHoursPhone">Phone number</label>
+				<label class="input-right" for="AuthorisedContacts_AuthorisedContact_BusinessHoursPhone">Phone</label>
 			</div>
 			<div class="col8 last">
 				<input id="AuthorisedContacts_AuthorisedContact_BusinessHoursPhone" name="AuthorisedContacts.AuthorisedContact.BusinessHoursPhone" type="text" value=""> 
@@ -374,8 +334,8 @@ layout: default
 		
 	</fieldset>
 	<div class="controls-content margin-bottom">
-		<button class="btn btn-default ajax-button" id="add-person" type="button">Add</button>
 		<button class="btn cancel ajax-button" type="button" id="cancel-assoc">Cancel</button>
+		<button class="btn btn-default ajax-button" id="add-person" type="button">Save authorisation</button>
 	</div>
 </div>
 <div id="dialogOne" style="display:none;">

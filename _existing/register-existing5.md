@@ -212,13 +212,13 @@ layout: default
 		</table>
 		<div id="all-content" style="display: none;">
 			<h3 id="taxreg-heading">Tax registrations</h3>
-			<p>If your business has multiple branches you need to apply for the registrations for individual branches separately.</p>
+			<!-- <p>If your business has multiple branches you need to apply for the registrations for individual branches separately.</p>
 			<p class="label">Do you want to apply for registrations for a branch?</p>
 			<div class="radio-toggle clearfix" style="zoom: .8;">
 				<label class="on label-left" for="branchYes"><input id="branchYes" type="radio" name="register-branch"><span>Yes</span></label>
 				<label class="off label-right" for="branchNo"><input id="branchNo" type="radio" name="register-branch" checked><span>No</span></label>
 			</div>
-			<div id="enter-branch" style="display: none">
+			<div id="enter-branch" style="display: block">
 				<p>Enter the branch number in the field below and click "Retrieve" to update your existing registrations for the selected branch.</p>
 				<div id="branch-div">
 					<p><label for="branch">Branch number</label><br />
@@ -226,148 +226,168 @@ layout: default
 					<span class="branch-spinner" style="display: none;"><img src="{{ site.baseurl }}/img/ajax-loader.gif" alt="loading" style="vertical-align: middle"/></span>
 					<span id="rego-update-msg" style="display: none;"><span class="fa fa-check green"></span> <span style="font-size: 90%;">registrations updated</span></span></p>
 				</div>
-			</div>
+			</div> -->
+			<p>
+				<label class="" for="BranchNumber">Branch number</label><br>
+				<select id="BranchNumber" name="BranchNumber" style="width: 400px">
+					<option id="no-opt" value="">Please select...</option>
+					<option value="2">Integrated client account: 2</option>
+					<option value="4">Integrated client account: 4</option>
+				</select>
+			</p>
 			<div id="rego-content">
 				<h4>Current registrations</h4>
-				<p id="reg-intro">The following tax roles have already been registered with the Australian Taxation Office (ATO):</p>
-				<p id="no-registrations" style="display: none;">There are no registrations for this branch.</p>
-				<ul id="reg-list" class="reg-list">
-					<li><span class="fa fa-check green"></span> Goods &amp; Services Tax</li>
-				</ul>
-				<div id="rego-display" style="display: none;">
-					<h4>Registrations added</h4>
-					<p>You have provided details to apply for the following tax roles:</p>
-					<table>
-						<thead class="visuallyhidden">
-							<tr>
-								<th>Field item</th>
-								<th>Input value</th>
+				<div class= "empty-content">
+					<p>Select a branch.</p>
+				</div>
+				<span class="branch-spinner" style="display: none;"><img src="{{ site.baseurl }}/img/ajax-loader.gif" alt="loading" /></span>
+				<div class="prefill-content" style="display: none;">
+					<p id="reg-intro">The following tax roles have already been registered with the Australian Taxation Office (ATO):</p>
+					<p id="no-registrations" style="display: none;">There are no registrations for this branch.</p>
+					<ul id="reg-list" class="reg-list">
+						<li><span class="fa fa-check green"></span> Goods &amp; Services Tax</li>
+					</ul>
+					<div id="rego-display" style="display: none;">
+						<h4>Registrations added</h4>
+						<p>You have provided details to apply for the following tax roles:</p>
+						<table>
+							<thead class="visuallyhidden">
+								<tr>
+									<th>Field item</th>
+									<th>Input value</th>
+								</tr>
+							</thead>
+							<tbody id="gst-display" style="display: none;">
+								<tr>
+									<th style="vertical-align: middle"><span class="fa fa-plus orange"></span> Goods &amp; Services Tax (GST)</th>
+									<th>
+										<button type="button" id="delete-gst" class="btn btn-default ico-remove">Remove</button>
+										<button type="button" id="edit-gst" class="btn btn-default ico-edit">Edit</button>
+									</th>
+								</tr>
+								<tr>
+									<td class="field-name">Registration start date</td>
+									<td class="input-value">18/04/2017</td>
+								</tr>
+								<tr>
+									<td class="field-name">Turnover</td>
+									<td class="input-value">$0 - $74,999</td>
+								</tr>
+								<tr>
+									<td class="field-name">Lodgement frequency</td>
+									<td class="input-value">Annually</td>
+								</tr>
+								<tr>
+									<td class="field-name">Accounting method</td>
+									<td class="input-value">Accrual</td>
+								</tr>
+								<tr>
+									<td class="field-name">Import goods?</td>
+									<td class="input-value">No</td>
+								</tr>
+							</tbody>
+							<tbody id="payg-display" style="display: none;">
+								<tr>
+									<th style="vertical-align: middle"><span class="fa fa-plus orange"></span> Pay As You Go (PAYG) Withholding</th>
+									<th>
+										<button type="button" id="delete-payg" class="btn btn-default ico-remove">Remove</button>
+										<button type="button" id="edit-payg" class="btn btn-default ico-edit">Edit</button>
+									</th>
+								</tr>
+								<tr>
+									<td class="field-name">Registration start date</td>
+									<td class="input-value">18/04/2017</td>
+								</tr>
+								<tr>
+									<td class="field-name">Number of employees</td>
+									<td class="input-value">12</td>
+								</tr>
+								<tr>
+									<td class="field-name">Annual witholding amount</td>
+									<td class="input-value">$2,000,000</td>
+								</tr>
+								<tr>
+									<td class="field-name">Payment summary report method</td>
+									<td class="input-value">Electronic</td>
+								</tr>
+								<tr>
+									<td class="field-name">Royalties, dividends, interest or investment body</td>
+									<td class="input-value">No</td>
+								</tr>
+							</tbody>
+							<tbody id="fbt-display" style="display: none;">
+								<tr>
+									<th style="vertical-align: middle"><span class="fa fa-plus orange"></span> Fringe Benefits Tax (FBT)</th>
+									<th>
+										<button type="button" id="delete-fbt" class="btn btn-default ico-remove">Remove</button>
+										<button type="button" id="edit-fbt" class="btn btn-default ico-edit">Edit</button>
+									</th>
+								</tr>
+								<tr>
+									<td class="field-name">Registration start date</td>
+									<td class="input-value">18/04/2017</td>
+								</tr>
+							</tbody>
+							<tbody id="ftc-display" style="display: none;">
+								<tr>
+									<th style="vertical-align: middle"><span class="fa fa-plus orange"></span> Fuel Tax Credits (FTC)</th>
+									<th>
+										<button type="button" id="delete-ftc" class="btn btn-default ico-remove">Remove</button>
+										<button type="button" id="edit-ftc" class="btn btn-default ico-edit">Edit</button>
+									</th>
+								</tr>
+								<tr>
+									<td class="field-name">Registration start date</td>
+									<td class="input-value">5/04/2017</td>
+								</tr>
+								<tr>
+									<td class="field-name">Heavy vehicles on public roads?</td>
+									<td class="input-value">Yes</td>
+								</tr>
+								<tr>
+									<td class="field-name">Fuel type(s)</td>
+									<td class="input-value">Petrol</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<h4 id="available">Available registrations</h4>
+				<div class= "empty-content">
+					<p>Select a branch.</p>
+				</div>
+				<span class="branch-spinner" style="display: none;"><img src="{{ site.baseurl }}/img/ajax-loader.gif" alt="loading" /> </span>
+				<div class="prefill-content" style="display: none;">
+					<p>Select from the following to apply for the associated tax registration:</p>
+					<table class="btn-list" style="width: inherit">
+						<tbody>
+							<tr id="opt-gst" style="display: none;">
+								<td>Goods and Services Tax (GST)</td>
+								<td><button type="button" id="apply-gst" class="btn btn-default ico-edit" style="float: none;">Add</button></td>
 							</tr>
-						</thead>
-						<tbody id="gst-display" style="display: none;">
-							<tr>
-								<th style="vertical-align: middle"><span class="fa fa-plus orange"></span> Goods &amp; Services Tax (GST)</th>
-								<th>
-									<button type="button" id="delete-gst" class="btn btn-default ico-remove">Remove</button>
-									<button type="button" id="edit-gst" class="btn btn-default ico-edit">Edit</button>
-								</th>
+							<tr id="opt-payg">
+								<td>Pay As You Go (PAYG) Withholding</td>
+								<td><button type="button" id="apply-payg" class="btn btn-default ico-edit" style="float: none;">Add</button></td>
+							</tr>
+							<tr id="opt-fbt">
+								<td>Fringe Benefits Tax (FBT)</td>
+								<td><button type="button" id="apply-fbt" class="btn btn-default ico-edit" style="float: none;">Add</button></td>
 							</tr>
 							<tr>
-								<td class="field-name">Registration start date</td>
-								<td class="input-value">18/04/2017</td>
+								<td>Luxury Car Tax (LCT)</td>
+								<td><button type="button" id="apply-lct" class="btn btn-default ico-edit" style="float: none;">Add</button></td>
+							</tr>
+							<tr id="opt-ftc">
+								<td>Fuel Tax Credits (FTC)</td>
+								<td><button type="button" id="apply-ftc" class="btn btn-default ico-edit" style="float: none;">Add</button></td>
 							</tr>
 							<tr>
-								<td class="field-name">Turnover</td>
-								<td class="input-value">$0 - $74,999</td>
-							</tr>
-							<tr>
-								<td class="field-name">Lodgement frequency</td>
-								<td class="input-value">Annually</td>
-							</tr>
-							<tr>
-								<td class="field-name">Accounting method</td>
-								<td class="input-value">Accrual</td>
-							</tr>
-							<tr>
-								<td class="field-name">Import goods?</td>
-								<td class="input-value">No</td>
-							</tr>
-						</tbody>
-						<tbody id="payg-display" style="display: none;">
-							<tr>
-								<th style="vertical-align: middle"><span class="fa fa-plus orange"></span> Pay As You Go (PAYG) Withholding</th>
-								<th>
-									<button type="button" id="delete-payg" class="btn btn-default ico-remove">Remove</button>
-									<button type="button" id="edit-payg" class="btn btn-default ico-edit">Edit</button>
-								</th>
-							</tr>
-							<tr>
-								<td class="field-name">Registration start date</td>
-								<td class="input-value">18/04/2017</td>
-							</tr>
-							<tr>
-								<td class="field-name">Number of employees</td>
-								<td class="input-value">12</td>
-							</tr>
-							<tr>
-								<td class="field-name">Annual witholding amount</td>
-								<td class="input-value">$2,000,000</td>
-							</tr>
-							<tr>
-								<td class="field-name">Payment summary report method</td>
-								<td class="input-value">Electronic</td>
-							</tr>
-							<tr>
-								<td class="field-name">Royalties, dividends, interest or investment body</td>
-								<td class="input-value">No</td>
-							</tr>
-						</tbody>
-						<tbody id="fbt-display" style="display: none;">
-							<tr>
-								<th style="vertical-align: middle"><span class="fa fa-plus orange"></span> Fringe Benefits Tax (FBT)</th>
-								<th>
-									<button type="button" id="delete-fbt" class="btn btn-default ico-remove">Remove</button>
-									<button type="button" id="edit-fbt" class="btn btn-default ico-edit">Edit</button>
-								</th>
-							</tr>
-							<tr>
-								<td class="field-name">Registration start date</td>
-								<td class="input-value">18/04/2017</td>
-							</tr>
-						</tbody>
-						<tbody id="ftc-display" style="display: none;">
-							<tr>
-								<th style="vertical-align: middle"><span class="fa fa-plus orange"></span> Fuel Tax Credits (FTC)</th>
-								<th>
-									<button type="button" id="delete-ftc" class="btn btn-default ico-remove">Remove</button>
-									<button type="button" id="edit-ftc" class="btn btn-default ico-edit">Edit</button>
-								</th>
-							</tr>
-							<tr>
-								<td class="field-name">Registration start date</td>
-								<td class="input-value">5/04/2017</td>
-							</tr>
-							<tr>
-								<td class="field-name">Heavy vehicles on public roads?</td>
-								<td class="input-value">Yes</td>
-							</tr>
-							<tr>
-								<td class="field-name">Fuel type(s)</td>
-								<td class="input-value">Petrol</td>
+								<td>Wine Equalisation Tax (WET)</td>
+								<td><button type="button" id="apply-wet" class="btn btn-default ico-edit" style="float: none;">Add</button></td>
 							</tr>
 						</tbody>
 					</table>
 				</div>
-				<h4 id="available">Available registrations</h4>
-				<p>Select from the following to apply for the associated tax registration:</p>
-				<table class="btn-list" style="width: inherit">
-					<tbody>
-						<tr id="opt-gst" style="display: none;">
-							<td>Goods and Services Tax (GST)</td>
-							<td><button type="button" id="apply-gst" class="btn btn-default ico-edit" style="float: none;">Add</button></td>
-						</tr>
-						<tr id="opt-payg">
-							<td>Pay As You Go (PAYG) Withholding</td>
-							<td><button type="button" id="apply-payg" class="btn btn-default ico-edit" style="float: none;">Add</button></td>
-						</tr>
-						<tr id="opt-fbt">
-							<td>Fringe Benefits Tax (FBT)</td>
-							<td><button type="button" id="apply-fbt" class="btn btn-default ico-edit" style="float: none;">Add</button></td>
-						</tr>
-						<tr>
-							<td>Luxury Car Tax (LCT)</td>
-							<td><button type="button" id="apply-lct" class="btn btn-default ico-edit" style="float: none;">Add</button></td>
-						</tr>
-						<tr id="opt-ftc">
-							<td>Fuel Tax Credits (FTC)</td>
-							<td><button type="button" id="apply-ftc" class="btn btn-default ico-edit" style="float: none;">Add</button></td>
-						</tr>
-						<tr>
-							<td>Wine Equalisation Tax (WET)</td>
-							<td><button type="button" id="apply-wet" class="btn btn-default ico-edit" style="float: none;">Add</button></td>
-						</tr>
-					</tbody>
-				</table>
 				<!-- <div id="registrations" class="grid-row clearfix">
 					<div class="col12 last">
 						<span class="select-spinner"></span>
@@ -821,24 +841,6 @@ layout: default
 <div id="contact-form" class="confirmation" style="display: none;">
 	<fieldset id="Associates_PersonAssociate_Roles">
 		<legend class="larger">Authorised contact</legend>
-		<p>You can enter a new contact or copy and modify the details from an existing contact.</p>
-		<table>
-			<tbody>
-				<tr>
-					<th colspan="3">Existing contacts</th>
-				</tr>
-				<tr>
-					<td>Fred Nerk</td>
-					<td>Accountant</td>
-					<td><button type="button" id="copy-contact1" class="btn btn-default ico-edit">Copy</button></td>
-				</tr>
-				<tr>
-					<td>Simon Bourke</td>
-					<td>Secretary</td>
-					<td><button type="button" id="copy-contact2" class="btn btn-default ico-edit">Copy</button></td>
-				</tr>
-			</tbody>
-		</table>
 		<h3 class="margin4">Contact details</h3>
 		<div class="grid-row">
 			<div class="col4">
@@ -849,7 +851,6 @@ layout: default
 				
 			</div>
 		</div>
-
 		<div class="grid-row">
 			<div class="col4">
 				<label class="input-right" for="Associates_PersonAssociate_FamilyName">Family name</label>
@@ -859,17 +860,15 @@ layout: default
 				
 			</div>
 		</div>
-
 		<div class="grid-row">
 			<div class="col4">
-				<label class="input-right" for="Associates_PersonAssociate_TaxFileNumber">Position</label>
+				<label class="input-right" for="Associates_PersonAssociate_TaxFileNumber">Position held</label>
 			</div>
 			<div class="col8 last">
-				<input id="Associates_PersonAssociate_TaxFileNumber" name="Associates.PersonAssociate.TaxFileNumber" type="text" value=""> <a class="cd-btn help" href="#help-businessdetailspersondetailstaxfilenumber"><span>Help - Tax File Number (TFN)</span></a>
-				
+				<input id="Associates_PersonAssociate_TaxFileNumber" name="Associates.PersonAssociate.TaxFileNumber" type="text" value=""> <a class="cd-btn help" href="#help-businessdetailspersondetailstaxfilenumber"><span>Help - Tax File Number (TFN)</span></a><br />
+				For example: tax agent.
 			</div>
 		</div>
-		
 		<div class="grid-row">
 			<div class="col4">
 				<label class="input-right" for="AuthorisedContacts_AuthorisedContact_BusinessHoursPhone">Business hours phone</label>
@@ -993,6 +992,15 @@ layout: default
 				scrollToAndFocus("#all-content");
 			});
 		}, 2500);
+		
+		$("#BranchNumber").change(function() {
+			$(".empty-content, .prefill-content").hide();
+			$(".branch-spinner").show();
+			window.setTimeout(function() {
+				$(".branch-spinner").hide();
+				$(".prefill-content").show();
+			}, 1000);
+		});
 		
 		$("#rego-select").change(function(){
 			if ($(this).val() == "")
