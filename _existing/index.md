@@ -17,13 +17,7 @@ layout: default-no-nav
 						<h2>New business</h2>
 					</div>
 				</div>
-				<p>Start here if you need to apply for:</p>
-				<ul style="list-style-type: disc">
-					<li>an ABN</li>
-					<li>a business name</li>
-					<li>a company or</li>
-					<li>tax registrations.</li>
-				</ul>
+				<p>Start here to register a new ABN with a business name, company, taxes or AUSkey.</p>
 			</a>
 		</li>
 		<li class="run">
@@ -33,11 +27,11 @@ layout: default-no-nav
 						<span class="fa topic run fa-gears"></span>
 					</div>
 					<div class="body">
-						<h2>Taxes only</h2>
+						<h2>Add Taxes</h2>
 					</div>
 				</div>
-				<p>Already have an ABN and now need to apply for a tax registration?</p>
-				<p>Use your AUSkey or MyGov to login and register.</p>
+				<p>Have an ABN and need to apply for additional taxes?</p>
+				<p>Use your <strong>AUSkey</strong> or <strong>MyGov</strong> login to register.</p>
 			</a>
 		</li>
 		<li class="register">
@@ -50,8 +44,8 @@ layout: default-no-nav
 						<h2>AUSkey only</h2>
 					</div>
 				</div>
-				<p>Already have an ABN and need one or more administrator AUSkeys?</p>
-				<p>Apply here!</p>
+				<p>Have an ABN and need an Administrator AUSkey for yourself or a business associate?</p>
+				<p>Apply here.</p>
 			</a>
 		</li>
 		<!-- <li class="plan">
