@@ -10,43 +10,71 @@ layout: default-no-nav
 		<li class="plan">
 			<a href="../register.html">
 				<div class="flag">
-					<div class="image">
-						<span class="fa topic start fa-lightbulb-o"></span>
-					</div>
+					<span class="fa-stack fa-2x">
+					  <i class="fa fa-circle fa-stack-2x"></i>
+					  <i class="fa fa-lightbulb-o fa-stack-1x fa-inverse"></i>
+					</span>
 					<div class="body">
 						<h2>New business</h2>
 					</div>
 				</div>
-				<p>Start here to register a new ABN with a business name, company, taxes or AUSkey.</p>
+				<p>Start here if you need to apply for:</p>
+				<ul style="list-style-type: disc">
+					<li>an ABN</li>
+					<li>a business name</li>
+					<li>a company or</li>
+					<li>tax registrations.</li>
+				</ul>
 			</a>
 		</li>
 		<li class="run">
 			<a href="tax-roles">
 				<div class="flag">
-					<div class="image">
-						<span class="fa topic run fa-gears"></span>
-					</div>
+					<span class="fa-stack fa-2x">
+					  <i class="fa fa-circle fa-stack-2x"></i>
+					  <i class="fa fa-gears fa-stack-1x fa-inverse"></i>
+					</span>
 					<div class="body">
-						<h2>Add Taxes</h2>
+						<h2>Taxes only</h2>
 					</div>
 				</div>
-				<p>Have an ABN and need to apply for additional taxes?</p>
-				<p>Use your <strong>AUSkey</strong> or <strong>MyGov</strong> login to register.</p>
+				<p>Already have an ABN and now need to apply for a tax registration?</p>
+				<p>Use your AUSkey or MyGov to login and register.</p>
 			</a>
 		</li>
 		<li class="register">
 			<a href="auskey">
 				<div class="flag">
-					<div class="image">
-						<span class="fa topic register fa-unlock-alt"></span>
-					</div>
+					<span class="fa-stack fa-2x">
+					  <i class="fa fa-circle fa-stack-2x"></i>
+					  <i class="fa fa-unlock-alt fa-stack-1x fa-inverse"></i>
+					</span>
 					<div class="body">
 						<h2>AUSkey only</h2>
 					</div>
 				</div>
-				<p>Have an ABN and need an Administrator AUSkey for yourself or a business associate?</p>
-				<p>Apply here.</p>
+				<p>Already have an ABN and need one or more administrator AUSkeys?</p>
+				<p>Apply here!</p>
 			</a>
+		</li>
+		<li class="assistance">
+			<span>
+				<div class="flag">
+					<span class="fa-stack fa-2x">
+					  <i class="fa fa-circle fa-stack-2x"></i>
+					  <i class="fa fa-hourglass-half fa-stack-1x fa-inverse" style="font-size: 80%"></i>
+					</span>
+
+					<div class="body">
+						<h2>Status</h2>
+					</div>
+				</div>
+				<p>Already applied for new or additional registrations?</p>
+				<p>Check on the status here.</p>
+				<span style="display: block; margin-top: 25px">
+					<button type="button" class="btn btn-small" onclick="location.href='b2c-login.html?dest=dashboard-b2c'">New</button> <button type="button" class="btn btn-small" onclick="location.href='aba-login.html?dest=dashboard'">Additional</button>
+				</span>
+			</span>
 		</li>
 		<!-- <li class="plan">
 			<a href="auskey" style="border-top-color: #8811A8;">
