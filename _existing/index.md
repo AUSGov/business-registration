@@ -69,27 +69,13 @@ layout: default-no-nav
 						<h2>Status</h2>
 					</div>
 				</div>
-				<p>Already applied for new or additional registrations?</p>
+				<p>Already applied for <strong>new</strong> or <strong>additional</strong> registrations?</p>
 				<p>Check on the status here.</p>
 				<span style="display: block; margin-top: 20px">
 					<button type="button" class="btn btn-small" onclick="location.href='b2c-login.html?dest=dashboard-b2c'">New</button> <button type="button" class="btn btn-small" onclick="location.href='aba-login.html?dest=dashboard'">Additional</button>
 				</span>
 			</span>
 		</li>
-		<!-- <li class="plan">
-			<a href="auskey" style="border-top-color: #8811A8;">
-				<div class="flag">
-					<div class="image">
-						<span class="fa topic start fa-inbox" style="padding: .46rem 0 0 0.8rem; background-color: #8811A8;"></span>
-					</div>
-					<div class="body">
-						<h2>My status</h2>
-					</div>
-				</div>
-				<p>Lodged an application and want to know where it's at?</p>
-				<p>Check the status here!</p>
-			</a>
-		</li> -->
 	</ul>
 </div>
 
