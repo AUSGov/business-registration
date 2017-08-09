@@ -71,7 +71,7 @@ layout: default-no-nav
 				</div>
 				<p>Already applied for new or additional registrations?</p>
 				<p>Check on the status here.</p>
-				<span style="display: block; margin-top: 25px">
+				<span style="display: block; margin-top: 20px">
 					<button type="button" class="btn btn-small" onclick="location.href='b2c-login.html?dest=dashboard-b2c'">New</button> <button type="button" class="btn btn-small" onclick="location.href='aba-login.html?dest=dashboard'">Additional</button>
 				</span>
 			</span>
