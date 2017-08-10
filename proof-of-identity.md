@@ -557,7 +557,8 @@ layout: default
 	<h1>Proof of identity</h1> 
 	<p>We were unable to confirm your identity automitically using the information you provided. The Australian Business Register may need to check the identity manually, which will delay your application.</p>	
 	<input type="button" class="btn btn-default" id="btnRemoveName1" value="Go back" onclick="visionaustralia.closeDialog('dialogTwo'); $('#individual1-given').focus();" /> 
-	<input type="button" class="btn" onclick='visionaustralia.closeDialog("dialogTwo"); ContinueUnvalidated();' value="Continue">
+	<input type="button" class="btn" onclick="visionaustralia.closeDialog('dialogTwo'); ContinueUnvalidated();" value="Continue" />
+	<button type="button" id="hidden-button" style="display: none">dummy</button>
 </div>
 
 <script src="scripts/jquery-1.11.3.min.js"></script>
@@ -565,8 +566,6 @@ layout: default
 <script src="scripts/jquery-toggleslide.js"></script>
 <script src="scripts/jquery.blockUI.js"></script>
 <script type="text/javascript" src="scripts/vadialog.js"></script> 
-<script type="text/javascript">
-</script>
 <script>
 	$(document).ready(function () {
 		/* Expand collapse headings config */
@@ -575,7 +574,7 @@ layout: default
 		initApplicationOptions();
 
 		visionaustralia.addDialog("edit", "dialogOne"); 
-		visionaustralia.addDialog("bad-next", "dialogTwo"); 
+		visionaustralia.addDialog("hidden-button", "dialogTwo"); 
 
 		$("#postal-cb").click(function() {
 			$("#postal-address").toggle();
@@ -605,7 +604,24 @@ layout: default
 				nextSection();
 			}
 		});
-		
+	
+		$("#bad-next").click(function() {
+			$.blockUI({
+					message: '<p id="loading-status" role="progressbar" aria-valuetext="loading">verifying identity <img class="loading-ellipsis" src="img/ellipsis.gif" /></p>',
+					css: {
+						padding: "5px"
+					},
+					overlayCSS: {
+						backgroundColor: '#bbb',
+						borderRadius: '10px'
+					}
+			});
+			window.setTimeout(function() {
+				$.unblockUI();
+				$("#hidden-button").click();
+			}, 2000);
+		});
+
 		$("#abn-prev").click(function() {
 			$("#section2 div.sub-section-content").hide("fast");
 			$("#section-div").show("fast", function() {
