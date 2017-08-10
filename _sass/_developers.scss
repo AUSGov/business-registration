@@ -137,12 +137,12 @@ ul.block-menu {
     }
 }
 
-@media only screen and (max-width: 768px) and (min-width: 640px) {
-	ul.block-menu > li button {
+@media only screen and (max-width: 768px) and (min-width: 641px) {
+	.feature-wrapper button {
 		width: auto;
 	}
 }
-
+		
 @media only screen and (max-width: 960px) {
 	ul.block-menu > li {
 		width: 50%;
@@ -150,9 +150,7 @@ ul.block-menu {
 }
 
 @media only screen and (max-width: 640px) {
-	ul.block-menu > li,
-	ul.block-menu > li button
-	{
+	ul.block-menu > li {
 		width: 100%;
 	}
 }
@@ -264,6 +262,10 @@ ul.block-menu li {
 div.feature-wrapper {
 	max-width: 800px;
 	margin: 0 auto;
+}
+
+.red {
+	color: #c00;
 }
 
 /* Chat now button */
@@ -461,6 +463,10 @@ input[type=number] {
     width: 20px;
 }
 
+.vadialog {
+	width: 450px;
+}
+    
 /* RF: The following classes should not be required and need checking before being removed or refactored */
 /*
 .strong label {
