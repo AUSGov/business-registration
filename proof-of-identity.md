@@ -16,16 +16,20 @@ layout: default
 	</ul>
 </div>
 <h1 id="heading" tabindex="-1">2. Business details <span>(Step 2 of 3)</span></h1>
-<p>All fields are required unless marked as optional.</p>
+<p>Please complete the details below. All fields are required unless marked as (optional).</p>
 
 
 <!-- START SECTION 1 -->
 <div id="section1" class="sub-section-container sub-section-open">
-	<h2><p id="verified" style="display: none; position: absolute; padding:0; margin:0; right: 4%; color: green; font-size: 0.8em"><span class="fa fa-check green"></span> verified</p>Proof of identity</h2>
+	<h2>
+		<p id="verified" style="display: none; position: absolute; padding:0; margin:0; right: 4%; color: green; font-size: 0.8em"><span class="fa fa-check green"></span> verified</p>
+		<p id="unverified" style="display: none; position: absolute; padding:0; margin:0; right: 4%; color: #c00; font-size: 0.8em"><span class="fa fa-times red"></span> unverified</p>
+		Proof of identity</h2>
 	
 	<div id="section-div" class="sub-section-content">
+	<div id="edit-details">
 		<div class="margin4">The details below are used to confirm your identity.</div>
-		<fieldset>
+		<fieldset class="no-margin">
 			<legend class="margin4 larger">Your details</legend>
 			<div class="grid-row">
 				<div class="col4">
@@ -60,9 +64,73 @@ layout: default
 				</div><!-- col -->
 			</div>
 		</fieldset>
+		<fieldset id="fieldsetPOIAddress" class="no-margin">
+            <div class="grid-row">
+                <div class="col4">
+                    <p>&nbsp;</p>
+                </div>
+                <div class="col8 last">
+                    <p class="label" id="PersonDetails_HasTaxFileNumber_lbl">Do you have a Tax File Number (TFN)?</p>
+                    <p>Providing your TFN is the quickest way to prove your identity.</p>
+                </div>
+            </div>
+            <fieldset id="PersonDetails_HasTaxFileNumber" tabindex="-1">
+                <div class="grid-row">
+                    <div class="col4">
+                        &nbsp;
+                    </div>
+                    <div class="col8 last">
+                        <div class="radio-toggle">
+                            <label class="on label-left" for="PersonDetails_HasTaxFileNumber_Yes">
+                                <input id="PersonDetails_HasTaxFileNumber_Yes" name="PersonDetails.HasTaxFileNumber" onclick="$('#tfn-div').show();" type="radio" value="Yes">
+                                <span id="tfn_yes">Yes</span>
+                            </label>
+                            <label class="off label-right" for="PersonDetails_HasTaxFileNumber_No">
+                                <input id="PersonDetails_HasTaxFileNumber_No" name="PersonDetails.HasTaxFileNumber" onclick="$('#tfn-div').hide(); $('#PersonDetails_TaxFileNumber').val('');" type="radio" value="No">
+                                <span id="tfn_no">No</span>
+                            </label>
+                        </div> 
+                        
+                    </div>
+                </div>
+            </fieldset>
+        
+			<div id="tfn-div" class="grid-row" style="">
+				<div class="col4">
+					<label class="input-right" for="PersonDetails_TaxFileNumber">Tax File Number <span class="field-note optional">(optional)</span></label>
+				</div>
+				<div class="col8 last">
+					<input id="PersonDetails_TaxFileNumber" name="PersonDetails.TaxFileNumber" type="number" value=""> <a class="cd-btn help" href="#help-businessdetailspersondetailstaxfilenumber"><span>Help - Tax File Number (TFN)</span></a>
+					
+				</div>
+			</div>
+		</fieldset>
+		<div class="grid-row clearfix">
+				<div class="col4">
+					<p>&nbsp;</p>
+				</div>
+				<div class="col7 last">
+					<fieldset class="margin-bottom-075">
+						<legend class="no-padding">Are you an Australian resident for taxation purposes?</legend>
+						<div class="radio-toggle">
+							<label class="on label-left" for="BusinessActivityDetails_IsResidentOfAustralia_Yes">
+								<input id="BusinessActivityDetails_IsResidentOfAustralia_Yes" name="BusinessActivityDetails.IsResidentOfAustralia" type="radio" value="Yes">
+
+								<span id="BusinessActivityDetails_IsResidentOfAustralia_Yes_span">Yes</span>
+							</label>
+							<label class="off label-right" for="BusinessActivityDetails_IsResidentOfAustralia_No">
+								<input id="BusinessActivityDetails_IsResidentOfAustralia_No" name="BusinessActivityDetails.IsResidentOfAustralia" type="radio" value="No">
+
+								<span id="BusinessActivityDetails_IsResidentOfAustralia_No_span">No</span>
+							</label>
+						</div> <a class="cd-btn help" href="#help-businessactivityisresidentofaustralia"><span>Help - Resident for tax purposes</span></a>
+						
+					</fieldset>
+				</div>
+			</div>
 		<div class="address-lookup" style="">
 			<fieldset>
-				<legend class="margin4 larger">Residential address</legend>
+				<legend class="margin4 larger">Main business address</legend>
 				<div class="grid-row clearfix">
 					<div class="col4">
 						<label class="input-right" for="ContactDetails_BusinessAddress_AddressDetails_CountryId">Country</label>
@@ -169,74 +237,47 @@ layout: default
 						<p class="margin4">or you can:<input type="button" id="addr-enter-manually-btn1" class="btn btn-default address-enter-manually" value="Enter it manually"></p>
 					</fieldset>
 				</div>
-			<div class="grid-row clearfix">
-				<div class="col4">
-					<p>&nbsp;</p>
-				</div>
-				<div class="col7 last">
-					<fieldset class="margin-bottom-075">
-						<legend class="no-padding">Are you an Australian resident for taxation purposes?</legend>
-						<div class="radio-toggle">
-							<label class="on label-left" for="BusinessActivityDetails_IsResidentOfAustralia_Yes">
-								<input id="BusinessActivityDetails_IsResidentOfAustralia_Yes" name="BusinessActivityDetails.IsResidentOfAustralia" type="radio" value="Yes">
-
-								<span id="BusinessActivityDetails_IsResidentOfAustralia_Yes_span">Yes</span>
-							</label>
-							<label class="off label-right" for="BusinessActivityDetails_IsResidentOfAustralia_No">
-								<input id="BusinessActivityDetails_IsResidentOfAustralia_No" name="BusinessActivityDetails.IsResidentOfAustralia" type="radio" value="No">
-
-								<span id="BusinessActivityDetails_IsResidentOfAustralia_No_span">No</span>
-							</label>
-						</div> <a class="cd-btn help" href="#help-businessactivityisresidentofaustralia"><span>Help - Resident for tax purposes</span></a>
-						
-					</fieldset>
-				</div>
+			
 			</div>
-			<div class="grid-row">
-				<div class="col4">
-					<label for="tfn" class="input-right">
-						Tax File Number<br />
-					</label>
-				</div><!-- col -->
-				<div class="col8 last">
-					<input id="tfn" type="number">
-					<p>Providing your TFN is the quickest way to prove your identity.</p>
-				</div><!-- col -->
-			</div><!-- grid-row -->
-			<!--
-			<div class="grid-row">
-				<div class="col4">
-					<label for="dob" class="input-right">Date of birth<br />
-					<span class="field-note">(DD/MM/YYYY)</span></label>
-				</div>
-				<div class="col8 last">
-					<input id="dob" type="date">
-				</div>
-			</div>
-			<div class="grid-row">
-				<div class="col4">
-					<label for="country" class="input-right">Country of birth</label>
-				</div>
-				<div class="col8 last">
-					<select id="country">
-						<option selected="selected">Australia</option>
-						<option></option>
-					</select>
-				</div>
-			</div>
-			<div class="grid-row">
-				<div class="col4">
-					<label for="town" class="input-right">Town or city of birth</label>
-				</div>
-				<div class="col8 last">
-					<input id="town" type="text">
-				</div>
-			</div>
-			-->
-
+			<div id="view-details" class="confirmation" style="display: none;">
+				<table id="proofofidentity">
+					<thead class="visuallyhidden">
+						<tr>
+							<th>Field item</th>
+							<th>Input value</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th style="vertical-align: middle">Your details</th>
+							<th><button id="edit" type="button" class="btn btn-default ico-edit">Edit</button></th>
+						</tr>
+						<tr>
+							<td class="field-name">Name</td>
+							<td class="input-value">Martin Jones</td>
+						</tr>
+						<tr>
+							<td class="field-name">Date of birth</td>
+							<td class="input-value">1/01/1981</td>
+						</tr>
+						<tr>
+							<td class="field-name">Tax File Number</td>
+							<td class="input-value">123456782</td>
+						</tr>
+						<tr>
+							<td class="field-name">Main business address</td>
+							<td class="input-value">10 Binara St Canberra City ACT 2601</td>
+						</tr>
+								<tr>
+							<td class="field-name">Postal address</td>
+							<td class="input-value">PO Box 9999 Canberra City ACT 2600</td>
+						</tr>                                    
+					</tbody>
+				</table>
+		</div>
 		<div class="controls-container">
 			<div class="controls-content">
-				<button type="button" class="btn" onclick="location.href='business-names-05.html'">Previous</button><button id="nextbtn" type="button" class="btn btn-default">Next</button>
+				<button type="button" class="btn">Previous</button><button id="bad-next" class="btn btn-default">Save and continue</button><button id="nextbtn" type="button" class="btn btn-default" style="display: none;">Save and continue</button>
 			</div><!-- controls-content -->
 		</div>
 	</div><!-- sub-section-content -->
@@ -332,33 +373,7 @@ layout: default
             </div>
         </div>
 
-    <div class="grid-row clearfix">
-        <div class="col4">
-            <p>&nbsp;</p>
-        </div>
-        <div class="col7 last">
-            <fieldset id="BusinessActivityDetails_IsResidentOfAustralia" class="margin-bottom-075" tabindex="-1">
-                <legend class="no-padding ">Are you an Australian resident for taxation purposes?</legend>
-                <div class="radio-toggle">
-                    <label class="on label-left" for="BusinessActivityDetails_IsResidentOfAustralia_Yes">
-                        <input data-val="true" data-val-required="{0} is required." id="BusinessActivityDetails_IsResidentOfAustralia_Yes" name="BusinessActivityDetails.IsResidentOfAustralia" type="radio" value="Yes">
 
-                        <span id="BusinessActivityDetails_IsResidentOfAustralia_Yes_span">Yes</span>
-                    </label>
-                    <label class="off label-right" for="BusinessActivityDetails_IsResidentOfAustralia_No">
-                        <input id="BusinessActivityDetails_IsResidentOfAustralia_No" name="BusinessActivityDetails.IsResidentOfAustralia" type="radio" value="No">
-
-                        <span id="BusinessActivityDetails_IsResidentOfAustralia_No_span">No</span>
-                    </label>
-                </div> <a class="cd-btn help" href="#help-businessactivityisresidentofaustralia"><span>Help - Resident for tax purposes</span></a>
-                
-            </fieldset>
-            <p id="BusinessActivityDetails_IsResidentOfAustralia_No_Content" style="display: none">
-                </p><p>Are you registered for <a href="https://www.ato.gov.au/business/international-tax-for-business/in-detail/doing-business-in-australia/gst-registration-information-for-a-non-resident/?page=1#Types_of_registration" target="_blank">Simplified Goods &amp; Services Tax (GST) <span class="visuallyhidden">(opens in new window)</span></a>? </p>
-<p><strong>Please note:</strong> If you register for an ABN, you will lose this GST status and will be moved to full GST registration.</p>
-            <p></p>
-        </div>
-    </div>
 
 </fieldset>
 
@@ -411,12 +426,68 @@ layout: default
 
 
     </fieldset>
+<div class="grid-row margin-bottom-075 clearfix">
+<div class="col4">&nbsp;</div>
+<div class="col7 last custom-controls">
+                    <p>
+                        <input id="BusinessActivityDifferent" name="BusinessActivityDetails.BusinessActivityDifferent" type="checkbox" value="true"><input name="BusinessActivityDifferent" type="hidden" value="false">
+                        <label for="BusinessActivityDifferent">Business activity is different at the main address</label> 
+                    </p>
+                    
+                </div>
+			</div>
+    <fieldset id="fieldsetBusinessAddressActivity1" style="display: none;">
+        <legend class="margin4 larger">
+            Business activity at main address<a class="cd-btn help" href="#help-businessbusinessactivitylegend"><span>Help - Main business activity</span></a>
+        </legend>
+
+<div id="BusinessActivityDetails_BusinessAddressActivity1">
+    <div class="showhide-target" style="display: block">
+        <div style="display: none">
+            <input id="__c__BusinessActivityDetails_BusinessAddressActivity_BusinessActivityId1" name="__c__BusinessActivityDetails.BusinessAddressActivity.BusinessActivityId1" type="hidden" value="BfNQIa39YHWRsVvADavFng==">
+        </div>
+        
+        <div class="grid-row">
+            <div class="col4">
+                <label for="BusinessActivityDetails_BusinessAddressActivity_SearchTerm1" class="input-right">
+                    Choose business activity<br>
+                    <span class="field-note">(Start typing and choose from the options presented)</span>
+                </label>
+            </div>
+            <div class="col8 last">
+                <input data-val="true" data-val-length="Search term must be a maximum of 200 characters long. You entered {TotalLength} characters." data-val-length-max="200" id="BusinessActivityDetails_BusinessAddressActivity_SearchTerm1" name="BusinessActivityDetails.BusinessAddressActivity.SearchTerm1" type="text" value="" spellcheck="true"> 
+                
+                <div id="BusinessActivityDetails_BusinessAddressActivity_Debug1" style="display: none;"></div>
+            </div>
+        </div>
+        <div class="grid-row">
+            <div class="col4">
+                <label for="BusinessActivityDetails_BusinessAddressActivity_Name1" class="input-right">
+                    Selected activity<br>
+                    <span class="field-note">(Choose your activity above)</span>
+                </label>
+            </div>
+            <div class="col8 last">
+                <textarea cols="20" data-val="true" data-val-length="Selected activity must be a maximum of 250 characters long. You entered {TotalLength} characters." data-val-length-max="250" id="BusinessActivityDetails_BusinessAddressActivity_Name1" name="BusinessActivityDetails.BusinessAddressActivity.Name1" readonly="readonly" rows="2" style="background: #f9f9f9" aria-owns="businessActivitySuggestions1" aria-autocomplete="both" aria-required="true" aria-describedby="businessActivitySuggestionsMessage1"></textarea> <br>
+                <button type="button" class="btn" id="anzsic-clear">Clear activity</button>
+
+                <input data-val="true" data-val-number="The field ActivityId must be a number." id="BusinessActivityDetails_BusinessAddressActivity_ActivityId1" name="BusinessActivityDetails.BusinessAddressActivity.ActivityId1" type="hidden" value="">
+                <input id="BusinessActivityDetails_BusinessAddressActivity_History1" name="BusinessActivityDetails.BusinessAddressActivity.History1" type="hidden" value="">
+                <input id="BusinessActivityDetails_BusinessAddressActivity_Index1" name="BusinessActivityDetails.BusinessAddressActivity.Index1" type="hidden" value="">
+                <input id="BusinessActivityDetails_BusinessAddressActivity_ShouldValidate1" name="BusinessActivityDetails.BusinessAddressActivity.ShouldValidate1" type="hidden" value="True">
+
+                
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
+    </fieldset>
     <div class="controls-container">
     <div class="controls-content">
-<button class="btn cancel ajax-button" data-ajax-target="ajax-container-for-businessdetails" name="SpXgWJEhm3PSafAhEI+gzT+yguW7i2eeMRDxomnlXkU=" type="button" value="__cvg__3Vm2adfQYvusabNtBnBi9w==">Previous</button><button class="btn btn-default ajax-button next" data-ajax-target="ajax-container-for-businessdetails" id="next-businessactivity-btn" name="EO84rvVS4xgqD9zHxz4Exg==" type="button" value="__cvg__tY59JnGJfVXqfDa5D37xIQ==">Save and continue</button>    </div>
+<button id="abn-prev" class="btn cancel ajax-button" data-ajax-target="ajax-container-for-businessdetails" name="SpXgWJEhm3PSafAhEI+gzT+yguW7i2eeMRDxomnlXkU=" type="button" value="__cvg__3Vm2adfQYvusabNtBnBi9w==">Previous</button><button class="btn btn-default ajax-button" data-ajax-target="ajax-container-for-businessdetails" id="abn-next" name="EO84rvVS4xgqD9zHxz4Exg==" type="button" value="__cvg__tY59JnGJfVXqfDa5D37xIQ==">Save and continue</button>    </div>
 </div>
 </div>
 </div>
@@ -424,6 +495,34 @@ layout: default
 <div id="section3" class="sub-section-container">
 	<h2>Contact details</h2>
 	<div class="sub-section-content">
+	<div class="grid-row">
+		<div class="col4">&nbsp;</div>
+		<div class="col7 last">
+			<p>Enter your main business contact details below. This is how you will receive notices and correspondence related to your business.</p>
+		</div>
+    </div>
+    <div class="grid-row">
+        <div class="col4">
+            <label class="input-right" for="ContactDetails_BusinessAddress_BusinessAddressContactDetails_Email">Email</label>
+        </div>
+        <div class="col8 last">
+            <input data-val="true" data-val-email="Please enter a valid email address in the format e.g. name@emailprovider.com." data-val-length="Email must be a maximum of 200 characters long. You entered {TotalLength} characters." data-val-length-max="200" data-val-required="{0} is required." id="ContactDetails_BusinessAddress_BusinessAddressContactDetails_Email" name="ContactDetails.BusinessAddress.BusinessAddressContactDetails.Email" type="email" value="test@test.com"> <a class="cd-btn help" href="#help-businessdetailsbusinessaddresscontactdetailsemail"><span>Help - Email address</span></a>
+            
+        </div>
+    </div>
+    <div class="grid-row">
+        <div class="col4">
+            <label class="input-right" for="ContactDetails_BusinessAddress_BusinessAddressContactDetails_Phone">Phone <span class="field-note optional">(optional)</span></label>
+        </div>
+        <div class="col8 last">
+            <input id="ContactDetails_BusinessAddress_BusinessAddressContactDetails_Phone" name="ContactDetails.BusinessAddress.BusinessAddressContactDetails.Phone" type="text" value="43214321"> <a class="cd-btn help" href="#help-businessdetailsbusinessaddresscontactdetailsphone"><span>Help - Phone number</span></a>
+            
+        </div>
+    </div>
+    <div class="controls-container">
+    <div class="controls-content">
+<button id="contact-prev" class="btn cancel ajax-button" data-ajax-target="ajax-container-for-businessdetails" name="SpXgWJEhm3PSafAhEI+gzT+yguW7i2eeMRDxomnlXkU=" type="button" value="__cvg__3Vm2adfQYvusabNtBnBi9w==">Previous</button><button class="btn btn-default ajax-button" data-ajax-target="ajax-container-for-businessdetails" id="contact-next" name="EO84rvVS4xgqD9zHxz4Exg==" type="button" value="__cvg__tY59JnGJfVXqfDa5D37xIQ==">Save and continue</button>    </div>
+</div>
 	</div>
 </div>
 
@@ -447,10 +546,27 @@ layout: default
 <div class="saveforlater" id="saveForLater"></div>
 <div class="applicationoptions" id="applicationOptions"></div>
 
+<div id="dialogOne" style="display:none;">
+	<h1>Confirm edit</h1> 
+	<p>If you modify your details you will need to confirm your identity again.<br />Do you want to continue?</p>	
+	<input type="button" class="btn btn-default" id="btnRemoveName1" value="Continue" onclick="visionaustralia.closeDialog('dialogOne'); EditDetails();" /> 
+	<input type="button" class="btn" onclick='visionaustralia.closeDialog("dialogOne");' value="Cancel">
+</div>
+
+<div id="dialogTwo" style="display:none;">
+	<h1>Proof of identity</h1> 
+	<p>We were unable to confirm your identity automitically using the information you provided. The Australian Business Register may need to check the identity manually, which will delay your application.</p>	
+	<input type="button" class="btn btn-default" id="btnRemoveName1" value="Go back" onclick="visionaustralia.closeDialog('dialogTwo'); $('#individual1-given').focus();" /> 
+	<input type="button" class="btn" onclick='visionaustralia.closeDialog("dialogTwo"); ContinueUnvalidated();' value="Continue">
+</div>
+
 <script src="scripts/jquery-1.11.3.min.js"></script>
 <script src="scripts/jquery.collapse.js"></script>
 <script src="scripts/jquery-toggleslide.js"></script>
 <script src="scripts/jquery.blockUI.js"></script>
+<script type="text/javascript" src="scripts/vadialog.js"></script> 
+<script type="text/javascript">
+</script>
 <script>
 	$(document).ready(function () {
 		/* Expand collapse headings config */
@@ -458,34 +574,96 @@ layout: default
 		initSaveForLater();
 		initApplicationOptions();
 
+		visionaustralia.addDialog("edit", "dialogOne"); 
+		visionaustralia.addDialog("bad-next", "dialogTwo"); 
+
 		$("#postal-cb").click(function() {
 			$("#postal-address").toggle();
 		});
 		
-		$("#nextbtn").click(function() {
-			$.blockUI({
-                    message: '<p id="loading-status" role="progressbar" aria-valuetext="loading">verifying identity <img class="loading-ellipsis" src="img/ellipsis.gif" /></p>',
-                    css: {
-                        padding: "10px"
-                    },
-                    overlayCSS: {
-                        backgroundColor: '#bbb',
-                        borderRadius: '10px'
-                    }
-			});
-			window.setTimeout(function() {
-				$.unblockUI();
-				$("html, body").animate({ scrollTop: $('#section1 h2').offset().top }, "fast", function() {
-					$("#section-div").hide("fast"); //, function() {
-						$("#verified").fadeIn("slow"); //, function() {
-							$("#section2 div.sub-section-content").show("fast");
-					//	});
-				//	});
-				});
-				//$("#section2").addClass("sub-section-open");
-			}, 2000);
+		$("#BusinessActivityDifferent").click(function() {
+			$("#fieldsetBusinessAddressActivity1").toggle();
 		});
-	});
+	
+		$("#nextbtn").click(function() {
+			if ($("#edit-details").is(":visible")) {
+				$.blockUI({
+						message: '<p id="loading-status" role="progressbar" aria-valuetext="loading">verifying identity <img class="loading-ellipsis" src="img/ellipsis.gif" /></p>',
+						css: {
+							padding: "5px"
+						},
+						overlayCSS: {
+							backgroundColor: '#bbb',
+							borderRadius: '10px'
+						}
+				});
+				window.setTimeout(function() {
+					$.unblockUI();
+					nextSection();
+				}, 2000);
+			} else {
+				nextSection();
+			}
+		});
+		
+		$("#abn-prev").click(function() {
+			$("#section2 div.sub-section-content").hide("fast");
+			$("#section-div").show("fast", function() {
+				$("html, body").animate({ scrollTop: $('#section1 h2').offset().top }, "fast");
+			});
+		});
+				
+		$("#abn-next").click(function() {
+			$("#section2 div.sub-section-content").hide("fast");
+			$("#section3 > div").show("fast", function() {
+				$("html, body").animate({ scrollTop: $('#section3 h2').offset().top }, "fast");
+			});
+		});
 
+		$("#contact-prev").click(function() {
+			$("#section3 > div").hide("fast");
+			$("#section2 div.sub-section-content").show("fast", function() {
+				$("html, body").animate({ scrollTop: $('#section2 h2').offset().top }, "fast");
+			});
+		});
+		
+	});
+	
+	function EditDetails() {
+		$("#view-details").hide();
+		$("#verified, #unverified").hide();
+		$("#individual1-given").val("Martin");
+		$("#individual1-other").val("");
+		$("#individual1-family").val("Jones");
+		$("#dateofbirth").val("01/01/1981");
+		$("#PersonDetails_HasTaxFileNumber_Yes").attr("checked", true);
+		$("#PersonDetails_TaxFileNumber").val("123456782");
+		$("#BusinessActivityDetails_IsResidentOfAustralia_Yes_span").attr("checked", true);
+		$("#edit-details").show("fast", function() {
+			$("html, body").animate({ scrollTop: $('#section1 h2').offset().top }, "fast");
+		});
+	}
+		
+	function nextSection() {
+		$("html, body").animate({ scrollTop: $('#section1 h2').offset().top }, "fast", function() {
+			$("#section-div").hide("fast", function() {
+				$("#edit-details").hide();
+				$("#view-details").show();
+			});
+			$("#unverified").hide();
+			$("#verified").fadeIn("slow");
+			$("#section2 div.sub-section-content").show("fast");
+		});
+	}
+
+	function ContinueUnvalidated() {
+		$("html, body").animate({ scrollTop: $('#section1 h2').offset().top }, "fast", function() {
+			$("#section-div").hide("fast");
+			$("#unverified").fadeIn("slow");
+			$("#section2 div.sub-section-content").show("fast");
+			$("#bad-next").hide();
+			$("#nextbtn").show();
+		});
+	}
 
 </script>
