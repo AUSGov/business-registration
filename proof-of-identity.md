@@ -581,12 +581,12 @@ layout: default
 <div class="saveforlater" id="saveForLater"></div>
 <div class="applicationoptions" id="applicationOptions"></div>
 
-<!-- <div id="dialogOne" style="display:none;">
-	<h1>Confirm edit</h1> 
-	<p>If you modify your details you will need to confirm your identity again.<br />Do you want to continue?</p>	
-	<input type="button" class="btn btn-default" id="btnRemoveName1" value="Continue" onclick="visionaustralia.closeDialog('dialogOne'); EditDetails();" /> 
-	<input type="button" class="btn" onclick='visionaustralia.closeDialog("dialogOne");' value="Cancel">
-</div> -->
+<div id="dialogOne" style="display:none;">
+	<h1>Proof of identity</h1> 
+	<p>Your details have not been verified. You may continue to make further changes to correct any issues, but the changes will no longer be verified.</p>	
+	<input type="button" class="btn btn-default" id="btnRemoveName1" value="Continue" onclick="visionaustralia.closeDialog('dialogOne'); nextSection();" /> 
+	<input type="button" class="btn" onclick='visionaustralia.closeDialog("dialogOne"); clearErrors(); $("#individual1-given").focus();' value="Go back">
+</div>
 
 <div id="dialogTwo" style="display:none;">
 	<h1>Proof of identity</h1> 
@@ -606,7 +606,7 @@ layout: default
 		initSaveForLater();
 		initApplicationOptions();
 
-		// visionaustralia.addDialog("edit", "dialogOne"); 
+		visionaustralia.addDialog("nextbtn", "dialogOne"); 
 		visionaustralia.addDialog("hidden-button", "dialogTwo"); 
 
 		$("#postal-cb").click(function() {
@@ -617,7 +617,7 @@ layout: default
 			$("#fieldsetBusinessAddressActivity1").toggle();
 		});
 	
-		$("#nextbtn").click(function() {
+		//$("#nextbtn").click(function() {
 			//if ($("#edit-details").is(":visible")) {
 			//	$.blockUI({
 			//			message: '<p id="loading-status" role="progressbar" aria-valuetext="loading">verifying identity <img class="loading-ellipsis" src="img/ellipsis.gif" /></p>',
@@ -634,11 +634,10 @@ layout: default
 			//		nextSection();
 			//	}, 2000);
 			//} else {
-				$("#validationSummary").hide();
-				$(".validation-inline").removeClass("validation-inline");
-				nextSection();
+			//	clearErrors();
+			//	nextSection();
 			//}
-		});
+		//});
 	
 		$("#bad-next").click(function() {
 			$("#bad-next").hide();
@@ -691,6 +690,11 @@ layout: default
 			$("#section-div").hide("fast") //, function() {
 			$("#section2 div.sub-section-content").show("fast");
 		});
+	}
+	
+	function clearErrors() {
+		$("#validationSummary").hide();
+		$(".validation-inline").removeClass("validation-inline");
 	}
 
 	function ContinueUnvalidated() {
