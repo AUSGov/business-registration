@@ -18,13 +18,41 @@ layout: default
 <h1 id="heading" tabindex="-1">2. Business details <span>(Step 2 of 3)</span></h1>
 <p>Please complete the details below. All fields are required unless marked as (optional).</p>
 
+<div id="validationSummary" class="validation-summary-errors validation-container clearfix" data-valmsg-summary="true">
+    <div class="grid-row">
+        <div class="validation-summary-icon">
+            <img src="img/ico-alert-red.png" alt="Error">
+        </div>
+        <div class="validation-message">
+            <h2><a id="validationSummaryAnchor" tabindex="-1">Just <span id="validation-error-count">1</span> thing(s) to check and you're on your way:</a>
+            </h2>
+            <ul class="validation-message-errors">
+                
 
+                        <li><a href="javascript:scrollToAndFocus('[id$=individual1-given]');">Your details do not match what we have on record. Please check the fields indicated and correct any errors.</a></li>
+            </ul>			
+            <p><span class="validation-red">*</span> indicates areas that need to be checked.</p>
+            <script type="text/javascript">
+                $(document).ready(function() {
+                    if ($("#validationSummary").hasClass("validation-summary-errors")) {
+                        scrollToAndFocus('#validationSummaryAnchor');
+                    }
+                });
+
+                function scrollToAndFocus(id) {
+                    scrollToTargetElement(id);
+                    var target = $(id);
+                    if (target) {
+                        target.focus();
+                    }
+                }
+            </script>
+        </div>
+    </div>
+</div>
 <!-- START SECTION 1 -->
 <div id="section1" class="sub-section-container sub-section-open">
-	<h2>
-		<p id="verified" style="display: none; position: absolute; padding:0; margin:0; right: 4%; color: green; font-size: 0.8em"><span class="fa fa-check green"></span> verified</p>
-		<p id="unverified" style="display: none; position: absolute; padding:0; margin:0; right: 4%; color: #c00; font-size: 0.8em"><span class="fa fa-times red"></span> unverified</p>
-		Proof of identity</h2>
+	<h2>Proof of identity</h2>
 	
 	<div id="section-div" class="sub-section-content">
 	<div id="edit-details">
@@ -33,34 +61,34 @@ layout: default
 			<legend class="margin4 larger">Your details</legend>
 			<div class="grid-row">
 				<div class="col4">
-					<label for="individual1-given" class="input-right">Given name</label>
+					<label for="individual1-given" class="input-right validation-inline">Given name</label>
 				</div><!-- col -->
 				<div class="col8 last">
-					<input id="individual1-given" type="text">
+					<input id="individual1-given" type="text" value="Martin">
 				</div><!-- col -->
 			</div><!-- grid-row -->
 			<div class="grid-row">
 				<div class="col4">
-					<label for="individual1-other" class="input-right">Other given name <span class="field-note">(optional)</span></label>
+					<label for="individual1-other" class="input-right validation-inline">Other given name <span class="field-note">(optional)</span></label>
 				</div><!-- col -->
 				<div class="col8 last">
-					<input id="individual1-other" type="text">
+					<input id="individual1-other" type="text" value="Albert">
 				</div><!-- col -->
 			</div><!-- grid-row -->
 			<div class="grid-row">
 				<div class="col4">
-					<label for="individual1-family" class="input-right">Family name</label>
+					<label for="individual1-family" class="input-right validation-inline">Family name</label>
 				</div><!-- col -->
 				<div class="col8 last">
-					<input id="individual1-family" type="text">
+					<input id="individual1-family" type="text" value="Jones">
 				</div><!-- col -->
 			</div><!-- grid-row -->
 			<div class="grid-row clearfix">
 				<div class="col4">
-					<label for="dateofbirth" class="input-right">Date of birth</label>
+					<label for="dateofbirth" class="input-right validation-inline">Date of birth</label>
 				</div><!-- col -->
 				<div class="col8 last">
-					<input type="date" id="dateofbirth" />
+					<input type="date" id="dateofbirth" value="1981-01-01">
 				</div><!-- col -->
 			</div>
 		</fieldset>
@@ -82,7 +110,7 @@ layout: default
                     <div class="col8 last">
                         <div class="radio-toggle">
                             <label class="on label-left" for="PersonDetails_HasTaxFileNumber_Yes">
-                                <input id="PersonDetails_HasTaxFileNumber_Yes" name="PersonDetails.HasTaxFileNumber" onclick="$('#tfn-div').show();" type="radio" value="Yes">
+                                <input checked id="PersonDetails_HasTaxFileNumber_Yes" name="PersonDetails.HasTaxFileNumber" onclick="$('#tfn-div').show();" type="radio" value="Yes">
                                 <span id="tfn_yes">Yes</span>
                             </label>
                             <label class="off label-right" for="PersonDetails_HasTaxFileNumber_No">
@@ -97,10 +125,10 @@ layout: default
         
 			<div id="tfn-div" class="grid-row" style="">
 				<div class="col4">
-					<label class="input-right" for="PersonDetails_TaxFileNumber">Tax File Number <span class="field-note optional">(optional)</span></label>
+					<label class="input-right validation-inline" for="PersonDetails_TaxFileNumber">Tax File Number <span class="field-note optional">(optional)</span></label>
 				</div>
 				<div class="col8 last">
-					<input id="PersonDetails_TaxFileNumber" name="PersonDetails.TaxFileNumber" type="number" value=""> <a class="cd-btn help" href="#help-businessdetailspersondetailstaxfilenumber"><span>Help - Tax File Number (TFN)</span></a>
+					<input id="PersonDetails_TaxFileNumber" name="PersonDetails.TaxFileNumber" type="number" value="123456782"> <a class="cd-btn help" href="#help-businessdetailspersondetailstaxfilenumber"><span>Help - Tax File Number (TFN)</span></a>
 					
 				</div>
 			</div>
@@ -114,7 +142,7 @@ layout: default
 						<legend class="no-padding">Are you an Australian resident for taxation purposes?</legend>
 						<div class="radio-toggle">
 							<label class="on label-left" for="BusinessActivityDetails_IsResidentOfAustralia_Yes">
-								<input id="BusinessActivityDetails_IsResidentOfAustralia_Yes" name="BusinessActivityDetails.IsResidentOfAustralia" type="radio" value="Yes">
+								<input checked id="BusinessActivityDetails_IsResidentOfAustralia_Yes" name="BusinessActivityDetails.IsResidentOfAustralia" type="radio" value="Yes">
 
 								<span id="BusinessActivityDetails_IsResidentOfAustralia_Yes_span">Yes</span>
 							</label>
@@ -133,7 +161,7 @@ layout: default
 				<legend class="margin4 larger">Main business address</legend>
 				<div class="grid-row clearfix">
 					<div class="col4">
-						<label class="input-right" for="ContactDetails_BusinessAddress_AddressDetails_CountryId">Country</label>
+						<label class="input-right validation-inline" for="ContactDetails_BusinessAddress_AddressDetails_CountryId">Country</label>
 					</div>
 					<div class="col8 last">
 						<select class="address-country-select" id="ContactDetails_BusinessAddress_AddressDetails_CountryId" name="ContactDetails.BusinessAddress.AddressDetails.CountryId">
@@ -162,18 +190,26 @@ layout: default
 						</select>
 						<a class="cd-btn help" href="#help-addressdetailscountry"><span>Help - Country</span></a>
 					</div>
-				</div>
-				<p class="margin4">Start typing the address in the field below and select the correct one from the drop-down list that appears. </p>						
+				</div>					
 				<div class="grid-row">
 					<div class="col4">
-						<label class="input-right" for="ContactDetails_BusinessAddress_AddressDetails_AddressLookupText">Address</label>
+						<label class="input-right validation-inline" for="ContactDetails_BusinessAddress_AddressDetails_AddressLookupText">Address</label>
 					</div>
 					<div class="col8 last">
-						<input class="address-lookup-text ui-autocomplete-input" id="ContactDetails_BusinessAddress_AddressDetails_AddressLookupText" name="ContactDetails.BusinessAddress.AddressDetails.AddressLookupText" type="text" value="" autocomplete="off"> <a class="cd-btn help" href="#help-addressdetailsaddress"><span>Help - Address</span></a>
-						
-					</div>
-				</div>
-				<p class="margin4">or you can:<input type="button" id="addr-enter-manually-btn" class="btn btn-default address-enter-manually" value="Enter it manually"></p>
+            <p>Selected address:</p>
+            <div>
+                <p style="font-weight: bold" class="address-display-label">
+                    100 Abbett St<br>
+                    Scarborough WA 6019
+                </p>
+            </div>
+            <p>If this is not your address you can:</p>
+            <p>
+                <input type="button" class="btn address-enter-lookup" value="Find a different address">
+            </p>
+        </div>
+		</div>
+		</fieldset>
 				<div class="grid-row">
 					<div class="col4">
 						&nbsp;
@@ -187,7 +223,6 @@ layout: default
 						
 					</div>
 				</div>
-			</fieldset>
 		</div>
 				<div id="postal-address" class="address-lookup" style="display: none;">
 					<fieldset>
@@ -546,20 +581,18 @@ layout: default
 <div class="saveforlater" id="saveForLater"></div>
 <div class="applicationoptions" id="applicationOptions"></div>
 
-<div id="dialogOne" style="display:none;">
+<!-- <div id="dialogOne" style="display:none;">
 	<h1>Confirm edit</h1> 
 	<p>If you modify your details you will need to confirm your identity again.<br />Do you want to continue?</p>	
 	<input type="button" class="btn btn-default" id="btnRemoveName1" value="Continue" onclick="visionaustralia.closeDialog('dialogOne'); EditDetails();" /> 
 	<input type="button" class="btn" onclick='visionaustralia.closeDialog("dialogOne");' value="Cancel">
-</div>
+</div> -->
 
 <div id="dialogTwo" style="display:none;">
 	<h1>Proof of identity</h1> 
-	<p>We were unable to confirm your identity automitically using the information you provided. The Australian Business Register may need to check the identity manually, which will delay your application.</p>	
-	<input type="button" class="btn btn-default" id="btnRemoveName1" value="Go back" onclick="visionaustralia.closeDialog('dialogTwo'); $('#individual1-given').focus();" /> 
-	<input type="button" class="btn" onclick="visionaustralia.closeDialog('dialogTwo'); ContinueUnvalidated();" value="Continue" />
-	<button type="button" id="hidden-button" style="display: none">dummy</button>
-</div>
+	<p><strong>This is your last attempt to have your details verified.</strong><br />You may want to contact the ATO to check your details are up to date, then return to your application and resubmit.</p>	
+	<input type="button" class="btn" onclick="visionaustralia.closeDialog('dialogTwo');" value="Continue" />
+	<input id="hidden-button" type="button" class="btn" style="display: none;" /></div>
 
 <script src="scripts/jquery-1.11.3.min.js"></script>
 <script src="scripts/jquery.collapse.js"></script>
@@ -573,7 +606,7 @@ layout: default
 		initSaveForLater();
 		initApplicationOptions();
 
-		visionaustralia.addDialog("edit", "dialogOne"); 
+		// visionaustralia.addDialog("edit", "dialogOne"); 
 		visionaustralia.addDialog("hidden-button", "dialogTwo"); 
 
 		$("#postal-cb").click(function() {
@@ -585,41 +618,34 @@ layout: default
 		});
 	
 		$("#nextbtn").click(function() {
-			if ($("#edit-details").is(":visible")) {
-				$.blockUI({
-						message: '<p id="loading-status" role="progressbar" aria-valuetext="loading">verifying identity <img class="loading-ellipsis" src="img/ellipsis.gif" /></p>',
-						css: {
-							padding: "5px"
-						},
-						overlayCSS: {
-							backgroundColor: '#bbb',
-							borderRadius: '10px'
-						}
-				});
-				window.setTimeout(function() {
-					$.unblockUI();
-					nextSection();
-				}, 2000);
-			} else {
+			//if ($("#edit-details").is(":visible")) {
+			//	$.blockUI({
+			//			message: '<p id="loading-status" role="progressbar" aria-valuetext="loading">verifying identity <img class="loading-ellipsis" src="img/ellipsis.gif" /></p>',
+			//			css: {
+			//				padding: "5px"
+			//			},
+			//			overlayCSS: {
+			//				backgroundColor: '#bbb',
+			//				borderRadius: '10px'
+			//			}
+			//	});
+			//	window.setTimeout(function() {
+			//		$.unblockUI();
+			//		nextSection();
+			//	}, 2000);
+			//} else {
+				$("#validationSummary").hide();
+				$(".validation-inline").removeClass("validation-inline");
 				nextSection();
-			}
+			//}
 		});
 	
 		$("#bad-next").click(function() {
-			$.blockUI({
-					message: '<p id="loading-status" role="progressbar" aria-valuetext="loading">verifying identity <img class="loading-ellipsis" src="img/ellipsis.gif" /></p>',
-					css: {
-						padding: "5px"
-					},
-					overlayCSS: {
-						backgroundColor: '#bbb',
-						borderRadius: '10px'
-					}
-			});
-			window.setTimeout(function() {
-				$.unblockUI();
+			$("#bad-next").hide();
+			$("#nextbtn").show();
+			$("html, body").animate({ scrollTop: $('#validationSummary').offset().top }, "fast", function() {
 				$("#hidden-button").click();
-			}, 2000);
+			});
 		});
 
 		$("#abn-prev").click(function() {
@@ -662,12 +688,7 @@ layout: default
 		
 	function nextSection() {
 		$("html, body").animate({ scrollTop: $('#section1 h2').offset().top }, "fast", function() {
-			$("#section-div").hide("fast", function() {
-				$("#edit-details").hide();
-				$("#view-details").show();
-			});
-			$("#unverified").hide();
-			$("#verified").fadeIn("slow");
+			$("#section-div").hide("fast") //, function() {
 			$("#section2 div.sub-section-content").show("fast");
 		});
 	}
