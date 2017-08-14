@@ -609,6 +609,7 @@ layout: default
 		$(window).on("pageshow", function (event) {
 			if (event.persisted || window.performance &&
 				window.performance.navigation.type == 2) {
+				alert('reload');
 				location.reload();
 			}
 		});
