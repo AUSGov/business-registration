@@ -607,7 +607,7 @@ layout: default
 		});
 		
 		$(window).on("pageshow", function (event) {
-			alert("pageshow");
+			alert("Persisted: " + event.persisted);
 			if (event.persisted || window.performance &&
 				window.performance.navigation.type == 2) {
 				alert('reload');
