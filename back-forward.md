@@ -607,9 +607,10 @@ layout: default
 		});
 		
 		$(window).on("pageshow", function (event) {
-			alert('show');
+			alert("Type: " + event.originalEvent.type + ", Persisted: " + event.originalEvent.persisted + ", navtype: " + window.performance.navigation.type);
 			if (event.originalEvent.persisted || window.performance &&
 				window.performance.navigation.type == 2) {
+				alert('refresh');
 				window.location.reload(true);
 			}
 		});
