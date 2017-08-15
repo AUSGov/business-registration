@@ -612,6 +612,9 @@ layout: default
 					message: '<p id="loading-status" role="progressbar" aria-valuetext="loading">loading <img class="loading-ellipsis" src="/content/img/ellipsis.gif" /></p>',
 					css: {
 						cursor: 'auto'
+					},
+					overlayCSS: {
+						cursor: 'auto'
 					}
 				});
 				window.location.reload(true);
