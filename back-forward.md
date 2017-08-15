@@ -613,6 +613,10 @@ layout: default
 			}
 			$("#cache-check").val("true");
 		});
+		
+		$(window).on("unload", function() {
+			$.unblockUI();
+		});
 	});
 
 	/* Drop down settings menu */
