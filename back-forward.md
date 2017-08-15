@@ -608,14 +608,15 @@ layout: default
 		
 		$(window).on("pageshow", function (event) {
 			if ($("#cache-check").val() == "true") {
-				$.blockUI({ message: '<p id="loading-status" role="progressbar" aria-valuetext="loading">loading <img class="loading-ellipsis" src="/content/img/ellipsis.gif" /></p>' });
+				$.blockUI({
+					message: '<p id="loading-status" role="progressbar" aria-valuetext="loading">loading <img class="loading-ellipsis" src="/content/img/ellipsis.gif" /></p>',
+					css: {
+						cursor: auto
+					}
+				});
 				window.location.reload(true);
 			}
 			$("#cache-check").val("true");
-		});
-		
-		$(window).on("unload", function() {
-			$.unblockUI();
 		});
 	});
 
