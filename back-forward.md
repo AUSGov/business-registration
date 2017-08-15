@@ -530,7 +530,7 @@ layout: default
 					 <a class="cd-btn help" href="#help"><span>Help information</span></a>
 				</div>
 			</div><!-- grid-row -->
-			<input id="cache-check" value="false" />
+			<input id="cache-check" type="text" value="false" />
 		</fieldset>
 
 		<div class="controls-container">
@@ -607,9 +607,7 @@ layout: default
 		});
 		
 		$(window).on("pageshow", function (event) {
-			alert("Cache: " + $("#cache-check").val() + ", Persisted: " + event.originalEvent.persisted + ", navtype: " + window.performance.navigation.type);
-			if (event.originalEvent.persisted || window.performance &&
-				window.performance.navigation.type == 2) {
+			if ($("#cache-check").val() == "true") {
 				alert('refresh');
 				window.location.reload(true);
 			}
