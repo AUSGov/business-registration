@@ -548,7 +548,7 @@ layout: default
 <script src="scripts/jquery-1.11.3.min.js"></script>
 <script src="scripts/jquery.collapse.js"></script>
 <script src="scripts/jquery-toggleslide.js"></script>
-
+<script src="scripts/jquery.blockUI.js"></script>
 <script>
 	$(document).ready(function () {
 		/* Expand collapse headings config */
@@ -608,7 +608,7 @@ layout: default
 		
 		$(window).on("pageshow", function (event) {
 			if ($("#cache-check").val() == "true") {
-				alert('refresh');
+				$.blockUI({ message: '<p id="loading-status" role="progressbar" aria-valuetext="loading">loading <img class="loading-ellipsis" src="/content/img/ellipsis.gif" /></p>' });
 				window.location.reload(true);
 			}
 			$("#cache-check").val("true");
