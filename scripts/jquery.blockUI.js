@@ -478,8 +478,6 @@
 			else
 				els = $el.find('>.blockUI');
 
-			els[1].style.cursor = 'default';
-			
 			// fix cursor issue
 			if ( opts.cursorReset ) {
 				if ( els.length > 1 )
