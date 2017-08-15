@@ -530,7 +530,7 @@ layout: default
 					 <a class="cd-btn help" href="#help"><span>Help information</span></a>
 				</div>
 			</div><!-- grid-row -->
-			
+			<input id="cache-check" value="false" />
 		</fieldset>
 
 		<div class="controls-container">
@@ -607,12 +607,13 @@ layout: default
 		});
 		
 		$(window).on("pageshow", function (event) {
-			alert("Type: " + event.originalEvent.type + ", Persisted: " + event.originalEvent.persisted + ", navtype: " + window.performance.navigation.type);
+			alert("Cache: " + $("#cache-check").val() + ", Persisted: " + event.originalEvent.persisted + ", navtype: " + window.performance.navigation.type);
 			if (event.originalEvent.persisted || window.performance &&
 				window.performance.navigation.type == 2) {
 				alert('refresh');
 				window.location.reload(true);
 			}
+			$("#cache-check").val("true");
 		});
 	});
 
