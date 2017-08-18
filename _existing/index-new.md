@@ -158,7 +158,7 @@ layout: default-signin-nav
 						</div>
 						<p>If you have submitted an application for additional tax registrations or for additional AUSkeys, you can sign in using your administrator AUSkey or MyGov account and view the status on the application summary.</p>
 						<div class="buttons">
-							<p class="text-center"><a class="button call-to-action" href="b2c-login.html?dest=dashboard-b2c">Additional registrations</a></p>
+							<p class="text-center"><a class="button call-to-action" href="aba-login.html?dest=dashboard">Additional registrations</a></p>
 						</div>
 					</span>
 				</li>
