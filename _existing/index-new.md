@@ -4,6 +4,15 @@ layout: default-signin-nav
 ---
 <style>
 	
+	.feature-wrapper .col6 {
+		margin-right: 2%;
+	}
+	
+	ul.block-menu > li {
+		margin: 0 0 0.5rem 0;
+		padding: 0;
+	}
+	
 	ul.block-menu > li > a,
 	ul.block-menu > li > a:hover {
 		padding: 1rem;
@@ -22,7 +31,65 @@ layout: default-signin-nav
 		line-height: 1.5rem;
 	}
 	
+	a.call-to-action {
+		text-decoration: none;
+		margin-top: 25px;
+	}
+
+	.call-to-action {
+		-webkit-transition: all 700ms cubic-bezier(.23,1,.32,1);
+		-ms-transition: all 700ms cubic-bezier(.23,1,.32,1);
+		-moz-transition: all 700ms cubic-bezier(.23,1,.32,1);
+		-o-transition: all 700ms cubic-bezier(.23,1,.32,1);
+		transition: all 700ms cubic-bezier(.23,1,.32,1);
+		opacity: .9;
+		border: none;
+		background-color: #254f90 !important;
+		color: #fff !important;
+		text-decoration: none;
+	}
+
+	.call-to-action {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		border-radius: 0;
+		border-style: solid;
+		border-width: 0;
+		cursor: pointer;
+		font-family: "Open Sans",sans-serif;
+		font-weight: normal;
+		line-height: normal;
+		margin: 0 0 1.25rem;
+		position: relative;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		padding: 1rem 2rem 1.0625rem 2rem;
+		font-size: 1rem;
+		background-color: #254f90;
+		border-color: #1e3f73;
+		color: #fff;
+		border: 1px solid #666;
+		color: #333;
+		background-color: #fff;
+		font-weight: 100;
+		font-size: 1.25rem;
+		text-decoration: none;
+		line-height: 1.5rem;
+		padding: .375rem 2em;
+		margin-bottom: 1.5rem;
+		border-radius: 0;
+		display: inline-block;
+	}
 	
+	.call-to-action {
+		background-color: #1e3f73;
+	}
+	
+	.text-center {
+		text-align: center;
+		margin-top:25px;
+	}
 </style>
 <div class="feature-wrapper" style="max-width: inherit">
 
@@ -40,13 +107,7 @@ layout: default-signin-nav
 							</span>
 							<div class="body">
 								<h2>New business</h2>
-								<p>Start here if you need to apply for:</p>
-								<ul style="list-style-type: disc">
-									<li>an ABN</li>
-									<li>a business name</li>
-									<li>a company or</li>
-									<li>tax registrations.</li>
-								</ul>
+								<p>Register here for an ABN along with a business name, company, taxes or AUSkey.<br />You can also apply here for just a business name.</p>
 							</div>
 						</div>
 					</a>
@@ -59,9 +120,8 @@ layout: default-signin-nav
 							  <i class="fa fa-gears fa-stack-1x fa-inverse"></i>
 							</span>
 							<div class="body">
-								<h2>Taxes only</h2>
-								<p>Already have an ABN and now need to apply for a tax registration?</p>
-								<p>Use your AUSkey or MyGov to login and register.</p>
+								<h2>Apply for tax registrations</h2>
+								<p>Already have an ABN and need to apply for GST, PAYG withholding or other tax registrations?<br />Use your <strong>AUSkey</strong> or <strong>MyGov</strong> login to apply.</p>
 							</div>
 						</div>
 					</a>
@@ -92,9 +152,7 @@ layout: default-signin-nav
 						</div>
 						<p>Already applied for new or additional registrations?</p>
 						<p>Check on the status here.</p>
-						<span style="display: block; margin-top: 25px">
-							<button type="button" class="btn btn-small" onclick="location.href='b2c-login.html?dest=dashboard-b2c'">New</button> <button type="button" class="btn btn-small" onclick="location.href='aba-login.html?dest=dashboard'">Additional</button>
-						</span>
+						<p class="text-center"><a class="button call-to-action" href="b2c-login.html?dest=dashboard-b2c">New</a></p>
 					</span>
 				</li>
 			</ul>
