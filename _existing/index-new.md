@@ -35,15 +35,15 @@ layout: default-signin-nav
 		text-decoration: none;
 	}
 
-	.call-to-action {
+	.call-to-action:hover {
 		-webkit-transition: all 700ms cubic-bezier(.23,1,.32,1);
 		-ms-transition: all 700ms cubic-bezier(.23,1,.32,1);
 		-moz-transition: all 700ms cubic-bezier(.23,1,.32,1);
 		-o-transition: all 700ms cubic-bezier(.23,1,.32,1);
 		transition: all 700ms cubic-bezier(.23,1,.32,1);
-		opacity: .9;
+		opacity: 1;
 		border: none;
-		background-color: #254f90 !important;
+		background-color: #1e3f73 !impotant;
 		color: #fff !important;
 		text-decoration: none;
 	}
@@ -65,12 +65,9 @@ layout: default-signin-nav
 		display: inline-block;
 		padding: 1rem 2rem 1.0625rem 2rem;
 		font-size: 1rem;
-		background-color: #254f90;
-		border-color: #1e3f73;
-		color: #fff;
-		border: 1px solid #666;
-		color: #333;
-		background-color: #fff;
+		background-color: #254f90 !important;
+		border: none;
+		color: #fff !important;
 		font-weight: 100;
 		font-size: 1.25rem;
 		text-decoration: none;
@@ -79,10 +76,7 @@ layout: default-signin-nav
 		margin-bottom: .25rem;
 		border-radius: 0;
 		display: inline-block;
-	}
-	
-	.call-to-action {
-		background-color: #1e3f73;
+		opacity: .9;
 	}
 	
 	.buttons {
@@ -150,13 +144,13 @@ layout: default-signin-nav
 				<li class="assistance" style="width:100%">
 					<span>
 						<div class="flag" style="width: 100%;">
-							<h2 style="text-align: center; margin-top: 1rem">Already submitted an application?</h2>
+							<h2 style="text-align: center; margin-top: 1rem">Already started or submitted an application?</h2>
 						</div>
-						<p>If you have submitted an application for a new business registration or a new administrator AUSkey, you can login and check on the progress by visiting the application summary for new business registrations.</p>
+						<p>Started or submitted an application for a <strong>new business registration</strong> or an <strong>administrator AUSkey</strong>? Resume or check on the progress of your application below.</p>
 						<div class="buttons">
-							<p class="text-center"><a class="button call-to-action" href="b2c-login.html?dest=dashboard-b2c">New business applications</a></p>
+							<p class="text-center"><a class="button call-to-action" href="b2c-login.html?dest=dashboard-b2c">New applications</a></p>
 						</div>
-						<p>If you have submitted an application for additional tax registrations or for additional AUSkeys, you can sign in using your administrator AUSkey or MyGov account and view the status on the application summary.</p>
+						<p>Started or submitted an application for <strong>additional tax registrations</strong> or <strong>additional AUSkeys</strong>? Resume or check on the progress of your application below.</p>
 						<div class="buttons">
 							<p class="text-center"><a class="button call-to-action" href="aba-login.html?dest=dashboard">Additional registrations</a></p>
 						</div>
