@@ -33,7 +33,6 @@ layout: default-signin-nav
 	
 	a.call-to-action {
 		text-decoration: none;
-		margin-top: 25px;
 	}
 
 	.call-to-action {
@@ -56,10 +55,10 @@ layout: default-signin-nav
 		border-style: solid;
 		border-width: 0;
 		cursor: pointer;
-		font-family: "Open Sans",sans-serif;
+		font-family: "open_sanslight",sans-serif;
 		font-weight: normal;
 		line-height: normal;
-		margin: 0 0 1.25rem;
+		margin: 0;
 		position: relative;
 		text-align: center;
 		text-decoration: none;
@@ -77,7 +76,7 @@ layout: default-signin-nav
 		text-decoration: none;
 		line-height: 1.5rem;
 		padding: .375rem 2em;
-		margin-bottom: 1.5rem;
+		margin-bottom: .25rem;
 		border-radius: 0;
 		display: inline-block;
 	}
@@ -86,9 +85,12 @@ layout: default-signin-nav
 		background-color: #1e3f73;
 	}
 	
+	.buttons {
+		margin:25px 0;
+	}
+	
 	.text-center {
 		text-align: center;
-		margin-top:25px;
 	}
 </style>
 <div class="feature-wrapper" style="max-width: inherit">
@@ -148,15 +150,20 @@ layout: default-signin-nav
 				<li class="assistance" style="width:100%">
 					<span>
 						<div class="flag" style="width: 100%;">
-							<h2 style="text-align: center;">Status of your application</h2>
+							<h2 style="text-align: center; margin-top: 1rem">Already submitted an application?</h2>
 						</div>
-						<p>Already applied for new or additional registrations?</p>
-						<p>Check on the status here.</p>
-						<p class="text-center"><a class="button call-to-action" href="b2c-login.html?dest=dashboard-b2c">New</a></p>
+						<p>If you have submitted an application for a new business registration or a new administrator AUSkey, you can login and check on the progress by visiting the application summary for new business registrations.</p>
+						<div class="buttons">
+							<p class="text-center"><a class="button call-to-action" href="b2c-login.html?dest=dashboard-b2c">New business applications</a></p>
+						</div>
+						<p>If you have submitted an application for additional tax registrations or for additional AUSkeys, you can sign in using your administrator AUSkey or MyGov account and view the status on the application summary.</p>
+						<div class="buttons">
+							<p class="text-center"><a class="button call-to-action" href="b2c-login.html?dest=dashboard-b2c">Additional registrations</a></p>
+						</div>
 					</span>
 				</li>
 			</ul>
 		</div>
-
+	</div>
 </div>
 
