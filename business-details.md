@@ -2,7 +2,27 @@
 title: Business details
 layout: default
 ---
-<div class="progress-container">
+<style>
+	a.feedback {
+		position: fixed;
+		right: 5px;
+		bottom: 5px;
+		background-color: #6f6f6f;
+		border: 1px solid #fff;
+		color: #fff;
+		font-size: 1.2rem;
+		font-weight: 500;
+		text-decoration: none;
+		width: 140px;
+		height: 45px;
+		padding-left: 1rem;
+		padding-top: .5rem;
+		z-index: 10;
+		background-image: none;
+		padding-right: 0;
+	}
+</style>
+<div class="progress-container" style="padding-bottom: 85px">
 	<div class="progress-bar">
 		<span id="progress-percent" role="progressbar" aria-valuetext="step 3 of 5 steps" style="width:48.25%"></span>
 	</div><!-- meter -->
@@ -16,6 +36,7 @@ layout: default
 		<li style="width: 15.3%"><span class="visually-hidden">Step </span><span>5</span><br>Pay<br> &amp; submit <span class="visually-hidden"> (not completed)</span></li>
 		<li class="bookend right"><a href="dashboard"><span>›</span><br>Application<br> summary</a></li>
 	</ul>
+	<p style="position: absolute; right: 2%; bottom: 0;"><strong>Reference:</strong> #1708-AA-2128-L</p>
 </div>
 <h1 id="heading" tabindex="-1">3. Business details <span>(Step 3 of 6)</span></h1>
 <p>All fields are required unless marked as optional.</p>
@@ -544,7 +565,7 @@ layout: default
 
 <div class="saveforlater" id="saveForLater"></div>
 <div class="applicationoptions" id="applicationOptions"></div>
-
+<a class="feedback" href="https://business.gov.au/Forms/Feedback" target="_blank"><span class="fa fa-commenting"></span>&nbsp;Feedback <span class="visuallyhidden">(opens in new window)</span></a>
 <script src="scripts/jquery-1.11.3.min.js"></script>
 <script src="scripts/jquery.collapse.js"></script>
 <script src="scripts/jquery-toggleslide.js"></script>
