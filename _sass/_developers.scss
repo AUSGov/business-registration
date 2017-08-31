@@ -1,6 +1,23 @@
 // ----- Developers use for additions or overrides. UI team then refactor this into appropriate SASS file
 // ------------------------------------------------------------------------------------------------------
 
+p.app-ref {
+	position: absolute;
+	right: 2%;
+	top: 100px;
+	
+	@media only screen and (max-width: 640px) {
+		left: 15px;
+		top: 60px;
+	}
+}
+
+@media only screen and (max-width: 640px) {
+	header div.sub-brand {
+		margin-top: 10px;
+	}
+}
+
 li.sub-menu {
 	margin: 0 -9px -10px;
 	padding-left: 10px;
