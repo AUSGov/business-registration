@@ -36,7 +36,6 @@ layout: default
 		<li style="width: 15.3%"><span class="visually-hidden">Step </span><span>5</span><br>Pay<br> &amp; submit <span class="visually-hidden"> (not completed)</span></li>
 		<li class="bookend right"><a href="dashboard"><span>›</span><br>Application<br> summary</a></li>
 	</ul>
-	<p style="position: absolute; right: 2%; bottom: 0;"><strong>Reference:</strong> #1708-AA-2128-L</p>
 </div>
 <h1 id="heading" tabindex="-1">3. Business details <span>(Step 3 of 6)</span></h1>
 <p>All fields are required unless marked as optional.</p>
