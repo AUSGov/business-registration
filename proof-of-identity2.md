@@ -697,12 +697,12 @@ layout: default
 		});
 	}
 		
-	function nextSection() {
-		$("html, body").animate({ scrollTop: $('#section1 h2').offset().top }, "fast", function() {
-			$("#validationSummary").hide();
-			//$(".validation-inline").removeClass("validation-inline");
-			$("#section-div").hide("fast") //, function() {
-			$("#section2 div.sub-section-content").show("fast");
+	function nextSection() {	
+		$("#validationSummary").hide();
+		//$(".validation-inline").removeClass("validation-inline");
+		$("#section-div").hide("fast") //, function() {
+		$("#section2 div.sub-section-content").show("fast", function() {
+			$("html, body").animate({ scrollTop: $('#section2 h2').offset().top }, "fast");
 		});
 	}
 	
