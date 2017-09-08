@@ -641,14 +641,17 @@ layout: default
 			}
 			attempts--;
 			if (attempts == 1) {
+				$("#validationSummary").show();
+				$("div#identity-check fieldset legend").addClass("validation-inline");
 				$("#attempts-left").html("This is your <strong>last attempt</strong> to confirm your identity.");
 			}
 			else {
 				$("#id-para1").html("The details you have entered do not match what we have on record. You can still make changes to the fields above but they will no longer be checked against the details we have on record.");
 				$("#id-para2").html("If you submit your application with incorrect details, this may delay your application and may require that you contact the ATO to resolve any issues.");
 				$("#attempts-left").html("You have exhausted your attempts to verify your identity.");
-				$("#skip-check").prop("checked", "checked").prop("disabled", true);
-				$("#check-label").removeClass("validation-inline");
+				//$("#skip-check").removeAttr("checked").removeAttr("disabled");
+				$("#skip-check").prop("checked", true).prop("disabled", true);
+				//$("div#identity-check fieldset legend").removeClass("validation-inline");
 			}
 			$("html, body").animate({ scrollTop: $('#validationSummary').offset().top }, "fast");
 		});
@@ -656,7 +659,7 @@ layout: default
 		$("#abn-prev").click(function() {
 			$("#section2 div.sub-section-content").hide("fast");
 			$("#section-div").show("fast", function() {
-				if (attempts > 0) {
+				if (attempts > 0 && !$("#skip-check").is(":checked")) {
 					$("#validationSummary").show();
 					$("html, body").animate({ scrollTop: $('#validationSummary').offset().top }, "fast");
 				} else {
