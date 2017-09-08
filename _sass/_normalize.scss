@@ -407,6 +407,9 @@ legend, label, .label {
 legend {
   display: inline-block;
 }
+legend.margin4 {
+  display: table;
+}
 legend.larger {
   font-size: 130%;
   font-weight: bold;
