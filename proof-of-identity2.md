@@ -647,7 +647,7 @@ layout: default
 				$("#id-para1").html("The details you have entered do not match what we have on record. You can still make changes to the fields above but they will no longer be checked against the details we have on record.");
 				$("#id-para2").html("If you submit your application with incorrect details, this may delay your application and may require that you contact the ATO to resolve any issues.");
 				$("#attempts-left").html("You have exhausted your attempts to verify your identity.");
-				$("#skip-check").attr("checked", "checked").attr("disabled", true);
+				$("#skip-check").prop("checked", "checked").prop("disabled", true);
 				$("#check-label").removeClass("validation-inline");
 			}
 			$("html, body").animate({ scrollTop: $('#validationSummary').offset().top }, "fast");
