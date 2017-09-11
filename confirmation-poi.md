@@ -137,7 +137,7 @@ layout: default
 							</div>
 							<div class="col11 last">
 								<h3 id="hEntitledTitle" style="margin-top: 0; margin-left: 0;">Your identity has not been confirmed</h3>
-								<div id="divEntitledMessage"><p>The details you have entered do not match our records. Check the fields in the &apos;Proof of identity&apos; section below and correct any errors. You have <strong>2 attempts</strong> left to verify your identity.</p></div>
+								<div id="divEntitledMessage"><p>The details you have entered do not match our records. Check the fields in the &apos;Proof of identity&apos; section below and select &apos;Edit&apos; to correct any errors. You have <strong>2 attempts</strong> left to verify your identity.</p></div>
 									<div>You may submit your application without confirming your identity, but this may result in your application being rejected. You will then need to contact the ATO to progress your application.
 								</div>
 							</div>
