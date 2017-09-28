@@ -65,3 +65,6 @@ $( function() {
 		$( ul ).find( "li:odd" ).addClass( "odd" );
     }
 });
+$(document).ready(function() {
+		$("#business-activity" ).height(0).height($("#business-activity" )[0].scrollHeight - 10);
+	});
