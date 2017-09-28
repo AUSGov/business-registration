@@ -29,6 +29,7 @@ layout: default
 	
 	#business-activity {
 		resize: none;
+		min-height: 45px;
 	}
 </style>
 <div class="progress-container" style="padding-bottom: 85px">
