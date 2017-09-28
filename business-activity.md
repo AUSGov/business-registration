@@ -229,5 +229,5 @@ layout: default
 <a class="feedback" href="https://business.gov.au/Forms/Feedback" target="_blank"><span class="fa fa-commenting"></span>&nbsp;Feedback <span class="visuallyhidden">(opens in new window)</span></a>
 <script src="scripts/jquery.collapse.js"></script>
 <script src="scripts/jquery-toggleslide.js"></script>
-<script src="scripts/jquery-ui.js"></script>
+<script src="scripts/jquery-ui.min.js"></script>
 <script src="scripts/business-activity.js"></script>
