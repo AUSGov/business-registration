@@ -40,26 +40,17 @@ layout: default
 
 <h1 id="heading" tabindex="-1">4. Confirm application <span role="progressbar">(Step 4 of 5 steps)</span></h1>
 
-<div class="grid-row">
-    <div>
-        Here&apos;s your chance to check that you&apos;ve entered all the details correctly. If you find an error on this page, select the Edit button next to a section to return to that part of the form. <a class="cd-btn help" href="#help-confirmationnotes"><span>Help - Confirmation</span></a>
-    </div>
-</div>
 <form action="/registration/confirmation?appid=2118" id="sobrsform" method="post">
-<input name="__RequestVerificationToken" type="hidden" value="itmZqTVpE9huqUqD4pABZFeXU1kNf31EvJdkyDFdb-c8cYEeaRzPbY_BANbLHfcHcFyzkSfw81bVBzI2UwU_9DREO05g6-cnBprKEp1sySq4DLd9VF5hHYu4-BIRKt3jvIiK0RpSiuo-cA3BBxZC7w2" />
-<input id="__c__ApplicationId" name="__c__ApplicationId" type="hidden" value="dN5hC9T2vnBNExPpgqmqsQ==" />
-<input id="__c__HasNameStatusChanged" name="__c__HasNameStatusChanged" type="hidden" value="YRBk3UFuGeCu5zo+Lao/Qw==" />
-<input id="__c__isDisplayContentKey" name="__c__isDisplayContentKey" type="hidden" value="YRBk3UFuGeCu5zo+Lao/Qw==" />
-<div id="validationSummary" class="validation-summary-valid validation-container clearfix" data-valmsg-summary="true">
+<div id="validationSummary" class="validation-container clearfix" data-valmsg-summary="true">
     <div class="grid-row">
         <div class="validation-summary-icon">
-            <img src="/content/img/ico-alert-red.png" alt="Error">
+            <img src="/img/ico-alert-red.png" alt="Error">
         </div>
         <div class="validation-message">
-            <h2><a id="validationSummaryAnchor" tabindex="-1">Just <span id="validation-error-count">0</span> thing(s) to check and you're on your way:</a>
+            <h2><a id="validationSummaryAnchor" tabindex="-1">Just <span id="validation-error-count">1</span> thing(s) to check and you're on your way:</a>
             </h2>
             <ul class="validation-message-errors">
-                
+                <li>We have not been able to verify your identity using the details you have provided. Please check the details below and correct any errors.</li>
 
             </ul>
             <p><span class="validation-red">*</span> indicates areas that need to be checked.</p>
@@ -82,355 +73,274 @@ layout: default
     </div>
 </div>
     <div class="confirmation">
-<div id="selectedregistrations" class="section-container" data-section-name="Registrations">
-                    <div class="confirmation-heading">
+<div id="selectedregistrations" class="sub-section-container sub-section-open" data-section-name="Registrations">
+                        
+                <div id="businessdetails" class="" data-section-name="AbnRegistrationDetails">
+                    <div class="sub-section-container sub-section-open">
                         <h2>
-                            Selected Registrations
-                                <button type="button" class="btn btn-default ico-edit" data-changepath="/registration/type?appId=2133&amp;s=0">Edit</button>
+                            Proof of identity
                         </h2>
-                    </div>
-                        <ul>
-<li><a href="#businessactivity">Australian Business Number (ABN)</a></li>
-    </ul>
-                <div id="gettingstarted" class="section-container" data-section-name="GettingStarted">
-                    <div class="confirmation-heading">
-                        <h2>
-                            Getting Started
-                        </h2>
-                    </div>
-                                                                                            <table id="abndetails">
-                                    <thead class="visuallyhidden">
-                                        <tr>
-                                            <th>Field item</th>
-                                            <th>Input value</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody><tr>
-                                        <th style="vertical-align: middle">ABN details</th>
-                                            <th><button type="button" class="btn btn-default ico-edit" data-changepath="/registration/gettingstarted?appId=2133&amp;s=0">Edit</button></th>
-                                    </tr>
-        <tr>
-            <td class="field-name">Entity Type</td>
-           
 
-            <td class="input-value">Individual</td>
-        </tr>
-        <tr>
-            <td class="field-name">Entity Subtype</td>
-           
-
-            <td class="input-value">Individual/Sole Trader</td>
-        </tr>
-                                    
-                                </tbody></table>
+		<fieldset class="no-margin">
+			<legend class="margin4 larger">Your details</legend>
+			<div class="grid-row">
+				<div class="col4">
+					<label for="individual1-given" class="input-right">Given name</label>
+				</div><!-- col -->
+				<div class="col8 last">
+					<input id="individual1-given" type="text" value="Martin">
+				</div><!-- col -->
+			</div><!-- grid-row -->
+			<div class="grid-row">
+				<div class="col4">
+					<label for="individual1-other" class="input-right">Other given name <span class="field-note">(optional)</span></label>
+				</div><!-- col -->
+				<div class="col8 last">
+					<input id="individual1-other" type="text" value="Albert">
+				</div><!-- col -->
+			</div><!-- grid-row -->
+			<div class="grid-row">
+				<div class="col4">
+					<label for="individual1-family" class="input-right ">Family name</label>
+				</div><!-- col -->
+				<div class="col8 last">
+					<input id="individual1-family" type="text" value="Jones">
+				</div><!-- col -->
+			</div><!-- grid-row -->
+			<div class="grid-row clearfix">
+				<div class="col4">
+					<label for="dateofbirth" class="input-right ">Date of birth</label>
+				</div><!-- col -->
+				<div class="col8 last">
+					<input type="date" id="dateofbirth" value="1981-01-01">
+				</div><!-- col -->
+			</div>
+		</fieldset>
+		<fieldset id="fieldsetPOIAddress" class="no-margin">
+            <div class="grid-row">
+                <div class="col4">
+                    <p>&nbsp;</p>
                 </div>
-                <div id="businessdetails" class="section-container" data-section-name="AbnRegistrationDetails">
-                    <div class="confirmation-heading">
-                        <h2>
-                            Business Details
-                        </h2>
-                    </div>
-					<div id="divEntitlementMessage" class="result-container validation col12 outcome" style="background-color: #efe8ce;">
-						<div class="grid-row">
-							<div class="col1">
-									<img id="imgEntitle" alt="Entitled" src="{{ site.baseurl }}/img/ico-exclamation-orange.png" style="margin-top: 0;">
-							</div>
-							<div class="col11 last">
-								<h3 id="hEntitledTitle" style="margin-top: 0; margin-left: 0;">Your identity has not been confirmed</h3>
-								<div id="divEntitledMessage"><p>The details you have entered do not match our records. Check the fields in the &apos;Proof of identity&apos; section below and select &apos;Edit&apos; to correct any errors. You have <strong>2 attempts</strong> left to verify your identity.</p></div>
-									<div>You may submit your application without confirming your identity, but this may result in your application being rejected. You will then need to contact the ATO to progress your application.
-								</div>
-							</div>
-						</div>
-					</div>
-					<table id="proofofidentity">
-                                    <thead class="visuallyhidden">
-                                        <tr>
-                                            <th>Field item</th>
-                                            <th>Input value</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody><tr>
-                                        <th style="vertical-align: middle">Proof of Identity</th>
-                                            <th><button type="button" class="btn btn-default ico-edit" data-changepath="/registration/businessdetails?appId=2133&amp;s=0">Edit</button></th>
-                                    </tr>
-        <tr>
-            <td class="field-name">Roles</td>
-           
-
-            <td class="input-value">Sole Trader, Authorised Contact</td>
-        </tr>
-        <tr>
-            <td class="field-name">Name</td>
-           
-
-            <td class="input-value">Fred Nerk</td>
-        </tr>
-        <tr>
-            <td class="field-name">Date of birth</td>
-           
-
-            <td class="input-value">1/01/1981</td>
-        </tr>
-        <tr>
-            <td class="field-name">Tax File Number</td>
-           
-
-            <td class="input-value">123456782</td>
-        </tr>
-        <tr>
-            <td class="field-name">Are you an Australian resident for taxation purposes?</td>
-           
-
-            <td class="input-value">Yes</td>
-        </tr>
-        <tr>
-            <td class="field-name">Main Business Address</td>
-           
-
-            <td class="input-value">100 Abbett St, Scarborough, WA, Australia, 6019</td>
-        </tr>
-        <tr>
-            <td class="field-name">Postal Address</td>
-           
-
-            <td class="input-value">200 Anthony Rd, Anthony, QLD, Australia, 4310</td>
-        </tr>
-
-                                </tbody></table>
-                                <table id="businessactivity">
-                                    <thead class="visuallyhidden">
-                                        <tr>
-                                            <th>Field item</th>
-                                            <th>Input value</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody><tr>
-                                        <th style="vertical-align: middle">ABN details</th>
-                                            <th><button type="button" class="btn btn-default ico-edit" data-changepath="/registration/businessdetails?appId=2133&amp;s=1">Edit</button></th>
-                                    </tr>
-        <tr>
-            <td class="field-name">ABN start date</td>
-           
-
-            <td class="input-value">7/09/2017</td>
-        </tr>
-        <tr>
-            <td class="field-name">All business activity will end within 3 months of the start date</td>
-           
-
-            <td class="input-value">No</td>
-        </tr>
-        <tr>
-            <td class="field-name">Do you operate an agricultural property?</td>
-           
-
-            <td class="input-value">No</td>
-        </tr>
-        <tr>
-            <td class="field-name">Main business activity</td>
-           
-
-            <td class="input-value">Lake or river fishing</td>
-        </tr>
-        <tr>
-            <td class="field-name">Business activity at main address</td>
-           
-
-            <td class="input-value">Same as the main business activity</td>
-        </tr>
-		<tr>
-            <td class="field-name">Contact Email</td>
-           
-
-            <td class="input-value">test@test.com</td>
-        </tr>
-        <tr>
-            <td class="field-name">Business Hours Phone</td>
-           
-
-            <td class="input-value">0243218765</td>
-        </tr>
-                                </tbody></table>
-                                <table id="additionalbusinesslocations">
-                                    <thead class="visuallyhidden">
-                                        <tr>
-                                            <th>Field item</th>
-                                            <th>Input value</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody><tr>
-                                        <th style="vertical-align: middle">Additional business locations</th>
-                                            <th><button type="button" class="btn btn-default ico-edit" data-changepath="/registration/businessdetails?appId=2133&amp;s=3">Edit</button></th>
-                                    </tr>
-        <tr>
-            <td class="field-name"></td>
-           
-
-            <td class="input-value">Not Provided</td>
-        </tr>
-                                    
-                                </tbody></table>
-                                <table id="authorisedcontacts">
-                                    <thead class="visuallyhidden">
-                                        <tr>
-                                            <th>Field item</th>
-                                            <th>Input value</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody><tr>
-                                        <th style="vertical-align: middle">Authorised contacts</th>
-                                            <th><button type="button" class="btn btn-default ico-edit" data-changepath="/registration/businessdetails?appId=2133&amp;s=4">Edit</button></th>
-                                    </tr>
-        <tr>
-            <td class="field-name">Tax file number</td>
-           
-
-            <td class="input-value">123456782</td>
-        </tr>
-        <tr>
-            <td class="field-name">Name</td>
-           
-
-            <td class="input-value">Fred Nerk</td>
-        </tr>
-        <tr>
-            <td class="field-name">Position</td>
-           
-
-            <td class="input-value">Individual/Sole Trader</td>
-        </tr>
-        <tr>
-            <td class="field-name">Email</td>
-           
-
-            <td class="input-value">test@test.com</td>
-        </tr>
-        <tr>
-            <td class="field-name">Business Hours Phone</td>
-           
-
-            <td class="input-value">0243218765</td>
-        </tr>
-                                    
-                                </tbody></table>
-                                <table id="reasonforabnapplication">
-                                    <thead class="visuallyhidden">
-                                        <tr>
-                                            <th>Field item</th>
-                                            <th>Input value</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody><tr>
-                                        <th style="vertical-align: middle">Reason for ABN application</th>
-                                            <th><button type="button" class="btn btn-default ico-edit" data-changepath="/registration/businessdetails?appId=2133&amp;s=5">Edit</button></th>
-                                    </tr>
-        <tr>
-            <td class="field-name">Reason</td>
-           
-
-            <td class="input-value">New business in Australia</td>
-        </tr>
-        <tr>
-            <td class="field-name">Is this your first time in business in Australia?</td>
-           
-
-            <td class="input-value">Yes</td>
-        </tr>
-                                    
-                                </tbody></table>
+                <div class="col8 last">
+                    <p class="label" id="PersonDetails_HasTaxFileNumber_lbl">Do you have a Tax File Number (TFN)?</p>
+                    <p>Providing your TFN is the quickest way to prove your identity.</p>
                 </div>
-
-        <div id="ajax-container-for-declaration">
-            
-<div style="display: none">
-    <input id="__c__Declaration_IsDeclarantDetailsRequired" name="__c__Declaration.IsDeclarantDetailsRequired" type="hidden" value="YRBk3UFuGeCu5zo+Lao/Qw==">
-    <input id="__c__Declaration_IsDeclarantNameRequired" name="__c__Declaration.IsDeclarantNameRequired" type="hidden" value="YRBk3UFuGeCu5zo+Lao/Qw==">
-    <input id="__c__Declaration_IsDeclarantAddressRequired" name="__c__Declaration.IsDeclarantAddressRequired" type="hidden" value="YRBk3UFuGeCu5zo+Lao/Qw==">
-    <input id="__c__Declaration_IsDeclarantPositionRequired" name="__c__Declaration.IsDeclarantPositionRequired" type="hidden" value="YRBk3UFuGeCu5zo+Lao/Qw==">
-    <input id="__c__Declaration_IsDeclarantContactDetailsRequired" name="__c__Declaration.IsDeclarantContactDetailsRequired" type="hidden" value="YRBk3UFuGeCu5zo+Lao/Qw==">
-    <input id="__c__Declaration_IsAusKeyRegistrationPresent" name="__c__Declaration.IsAusKeyRegistrationPresent" type="hidden" value="YRBk3UFuGeCu5zo+Lao/Qw==">
-    <input id="__c__Declaration_IsDeclarantACompany" name="__c__Declaration.IsDeclarantACompany" type="hidden" value="YRBk3UFuGeCu5zo+Lao/Qw==">
-    ;
-    <input id="__c__Declaration_ApplicationId" name="__c__Declaration.ApplicationId" type="hidden" value="k3YtThqY4AdBj6QjFJ/bxA==">;
-    <input id="__c__Declaration_IsDeclarantApplicant" name="__c__Declaration.IsDeclarantApplicant" type="hidden" value="YRBk3UFuGeCu5zo+Lao/Qw==">;
-    <input id="__c__Declaration_IsDisplayReferrerConsent" name="__c__Declaration.IsDisplayReferrerConsent" type="hidden" value="YRBk3UFuGeCu5zo+Lao/Qw==">;
-    <input id="__c__Declaration_IsSmsf" name="__c__Declaration.IsSmsf" type="hidden" value="YRBk3UFuGeCu5zo+Lao/Qw==">;
-
-<input id="__c__Declaration_Officeholders_0__Value" name="__c__Declaration.Officeholders[0].Value" type="hidden" value="44/3LrOQd/uKFIPiyT3jVQ=="><input id="__c__Declaration_Officeholders_0__Text" name="__c__Declaration.Officeholders[0].Text" type="hidden" value="yG7gIoTaU6iyeLcpVo5xlg=="><input id="__c__Declaration_Officeholders_1__Value" name="__c__Declaration.Officeholders[1].Value" type="hidden" value="Bl4QuLay3uQM/jutouihIw=="><input id="__c__Declaration_Officeholders_1__Text" name="__c__Declaration.Officeholders[1].Text" type="hidden" value="mNDAvZQCnDqRCgvXeGCfhQgX2Q414eYQJ7y4eS3DpGE=">
-</div>
-
-
-<fieldset id="declarationFieldset" class="showhide-target">
-    <legend class="larger">
-        Declaration <a class="cd-btn help" href="#help-confirmationdeclarationlegend"><span>Help - Declaration</span></a>
-    </legend>
-        <p>Please complete the details below. All fields are required unless marked as <em>(optional)</em>. </p>
-
-        <div class="grid-row">
-            <div class="col4">
-                <label class="input-right" for="Declaration_OfficeholderId">Who is making the declaration?</label>
             </div>
-            <div class="col8 last">
-<select id="Declaration_OfficeholderId" name="Declaration.OfficeholderId"><option value="">Please select...</option>
-<option value="1183">Fred Nerk</option>
-<option value="AddAnother">Add another person</option>
-</select> 
-                
-            </div>
-        </div>
-
-
-    <div id="AddDeclarant" style="display:none">
-
-
-    </div>
-
-
-</fieldset>
-
-
-
-
-
-
-<a id="Declaration_DeclarationMustBeAccepted"></a>
-<div class="declaration-wrapper margin-top-075">
-
-    <div id="declaration-text" class="grid-row">
-                            <fieldset class="custom-controls">
-                <legend class="larger no-padding">Tax Registrations</legend>
-                <p>The declaration below applies to your application for the following Australian Taxation Office (ATO) registrations:</p>
-                <ul>
-                        <li>Australian Business Number (ABN)</li>
-                </ul>
-                    <p>
-                        <input id="ATOTrueAndCorrectCheckBox" name="ATOTrueAndCorrectCheckBox" type="checkbox" value="true"><input name="ATOTrueAndCorrectCheckBox" type="hidden" value="false">
-                        <label id="ato-trueandcorrect-check" for="ATOTrueAndCorrectCheckBox">I declare that:<br>
-<span class="dot-point">The information in this application is true and correct.</span><br>
-<span class="dot-point">This document has been prepared in accordance with information supplied by the entity.</span><br>
-<span class="dot-point">I have received a declaration in writing from the entity stating that the information is true and correct.</span><br>
-<span class="dot-point">I am authorised by the entity to give this document to the Commissioner of Taxation and/or Registrar of the Australian Business Register.</span> </label>
-                    </p>
-                            </fieldset>
-            </div>
-    <div class="grid-row">
-        <h3>Privacy</h3>
-        <p>The information provided to ASIC, the ABR and the ATO in this form may include personal information. Please refer to the <a href="http://www.asic.gov.au/privacy" target="_blank">ASIC privacy policy <span class="visuallyhidden">(opens in new window)</span></a>, the <a href="https://abr.gov.au/General-information/Privacy/Privacy---abr-gov-au-website" target="_blank">ABR privacy policy <span class="visuallyhidden">(opens in new window)</span></a> and the <a href="https://www.ato.gov.au/About-ATO/Access,-accountability-and-reporting/In-detail/Privacy-notices/Privacy-policy/" target="_blank">ATO privacy policy <span class="visuallyhidden">(opens in new window)</span></a> for information on how they handle your personal information, your rights to seek access to and correct personal information, and to complain about breaches of privacy.</p>
-    </div>
-</div>
-
-
-
-
-        </div>
+            <fieldset id="PersonDetails_HasTaxFileNumber" tabindex="-1">
+                <div class="grid-row">
+                    <div class="col4">
+                        &nbsp;
+                    </div>
+                    <div class="col8 last">
+                        <div class="radio-toggle">
+                            <label class="on label-left" for="PersonDetails_HasTaxFileNumber_Yes">
+                                <input checked id="PersonDetails_HasTaxFileNumber_Yes" name="PersonDetails.HasTaxFileNumber" onclick="$('#tfn-div').show();" type="radio" value="Yes">
+                                <span id="tfn_yes">Yes</span>
+                            </label>
+                            <label class="off label-right" for="PersonDetails_HasTaxFileNumber_No">
+                                <input id="PersonDetails_HasTaxFileNumber_No" name="PersonDetails.HasTaxFileNumber" onclick="$('#tfn-div').hide(); $('#PersonDetails_TaxFileNumber').val('');" type="radio" value="No">
+                                <span id="tfn_no">No</span>
+                            </label>
+                        </div> 
+                        
+                    </div>
+                </div>
+            </fieldset>
         
-        <input id="Declaration_RegistrationDeclarationAccepted" name="Declaration.RegistrationDeclarationAccepted" type="hidden" value="False">
-        <div class="grid-row custom-controls">
+			<div id="tfn-div" class="grid-row" style="">
+				<div class="col4">
+					<label class="input-right " for="PersonDetails_TaxFileNumber">Tax File Number <span class="field-note optional">(optional)</span></label>
+				</div>
+				<div class="col8 last">
+					<input id="PersonDetails_TaxFileNumber" name="PersonDetails.TaxFileNumber" type="number" value="123456782"> <a class="cd-btn help" href="#help-businessdetailspersondetailstaxfilenumber"><span>Help - Tax File Number (TFN)</span></a>
+					
+				</div>
+			</div>
+		</fieldset>
+		<div class="grid-row clearfix">
+				<div class="col4">
+					<p>&nbsp;</p>
+				</div>
+				<div class="col7 last">
+					<fieldset class="margin-bottom-075">
+						<legend class="no-padding">Are you an Australian resident for taxation purposes?</legend>
+						<div class="radio-toggle">
+							<label class="on label-left" for="BusinessActivityDetails_IsResidentOfAustralia_Yes">
+								<input checked id="BusinessActivityDetails_IsResidentOfAustralia_Yes" name="BusinessActivityDetails.IsResidentOfAustralia" type="radio" value="Yes">
+
+								<span id="BusinessActivityDetails_IsResidentOfAustralia_Yes_span">Yes</span>
+							</label>
+							<label class="off label-right" for="BusinessActivityDetails_IsResidentOfAustralia_No">
+								<input id="BusinessActivityDetails_IsResidentOfAustralia_No" name="BusinessActivityDetails.IsResidentOfAustralia" type="radio" value="No">
+
+								<span id="BusinessActivityDetails_IsResidentOfAustralia_No_span">No</span>
+							</label>
+						</div> <a class="cd-btn help" href="#help-businessactivityisresidentofaustralia"><span>Help - Resident for tax purposes</span></a>
+						
+					</fieldset>
+				</div>
+			</div>
+		<div class="address-lookup" style="">
+			<fieldset>
+				<legend class="margin4 larger">Main business address</legend>
+				<div class="grid-row clearfix">
+					<div class="col4">
+						<label class="input-right " for="ContactDetails_BusinessAddress_AddressDetails_CountryId">Country</label>
+					</div>
+					<div class="col8 last">
+						<select class="address-country-select" id="ContactDetails_BusinessAddress_AddressDetails_CountryId" name="ContactDetails.BusinessAddress.AddressDetails.CountryId">
+							<option selected="selected" value="14">Australia</option>
+							<option value="15">Austria</option>
+							<option value="32">Brazil</option>
+							<option value="41">Canada</option>
+							<option value="46">China</option>
+							<option value="47">Christmas Island</option>
+							<option value="48">Cocos (Keeling) Islands</option>
+							<option value="56">Croatia</option>
+							<option value="61">Denmark</option>
+							<option value="76">France</option>
+							<option value="83">Germany</option>
+							<option value="100">Hong Kong</option>
+							<option value="103">India</option>
+							<option value="104">Indonesia</option>
+							<option value="110">Italy</option>
+							<option value="112">Japan</option>
+							<option value="135">Malaysia</option>
+							<option value="159">New Zealand</option>
+							<option value="183">Russian Federation</option>
+							<option value="206">South Africa</option>
+							<option value="220">Thailand</option>
+							<option value="248">Zimbabwe</option>
+						</select>
+						<a class="cd-btn help" href="#help-addressdetailscountry"><span>Help - Country</span></a>
+					</div>
+				</div>					
+				<div class="grid-row">
+					<div class="col4">
+						<label class="input-right " for="ContactDetails_BusinessAddress_AddressDetails_AddressLookupText">Address</label>
+					</div>
+					<div class="col8 last">
+            <p>Selected address:</p>
             <div>
-                <strong>Almost done!</strong> You now have a chance to print a copy of the form by selecting <strong>File</strong> from the browser menu above, then <strong>Print</strong>. If payment is required, the next step will open our secure payment page. <a class="cd-btn help" href="#help-confirmationalmostdone"><span>Help - Almost Done</span></a>
+                <p style="font-weight: bold" class="address-display-label">
+                    100 Abbett St<br>
+                    Scarborough WA 6019
+                </p>
             </div>
+            <p>If this is not your address you can:</p>
+            <p>
+                <input type="button" class="btn address-enter-lookup" value="Find a different address">
+            </p>
         </div>
+		</div>
+		</fieldset>
+		<fieldset>
+			<legend class="margin4 larger">Postal address</legend>
+				<div class="grid-row">
+					<div class="col4">
+						&nbsp;
+					</div>
+					<div class="col8 last custom-controls">
+						<p>
+
+							<input id="postal-cb" type="checkbox"><input name="postal-cb1" type="hidden" value="false">
+							<label for="postal-cb">My postal address is different to main business address</label>
+						</p> 
+						
+					</div>
+				</div>
+			</fieldset>
+		</div>
+		<div id="postal-address" class="address-lookup" style="display: none;">
+			<div class="grid-row clearfix">
+					<div class="col4">
+						<label class="input-right" for="ContactDetails_BusinessAddress_AddressDetails_CountryId1">Country</label>
+					</div>
+					<div class="col8 last">
+						<select class="address-country-select" id="ContactDetails_BusinessAddress_AddressDetails_CountryId1" name="ContactDetails.BusinessAddress.AddressDetails.CountryId1">
+							<option selected="selected" value="14">Australia</option>
+							<option value="15">Austria</option>
+							<option value="32">Brazil</option>
+							<option value="41">Canada</option>
+							<option value="46">China</option>
+							<option value="47">Christmas Island</option>
+							<option value="48">Cocos (Keeling) Islands</option>
+							<option value="56">Croatia</option>
+							<option value="61">Denmark</option>
+							<option value="76">France</option>
+							<option value="83">Germany</option>
+							<option value="100">Hong Kong</option>
+							<option value="103">India</option>
+							<option value="104">Indonesia</option>
+							<option value="110">Italy</option>
+							<option value="112">Japan</option>
+							<option value="135">Malaysia</option>
+							<option value="159">New Zealand</option>
+							<option value="183">Russian Federation</option>
+							<option value="206">South Africa</option>
+							<option value="220">Thailand</option>
+							<option value="248">Zimbabwe</option>
+						</select>
+						<a class="cd-btn help" href="#help-addressdetailscountry"><span>Help - Country</span></a>
+					</div>
+				</div>
+				<p class="margin4">Start typing the address in the field below and select the correct one from the drop-down list that appears. </p>						
+				<div class="grid-row">
+					<div class="col4">
+						<label class="input-right" for="ContactDetails_BusinessAddress_AddressDetails_AddressLookupText1">Address</label>
+					</div>
+					<div class="col8 last">
+						<input class="address-lookup-text ui-autocomplete-input1" id="ContactDetails_BusinessAddress_AddressDetails_AddressLookupText" name="ContactDetails.BusinessAddress.AddressDetails.AddressLookupText" type="text" value="" autocomplete="off"> <a class="cd-btn help" href="#help-addressdetailsaddress"><span>Help - Address</span></a>
+						
+					</div>
+				</div>
+				<p class="margin4">or you can:<input type="button" id="addr-enter-manually-btn1" class="btn btn-default address-enter-manually" value="Enter it manually"></p>
+				</div>
+			
+			</div>
+			<div id="view-details" class="confirmation" style="display: none;">
+				<table id="proofofidentity">
+					<thead class="visuallyhidden">
+						<tr>
+							<th>Field item</th>
+							<th>Input value</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th style="vertical-align: middle">Your details</th>
+							<th><button id="edit" type="button" class="btn btn-default ico-edit">Edit</button></th>
+						</tr>
+						<tr>
+							<td class="field-name">Name</td>
+							<td class="input-value">Martin Jones</td>
+						</tr>
+						<tr>
+							<td class="field-name">Date of birth</td>
+							<td class="input-value">1/01/1981</td>
+						</tr>
+						<tr>
+							<td class="field-name">Tax File Number</td>
+							<td class="input-value">123456782</td>
+						</tr>
+						<tr>
+							<td class="field-name">Main business address</td>
+							<td class="input-value">10 Binara St Canberra City ACT 2601</td>
+						</tr>
+								<tr>
+							<td class="field-name">Postal address</td>
+							<td class="input-value">PO Box 9999 Canberra City ACT 2600</td>
+						</tr>                                    
+					</tbody>
+				</table>
+		</div>
+		<div class="controls-container">
+			<div class="controls-content">
+				<button id="nextbtn" type="button" class="btn" >Continue without verifying</button> <button id="bad-next" class="btn btn-default">Save and try again</button>
+			</div><!-- controls-content -->
+		</div>
+ 
+                </div>
         
         
     </div>
