@@ -52,7 +52,7 @@ layout: default
 <div id="validationSummary" class="validation-summary-errors validation-container clearfix" data-valmsg-summary="true">
     <div class="grid-row">
         <div class="validation-summary-icon">
-            <img src="/business-registration/img/ico-alert-red.png" alt="Error">
+            <img src="/img/ico-alert-red.png" alt="Error">
         </div>
         <div class="validation-message">
             <h2><a id="validationSummaryAnchor" tabindex="-1">Just <span id="validation-error-count">1</span> thing(s) to check and you're on your way:</a>
@@ -60,13 +60,13 @@ layout: default
             <ul class="validation-message-errors">
                 
 
-                        <li><a href="javascript:scrollToAndFocus('[id$=Associates_PersonAssociate_PlaceOfBirth]');">We have not been able to verify your identity using the details you have provided. Please check the details below and correct any errors.</a></li>
+                        <li><a href="javascript:scrollToAndFocus('[id$=Associates_PersonAssociate]');">We have not been able to verify your identity using the details you have provided. Please check the details below and correct any errors.</a></li>
             </ul>
             <p><span class="validation-red">*</span> indicates areas that need to be checked.</p>
             <script type="text/javascript">
                 $(document).ready(function() {
                     if ($("#validationSummary").hasClass("validation-summary-errors")) {
-                        scrollToAndFocus('#validationSummaryAnchor');
+                        scrollToAndFocus('#validationSummary');
                     }
                 });
 
@@ -992,11 +992,23 @@ layout: default
 
 
             </fieldset>
+			<fieldset>
+				<legend class="margin4 larger">Proof of identity</legend>
+				<div class="custom-controls">
+					<div class="col4">&nbsp;</div>
+					<div class="col8 last">
+						<p>Blurb about risks of not confirming your identity before submit.</p>
+						<p>
+							<input id="skip-cb" type="checkbox">
+							<label for="skip-cb">Skip identity check</label>
+						</p> 
+					</div>
+				</div>
+			</fieldset>
 
     <div class="margin4 controls-content margin-bottom">
         <button class="btn btn-default ajax-button" id="save-person" type="button" style="margin-right: .5em;">Save individual</button>
-		<button id="unverified" class="btn cancel ajax-button" type="button">Save unverified</button>
-        <button class="btn cancel" type="button">Cancel</button>
+		<button class="btn cancel" type="button">Cancel</button>
     </div>
 
     
@@ -1004,235 +1016,9 @@ layout: default
 
 </div>
 
-    <div class="help" id="help">
-        <div class="cd-panel from-right">
-            <div class="cd-panel-header">
-                <a href="#" class="cd-panel-close">Close</a>
-                <h2 id="helpTopic">Help topics</h2>
-                <p class="cd-panel-print">
-                    <a href="#" id="aPrint" onclick="printHelp(); return false;">Print</a>
-                </p>
-            </div>
-            <div class="cd-panel-container">
-                <div class="cd-panel-content">
-                    <div id="helpFile" class="showhide">
-                                <input type="hidden" class="help-anchor" id="help-companyassociatesabncompany">
-<h3 data-collapse-summary="" aria-expanded="false"><a href="#">Business associates</a></h3>
-<div aria-hidden="true" style="display: none;">
-<p>In this section, please provide the details of all business associates of the company, including:</p>
-<ul>
-<li>directors</li>
-<li>shareholders or members</li>
-<li>secretaries</li>
-<li>the public officer.</li>
-</ul>
-<p><strong>Companies must have written consent</strong> from all directors, secretaries and shareholders/members to take on their role. You don't need to provide copies, but you must keep them as part of the company's records after the company is registered.</p>
-<p>As the applicant, you'll be asked to declare that you have received these before you can submit this application.</p>
-<blockquote><hr>
-<p>Remember! Shareholders/members can be individuals or companies, but directors and secretaries must be individuals.</p><hr></blockquote>
-
-<h4>What personal information will be available to the public?</h4>
-
-<p>The following information will be available to the public in the <a href="https://asic.gov.au/search-organisations" target="_blank">company register <span class="visuallyhidden">(opens in new window)</span></a>:</p>
-<ul>
-<li>All directors and secretaries – their full name, date of birth and residential address.</li>
-<li>Top 20 shareholders or members (based on shareholdings) of each share class – their name and address.</li>
-
-</ul>
-<p>Officeholders (directors and secretaries) can apply for approval to provide a different address in some circumstances. Visit the Australian Securities &amp; Investments Commission (ASIC) website for information about the application fee and how to <a href="http://asic.gov.au/for-business/changes-to-your-company/company-addresses/application-for-suppression-of-residential-address/" target="_blank">apply for suppression of residential address <span class="visuallyhidden">(opens in new window)</span></a>.</p>
-<p>Read the <a href="http://www.asic.gov.au/privacy" target="_blank">summary of ASIC's privacy policy <span class="visuallyhidden">(opens in new window)</span></a> to find out how ASIC handles personal information.</p>
-
-
-
-
-</div>                                <input type="hidden" class="help-anchor" id="help-companydetailspersonassociateofficedirector">
-<h3 data-collapse-summary="" aria-expanded="false"><a href="#">Directors</a></h3>
-<div aria-hidden="true" style="display: none;">
-
-<p>Directors are expected to:</p>
-<ul>
-<li>guide and monitor the management of the company</li>
-<li>always act in the company's best interests</li>
-<li>ensure the company complies with its legal requirements.</li>
-</ul>
-
-
-<p>To be a director, a person must:</p>
-
-<ul>
-<li>have agreed in writing to be a company director</li>
-<li>be at least 18 years of age.</li>
-</ul>
-
-<p>A director's appointment is effective on the day the company is successfully registered.</p>
-<p>For more about the duties of a company director, go to the Australian Securities &amp; Investments Commission (ASIC) website:</p>
-
-<ul>
-<li><a href="http://asic.gov.au/your-company" target="_blank">Your company and the law <span class="visuallyhidden">(opens in new window)</span></a></li>
-<li><a href="http://asic.gov.au/company-officeholders" target="_blank">Company officeholder duties <span class="visuallyhidden">(opens in new window)</span></a></li>
-</ul>
-
-<h4>What personal information will be available to the public?</h4>
-
-<p>The name, date of birth and residential address of directors will be available to the public from the <a href="https://asic.gov.au/search-organisations" target="_blank">company register <span class="visuallyhidden">(opens in new window)</span></a> for a small fee.</p> 
-<p>Read the <a href="http://www.asic.gov.au/privacy" target="_blank">summary of ASIC's privacy policy <span class="visuallyhidden">(opens in new window)</span></a> to find out how ASIC handles personal information.</p>
-
-<h4>Who can't be a director?</h4>
-
-<p>Unless a court allows it, a person <strong>must not be a director</strong> if they:</p>
-<ul>
-<li>are bankrupt</li>
-<li>are in debt and have an agreement with creditors to manage the debt</li>
-<li>have been convicted of offences such as fraud or offences under the <em>Corporations Act 2001</em></li>
-<li>have been disqualified from managing companies.</li>
-</ul>
-
-
-<p>Find out more about <a href="http://asic.gov.au/regulatory-resources/insolvency/insolvency-for-directors/bankruptcy-and-personal-insolvency-agreements/" target="_blank">bankruptcy and personal insolvency agreements while you're a director <span class="visuallyhidden">(opens in new window)</span></a> on the ASIC website.</p>
-
-</div>                                <input type="hidden" class="help-anchor" id="help-companydetailspersonassociateofficesecretary">
-<h3 data-collapse-summary="" aria-expanded="false"><a href="#">Secretaries</a></h3>
-<div aria-hidden="true" style="display: none;">
-<p>The day-to-day responsibilities of company secretaries may include:</p>
-<ul>
-<li>letting ASIC know about changes to company details (such as changes to the registered office address, secretaries or directors)</li>
-<li>lodging the company's financial reports</li>
-<li>ensuring the company meets its legal requirements.</li>
-</ul>
-
-<p>To be a secretary, a person must:</p>
-<ul>
-<li>have agreed in writing to be a company secretary</li>
-<li>be at least 18 years of age.</li>
-</ul>
-
-<p>A secretary's appointment is effective on the day the company is successfully registered.</p>
-
-<p>Find out more about the <a href="http://asic.gov.au/for-business/running-a-company/company-officeholder-duties/" target="_blank">duties of officeholders (directors and secretaries) <span class="visuallyhidden">(opens in new window)</span></a> on the Australian Securities &amp; Investments Commission (ASIC) website.</p>
-
-<h4>What personal information will be available to the public?</h4>
-
-<p>The name, date of birth and residential address of company secretaries will be available to the public from the <a href="https://asic.gov.au/search-organisations" target="_blank">company register <span class="visuallyhidden">(opens in new window)</span></a> for a small fee.</p> 
-<p>Read the <a href="http://www.asic.gov.au/privacy" target="_blank">summary of ASIC's privacy policy <span class="visuallyhidden">(opens in new window)</span></a> to find out how ASIC handles personal information.</p>
-
-<h4>Who can't be a secretary?</h4>
-
-<p>Unless a court allows it, a person <strong>must not be a secretary</strong> if they:</p>
-<ul>
-<li>are bankrupt</li>
-<li>are in debt and have an agreement with creditors to manage the debt</li>
-<li>have been convicted of offences such as fraud or offences under the <em>Corporations Act 2001</em>.</li>
-</ul>
-</div>                                <input type="hidden" class="help-anchor" id="help-companydetailspersonassociateofficepublicofficer">
-<h3 data-collapse-summary="" aria-expanded="false"><a href="#">Public officers</a></h3>
-<div aria-hidden="true" style="display: none;">
-<p> All public companies and limited partnerships must appoint a public officer.</p>
-<p>Public officers must be an individual and at least 18 years of age.</p>
-<p> Public officers are responsible for making sure the company complies with tax law, keeping tax records and submitting company tax returns.</p>
-<p>The Australian Taxation Office (ATO) will contact public officers about tax matters related to the company.</p>
-<p>Find out more about <a href="https://www.ato.gov.au/Tax-professionals/Your-practice/Tax-and-BAS-agents/Primary-contact-and-authorised-contacts/#Public_officer" target="_blank">public officers <span class="visuallyhidden">(opens in new window)</span></a> on the ATO website.</p>
-</div>
-                                <input type="hidden" class="help-anchor" id="help-companydetailspersonassociateofficeshareholder">
-<h3 data-collapse-summary="" aria-expanded="false"><a href="#">Shareholders</a></h3>
-<div aria-hidden="true" style="display: none;">
-<p>Shareholders are also known as members. Together, they own the company by owning shares in the company.</p>
-
-<p>Remember, however, that the company is a separate legal entity, so the company's assets belong to the company, not the shareholders.</p>
-
-<p>Shareholders can be individuals or companies. Company law doesn't set out a minimum age requirement for shareholders, but a company can make rules about this if they like.</p>
-
-
-<p>Find out more about the <a href="http://asic.gov.au/members" target="_blank">role of company members (shareholders) <span class="visuallyhidden">(opens in new window)</span></a> on the ASIC website.</p>
-
-<h4>What information will be available to the public?</h4>
-
-<p>The name and residential address of company members (shareholders) will be available to the public from the <a href="https://asic.gov.au/search-organisations" target="_blank">company register <span class="visuallyhidden">(opens in new window)</span></a> for a small fee.</p> 
-<p>Read the <a href="http://www.asic.gov.au/privacy" target="_blank">summary of ASIC's privacy policy <span class="visuallyhidden">(opens in new window)</span></a> to find out how ASIC handles personal information.</p>
-
-</div>
-                                <input type="hidden" class="help-anchor" id="help-companydetailspersonassociateispersonhaveformername">
-<h3 data-collapse-summary="" aria-expanded="false"><a href="#">Former name</a></h3>
-<div aria-hidden="true" style="display: none;"><p>A person may have a former name if they changed their name, for example by deed poll or by marriage.</p>
-<p>If the person has several former names, provide the most recent former name.</p></div>                                <input type="hidden" class="help-anchor" id="help-businessassociatebirthdetailsintro">
-<h3 data-collapse-summary="" aria-expanded="false"><a href="#">Birth details</a></h3>
-<div aria-hidden="true" style="display: none;">
-<p>The date of birth of all company officeholders (directors and secretaries) will be available to the public from the <a href="https://asic.gov.au/search-organisations" target="_blank">company register <span class="visuallyhidden">(opens in new window)</span></a> for a small fee.</p>
-<p>Read the <a href="http://www.asic.gov.au/privacy" target="_blank">summary of ASIC's privacy policy <span class="visuallyhidden">(opens in new window)</span></a> to find out how ASIC handles personal information.</p>
-</div>                                <input type="hidden" class="help-anchor" id="help-companydetailspersonassociateplaceofbirth">
-<h3 data-collapse-summary="" aria-expanded="false"><a href="#">Place of birth</a></h3>
-<div aria-hidden="true" style="display: none;">
-<p>Please only enter the city <strong>or</strong> town of birth and check it:  </p>
-<ul><li>is spelled out in full (e.g. Mount Gambier <strong>not </strong> Mt Gambier)</li>
-<li>doesn’t include the hospital or suburb (e.g. Perth <strong>not </strong> Osborne Park Hospital, Stirling)</li>
-<li>uses sentence case (e.g. Swan Hill <strong>not </strong> Swan hill).</li></ul>
-<blockquote><hr><p><strong>Important:</strong> This field helps to prove the identity of this person. If the birth details are entered incorrectly, 
-your registration may be rejected by the Australian Securities &amp; Investments Commission (ASIC).</p><hr></blockquote>
-
-<h4>Still not sure? </h4>
-<p>Entering the Place of birth on behalf of someone else? If you want to make sure you’ve entered the place name correctly, you can check it on the <a href="http://www.ga.gov.au/placename" target="_blank">Australia Place Name Search <span class="visuallyhidden">(opens in new window)</span></a> on the Geoscience Australia website.</p>
-</div>                                <input type="hidden" class="help-anchor" id="help-businessdetailspersondetailstaxfilenumber">
-<h3 data-collapse-summary="" aria-expanded="false"><a href="#">Tax File Number (TFN)</a></h3>
-<div aria-hidden="true" style="display: none;">
-<h4>Do I have to provide my TFN?</h4>
-<p>If you're applying for an AUSkey, you <strong>must</strong> provide your TFN.</p>
-
-<p>If you're <strong>not</strong> applying for an AUSkey, you <strong>don't</strong> have to provide your TFN. However, not providing one will delay your application by up to 28 days.</p>
-<h4>Why the delay?</h4>
-<p>Without a TFN, the Australian Business Register (ABR) may need to manually process your application. To do this, the ABR will need you to provide additional information or certified copies of documents including your: </p>
-<ul><li>bank account number</li>
-<li>birth certificate</li>
-<li>passport</li>
-<li>driver’s licence.</li></ul>
-<h4>Can I provide a TFN later?</h4>
-<p>If you don't have the TFN with you, you can leave the form and come back to it later. The form will be saved automatically.</p><p>As long as you don't lodge the form, you can return later and log in to resume your application from the Application summary screen. </p>
-<h4>Where can I find out more?</h4>
-<p>Details on what information the ABR needs to <a href="https://abr.gov.au/General-information/Proving-your-identity/" target="_blank">prove your identity <span class="visuallyhidden">(opens in new window)</span></a> can be found on the ABR website. </p>
-</div>                                <input type="hidden" class="help-anchor" id="help-businessassociateresidentialaddress">
-<h3 data-collapse-summary="" aria-expanded="false"><a href="#">Residential address</a></h3>
-<div aria-hidden="true" style="display: none;">
-<p>Residential address means the address that the individual normally lives at for most of the time.</p>
-<p>The residential address of the following business associates will be available to the public in the <a href="https://asic.gov.au/search-organisations" target="_blank">company register <span class="visuallyhidden">(opens in new window)</span></a>:</p>
-<ul>
-<li>individual shareholders in the top 20 of each share class (based on shareholdings)</li>
-<li>officeholders (directors and secretaries).</li>
-</ul>
-<p>If an officeholder has approval from Australian Securities &amp; Investments Commission (ASIC) to use an address that's different to their residential address, enter it here. Later in the form, we'll ask you to provide the <strong>ASIC approval number</strong>.</p>
-<blockquote><hr>
-<p>Officeholders can apply for approval to provide a different address in some circumstances. For example, if providing the residential address would risk the safety of the officeholder or their family.</p>
-
-<p>Visit the ASIC website for information about the application fee and how to <a href="http://asic.gov.au/for-business/changes-to-your-company/company-addresses/application-for-suppression-of-residential-address/" target="_blank">apply for suppression of residential address <span class="visuallyhidden">(opens in new window)</span></a>.</p>
-<hr></blockquote>
-<p>Read the <a href="http://www.asic.gov.au/privacy" target="_blank">summary of ASIC's privacy policy <span class="visuallyhidden">(opens in new window)</span></a> to find out how ASIC handles personal information.</p>
-</div>
-                                <input type="hidden" class="help-anchor" id="help-addressdetailscountry">
-<h3 data-collapse-summary="" aria-expanded="false"><a href="#">Country</a></h3>
-<div aria-hidden="true" style="display: none;"><p>To enter Norfolk Island, Christmas Island and Cocos Island addresses:</p>
-<ol>
-<li>select the island from the Country dropdown list</li>
-<li>enter your address details in Address line 1 (and Address line 2, if needed)</li>
-<li>enter the island name in Address line 3</li>
-<li>enter your postcode (6798 for Christmas Island, 6799 for Cocos Island and 2899 for Norfolk Island).</li>
-</ol>
-</div>                                <input type="hidden" class="help-anchor" id="help-addressdetailsaddress">
-<h3 data-collapse-summary="" aria-expanded="false"><a href="#">Address</a></h3>
-<div aria-hidden="true" style="display: none;">
-<p>If the address doesn't appear in the drop-down list, please use the 'Enter it manually' button to enter the address.</p> 
-</div>                    </div>
-                    <div class="more-help">
-                        <p><strong>Need more help? Contact us via <a href="https://www.business.gov.au/contact-us" target="_blank">business.gov.au <span class="visuallyhidden">(opens in new window)</span></a> or call 13&nbsp;28&nbsp;46.</strong>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-
     <div class="controls-container">
     <div class="controls-content">
-<button class="btn cancel ajax-button" data-ajax-target="ajax-container-for-companydetails" disabled="disabled" name="F6uLTxktNN6e0fPVdsTjsw==" type="button" value="__cvg__">Previous</button><button class="btn btn-default ajax-button next" data-ajax-target="ajax-container-for-companydetails" disabled="disabled" id="bus-associates-next" name="F6uLTxktNN6e0fPVdsTjsw==" type="button" value="__cvg__">Save and continue</button>    </div>
+<button class="btn cancel ajax-button" disabled="disabled" type="button">Previous</button><button class="btn btn-default ajax-button next" disabled="disabled" id="bus-associates-next" type="button">Save and continue</button>    </div>
 </div>
 </div>
     </div>

@@ -41,7 +41,7 @@ layout: default
 <h1 id="heading" tabindex="-1">4. Confirm application <span role="progressbar">(Step 4 of 5 steps)</span></h1>
 
 <form action="/registration/confirmation?appid=2118" id="sobrsform" method="post">
-<div id="validationSummary" class="validation-container clearfix" data-valmsg-summary="true">
+<div id="validationSummary" class="validation-container validation-summary-errors clearfix" data-valmsg-summary="true">
     <div class="grid-row">
         <div class="validation-summary-icon">
             <img src="/img/ico-alert-red.png" alt="Error">
@@ -50,14 +50,14 @@ layout: default
             <h2><a id="validationSummaryAnchor" tabindex="-1">Just <span id="validation-error-count">1</span> thing(s) to check and you're on your way:</a>
             </h2>
             <ul class="validation-message-errors">
-                <li>We have not been able to verify your identity using the details you have provided. Please check the details below and correct any errors.</li>
+                <li><a href="javascript:scrollToAndFocus('[id$=proof-of-identity]');">We have not been able to verify your identity using the details you have provided. Please check the details below and correct any errors.</a></li>
 
             </ul>
             <p><span class="validation-red">*</span> indicates areas that need to be checked.</p>
             <script type="text/javascript">
                 $(document).ready(function() {
                     if ($("#validationSummary").hasClass("validation-summary-errors")) {
-                        scrollToAndFocus('#validationSummaryAnchor');
+                        scrollToAndFocus('#validationSummary');
                     }
                 });
 
@@ -73,9 +73,7 @@ layout: default
     </div>
 </div>
 <div class="confirmation">
-<!-- 	<div id="selectedregistrations" class="sub-section-container sub-section-open" data-section-name="Registrations">
-<div id="businessdetails" class="" data-section-name="AbnRegistrationDetails"> -->
-	<div class="sub-section-container sub-section-open">
+	<div id="proof-of-identity" class="sub-section-container sub-section-open">
 		<h2>
 			Proof of identity
 		</h2>
