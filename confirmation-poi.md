@@ -44,7 +44,7 @@ layout: default
 <div id="validationSummary" class="validation-container clearfix" data-valmsg-summary="true">
     <div class="grid-row">
         <div class="validation-summary-icon">
-            <img src="/business-registration/img/ico-alert-red.png" alt="Error">
+            <img src="/img/ico-alert-red.png" alt="Error">
         </div>
         <div class="validation-message">
             <h2><a id="validationSummaryAnchor" tabindex="-1">Just <span id="validation-error-count">1</span> thing(s) to check and you're on your way:</a>
@@ -72,15 +72,13 @@ layout: default
         </div>
     </div>
 </div>
-    <div class="confirmation">
-<div id="selectedregistrations" class="sub-section-container sub-section-open" data-section-name="Registrations">
-                        
-                <div id="businessdetails" class="" data-section-name="AbnRegistrationDetails">
-                    <div class="sub-section-container sub-section-open">
-                        <h2>
-                            Proof of identity
-                        </h2>
-
+<div class="confirmation">
+<!-- 	<div id="selectedregistrations" class="sub-section-container sub-section-open" data-section-name="Registrations">
+<div id="businessdetails" class="" data-section-name="AbnRegistrationDetails"> -->
+	<div class="sub-section-container sub-section-open">
+		<h2>
+			Proof of identity
+		</h2>
 		<fieldset class="no-margin">
 			<legend class="margin4 larger">Your details</legend>
 			<div class="grid-row">
@@ -117,36 +115,36 @@ layout: default
 			</div>
 		</fieldset>
 		<fieldset id="fieldsetPOIAddress" class="no-margin">
-            <div class="grid-row">
-                <div class="col4">
-                    <p>&nbsp;</p>
-                </div>
-                <div class="col8 last">
-                    <p class="label" id="PersonDetails_HasTaxFileNumber_lbl">Do you have a Tax File Number (TFN)?</p>
-                    <p>Providing your TFN is the quickest way to prove your identity.</p>
-                </div>
-            </div>
-            <fieldset id="PersonDetails_HasTaxFileNumber" tabindex="-1">
-                <div class="grid-row">
-                    <div class="col4">
-                        &nbsp;
-                    </div>
-                    <div class="col8 last">
-                        <div class="radio-toggle">
-                            <label class="on label-left" for="PersonDetails_HasTaxFileNumber_Yes">
-                                <input checked id="PersonDetails_HasTaxFileNumber_Yes" name="PersonDetails.HasTaxFileNumber" onclick="$('#tfn-div').show();" type="radio" value="Yes">
-                                <span id="tfn_yes">Yes</span>
-                            </label>
-                            <label class="off label-right" for="PersonDetails_HasTaxFileNumber_No">
-                                <input id="PersonDetails_HasTaxFileNumber_No" name="PersonDetails.HasTaxFileNumber" onclick="$('#tfn-div').hide(); $('#PersonDetails_TaxFileNumber').val('');" type="radio" value="No">
-                                <span id="tfn_no">No</span>
-                            </label>
-                        </div> 
-                        
-                    </div>
-                </div>
-            </fieldset>
-        
+			<div class="grid-row">
+				<div class="col4">
+					<p>&nbsp;</p>
+				</div>
+				<div class="col8 last">
+					<p class="label" id="PersonDetails_HasTaxFileNumber_lbl">Do you have a Tax File Number (TFN)?</p>
+					<p>Providing your TFN is the quickest way to prove your identity.</p>
+				</div>
+			</div>
+			<fieldset id="PersonDetails_HasTaxFileNumber" tabindex="-1">
+				<div class="grid-row">
+					<div class="col4">
+						&nbsp;
+					</div>
+					<div class="col8 last">
+						<div class="radio-toggle">
+							<label class="on label-left" for="PersonDetails_HasTaxFileNumber_Yes">
+								<input checked id="PersonDetails_HasTaxFileNumber_Yes" name="PersonDetails.HasTaxFileNumber" onclick="$('#tfn-div').show();" type="radio" value="Yes">
+								<span id="tfn_yes">Yes</span>
+							</label>
+							<label class="off label-right" for="PersonDetails_HasTaxFileNumber_No">
+								<input id="PersonDetails_HasTaxFileNumber_No" name="PersonDetails.HasTaxFileNumber" onclick="$('#tfn-div').hide(); $('#PersonDetails_TaxFileNumber').val('');" type="radio" value="No">
+								<span id="tfn_no">No</span>
+							</label>
+						</div> 
+						
+					</div>
+				</div>
+			</fieldset>
+		
 			<div id="tfn-div" class="grid-row" style="">
 				<div class="col4">
 					<label class="input-right " for="PersonDetails_TaxFileNumber">Tax File Number <span class="field-note optional">(optional)</span></label>
@@ -158,28 +156,28 @@ layout: default
 			</div>
 		</fieldset>
 		<div class="grid-row clearfix">
-				<div class="col4">
-					<p>&nbsp;</p>
-				</div>
-				<div class="col7 last">
-					<fieldset class="margin-bottom-075">
-						<legend class="no-padding">Are you an Australian resident for taxation purposes?</legend>
-						<div class="radio-toggle">
-							<label class="on label-left" for="BusinessActivityDetails_IsResidentOfAustralia_Yes">
-								<input checked id="BusinessActivityDetails_IsResidentOfAustralia_Yes" name="BusinessActivityDetails.IsResidentOfAustralia" type="radio" value="Yes">
-
-								<span id="BusinessActivityDetails_IsResidentOfAustralia_Yes_span">Yes</span>
-							</label>
-							<label class="off label-right" for="BusinessActivityDetails_IsResidentOfAustralia_No">
-								<input id="BusinessActivityDetails_IsResidentOfAustralia_No" name="BusinessActivityDetails.IsResidentOfAustralia" type="radio" value="No">
-
-								<span id="BusinessActivityDetails_IsResidentOfAustralia_No_span">No</span>
-							</label>
-						</div> <a class="cd-btn help" href="#help-businessactivityisresidentofaustralia"><span>Help - Resident for tax purposes</span></a>
-						
-					</fieldset>
-				</div>
+			<div class="col4">
+				<p>&nbsp;</p>
 			</div>
+			<div class="col7 last">
+				<fieldset class="margin-bottom-075">
+					<legend class="no-padding">Are you an Australian resident for taxation purposes?</legend>
+					<div class="radio-toggle">
+						<label class="on label-left" for="BusinessActivityDetails_IsResidentOfAustralia_Yes">
+							<input checked id="BusinessActivityDetails_IsResidentOfAustralia_Yes" name="BusinessActivityDetails.IsResidentOfAustralia" type="radio" value="Yes">
+
+							<span id="BusinessActivityDetails_IsResidentOfAustralia_Yes_span">Yes</span>
+						</label>
+						<label class="off label-right" for="BusinessActivityDetails_IsResidentOfAustralia_No">
+							<input id="BusinessActivityDetails_IsResidentOfAustralia_No" name="BusinessActivityDetails.IsResidentOfAustralia" type="radio" value="No">
+
+							<span id="BusinessActivityDetails_IsResidentOfAustralia_No_span">No</span>
+						</label>
+					</div> <a class="cd-btn help" href="#help-businessactivityisresidentofaustralia"><span>Help - Resident for tax purposes</span></a>
+					
+				</fieldset>
+			</div>
+		</div>
 		<div class="address-lookup" style="">
 			<fieldset>
 				<legend class="margin4 larger">Main business address</legend>
@@ -220,39 +218,39 @@ layout: default
 						<label class="input-right " for="ContactDetails_BusinessAddress_AddressDetails_AddressLookupText">Address</label>
 					</div>
 					<div class="col8 last">
-            <p>Selected address:</p>
-            <div>
-                <p style="font-weight: bold" class="address-display-label">
-                    100 Abbett St<br>
-                    Scarborough WA 6019
-                </p>
-            </div>
-            <p>If this is not your address you can:</p>
-            <p>
-                <input type="button" class="btn address-enter-lookup" value="Find a different address">
-            </p>
-        </div>
-		</div>
-		</fieldset>
-		<fieldset>
-			<legend class="margin4 larger">Postal address</legend>
-				<div class="grid-row">
-					<div class="col4">
-						&nbsp;
-					</div>
-					<div class="col8 last custom-controls">
+						<p>Selected address:</p>
+						<div>
+							<p style="font-weight: bold" class="address-display-label">
+								100 Abbett St<br>
+								Scarborough WA 6019
+							</p>
+						</div>
+						<p>If this is not your address you can:</p>
 						<p>
-
-							<input id="postal-cb" type="checkbox"><input name="postal-cb1" type="hidden" value="false">
-							<label for="postal-cb">My postal address is different to main business address</label>
-						</p> 
-						
+							<input type="button" class="btn address-enter-lookup" value="Find a different address">
+						</p>
 					</div>
 				</div>
 			</fieldset>
-		</div>
-		<div id="postal-address" class="address-lookup" style="display: none;">
-			<div class="grid-row clearfix">
+			<fieldset>
+				<legend class="margin4 larger">Postal address</legend>
+					<div class="grid-row">
+						<div class="col4">
+							&nbsp;
+						</div>
+						<div class="col8 last custom-controls">
+							<p>
+
+								<input id="postal-cb" type="checkbox"><input name="postal-cb1" type="hidden" value="false">
+								<label for="postal-cb">My postal address is different to main business address</label>
+							</p> 
+							
+						</div>
+					</div>
+				</fieldset>
+			</div>
+			<div id="postal-address" class="address-lookup" style="display: none;">
+				<div class="grid-row clearfix">
 					<div class="col4">
 						<label class="input-right" for="ContactDetails_BusinessAddress_AddressDetails_CountryId1">Country</label>
 					</div>
@@ -295,9 +293,8 @@ layout: default
 					</div>
 				</div>
 				<p class="margin4">or you can:<input type="button" id="addr-enter-manually-btn1" class="btn btn-default address-enter-manually" value="Enter it manually"></p>
-				</div>
-			
 			</div>
+
 			<div id="view-details" class="confirmation" style="display: none;">
 				<table id="proofofidentity">
 					<thead class="visuallyhidden">
@@ -333,15 +330,25 @@ layout: default
 						</tr>                                    
 					</tbody>
 				</table>
+			</div>
+			<fieldset>
+				<legend class="margin4 larger">Proof of identity</legend>
+				<div class="custom-controls">
+					<div class="col4">&nbsp;</div>
+					<div class="col8 last">
+						<p>Blurb about risks of not confirming your identity before submit.</p>
+						<p>
+							<input id="skip-cb" type="checkbox">
+							<label for="skip-cb">Skip identity check</label>
+						</p> 
+					</div>
+				</div>
+			</fieldset>
+			<div class="controls-container">
+				<div class="controls-content custom-controls">
+					<button type="button" class="btn" >Cancel</button> <button id="bad-next" class="btn btn-default">Save</button>
+				</div><!-- controls-content -->
+			</div>        
 		</div>
-		<div class="controls-container">
-			<div class="controls-content">
-				<button id="nextbtn" type="button" class="btn" >Continue without verifying</button> <button id="bad-next" class="btn btn-default">Save and try again</button>
-			</div><!-- controls-content -->
-		</div>
- 
-                </div>
-        
-        
-    </div>
-</div>
+	</div>
+</form>
