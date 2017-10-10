@@ -44,13 +44,13 @@ layout: default
 <div id="validationSummary" class="validation-container validation-summary-errors clearfix" data-valmsg-summary="true">
     <div class="grid-row">
         <div class="validation-summary-icon">
-            <img src="/business-registration/img/ico-alert-red.png" alt="Error">
+            <img src="/img/ico-alert-red.png" alt="Error">
         </div>
         <div class="validation-message">
             <h2><a id="validationSummaryAnchor" tabindex="-1">Just <span id="validation-error-count">1</span> thing(s) to check and you're on your way:</a>
             </h2>
             <ul class="validation-message-errors">
-                <li><a href="javascript:scrollToAndFocus('[id$=proof-of-identity]');">We have not been able to verify your identity using the details you have provided. Please check the details below and correct any errors.</a></li>
+                <li><a id="fail-link" href="javascript:scrollToAndFocus('[id$=proof-of-identity]');">We have not been able to verify your identity using the details you have provided.<br />Please check the details below and correct any errors.</a></li>
 
             </ul>
             <p><span class="validation-red">*</span> indicates areas that need to be checked.</p>
@@ -74,11 +74,9 @@ layout: default
 </div>
 <div class="confirmation">
 	<div id="proof-of-identity" class="sub-section-container sub-section-open">
-		<h2>
-			Proof of identity
-		</h2>
+		<h2>Proof of identity</h2>
 		<fieldset class="no-margin">
-			<legend class="margin4 larger">Your details</legend>
+			<legend class="margin4 validation-inline larger">Your details</legend>
 			<div class="grid-row">
 				<div class="col4">
 					<label for="individual1-given" class="input-right">Given name</label>
@@ -178,7 +176,7 @@ layout: default
 		</div>
 		<div class="address-lookup" style="">
 			<fieldset>
-				<legend class="margin4 larger">Main business address</legend>
+				<legend class="margin4 validation-inline larger">Main business address</legend>
 				<div class="grid-row clearfix">
 					<div class="col4">
 						<label class="input-right " for="ContactDetails_BusinessAddress_AddressDetails_CountryId">Country</label>
@@ -231,7 +229,7 @@ layout: default
 				</div>
 			</fieldset>
 			<fieldset>
-				<legend class="margin4 larger">Postal address</legend>
+				<legend class="margin4 validation-inline larger">Postal address</legend>
 					<div class="grid-row">
 						<div class="col4">
 							&nbsp;
@@ -329,7 +327,7 @@ layout: default
 					</tbody>
 				</table>
 			</div>
-			<fieldset>
+			<!--fieldset>
 				<legend class="margin4 larger">Proof of identity</legend>
 				<div class="custom-controls">
 					<div class="col4">&nbsp;</div>
@@ -341,12 +339,26 @@ layout: default
 						</p> 
 					</div>
 				</div>
-			</fieldset>
+			</fieldset-->
 			<div class="controls-container">
 				<div class="controls-content custom-controls">
-					<button type="button" class="btn" >Cancel</button> <button id="bad-next" class="btn btn-default">Save</button>
+					<button type="button" class="btn" >Cancel</button> <button id="save" type="button" class="btn btn-default">Save</button>
 				</div><!-- controls-content -->
 			</div>        
 		</div>
 	</div>
 </form>
+<script>
+	$(document).ready(function() {
+		var attempts = 1;
+		$("#save").click(function() {
+			if (++attempts == 3) {
+				// no more attempts message
+				$("#fail-link").html("We have not been able to verify your identity.<br />You can still correct any errors, but we will no longer be able to verify your details until you submit your application.");
+			}
+			window.setTimeout(function() {
+				scrollToAndFocus('#validationSummary');
+			}, 500);
+		});
+	});
+</script>
