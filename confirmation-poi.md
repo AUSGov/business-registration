@@ -39,7 +39,17 @@ layout: default
 </div>
 
 <h1 id="heading" tabindex="-1">4. Confirm application <span role="progressbar">(Step 4 of 5 steps)</span></h1>
-
+<div id="divEntitlementMessage-top" class="result-container validation col12 outcome" style="background-color: #efe8ce; display: none;">
+        <div class="grid-row">
+            <div class="col1">
+                    <img id="imgEntitle" alt="Entitled" src="{{ site.baseurl }}/img/ico-exclamation-orange.png" style="margin-top: 0;">
+            </div>
+            <div class="col11 last">
+                <h3 id="hEntitledTitle" style="margin-top: 0; margin-left: 0;">Unable to verify your identity</h3>
+                <div id="divEntitledMessage"><p>The identity details you have entered have not been verified by the Australian Taxation Office (ATO). You can check your details on the <a href="confirmation-eoi?lastfailed=true">Proof of identity</a> page.</p></div>
+            </div>
+        </div>
+    </div>
 <div class="grid-row">
     <div>
         Here&apos;s your chance to check that you&apos;ve entered all the details correctly. If you find an error on this page, select the Edit button next to a section to return to that part of the form. <a class="cd-btn help" href="#help-confirmationnotes"><span>Help - Confirmation</span></a>
@@ -81,6 +91,7 @@ layout: default
         </div>
     </div>
 </div>
+
     <div class="confirmation">
                 <div id="feesummary" class="section-container" data-section-name="FeeSummary">
                     <div class="confirmation-heading">
@@ -617,8 +628,8 @@ layout: default
 	});
 	$(document).ready(function() {
 		if (location.search.indexOf("failpoi")>=0) {
-			$("#divEntitlementMessage").show();
-			scrollToAndFocus("#businessdetails");
+			$("#divEntitlementMessage, #divEntitlementMessage-top").show();
+			// scrollToAndFocus("#businessdetails");
 		}
 	});
 </script>
