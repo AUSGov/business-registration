@@ -349,7 +349,7 @@ layout: default
 			</fieldset-->
 			<div class="controls-container">
 				<div class="controls-content custom-controls">
-					<button id="cancel" type="button" class="btn" >Cancel</button> <button id="save" type="button" class="btn btn-default">Save</button>
+					<button id="cancel" type="button" class="btn">Cancel</button> <button id="save" type="button" class="btn btn-default">Save</button>
 				</div><!-- controls-content -->
 			</div>        
 		</div>
