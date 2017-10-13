@@ -52,7 +52,7 @@ layout: default
 <div id="validationSummary" class="validation-summary-errors validation-container clearfix" data-valmsg-summary="true">
     <div class="grid-row">
         <div class="validation-summary-icon">
-            <img src="/business-registration/img/ico-alert-red.png" alt="Error">
+            <img src="/img/ico-alert-red.png" alt="Error">
         </div>
         <div class="validation-message">
             <h2><a id="validationSummaryAnchor" tabindex="-1">Just <span id="validation-error-count">1</span> thing(s) to check and you're on your way:</a>
@@ -60,7 +60,7 @@ layout: default
             <ul class="validation-message-errors">
                 
 
-                        <li><a href="javascript:scrollToAndFocus('[id$=Associates_PersonAssociate]');">We have not been able to verify your identity using the details you have provided. Please check the details below and correct any errors.</a></li>
+                        <li><a id="fail-link" href="javascript:scrollToAndFocus('[id$=Associates_PersonAssociate]');">We have not been able to verify your identity using the details you have provided. Please check the details below and correct any errors.</a></li>
             </ul>
             <p><span class="validation-red">*</span> indicates areas that need to be checked.</p>
             <script type="text/javascript">
@@ -192,7 +192,7 @@ layout: default
     </fieldset>
 
     <fieldset>
-        <legend class="margin4 larger">Individual details</legend>
+        <legend class="margin4 larger validation-inline">Individual details</legend>
         <div class="grid-row">
             <div class="col4">
                 <label class="input-right" for="Associates_PersonAssociate_GivenName">Given name</label>
@@ -270,7 +270,7 @@ layout: default
     </fieldset>
 
         <fieldset id="Associates_PersonAssociate_PlaceOfBirthDetails" style="">
-            <legend class="margin4 larger">Birth details <a class="cd-btn help" href="#help-businessassociatebirthdetailsintro"><span>Help - Birth details</span></a>
+            <legend class="margin4 larger"><span class="validation-inline" style="font-weight: bold">Birth details</span> <a class="cd-btn help" href="#help-businessassociatebirthdetailsintro"><span>Help - Birth details</span></a>
                 
             </legend>
             <div class="grid-row">
@@ -575,8 +575,7 @@ layout: default
         </fieldset>
     
             <fieldset>
-                <legend class="margin4 larger">
-                    How do you want to prove identity of this associate? 
+                <legend class="margin4 larger"><span class="validation-inline" style="font-weight: bold">How do you want to prove identity of this associate?</span>
                     <br><span class="field-note">Providing your TFN is the quickest way to prove your identity.</span>
                 </legend>
 
@@ -591,8 +590,7 @@ layout: default
                 </div>
             </fieldset>
             <fieldset>
-                <legend class="margin4 larger">
-                    Residential address <a class="cd-btn help" href="#help-businessassociateresidentialaddress"><span>Help - Residential address</span></a>
+                <legend class="margin4 larger"><span class="validation-inline" style="font-weight: bold">Residential address</span> <a class="cd-btn help" href="#help-businessassociateresidentialaddress"><span>Help - Residential address</span></a>
                     
                 </legend>
                 
@@ -992,23 +990,9 @@ layout: default
 
 
             </fieldset>
-			<fieldset>
-				<legend class="margin4 larger">Proof of identity</legend>
-				<div class="custom-controls">
-					<div class="col4">&nbsp;</div>
-					<div class="col8 last">
-						<p>Blurb about risks of not confirming your identity before submit.</p>
-						<p>
-							<input id="skip-cb" type="checkbox">
-							<label for="skip-cb">Skip identity check</label>
-						</p> 
-					</div>
-				</div>
-			</fieldset>
-
     <div class="margin4 controls-content margin-bottom">
         <button class="btn btn-default ajax-button" id="save-person" type="button" style="margin-right: .5em;">Save individual</button>
-		<button class="btn cancel" type="button">Cancel</button>
+		<button class="btn cancel" type="button" onclick="location.href='company-details-eoa'">Cancel</button>
     </div>
 
     
@@ -1045,5 +1029,22 @@ layout: default
 </div>
 <script type="text/javascript" src="scripts/vadialog.js"></script> 
 <script type="text/javascript">
-		visionaustralia.addDialog("unverified", "dialogOne"); 
+		visionaustralia.addDialog("unverified", "dialogOne");
+		
+		var attempts = 2;
+		$(document).ready(function() {
+			$("#save-person").click(function() {
+				if (attempts >= 3) {
+					location.href="company-details-eoa";
+				}
+				if (++attempts == 3) {
+					// no more attempts message
+					$("#fail-link").html("We have not been able to verify your identity.<br />You can still correct any errors, but we will no longer be able to verify your details until you submit your application.");
+				}
+				window.setTimeout(function() {
+					$("#save").blur();
+					scrollToAndFocus('#validationSummary');
+				}, 500);
+			});
+		});
 </script>
