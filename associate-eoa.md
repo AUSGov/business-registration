@@ -52,7 +52,7 @@ layout: default
 <div id="validationSummary" class="validation-summary-errors validation-container clearfix" data-valmsg-summary="true">
     <div class="grid-row">
         <div class="validation-summary-icon">
-            <img src="/business-registeation/img/ico-alert-red.png" alt="Error">
+            <img src="{{ site.baseurl }}/img/ico-alert-red.png" alt="Error">
         </div>
         <div class="validation-message">
             <h2><a id="validationSummaryAnchor" tabindex="-1">Just <span id="validation-error-count">1</span> thing(s) to check and you're on your way:</a>
