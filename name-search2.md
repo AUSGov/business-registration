@@ -3,15 +3,19 @@ title: Name search
 layout: default-no-nav-no-footer
 ---
 <h1>{{ page.title }}</h1>
-<div class="grid-row">
-	<div id="search-container">
-		<label for="name">Enter proposed name</label><br />
-		<input type="text" id="name" value="Carpool Karaoke" /><br />
-		<input type="checkbox" id="busname" style="width: 20px; height: 20px; margin: 0 10px 0 0:" checked /><label style="font-size: 75%" for="busname">Business name</label>
-		<input type="checkbox" id="domname" style="width: 20px; height: 20px; margin: 0 10px 0 0:" checked /><label style="font-size: 75%" for="domname">Domain name</label>
-		<input type="checkbox" id="trademark" style="width: 20px; height: 20px; margin: 0 10px 0 0:" checked /><label style="font-size: 75%" for="trademark">Trademark</label>
-		<input type="checkbox" id="social" style="width: 20px; height: 20px; margin: 0 10px 0 0:" checked /><label style="font-size: 75%" for="social">Social media</label><br />
-		<button id="search" class="btn btn-default" style="margin-top: 0.5em;">Check my name</button>
+<div id="search-container" class="compare-wrapper">
+	<div class="grid-row clearfix">
+		<div class="col4">
+			<label for="name" class="input-right">Enter proposed name</label>
+		</div>
+		<div class="col8 last">
+			<input type="text" id="name" value="Carpool Karaoke" style="max-width: 26em" /><br />
+			<input type="checkbox" id="busname" style="width: 20px; height: 20px; margin: 0 10px 0 0:" checked /><label style="font-size: 75%" for="busname">Business name</label>
+			<input type="checkbox" id="domname" style="width: 20px; height: 20px; margin: 0 10px 0 0:" checked /><label style="font-size: 75%" for="domname">Domain name</label>
+			<input type="checkbox" id="trademark" style="width: 20px; height: 20px; margin: 0 10px 0 0:" checked /><label style="font-size: 75%" for="trademark">Trademark</label>
+			<input type="checkbox" id="social" style="width: 20px; height: 20px; margin: 0 10px 0 0:" checked /><label style="font-size: 75%" for="social">Social media</label><br />
+			<button id="search" class="btn btn-default" style="margin-top: 0.5em;">Check my name</button>
+		</div>
 	</div>
 </div>
 <ul id="results" class="block-menu clearfix" style="display: none;">
@@ -75,7 +79,7 @@ layout: default-no-nav-no-footer
 				</div>
 			</div>
 			<p style="margin-bottom: 0.5em;">See below for the status of your name on various popular social media sites:</p>
-			<ul style="list-style-type: none; margin-left: -40px;">
+			<ul style="list-style-type: none; margin-left: -20px;">
 				<li><span class="fa fa-facebook-official" style="width: 22px; font-size: 150%; color: #3B5B9C"></span> @CarpoolKaraoke is UNAVAILABLE</li>
 				<li><span class="fa fa-twitter" style="width: 22px; font-size: 150%; color: #55acee"></span> @CarpoolKaraoke is UNAVAILABLE</li>
 				<li><span class="fa fa-instagram" style="width: 22px; font-size: 150%;color: #c13584"></span> @CarpoolKaraoke is UNAVAILABLE</li>
@@ -87,7 +91,7 @@ layout: default-no-nav-no-footer
 <script>
 	$(document).ready(function() {
 		$("#search").click(function() {
-			
+			$(this).blur();
 			$("[id$=-results]").hide();
 			var isChecked = false;
 			$("#search-container :checked").each(function() {
