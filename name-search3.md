@@ -12,7 +12,7 @@ layout: default-no-nav-no-footer
 			<input type="text" id="name" value="Connections" style="max-width: 26em" /><br />
 			<input type="checkbox" id="busname" style="width: 20px; height: 20px; margin: 0 10px 0 0:" checked /><label style="font-size: 75%" for="busname">Business name</label>
 			<input type="checkbox" id="domname" style="width: 20px; height: 20px; margin: 0 10px 0 0:" checked /><label style="font-size: 75%" for="domname">Domain name</label>
-			<input type="checkbox" id="trademark" style="width: 20px; height: 20px; margin: 0 10px 0 0:" checked /><label style="font-size: 75%" for="trademark">Trademark</label>
+			<input type="checkbox" id="trademark" style="width: 20px; height: 20px; margin: 0 10px 0 0:" checked /><label style="font-size: 75%" for="trademark">Trade mark</label>
 			<input type="checkbox" id="social" style="width: 20px; height: 20px; margin: 0 10px 0 0:" checked /><label style="font-size: 75%" for="social">Social media</label><br />
 			<button id="search" class="btn btn-default" style="margin-top: 0.5em;">Check my name</button>
 		</div>

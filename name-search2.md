@@ -12,7 +12,7 @@ layout: default-no-nav-no-footer
 			<input type="text" id="name" value="Carpool Karaoke" style="max-width: 26em" /><br />
 			<input type="checkbox" id="busname" style="width: 20px; height: 20px; margin: 0 10px 0 0:" checked /><label style="font-size: 75%" for="busname">Business name</label>
 			<input type="checkbox" id="domname" style="width: 20px; height: 20px; margin: 0 10px 0 0:" checked /><label style="font-size: 75%" for="domname">Domain name</label>
-			<input type="checkbox" id="trademark" style="width: 20px; height: 20px; margin: 0 10px 0 0:" checked /><label style="font-size: 75%" for="trademark">Trademark</label>
+			<input type="checkbox" id="trademark" style="width: 20px; height: 20px; margin: 0 10px 0 0:" checked /><label style="font-size: 75%" for="trademark">Trade mark</label>
 			<input type="checkbox" id="social" style="width: 20px; height: 20px; margin: 0 10px 0 0:" checked /><label style="font-size: 75%" for="social">Social media</label><br />
 			<button id="search" class="btn btn-default" style="margin-top: 0.5em;">Check my name</button>
 		</div>
@@ -26,7 +26,7 @@ layout: default-no-nav-no-footer
 					<h2>Business name</h2>
 				</div>
 			</div>
-			<p style="margin-bottom: 0.5em;"><strong>CARPOOL KARAOKE</strong> is currently available</p>
+			<p style="margin-bottom: 1em; font-size: 100%"><strong>CARPOOL KARAOKE</strong> is currently available</p>
 			<p>Similar registered names:</p>
 			<ul>
 				<li>COO-EE KARAOKE</li>
@@ -45,7 +45,7 @@ layout: default-no-nav-no-footer
 					<h2>Domain names</h2>
 				</div>
 			</div>
-			<p style="margin-bottom: 0.5em;"><strong>carpoolkaraoke.com.au</strong> is unavailable</p>
+			<p style="margin-bottom: 1em; font-size: 100%"><strong>carpoolkaraoke.com.au</strong> is unavailable</p>
 			<p>Other domain names:</p>
 			<ul>
 				<li>carpoolkaraoke.com <strong>UNAVAILABLE</strong></li>
@@ -59,7 +59,7 @@ layout: default-no-nav-no-footer
 		<span>
 			<div class="flag">
 				<div class="body">
-					<h2>Trademarks</h2>
+					<h2>Trade marks</h2>
 				</div>
 			</div>
 			<p>The following registrations were returned:</p>
@@ -68,7 +68,7 @@ layout: default-no-nav-no-footer
 				<li><a href="#">CARPOOL KARAOKE (Class 38)</a> PENDING<br>Owners: CBS Broadcasting inc</li>
 			</ul>
 			<p style="margin-top: 0.5em;"><strong>Note:</strong> this search may not provide an exhaustive list.</p>
-			<p>Visit the <a href="#">IP-Australia website</a> to perform more detailed tradmark searches.</p>
+			<p>Visit the <a href="#">IP-Australia website</a> to perform more detailed Trade mark searches.</p>
 		</span>
 	</li>
 	<li id="social-results" class="run" style="display: none;">
