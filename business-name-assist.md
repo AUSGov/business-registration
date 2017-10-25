@@ -75,7 +75,7 @@ layout: default
 		<div class="result-container">
         <div class="result-row">
             <div class="result-cell cell-icon">
-				<img alt="Success" src="{{ site.baseurl }}/img/ico-tick-green.png" style="padding: inherit; margin-right: 10px;">
+				<img alt="Success" src="/business-registration/img/ico-tick-green.png" style="padding: inherit; margin-right: 10px;">
             </div>
             <div class="result-cell cell-detail">
                 <h2>CARPOOL KARAOKE</h2>
