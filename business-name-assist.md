@@ -119,7 +119,7 @@ layout: default
 		</div>
 		<div class="col4 last">
 			<strong>Other registrations</strong>
-			<p style="font-size: 90%">There are <a href="#">23 registered Trade Marks</a>.</p>
+			<p style="font-size: 90%">There are <a href="#">23 registered trade marks</a>.</p>
 			<ul style="list-style-type: none; margin-left: -37px; font-size: 90%">
 				<li><span class="fa fa-facebook-official" style="width: 25px; font-size: 150%; color: #3B5B9C"></span> facebook/<strike>CarpoolKaraoke</strike> <span class="fa fa-times" style="font-size: 150%; color: red"></span></li>
 				<li><span class="fa fa-twitter" style="width: 25px; font-size: 150%; color: #55acee"></span> @<strike>CarpoolKaraoke</strike> <span class="fa fa-times" style="font-size: 150%; color: red"></span></li>
