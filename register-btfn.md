@@ -161,7 +161,7 @@ Here you can apply for your key business and tax registrations in one place. <a 
         </div>
 
     </fieldset>
-	<p>The following registration must be submitted on its own:</p>
+	<h3 style="margin-top: 1em;">The following registration must be submitted on its own:</h3>
 	<fieldset id="radios" class="custom-controls">
 		<legend class="visually-hidden">Standalone registrations</legend>
 		<div class="grid-row">
