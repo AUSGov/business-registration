@@ -194,14 +194,7 @@ layout: default
         <caption>
             Application reference: <strong>#1710-AA-5263-L</strong><br>
             
-            <div class="app-status"><p>Submitted on 31 Oct 2017 08:03</p></div>
-            <span class="controls">
-                <a href="javascript:void(0);" class="edit" style="display: none;">Resume</a>
-                &nbsp;
-                <a href="javascript:void(0);" class="remove" style="display: none;">Delete</a>
-                &nbsp;
-                <a href="javascript:void(0);" class="refresh"><span class="fa fa-refresh"></span>Status update</a>
-            </span>
+            <div class="app-status"><p>Completed on 31 Oct 2017 08:03</p></div>
         </caption>
         <thead>
         <tr>
