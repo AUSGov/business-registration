@@ -30,10 +30,10 @@ layout: default
 			<a href="/registration/gettingstarted?appid=2694"><span class="visually-hidden">Step </span><span>1</span><br />Getting<br> started <span class="visually-hidden"> (completed)</span></a>
 		</li>
 		<li class="active" style="width: 15.3%">
-			<a href="/registration/businessname?appid=2694"><span class="visually-hidden">Step </span><span>2</span><br />Business<br> name</a>
+			<span class="visually-hidden">Step </span><span>2</span><br />Business<br> name <span class="visually-hidden"> (current step)</span>
 		</li>
 		<li class="" style="width: 15.3%">
-			<span class="visually-hidden">Step </span><span>3</span><br />Business<br> details <span class="visually-hidden"> (current step)</span>
+			<span class="visually-hidden">Step </span><span>3</span><br />Business<br> details <span class="visually-hidden"> (not completed)</span>
 		</li>
 		<li class="" style="width: 15.3%">
 				<span class="visually-hidden">Step </span><span>4</span><br />Confirm<br> application <span class="visually-hidden"> (not completed)</span>

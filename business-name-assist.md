@@ -2,6 +2,13 @@
 title: Business name
 layout: default
 ---
+
+<style>
+	img {
+		width: auto !important;
+	}
+</style>
+
 <div class="progress-container">
 	<div class="progress-bar">
 		<span id="progress-percent" role="progressbar" aria-valuetext="step 3 of 5 steps" style="width:34.25%"></span>
@@ -14,10 +21,10 @@ layout: default
 			<a href="/registration/gettingstarted?appid=2694"><span class="visually-hidden">Step </span><span>1</span><br />Getting<br> started <span class="visually-hidden"> (completed)</span></a>
 		</li>
 		<li class="active" style="width: 15.3%">
-			<a href="/registration/businessname?appid=2694"><span class="visually-hidden">Step </span><span>2</span><br />Business<br> name</a>
+			<span class="visually-hidden">Step </span><span>2</span><br />Business<br> name <span class="visually-hidden"> (current step)</span>
 		</li>
 		<li class="" style="width: 15.3%">
-			<span class="visually-hidden">Step </span><span>3</span><br />Business<br> details <span class="visually-hidden"> (current step)</span>
+			<span class="visually-hidden">Step </span><span>3</span><br />Business<br> details <span class="visually-hidden"> (not completed)</span>
 		</li>
 		<li class="" style="width: 15.3%">
 				<span class="visually-hidden">Step </span><span>4</span><br />Confirm<br> application <span class="visually-hidden"> (not completed)</span>
@@ -75,7 +82,7 @@ layout: default
 		<div class="result-container">
         <div class="result-row">
             <div class="result-cell cell-icon">
-				<img alt="Success" src="/business-registration/img/ico-tick-green.png" style="padding: inherit; margin-right: 10px;">
+				<img alt="Success" src="/img/ico-tick-green.png" style="padding: inherit; margin-right: 10px;">
             </div>
             <div class="result-cell cell-detail">
                 <h2>CARPOOL KARAOKE</h2>
@@ -90,45 +97,82 @@ layout: default
         </div>
     </div>
 	</fieldset>
-	<div class="grid-row margin-top-075 clearfix">
-		<p>Want a business name that stands out? See what's already in use and what's currently available:</p>
-		<div class="col4 tip no-margin">
-			<strong>Similar registered names</strong>
-			<ul class="lines" style="font-size: 90%">
-				<li>COO-EE KARAOKE</li>
-				<li>A. KARAOKE CO</li>
-				<li>STARSTRUCK KARAOKE</li>
-				<li>YEAR 2000 KARAOKE</li>
-				<li>YOU'RE THE STAR KARAOKE</li>
-				<li>ZERO KARAOKE BAR</li>
-				<li class="hidden-similar-names" style="display: none;">STARS IN YOUR EYES KARAOKE</li>
-				<li class="hidden-similar-names" style="display: none;">KARAOKE MUSIC FUND PTY LTD</li>
-				<li class="hidden-similar-names" style="display: none;">OKELY DOKELY KARAOKE</li>
-				<li class="hidden-similar-names" style="display: none;">YOUR THE VOICE KARAOKE</li>
-				<li class="hidden-similar-names" style="display: none;">A PLUS KARAOKE RESTAURANT</li>
-			</ul>
+	<p>Want a business name that stands out? Click the link below to see what's available and what's already in use.</p>
+	<h3 id="other-names" style="margin-top: 0.5em;"><a href="javascript:void(0);" id="other-regos" style="color: #3c86c4; text-decoration: none; padding: 5px;"><span id="icon" class="fa fa-plus-circle" style="margin-right: 5px;"></span> Other name registrations</a></h3>
+	<div id="content" style="margin-left: 20px; padding-top: 0.5em; display: none;">
+		<div class="grid-row margin-top-075 clearfix">
+			<div id="similar-div" class="col6 tip no-margin">
+				<strong>Similar registered names</strong> <img id="sn-busy" src="img/ajax-loader.gif" alt="loading" style="display: inline;">
+
+				<ul id="similar-names" class="lines" style="display: none;">
+					<li>COO-EE KARAOKE</li>
+					<li>A. KARAOKE CO</li>
+					<li>STARSTRUCK KARAOKE</li>
+					<li>YEAR 2000 KARAOKE</li>
+					<li>YOU'RE THE STAR KARAOKE</li>
+					<li>ZERO KARAOKE BAR</li>
+					<li class="hidden-similar-names" style="display: none;">STARS IN YOUR EYES KARAOKE</li>
+					<li class="hidden-similar-names" style="display: none;">KARAOKE MUSIC FUND PTY LTD</li>
+					<li class="hidden-similar-names" style="display: none;">OKELY DOKELY KARAOKE</li>
+					<li class="hidden-similar-names" style="display: none;">YOUR THE VOICE KARAOKE</li>
+					<li class="hidden-similar-names" style="display: none;">A PLUS KARAOKE RESTAURANT</li>
+				</ul>
+			</div>
+			<div class="col6 tip no-margin last">
+				<strong>Domain names</strong>
+				<style>
+					.domain-table td {
+						padding: 5px;
+					}
+					.domain-table tr td:last-child {
+						height: 40px;
+						min-width: 160px;
+					}
+				</style>
+				<table class="domain-table" style="margin-top: 1.25em;">
+					<tr>
+						<td><span id="com-domain">carpoolkaraoke.com</span></td>
+						<td><img id="com-busy" src="img/ajax-loader.gif" alt="loading" style="display: inline;"><span id="com-result" style="display: none;"><span class="fa fa-times" style="font-size: 150%; color: red;"></span> Unavailable</span></td>
+					</tr>
+					<tr>
+						<td><span id="comau-domain">carpoolkaraoke.com.au</span></td>
+						<td><img id="comau-busy" src="img/ajax-loader.gif" alt="loading" style="display: inline;"><span id="comau-result" style="display: none;"><span class="fa fa-times" style="font-size: 150%; color: red"></span> Unavailable</span></td>
+					</tr>
+					<tr>
+						<td><span id="net-domain">carpoolkaraoke.net</span></td>
+						<td><img id="net-busy" src="img/ajax-loader.gif" alt="loading" style="display: inline;"><span id="net-result" style="display: none;"><span class="fa fa-times" style="font-size: 150%; color: red"></span> Unavailable</span></td>
+					</tr>
+					<tr>
+						<td><span id="netau-domain">carpoolkaraoke.net.au</span></td>
+						<td><img id="netau-busy" src="img/ajax-loader.gif" alt="loading" style="display: inline;"><span id="netau-result" style="display: none;"><span class="fa fa-exclamation" style="width: 21px; text-align: center; font-size: 150%; color: orange"></span> Check failed!</span></td>
+					</tr>
+					<tr>
+						<td><span id="org-domain">carpoolkaraoke.org</span></td>
+						<td><img id="org-busy" src="img/ajax-loader.gif" alt="loading" style="display: inline;"><span id="org-result" style="display: none;"><span class="fa fa-times" style="font-size: 150%; color: red"></span> Unavailable</span></td>
+					</tr>
+					<tr>
+						<td><span id="orgau-domain">carpoolkaraoke.org.au</span></td>
+						<td><img id="orgau-busy" src="img/ajax-loader.gif" alt="loading" style="display: inline;"><span id="orgau-result" style="display: none;"><span class="fa fa-check" style="font-size: 150%; color: green"></span> Available</span></td>
+					</tr>
+					<tr>
+						<td><span id="io-domain">carpoolkaraoke.io</span></td>
+						<td><img id="io-busy" src="img/ajax-loader.gif" alt="loading" style="display: inline;"><span id="io-result" style="display: none;"><span class="fa fa-times" style="font-size: 150%; color: red"></span> Unvailable</span></td>
+					</tr>
+				</table>
+			</div>
+			<!-- div class="col4 last">
+				<strong>Other registrations</strong>
+				<p style="font-size: 90%">There are <a href="#">23 registered Trade Marks</a>.</p>
+				<ul style="list-style-type: none; margin-left: -37px; font-size: 90%">
+					<li><span class="fa fa-facebook-official" style="width: 25px; font-size: 150%; color: #3B5B9C"></span> facebook/<strike>CarpoolKaraoke</strike> <span class="fa fa-times" style="font-size: 150%; color: red"></span></li>
+					<li><span class="fa fa-twitter" style="width: 25px; font-size: 150%; color: #55acee"></span> @<strike>CarpoolKaraoke</strike> <span class="fa fa-times" style="font-size: 150%; color: red"></span></li>
+					<li><span class="fa fa-instagram" style="width: 25px; font-size: 150%;color: #c13584"></span> instagram/<strike>CarpoolKaraoke</strike> <span class="fa fa-times" style="font-size: 150%; color: red"></span></li>
+					<li><span class="fa fa-linkedin-square" style="width: 25px; font-size: 150%;color: #0077b5"></span> linkedin/<strike>CarpoolKaraoke</strike> <span class="fa fa-times" style="font-size: 150%; color: red"></span></li>
+				</ul>
+			</div -->
 		</div>
-		<div class="col4 tip no-margin">
-			<strong>Domain names</strong>
-			<ul class="lines" style="font-size: 90%">
-				<li><strike>carpoolkaraoke.com.au</strike> <span class="fa fa-times" style="font-size: 150%; color: red"></span></li>
-				<li><strike>carpoolkaraoke.com</strike> <span class="fa fa-times" style="font-size: 150%; color: red"></span></li>
-				<li><strike>carpoolkaraoke.net.au</strike> <span class="fa fa-times" style="font-size: 150%; color: red"></span></li>
-				<li>carpoolkaraoke.org.au <span class="fa fa-check" style="font-size: 150%; color: green"></span></li>
-			</ul>
-		</div>
-		<div class="col4 last">
-			<strong>Other registrations</strong>
-			<p style="font-size: 90%">There are <a href="#">23 registered trade marks</a>.</p>
-			<ul style="list-style-type: none; margin-left: -37px; font-size: 90%">
-				<li><span class="fa fa-facebook-official" style="width: 25px; font-size: 150%; color: #3B5B9C"></span> facebook/<strike>CarpoolKaraoke</strike> <span class="fa fa-times" style="font-size: 150%; color: red"></span></li>
-				<li><span class="fa fa-twitter" style="width: 25px; font-size: 150%; color: #55acee"></span> @<strike>CarpoolKaraoke</strike> <span class="fa fa-times" style="font-size: 150%; color: red"></span></li>
-				<li><span class="fa fa-instagram" style="width: 25px; font-size: 150%;color: #c13584"></span> instagram/<strike>CarpoolKaraoke</strike> <span class="fa fa-times" style="font-size: 150%; color: red"></span></li>
-				<li><span class="fa fa-linkedin-square" style="width: 25px; font-size: 150%;color: #0077b5"></span> linkedin/<strike>CarpoolKaraoke</strike> <span class="fa fa-times" style="font-size: 150%; color: red"></span></li>
-			</ul>
-		</div>
+		<p class="clearfix">Having trouble finding a name that isn't already taken? Try our <a href="name-search2">Name search</a> tool.</p>
 	</div>
-	<p class="clearfix">Having trouble finding a name that isn't already taken? Try our <a href="name-search2">Name search</a> tool.</p>
 	<div class="controls-container">
 		<div class="controls-content">
 			<button class="btn cancel" name="wNjv11HSL2eBWG4934fyzQ==" type="submit" value="__cvg__3Vm2adfQYvusabNtBnBi9w==">Previous</button><button class="btn btn-default next" disabled="disabled" id="next-bn-btn" type="submit" value="">Save and continue</button>
@@ -136,8 +180,56 @@ layout: default
 	</div>
 </div>
 
-<script type="text/javascript" src="/scripts/pages/shared/validation.js?v=636348660414906763"></script>
-<script type="text/javascript" src="/scripts/pages/shared/functions.js?v=636443672048348557"></script>
-<script type="text/javascript" src="/scripts/pages/registration/businessname.js?v=636348660411016763"></script>
-<script type="text/javascript" src="/scripts/jquery-toggleslide.js?v=636348660403406763"></script>
-<script type="text/javascript" src="/scripts/vadialog.js?v=636348660405166763"></script>
+<script>
+	$(document).ready(function() {
+		var first = true;
+		$("#other-regos").click(function() {
+			$("#icon").toggleClass("fa-plus-circle").toggleClass("fa-minus-circle");
+			$("#content").toggle('fast', function() {
+				jQuery('html, body').animate({ scrollTop: $("#other-names").offset().top }, 150);
+			});
+			this.blur();
+			if (!first) return;
+			first = false;
+			window.setTimeout(function() {
+				$("#similar-names").fadeIn('fast');
+				$("#sn-busy").hide();
+			}, 4000);
+			window.setTimeout(function() {
+				$("#com-busy").hide();
+				$("#com-result").show();
+				$("#com-domain").wrap("<strike></strike>")
+			}, 2500);
+			window.setTimeout(function() {
+				$("#comau-busy").hide();
+				$("#comau-result").show();
+				$("#comau-domain").wrap("<strike></strike>")
+			}, 3800);
+			window.setTimeout(function() {
+				$("#net-busy").hide();
+				$("#net-result").show();
+				$("#net-domain").wrap("<strike></strike>")
+			}, 4000);
+			window.setTimeout(function() {
+				$("#netau-busy").hide();
+				$("#netau-result").show();
+				$("#netau-domain").wrap('<em style="opacity: .5"></em>');
+			}, 10000);
+			window.setTimeout(function() {
+				$("#org-busy").hide();
+				$("#org-result").show();
+				$("#org-domain").wrap("<strike></strike>")
+			}, 6200);
+			window.setTimeout(function() {
+				$("#orgau-busy").hide();
+				$("#orgau-result").show();
+				$("#orgau-domain").wrap("<strong></strong>")
+			}, 7000);
+			window.setTimeout(function() {
+				$("#io-busy").hide();
+				$("#io-result").show();
+				$("#io-domain").wrap("<strong></strong>")
+			}, 7500);
+		});
+	});
+</script>
