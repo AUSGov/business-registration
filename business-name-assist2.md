@@ -109,7 +109,7 @@ layout: default
 			</div>
 		</div>
 	</fieldset>
-	<p>Want a business name that stands out? Click the link below to see what's available and what's already in use.</p>
+	<p>Want a business name that stands out? Expand the links below to see what's available and what's already in use.</p>
 	<div class="grid-row margin-top-075 clearfix">
 		<div id="similar-div" class="col12 last tip no-margin">
 			<h3>Similar registered names</h3>
@@ -208,6 +208,7 @@ layout: default
 		$("#other-regos").click(function() {
 			$("#icon").toggleClass("fa-plus").toggleClass("fa-minus");
 			$("#content").toggle('fast', function() {
+				
 				jQuery('html, body').animate({ scrollTop: $("#other-names").offset().top }, 150);
 			});
 			this.blur();
