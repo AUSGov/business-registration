@@ -300,7 +300,7 @@ var first = true;
 				$("#lnk-busy").hide();
 				$("#lnk-result").show();
 				$("#social-field, #social-button").prop("disabled", false);
-			}, 500);
+			}, 5000);
 		});
 	});
 </script>
