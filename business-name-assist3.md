@@ -263,7 +263,7 @@ layout: default
 		</div>
 	</div -->
 
-	<p class="clearfix">Having trouble finding a name that isn't already taken? Try our <a href="name-search2">Name search</a> tool.</p>
+	<p class="clearfix">Having trouble finding a name that isn't already taken? Try our <a href="name-search4">Name search</a> tool.</p>
 	<div class="controls-container">
 		<div class="controls-content">
 			<button class="btn cancel" name="wNjv11HSL2eBWG4934fyzQ==" type="submit" value="__cvg__3Vm2adfQYvusabNtBnBi9w==">Previous</button><button class="btn btn-default next" disabled="disabled" id="next-bn-btn" type="submit" value="">Save and continue</button>
