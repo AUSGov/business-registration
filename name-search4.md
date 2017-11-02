@@ -3,7 +3,7 @@ title: Name search
 layout: default-no-nav-no-footer
 ---
 <h1>{{ page.title }}</h1>
-<div id="search-container" class="compare-wrapper">
+<div id="search-container" class="card">
 	<div class="grid-row clearfix">
 		<div class="col4">
 			<label for="name" class="input-right">Enter proposed name</label>
