@@ -109,11 +109,10 @@ layout: default
 			</div>
 		</div>
 	</fieldset>
-	<p>Want a business name that stands out? Expand the links below to see what's available and what's already in use.</p>
 	<div class="grid-row margin-top-075 clearfix">
 		<div id="similar-div" class="col12 last tip no-margin">
 			<h3>Similar registered names</h3>
-
+			<p>Want a business name that stands out? Check that your proposed name isn't too similar to the names below:</p>
 			<ul id="similar-names" class="lines">
 				<li>COO-EE KARAOKE</li>
 				<li>A. KARAOKE CO</li>
@@ -128,6 +127,7 @@ layout: default
 				<li class="hidden-similar-names" style="display: none;">A PLUS KARAOKE RESTAURANT</li>
 			</ul>
 		</div>
+		<p>Expand the links below to see what's available and what's already in use.</p>
 		<div class="col12 tip no-margin last">
 			<h3 id="other-names"><a href="javascript:void(0);" id="other-regos" style="text-decoration: none;"><span id="icon" class="fa fa-plus" style="margin-right: 5px;"></span> Domain names</a></h3>
 			<div id="content" style="margin-left: 20px; padding-top: 0.5em; display: none;">
@@ -170,6 +170,7 @@ layout: default
 						<td><img id="io-busy" src="img/ajax-loader.gif" alt="loading" style="display: inline;"><span id="io-result" style="display: none;"><span class="fa fa-times" style="font-size: 150%; color: red"></span> Unvailable</span></td>
 					</tr>
 				</table>
+				<p>Once you choose your domain name you'll need to register it with a <a href="#">registrar</a> or <a href="#">reseller</a>.</p>
 			</div>
 			<h3 id="tm-names"><a href="javascript:void(0);" id="tm-regos" style="text-decoration: none;"><span id="tm-icon" class="fa fa-plus" style="margin-right: 5px;"></span> Trade marks</a></h3>
 			<div id="tm-content" style="display: none; margin-left: 20px; padding-top: 0.25em; padding-bottom: 1em;">
@@ -263,7 +264,7 @@ layout: default
 		</div>
 	</div -->
 
-	<p class="clearfix">Having trouble finding a name that isn't already taken? Try our <a href="name-search4">Name search</a> tool.</p>
+	<p class="clearfix">Having trouble finding a name that isn't already taken? Try our <a href="name-search2">Name search</a> tool.</p>
 	<div class="controls-container">
 		<div class="controls-content">
 			<button class="btn cancel" name="wNjv11HSL2eBWG4934fyzQ==" type="submit" value="__cvg__3Vm2adfQYvusabNtBnBi9w==">Previous</button><button class="btn btn-default next" disabled="disabled" id="next-bn-btn" type="submit" value="">Save and continue</button>
