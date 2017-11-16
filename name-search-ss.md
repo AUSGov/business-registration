@@ -20,7 +20,7 @@ layout: default-no-nav-no-footer
 			<h2 id="business-name">Business name</h2>
 			<table class="domain-table">
 				<tr>
-					<td><strong>THE SZECHUAN SOURCE</strong> is currently available</td>
+					<td><span class="fa fa-check" style="font-size: 150%; color: green"></span>&nbsp;&nbsp;<strong>THE SZECHUAN SOURCE</strong> is currently available</td>
 				</tr>
 				<tr>
 					<td>
