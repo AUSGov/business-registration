@@ -6,7 +6,7 @@ layout: default-no-nav-no-footer
 <div id="search-container" class="card">
 	<div class="grid-row clearfix">
 		<div class="col4">
-			<label for="name" class="input-right">Enter proposed name</label>
+			<label for="name" class="input-right">Enter proposed name:</label>
 		</div>
 		<div class="col8 last">
 			<input type="text" id="name" value="Carpool Karaoke" style="max-width: 26em" /><br />
