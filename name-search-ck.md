@@ -3,10 +3,12 @@ title: Name search
 layout: default-no-nav-no-footer
 ---
 <h1>{{ page.title }}</h1>
+<p class="intro"><strong>Welcome to the Business Registration Name Search Service.</strong></p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quam libero, feugiat sit amet risus sit amet, gravida pellentesque dui. Donec sit amet aliquam enim.</p>
 <div id="search-container" class="card">
 	<div class="grid-row clearfix">
 		<div class="col4">
-			<label for="name" class="input-right">Enter proposed name:</label>
+			<label for="name" class="input-right">Enter proposed name</label>
 		</div>
 		<div class="col8 last">
 			<input type="text" id="name" value="Carpool Karaoke" style="max-width: 26em" /><br />
@@ -34,6 +36,7 @@ layout: default-no-nav-no-footer
 							<li>YOU'RE THE STAR KARAOKE</li>
 							<li>ZERO KARAOKE BAR</li>
 						</ul>
+						<!-- <p><button type="button" class="btn btn-default next">Register a business name</button></p> -->
 					</td>
 				</tr>
 				<tfoot>
@@ -42,6 +45,12 @@ layout: default-no-nav-no-footer
 							<label for="bn-field" style="display: none;">Business name</label>
 							<input id="bn-field" value="carpoolkaraoke" disabled />
 							<button id="bn-button" class="btn btn-small" disabled>search</button>
+						</td>
+					</tr>
+					<tr>
+						<td class="grey" colspan="2">
+							<p>Proin dictum metus purus, vel pretium ex lobortis a. Etiam iaculis nunc quis massa cursus tincidunt. In pretium nec erat eu feugiat. Donec rutrum sodales nisi.</p>
+							<button type="button" class="btn btn-default next">Register business name</button>
 						</td>
 					</tr>
 				</tfoot>
@@ -114,6 +123,12 @@ layout: default-no-nav-no-footer
 							<input id="domain-field" value="carpoolkaraoke" disabled />
 							<button id="domain-button" class="btn btn-small" disabled>search</button></td>
 					</tr>
+					<tr>
+						<td class="grey" colspan="2">
+							<p>Mauris non finibus tortor. Integer aliquam placerat ex non vulputate. Donec placerat luctus convallis. Nullam et eros ac libero eleifend dapibus nec vestibulum magna.</p>
+							<button type="button" class="btn btn-default next">Register domain name</button>
+						</td>
+					</tr>
 				</tfoot>
 			</table>
 		</div>
@@ -121,13 +136,14 @@ layout: default-no-nav-no-footer
 	<div class="grid-row" style="margin-top: 1em;">
 		<div class="col6">
 			<h2>Trade marks</h2>
-			<p id="tm-first">Searching for trade marks<span id="tm-busy">... <img src="img/ajax-loader.gif" alt="loading" style="display: inline;"></span><span id="tm-found" style="display: none;">. Found 25 results.</span></p>
-			<div id="tm-results" style="display: none;">
+			<!-- <p id="tm-first">Searching for trade marks<span id="tm-busy">... <img src="img/ajax-loader.gif" alt="loading" style="display: inline;"></span><span id="tm-found" style="display: none;">. Found 25 results.</span></p> -->
+			<div id="tm-results">
 				<div id="tm-retrieving" style="font-size: 90%">
-					<p>Searching for '<strong>CARPOOL KARAOKE</strong>' returned 25 results.</p>
+					<!-- <p>Searching for '<strong>CARPOOL KARAOKE</strong>' returned 25 results.</p> -->
 					<div style="padding: 5px; margin-top: 23px; border: 1px solid #ddd; box-shadow: 3px 3px 10px #888;">
 						<h3 style="margin-top: 0.5em">Want to find out more?</h3>
-						<p>If you're thinking about applying for a trade mark, you might want to consider using ip-Australia's <a href="https://www.ipaustralia.gov.au/trade-marks/applying-for-a-trade-mark/how-to-apply-for-a-trade-mark/tm-headstart" target="_blank">TM Headstart</a> service.</p>
+						<p>If you're thinking about applying for a trade mark, you might want to consider using IP-Australia's <a href="https://www.ipaustralia.gov.au/trade-marks/applying-for-a-trade-mark/how-to-apply-for-a-trade-mark/tm-headstart" target="_blank">TM Headstart</a> service.</p>
+						<p><button type="button" class="btn btn-default next">Apply for a trade mark</button></p>
 						<p>Using TM Headstart is a good way to apply for a trade mark if you are unsure of the process. The service is confidential and no one will see your trade mark until you are ready to file.</p>
 					</div>
 				</div>
@@ -155,7 +171,15 @@ layout: default-no-nav-no-footer
 				<tr>
 					<td><span class="fa fa-linkedin-square" style="width: 22px; font-size: 150%;color: #0077b5"></span></td>
 					<td><span id="lnk-user">linkedin/karpoolkaraoke</span></td>
-					<td><img id="lnk-busy" src="img/ajax-loader.gif" alt="loading" style="display: inline;"><span id="lnk-result" style="display: none;"><span class="fa fa-check" style="font-size: 150%; color: green"></span> Available</span></td>
+					<td>
+						<img id="lnk-busy" src="img/ajax-loader.gif" alt="loading" style="display: inline;">
+						<span id="lnk-result" style="display: none;">
+							<button type="button" class="btn btn-small btn-default next">
+								<span class="fa fa-check" style="color: white"></span> 
+								Available
+							</button>
+						</span>
+					</td>
 				</tr>
 				<tfoot>
 					<tr>
@@ -189,15 +213,15 @@ var first = true;
 			domainSearchReveal();
 			
 			/* trade mark */
-			window.setTimeout(function() {
-				$("#tm-first").hide();
-				// $("#tm-found").show();
-				$("#tm-results").show();
-				//window.setTimeout(function() {
-				//	$("#tm-retrieving").hide();
-				//	$("#tm-table").show('fast');
-				//}, 4000);
-			}, 2500);
+			//window.setTimeout(function() {
+			//	// $("#tm-first").hide();
+			//	// $("#tm-found").show();
+			//	$("#tm-results").show();
+			//	//window.setTimeout(function() {
+			//	//	$("#tm-retrieving").hide();
+			//	//	$("#tm-table").show('fast');
+			//	//}, 4000);
+			//}, 2500);
 			
 			/* social */
 			window.setTimeout(function() {
