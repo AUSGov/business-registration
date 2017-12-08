@@ -1,10 +1,17 @@
 ---
-title: Name search
+title: Business name check
 layout: default-no-nav-no-footer
 ---
 <h1>{{ page.title }}</h1>
-<p class="intro"><strong>Welcome to the Business Registration Name Search Service.</strong></p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quam libero, feugiat sit amet risus sit amet, gravida pellentesque dui. Donec sit amet aliquam enim.</p>
+<!-- <p class="intro"><strong>Welcome to the Business Registration Name Search Service.</strong></p> -->
+<p>
+Use this tool to check your proposed business name against:
+</p>
+<ul>
+	<li>existing business names</li>
+	<li>matching domain or website names </li>
+	<li>matching social media channels.</li>
+</ul>
 <div id="search-container" class="card">
 	<div class="grid-row clearfix">
 		<div class="col4">
@@ -40,17 +47,25 @@ layout: default-no-nav-no-footer
 					</td>
 				</tr>
 				<tfoot>
-					<tr>
+					<!-- <tr>
 						<td class="grey" colspan="2">
 							<label for="bn-field" style="display: none;">Business name</label>
 							<input id="bn-field" value="carpoolkaraoke" disabled />
 							<button id="bn-button" class="btn btn-small" disabled>search</button>
 						</td>
-					</tr>
+					</tr> -->
 					<tr>
 						<td class="grey" colspan="2">
-							<p>Proin dictum metus purus, vel pretium ex lobortis a. Etiam iaculis nunc quis massa cursus tincidunt. In pretium nec erat eu feugiat. Donec rutrum sodales nisi.</p>
-							<button type="button" class="btn btn-default next">Register business name</button>
+							<p>
+								If your proposed business name is available, you can register it with an 
+								Australian Business Number (ABN) below.
+							</p>
+							<button 
+								type="button" 
+								class="btn btn-default next"
+								onclick="javascript: window.open('https://register.business.gov.au', '_blank').focus()">
+								Register your business name
+							</button>
 						</td>
 					</tr>
 				</tfoot>
@@ -117,16 +132,26 @@ layout: default-no-nav-no-footer
 					<td><img id="io-busy" src="img/ajax-loader.gif" alt="loading" style="display: inline;"><span id="io-result" style="display: none;"><span class="fa fa-times" style="font-size: 150%; color: red"></span> Unvailable</span></td>
 				</tr>
 				<tfoot>
-					<tr>
+					<!-- <tr>
 						<td class="grey" colspan="2">
 							<label for="domain-field" style="display: none;">Domain</label>
 							<input id="domain-field" value="carpoolkaraoke" disabled />
 							<button id="domain-button" class="btn btn-small" disabled>search</button></td>
-					</tr>
+					</tr> -->
 					<tr>
 						<td class="grey" colspan="2">
-							<p>Mauris non finibus tortor. Integer aliquam placerat ex non vulputate. Donec placerat luctus convallis. Nullam et eros ac libero eleifend dapibus nec vestibulum magna.</p>
-							<button type="button" class="btn btn-default next">Register domain name</button>
+							<p>
+								If you want to set up a website, you'll need to make sure you're eligible for some .au domains.
+							</p>
+							<p>
+								Once you've chosen a domain name, you can register it with a registrar or reseller.
+							</p>
+							<button 
+								type="button" 
+								class="btn btn-default next"
+								onclick="javascript: window.open('https://www.auda.org.au/industry-information/registrars/', '_blank').focus()">
+								Find a domain name registrar
+							</button>
 						</td>
 					</tr>
 				</tfoot>
@@ -142,16 +167,23 @@ layout: default-no-nav-no-footer
 					<!-- <p>Searching for '<strong>CARPOOL KARAOKE</strong>' returned 25 results.</p> -->
 					<div style="padding: 5px; margin-top: 23px; border: 1px solid #ddd; box-shadow: 3px 3px 10px #888;">
 						<h3 style="margin-top: 0.5em">Want to find out more?</h3>
-						<p>If you're thinking about applying for a trade mark, you might want to consider using IP-Australia's <a href="https://www.ipaustralia.gov.au/trade-marks/applying-for-a-trade-mark/how-to-apply-for-a-trade-mark/tm-headstart" target="_blank">TM Headstart</a> service.</p>
-						<p><button type="button" class="btn btn-default next">Apply for a trade mark</button></p>
-						<p>Using TM Headstart is a good way to apply for a trade mark if you are unsure of the process. The service is confidential and no one will see your trade mark until you are ready to file.</p>
+						<p>If you want exclusive rights to a business name, you'll need to register it as a trade mark.</p>
+						<p>
+							<button 
+								type="button" 
+								class="btn btn-default next"
+								onclick="javascript: window.open('https://www.ipaustralia.gov.au/trade-marks/applying-for-a-trade-mark/how-to-apply-for-a-trade-mark/tm-headstart', '_blank').focus()">
+								Apply for a trade mark
+							</button>
+						</p>
+						<p>Using TM Headstart is a good way to apply for a trade mark if you're unsure of the process. The service is confidential and no one will see your trade mark until you're ready to file.</p>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="col6 last">
 			<h2>Social media</h2>
-			<p>Your name on social media:</p>
+			<!-- <p>Your name on social media:</p> -->
 			<table class="domain-table" style="margin-bottom: 50px;">
 				<tr>
 					<td><span class="fa fa-facebook-official" style="width: 22px; font-size: 150%; color: #3B5B9C"></span></td>
@@ -171,15 +203,7 @@ layout: default-no-nav-no-footer
 				<tr>
 					<td><span class="fa fa-linkedin-square" style="width: 22px; font-size: 150%;color: #0077b5"></span></td>
 					<td><span id="lnk-user">linkedin/karpoolkaraoke</span></td>
-					<td>
-						<img id="lnk-busy" src="img/ajax-loader.gif" alt="loading" style="display: inline;">
-						<span id="lnk-result" style="display: none;">
-							<button type="button" class="btn btn-small btn-default next">
-								<span class="fa fa-check" style="color: white"></span> 
-								Available
-							</button>
-						</span>
-					</td>
+					<td><img id="lnk-busy" src="img/ajax-loader.gif" alt="loading" style="display: inline;"><span id="lnk-result" style="display: none;"><span class="fa fa-check" style="font-size: 150%; color: green"></span> Available</span></td>
 				</tr>
 				<tfoot>
 					<tr>
@@ -187,6 +211,16 @@ layout: default-no-nav-no-footer
 							<label for="social-field" style="display: none;">Social media username</label>
 							<input id="social-field" value="carpoolkaraoke" disabled />
 							<button id="social-button" class="btn btn-small" disabled>search</button></td>
+					</tr>
+					<tr>
+						<td class="grey" colspan="3">
+							<p>
+								Found a match for your business name? If you want to sign up to a social media channel, you’ll need to go to the relevant website.
+							</p>
+							<p>
+								See our <a href="https://www.business.gov.au/info/run/advertising-and-online/social-media" target="_blank">Using social media for business page</a> for details.
+							</p>
+						</td>
 					</tr>
 				</tfoot>
 			</table>
