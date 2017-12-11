@@ -63,7 +63,7 @@ Use this tool to check your proposed business name against:
 							<button 
 								type="button" 
 								class="btn btn-default next"
-								onclick="javascript: window.open('https://register.business.gov.au', '_blank').focus()">
+								onclick="javascript: window.open('https://register.business.gov.au/registration/type', '_blank').focus()">
 								Register your business name
 							</button>
 						</td>
@@ -141,7 +141,7 @@ Use this tool to check your proposed business name against:
 					<tr>
 						<td class="grey" colspan="2">
 							<p>
-								If you want to set up a website, you'll need to make sure you're eligible for some .au domains.
+								If you want to set up a website, you'll need to make sure you're <a href="https://www.auda.org.au/industry-information/au-domains/" target="_blank">eligible</a> for some .au domains.
 							</p>
 							<p>
 								Once you've chosen a domain name, you can register it with a registrar or reseller.
@@ -161,25 +161,27 @@ Use this tool to check your proposed business name against:
 	<div class="grid-row" style="margin-top: 1em;">
 		<div class="col6">
 			<h2>Trade marks</h2>
-			<!-- <p id="tm-first">Searching for trade marks<span id="tm-busy">... <img src="img/ajax-loader.gif" alt="loading" style="display: inline;"></span><span id="tm-found" style="display: none;">. Found 25 results.</span></p> -->
-			<div id="tm-results">
-				<div id="tm-retrieving" style="font-size: 90%">
-					<!-- <p>Searching for '<strong>CARPOOL KARAOKE</strong>' returned 25 results.</p> -->
-					<div style="padding: 5px; margin-top: 23px; border: 1px solid #ddd; box-shadow: 3px 3px 10px #888;">
+			<table class="domain-table" style="margin-bottom: 50px;">
+				<tr>
+					<td>
 						<h3 style="margin-top: 0.5em">Want to find out more?</h3>
 						<p>If you want exclusive rights to a business name, you'll need to register it as a trade mark.</p>
-						<p>
+						<p>Using IP Australia's TM Headstart is a good way to apply for a trade mark if you're unsure of the process. The service is confidential and no one will see your trade mark until you're ready to file.</p>
+					</td>
+				</tr>
+				<tfoot>
+					<tr>
+						<td class="grey" colspan="3">
 							<button 
 								type="button" 
 								class="btn btn-default next"
 								onclick="javascript: window.open('https://www.ipaustralia.gov.au/trade-marks/applying-for-a-trade-mark/how-to-apply-for-a-trade-mark/tm-headstart', '_blank').focus()">
 								Apply for a trade mark
 							</button>
-						</p>
-						<p>Using TM Headstart is a good way to apply for a trade mark if you're unsure of the process. The service is confidential and no one will see your trade mark until you're ready to file.</p>
-					</div>
-				</div>
-			</div>
+						</td>
+					</tr>
+				</tfoot>
+			</table>
 		</div>
 		<div class="col6 last">
 			<h2>Social media</h2>
