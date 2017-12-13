@@ -57,8 +57,9 @@ Use this tool to check your proposed business name against:
 					<tr>
 						<td class="grey" colspan="2">
 							<p>
-								If your proposed business name is available, you can register it with an 
-								Australian Business Number (ABN) below.
+								If you want to register your proposed business name, 
+								you'll need an <a href="https://www.business.gov.au/Info/Plan-and-Start/Start-your-business/Business-and-company-registration/Register-for-an-Australian-Business-Number-ABN" target="_blank">Australian Business Number</a> (ABN). 
+								You can register both at the same time below.
 							</p>
 							<button 
 								type="button" 
@@ -164,7 +165,7 @@ Use this tool to check your proposed business name against:
 			<table class="domain-table" style="margin-bottom: 50px;">
 				<tr>
 					<td>
-						<h3 style="margin-top: 0.5em">Want to find out more?</h3>
+						<!-- <h3 style="margin-top: 0.5em">Want to find out more?</h3> -->
 						<p>If you want exclusive rights to a business name, you'll need to register it as a trade mark.</p>
 						<p>Using IP Australia's TM Headstart is a good way to apply for a trade mark if you're unsure of the process. The service is confidential and no one will see your trade mark until you're ready to file.</p>
 					</td>
@@ -208,16 +209,16 @@ Use this tool to check your proposed business name against:
 					<td><img id="lnk-busy" src="img/ajax-loader.gif" alt="loading" style="display: inline;"><span id="lnk-result" style="display: none;"><span class="fa fa-check" style="font-size: 150%; color: green"></span> Available</span></td>
 				</tr>
 				<tfoot>
-					<tr>
+					<!-- <tr>
 						<td class="grey" colspan="3">
 							<label for="social-field" style="display: none;">Social media username</label>
 							<input id="social-field" value="carpoolkaraoke" disabled />
 							<button id="social-button" class="btn btn-small" disabled>search</button></td>
-					</tr>
+					</tr> -->
 					<tr>
 						<td class="grey" colspan="3">
 							<p>
-								Found a match for your business name? If you want to sign up to a social media channel, you’ll need to go to the relevant website.
+								Found a match for your business name? If you want to sign up to a social media channel, you'll need to go to the relevant website.
 							</p>
 							<p>
 								See our <a href="https://www.business.gov.au/info/run/advertising-and-online/social-media" target="_blank">Using social media for business page</a> for details.
