@@ -1,6 +1,6 @@
 ---
 title: Payment
-layout: default
+layout: default-no-footer
 ---
 <div class="progress-container">
 	<div class="progress-bar">
