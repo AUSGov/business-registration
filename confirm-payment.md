@@ -682,7 +682,7 @@ layout: default-no-footer
 				$.unblockUI();
 			});
 			$("#pay-now").click(function() {
-				location.href = "payment";
+				location.href = "payment-noback";
 			});
 		});
 		

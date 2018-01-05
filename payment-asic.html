@@ -107,7 +107,7 @@
 
     <div class="controls-container">
         <div class="controls-content">
-            <button type="button" class="btn btn-default margin4" id="attemptToValidate">Pay and submit application</button>&nbsp;&nbsp; <button type="button" class="btn" onclick="window.open('confirm-payment', '_parent');">Cancel</a>
+            <button type="button" class="btn btn-default margin4" id="attemptToValidate">Pay and submit application</button>&nbsp;&nbsp; <button id="cancel-payment" type="button" class="btn">Cancel</a>
         </div><!-- controls-content -->
     </div><!-- controls-container -->
 
@@ -121,7 +121,6 @@
             // the following code is to register the slide up/down effect. this is
             // a customized jQuery plugin, the element that registered registerToggleSlide is
             // actually the scope of the effect.
-
         });
 
         $("#attemptToValidate").click(function () {
@@ -133,9 +132,15 @@
                   $("#payment-form").find('img').removeClass("visuallyhidden");
             }
             else {
-                window.open('dashboard.html', '_parent');
+				parent.postMessage("paymentsuccessful", "*");
+                window.setTimeout(function() {window.open('dashboard', '_parent');}, 10);
             }
         });
+		
+		$("#cancel-payment").click(function() {
+			parent.postMessage('paymentsuccessful', '*');
+			window.setTimeout(function() {window.open('confirm-payment', '_parent');}, 10);
+		});
 
         // Keyboard friendly anchor links to elements that can receive focus
         // bind a click event to the 'skip' link
