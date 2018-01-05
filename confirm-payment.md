@@ -557,29 +557,29 @@ layout: default-no-footer
                 <legend class="larger no-padding">Business Names</legend>
                 <p>I declare that:</p>
                     <p>
-                        <input id="ApplicantCheckBox" name="ApplicantCheckBox" type="checkbox" value="true"><input name="ApplicantCheckBox" type="hidden" value="false">
+                        <input id="ApplicantCheckBox" name="ApplicantCheckBox" type="checkbox" value="true" checked><input name="ApplicantCheckBox" type="hidden" value="false">
                         <label id="bn-applicant-check" for="ApplicantCheckBox">I am lodging this application on behalf of the applicant (the proposed business name holder). </label>
                     </p>
                     <p>
-                        <input id="NotDisqualifiedCheckBox" name="NotDisqualifiedCheckBox" type="checkbox" value="true"><input name="NotDisqualifiedCheckBox" type="hidden" value="false">
+                        <input id="NotDisqualifiedCheckBox" name="NotDisqualifiedCheckBox" type="checkbox" value="true" checked><input name="NotDisqualifiedCheckBox" type="hidden" value="false">
                         <label id="bn-notdisqualified-check" for="NotDisqualifiedCheckBox">The applicant is not disqualified from managing corporations under section 206B(1) of the <a href="http://www.austlii.edu.au/au/legis/cth/consol_act/ca2001172/" target="_blank"><em>Corporations Act</em> 2001 <span class="visuallyhidden">(opens in new window)</span></a>. </label>
                     </p>
                     <p>
-                        <input id="NoConvictionCheckBox" name="NoConvictionCheckBox" type="checkbox" value="true"><input name="NoConvictionCheckBox" type="hidden" value="false">
+                        <input id="NoConvictionCheckBox" name="NoConvictionCheckBox" type="checkbox" value="true" checked><input name="NoConvictionCheckBox" type="hidden" value="false">
                         <label id="bn-conviction-check" for="NoConvictionCheckBox">Within the last 5 years the applicant has not been:<br>
 <span class="dot-point">convicted of, or</span><br>
 <span class="dot-point">released from prison after being convicted of, and serving a term of imprisonment for, any of the criminal offences referred to in section 32(1) (c) or (d) of the <a href="http://www.austlii.edu.au/au/legis/cth/num_act/bnra2011311/" target="_blank"><em>Business Names Registration Act</em> 2011 <span class="visuallyhidden">(opens in new window)</span></a>.</span> </label>
                     </p>
                     <p>
-                        <input id="ElectronicLodgementCheckBox" name="ElectronicLodgementCheckBox" type="checkbox" value="true"><input name="ElectronicLodgementCheckBox" type="hidden" value="false">
+                        <input id="ElectronicLodgementCheckBox" name="ElectronicLodgementCheckBox" type="checkbox" value="true" checked><input name="ElectronicLodgementCheckBox" type="hidden" value="false">
                         <label id="bn-electronic-check" for="ElectronicLodgementCheckBox">I am authorised to submit this application for lodgement on behalf of the applicant under the terms and conditions of the <a href="http://www.asic.gov.au/online-services/register-for-online-access/electronic-lodgement-protocol/" target="_blank">Australian Securities and Investments Commission (ASIC) Electronic Lodgement Protocol <span class="visuallyhidden">(opens in new window)</span></a>. </label>
                     </p>
                     <p>
-                        <input id="DueAndProperEnquiriesCheckBox" name="DueAndProperEnquiriesCheckBox" type="checkbox" value="true"><input name="DueAndProperEnquiriesCheckBox" type="hidden" value="false">
+                        <input id="DueAndProperEnquiriesCheckBox" name="DueAndProperEnquiriesCheckBox" type="checkbox" value="true" checked><input name="DueAndProperEnquiriesCheckBox" type="hidden" value="false">
                         <label id="bn-enquiries-check" for="DueAndProperEnquiriesCheckBox">I am authorised to make each of the above declarations on behalf of the applicant after making all due and proper enquiries. </label>
                     </p>
                 <p>
-                    <input id="AsicTrueAndCorrectCheckBox" name="AsicTrueAndCorrectCheckBox" type="checkbox" value="true"><input name="AsicTrueAndCorrectCheckBox" type="hidden" value="false">
+                    <input id="AsicTrueAndCorrectCheckBox" name="AsicTrueAndCorrectCheckBox" type="checkbox" value="true" checked><input name="AsicTrueAndCorrectCheckBox" type="hidden" value="false">
                     <label id="bn-trueandcorrect-check" for="AsicTrueAndCorrectCheckBox">To the best of my knowledge, the information supplied in this transaction is complete and accurate (it is an offence to provide false or misleading information to ASIC). </label>
                 </p>
                 <p>ASIC may contact the applicant or the lodging party (if any) if there are any questions regarding this application for registration of a business name.</p>
@@ -587,7 +587,7 @@ layout: default-no-footer
                     <fieldset class="custom-controls">
                 <legend class="larger no-padding">Australian Company</legend>
                 <p>
-                    <input id="CompanyCheckBox" name="CompanyCheckBox" type="checkbox" value="true"><input name="CompanyCheckBox" type="hidden" value="false">
+                    <input id="CompanyCheckBox" name="CompanyCheckBox" type="checkbox" value="true" checked><input name="CompanyCheckBox" type="hidden" value="false">
                     <label id="co-registration-check" for="CompanyCheckBox">I apply for the registration of a company on the basis of the information in this form and any attachments. I have the necessary written consents and agreements referred to in this application concerning the members and officeholders and I shall give the consents and agreements to the company after the company becomes registered. The information provided in this application and in any attachments is true and correct at the time of signing. </label>
                 </p>
             </fieldset>
@@ -598,7 +598,7 @@ layout: default-no-footer
                         <li>Australian Business Number (ABN)</li>
                 </ul>
                     <p>
-                        <input id="ATOTrueAndCorrectCheckBox" name="ATOTrueAndCorrectCheckBox" type="checkbox" value="true"><input name="ATOTrueAndCorrectCheckBox" type="hidden" value="false">
+                        <input id="ATOTrueAndCorrectCheckBox" name="ATOTrueAndCorrectCheckBox" type="checkbox" value="true" checked><input name="ATOTrueAndCorrectCheckBox" type="hidden" value="false">
                         <label id="ato-trueandcorrect-check" for="ATOTrueAndCorrectCheckBox">I declare that:<br>
 <span class="dot-point">The information in this application is true and correct.</span><br>
 <span class="dot-point">This document has been prepared in accordance with information supplied by the entity.</span><br>
@@ -641,8 +641,12 @@ layout: default-no-footer
 	$(document).ready(function() {
 		$("#next-submit-btn").click(function() {
 			var top = (window.innerHeight - 670) / 2;
+			if (top < 0) {
+				top = "2.5%";
+			}
 			$.blockUI({
 				message: '<div style="max-width:800px; margin: 0 auto">' +
+						 '<button id="close-payment" type="button" style="position: absolute; visibility: hidden; top: 10px; right: 5px; border: none; background: transparent;" onload="this.blur();"><img src="{{ site.baseurl }}/img/ico-close.png" alt="close" /></button>' +
 						 '<h2>Payment required</h2>' +
 						 '<p>Your application contains at least one registration that requires a payment. ' +
 						 'Selecting "Pay now" will redirect you to the payment portal to complete your payment. ' +
@@ -665,7 +669,8 @@ layout: default-no-footer
 				css: {
 						padding:        '10px',
 						width:          '80%',
-						height:			'670px',
+						height: 		'95%',
+						maxHeight:		'670px',
 						top:            top,
 						left:           '10%',
 						textAlign:      'none',
@@ -678,7 +683,12 @@ layout: default-no-footer
 					cursor: 'default'
 				}
 			});
-			$("#cancel-payment").click(function() {
+			if ($(".blockMsg")[0].offsetHeight < 670) {
+				$(".blockMsg").css({
+					overflowY: "scroll"
+				});
+			}
+			$("#cancel-payment, #close-payment").click(function() {
 				$.unblockUI();
 			});
 			$("#pay-now").click(function() {
