@@ -40,10 +40,10 @@ layout: default-no-footer
 				$(window).off("beforeunload");
 		}, true);
 		$("#iframe-container").block({
-			message: "<p><img src=\"{{ site.baseurl }}/img/ajax-loader.gif\" alt=\"loading\" /> <strong>Loading</strong></p><p>Do not attempt to close the window or attempt to navigate away.</p>",
+			message: "<p><img src=\"{{ site.baseurl }}/img/ajax-loader.gif\" alt=\"loading\" /> <strong>Loading</strong></p><p>Do not attempt to close the window or navigate away.</p>",
 			css: {
 				width: "95%",
-				maxWidth: "600px"
+				maxWidth: "550px"
 			}
 		});
 		var left = (window.innerWidth - $(".blockMsg").offsetWidth) / 2;
