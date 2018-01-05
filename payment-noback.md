@@ -19,7 +19,7 @@ layout: default-no-footer
 <div class="grid-row">
 	<p style="margin-bottom: 1em;"><strong>NOTE:</strong> Navigating away from this page or closing the window may result in your payment being locked for up to two hours.</p>
 </div>
-<div id="iframe-container" style="width: 100%; min-height:500px">
+<div id="iframe-container" style="width: 100%; min-height:500px; margin-bottom: 20px;">
 	<iframe id="payment-iframe" src="payment-asic.html" style="width: 100%; height:750px; display: none;" >
 	</iframe>
 <script>
