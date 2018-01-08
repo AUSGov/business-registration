@@ -636,7 +636,50 @@ layout: default-no-footer
 		</div>
 	</div>
 </div>
-
+<div id="payment-popup" style="max-width:800px; margin: 0 auto; display: none;">
+	<button id="close-payment" type="button" style="position: absolute; visibility: hidden; top: 10px; right: 5px; border: none; background: transparent;" onload="this.blur();"><img src="{{ site.baseurl }}/img/ico-close.png" alt="close" /></button>
+	<h2>Payment required</h2>
+	<p>Your application contains at least one registration that requires a payment. Selecting "Pay now" will redirect you to the payment portal to complete your payment. Your application will not be submitted until the payment has been processed successfully.</p>
+	<div id="feesummary" class="section-container" data-section-name="FeeSummary">
+		<h3>Fee Summary</h3>
+		<div class="cart-container">
+			<h4 style="margin-top: 1em;">Company Name</h4>
+			<div class="cart-container">
+				<div class="result-row" data-business-name-id="">
+					<div class="result-cell cell-detail">
+						<p>COSTLY PRODUCTIONS PTY LTD</p>
+					</div>
+					<div class="result-cell cell-action no-padding">
+						<span class="subtotal">AU $999</span>
+					</div>
+				</div>
+			</div>
+			<h4 style="margin-top: 1em;">Business Name</h4>
+			<div class="cart-container">
+				<div class="result-row">
+					<div class="result-cell cell-detail">
+						<p>COSTIFY</p>
+					</div>
+					<div class="result-cell cell-action no-padding">
+						<span class="subtotal">AU $999</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cart-container">
+			<div class="result-row">
+				<div class="result-cell cell-total">
+					<p>Total payment required: AU<span id="totalPayment">$1998</span></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<p></p>
+	<div class="controls-content">
+		<button class="btn cancel" id="cancel-payment" type="button">Cancel</button>
+		<button class="btn btn-default" id="pay-now" type="button" >Pay now</button>
+	</div>
+</div>
 <script>
 	$(document).ready(function() {
 		$("#next-submit-btn").click(function() {
@@ -645,27 +688,7 @@ layout: default-no-footer
 				top = "2.5%";
 			}
 			$.blockUI({
-				message: '<div style="max-width:800px; margin: 0 auto">' +
-						 '<button id="close-payment" type="button" style="position: absolute; visibility: hidden; top: 10px; right: 5px; border: none; background: transparent;" onload="this.blur();"><img src="{{ site.baseurl }}/img/ico-close.png" alt="close" /></button>' +
-						 '<h2>Payment required</h2>' +
-						 '<p>Your application contains at least one registration that requires a payment. ' +
-						 'Selecting "Pay now" will redirect you to the payment portal to complete your payment. ' +
-						 'Your application will not be submitted until the payment has been processed successfully.</p>' +
-						 '<div id="feesummary" class="section-container" data-section-name="FeeSummary">' +
-						 '<h3>Fee Summary</h3>' +
-						 '<div class="cart-container"><h4 style="margin-top: 1em;">Company Name</h4>' + 
-						 '<div class="cart-container"><div class="result-row" data-business-name-id="">' +
-						 '<div class="result-cell cell-detail"><p>COSTLY PRODUCTIONS PTY LTD</p></div>' +
-						 '<div class="result-cell cell-action no-padding"><span class="subtotal">AU $999</span></div></div></div>' +
-						 '<h4 style="margin-top: 1em;">Business Name</h4><div class="cart-container"><div class="result-row">' +
-						 '<div class="result-cell cell-detail"><p>COSTIFY</p></div>' +
-						 '<div class="result-cell cell-action no-padding"><span class="subtotal">AU $999</span></div></div></div></div>' +
-						 '<div class="cart-container"><div class="result-row"><div class="result-cell cell-total">' +
-						 '<p>Total payment required: AU<span id="totalPayment">$1998</span></p></div></div></div></div>' +
-						 '<p></p>' +
-						 '<div class="controls-content">' + 
-						 '<button class="btn cancel" id="cancel-payment" type="button">Cancel</button>' +
-						 '<button class="btn btn-default" id="pay-now" type="button" >Pay now</button></div></div>',
+				message: $("#payment-popup"),
 				css: {
 						padding:        '10px',
 						width:          '80%',
