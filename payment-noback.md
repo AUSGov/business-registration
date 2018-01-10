@@ -17,7 +17,7 @@ layout: default-no-footer
 </div><!-- progress-container -->        
 <h1 id="heading" tabindex="-1">6. Payment <span>(Step 6 of 6)</span></h1>
 <div class="grid-row">
-	<p style="margin-bottom: 1em;"><strong>NOTE:</strong> Navigating away from this page or closing the window may result in your payment being locked for up to two hours.</p>
+<p style="margin-bottom: 1em;"><strong class="validation-red">Warning:</strong> Your payment details may be locked for up to two hours if you navigate away from this page. Your application will still be saved, but you will not be able to update or submit your payment within the two-hour period.</p>
 </div>
 <div id="iframe-container" style="width: 100%; min-height:500px; margin-bottom: 20px;">
 	<iframe id="payment-iframe" src="payment-asic.html" style="width: 100%; height:750px; display: none;" >
