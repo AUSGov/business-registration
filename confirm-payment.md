@@ -695,7 +695,7 @@ layout: default-no-footer
 						padding:        '10px',
 						width:          '80%',
 						height: 		'95%',
-						maxHeight:		'670px',
+						maxHeight:		'720px',
 						top:            top,
 						left:           '10%',
 						textAlign:      'none',
@@ -708,7 +708,7 @@ layout: default-no-footer
 					cursor: 'default'
 				}
 			});
-			if ($(".blockMsg")[0].offsetHeight < 670) {
+			if ($(".blockMsg")[0].offsetHeight < 720) {
 				$(".blockMsg").css({
 					overflowY: "scroll"
 				});
