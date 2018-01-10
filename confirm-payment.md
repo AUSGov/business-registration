@@ -685,7 +685,7 @@ layout: default-no-footer
 <script>
 	$(document).ready(function() {
 		$("#next-submit-btn").click(function() {
-			var top = (window.innerHeight - 670) / 2;
+			var top = (window.innerHeight - 790) / 2;
 			if (top < 0) {
 				top = "2.5%";
 			}
@@ -695,7 +695,7 @@ layout: default-no-footer
 						padding:        '10px',
 						width:          '80%',
 						height: 		'95%',
-						maxHeight:		'720px',
+						maxHeight:		'790px',
 						top:            top,
 						left:           '10%',
 						textAlign:      'none',
@@ -708,7 +708,7 @@ layout: default-no-footer
 					cursor: 'default'
 				}
 			});
-			if ($(".blockMsg")[0].offsetHeight < 720) {
+			if ($(".blockMsg")[0].offsetHeight < 790) {
 				$(".blockMsg").css({
 					overflowY: "scroll"
 				});
