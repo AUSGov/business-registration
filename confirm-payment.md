@@ -639,7 +639,7 @@ layout: default-no-footer
 <div id="payment-popup" style="max-width:800px; margin: 0 auto; display: none;">
 	<button id="close-payment" type="button" style="position: absolute; visibility: hidden; top: 10px; right: 5px; border: none; background: transparent;" onload="this.blur();"><img src="{{ site.baseurl }}/img/ico-close.png" alt="close" /></button>
 	<h2>Payment required</h2>
-	<p>Your application contains at least one registration that requires a payment. Selecting "Pay now" will redirect you to the payment portal to complete your payment. Your application will not be submitted until the payment has been processed successfully.</p>
+	<p>Your application requires the following payment:</p>
 	<div id="feesummary" class="section-container" data-section-name="FeeSummary">
 		<h3>Fee Summary</h3>
 		<div class="cart-container">
@@ -674,8 +674,10 @@ layout: default-no-footer
 			</div>
 		</div>
 	</div>
-	<p></p>
-	<div class="controls-content">
+	<p>You can make this payment using a Visa or MasterCard. You&apos;ll receive receipt number on the application summary page once your application is submitted.</p>
+	<p><strong>Note:</strong> Your application will not be submitted until your payment has been successfully processed.</p>
+	<p>Select &apos;Pay now&apos; if you’re ready to complete your payment.</p>
+<div class="controls-content">
 		<button class="btn cancel" id="cancel-payment" type="button">Cancel</button>
 		<button class="btn btn-default" id="pay-now" type="button" >Pay now</button>
 	</div>
