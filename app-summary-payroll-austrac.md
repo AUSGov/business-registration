@@ -287,7 +287,7 @@ layout: default
 			<td colspan="2">
 				<p>As a employer in NSW, you may have to pay payroll tax. Payroll tax is applied to a business’s New South Wales (NSW) wages that exceed the payroll tax threshold.</p>
 				<h4>How do I register for payroll tax?</h4>
-				<p>Each state or territory has it's own registration process for payroll tax. You can register for NSW state payroll tax online</p></td>
+				<p>Each state or territory has it's own registration process for payroll tax. You can register for <a aria-label="CTRL+Click or CTRL+Enter to follow link http://www.revenue.nsw.gov.au/taxes/payroll" href="http://www.revenue.nsw.gov.au/taxes/payroll">NSW state payroll tax online</a>.</p></td>
 			<td>&nbsp;</td>
 		</tr>
 		<tr onclick="toggleRow(this);">
