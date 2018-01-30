@@ -10,6 +10,11 @@ layout: default
         height: 20px;
         vertical-align: middle;
     }
+	
+	td span.fa.fa-plus-square,
+	td span.fa.fa-minus-square {
+		cursor: pointer;
+	}
 
     p:hover a.dismiss span, a.dismiss:focus span {
         background: url(/Content/img/ico-close.png);
