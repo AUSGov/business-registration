@@ -7,30 +7,15 @@
 			.msoFix { mso-table-lspace:-1pt; mso-table-rspace:-1pt; }
 		</style>
 		<script src="/scripts/jquery-1.11.3.min.js"></script>
-		<script src="/scripts/vadialog.js"></script> 
+		<script src="/scripts/vadialog.js"></script>
+		<script src="/scripts/navtrap.js"></script>
 		<script>
-			var referrer = "";
-			function listen() {
-				window.addEventListener("message", receiveMessage, true);
-				referrer = document.referrer;
-				visionaustralia.addDialog("no-button-binding", "navigate-away-modal", undefined, onStay, false);
-			}
-
-			function receiveMessage(event) {
-				var key = event.message ? 'message' : 'data';
-				var data = event[key];
-				switch (data) {
-					case "nav-back":
-						//setPromptOffNavigateAway();
-						hrefClicked = "/app-summary";
-						visionaustralia.openDialog("navigate-away-modal");
-						//setPromptOnNavigateAway();
-						window.setTimeout(function () { document.getElementById("nav-trap").contentWindow.location.replace("/email/navtrap.html"); }, 20);
-						break;
-				}
-			}
+/*			var hrefClicked = undefined;
 			
-			var hrefClicked = undefined;
+			function load() {
+				visionaustralia.addDialog("no-button-binding", "navigate-away-modal", undefined, onStay, false);
+				CatchBackButton.Init(onBackButton)
+			}
 
 			function onStay() {
 				visionaustralia.closeDialog("navigate-away-modal");
@@ -44,9 +29,14 @@
 				}
 				visionaustralia.closeDialog("navigate-away-modal");
 			}
+			
+			function onBackButton() {
+				hrefClicked = "logos.html";
+				visionaustralia.openDialog("navigate-away-modal");
+			} */
 		</script>
 	</head>
-	<body onload="listen();" style="margin: 0px; padding: 0px; background-color: #FFFFFF;" bgcolor="#FFFFFF">
+	<body onload="CatchBackButton.Init();" style="margin: 0px; padding: 0px; background-color: #FFFFFF;" bgcolor="#FFFFFF">
 		<style>
 			p, ul li, td {
 				font-family: helvetica, sans-serif;
@@ -114,7 +104,6 @@
 	left:-9999px;
 }
 		</style>
-		<iframe id="nav-trap" src="navtrap.html" style="display: none;"></iframe>
 		<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" style="margin: 0">
 			<tr>
 				<td align="center">
