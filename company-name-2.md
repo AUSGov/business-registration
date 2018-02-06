@@ -101,7 +101,7 @@ layout: default
                             <div class="form-row">
                                 <div>
                                     <label for="CompanyName_ProposedCompanyName">Company name<span class="visuallyhidden"> - text will convert to uppercase</span></label><a class="cd-btn help" href="#help-companynamehelp"><span>Help - Company name format</span></a><br>
-                                    <input class="uppercase normaliseOrganisationName" id="CompanyName_ProposedCompanyName" name="CompanyName.ProposedCompanyName" type="text" value="MEXICAN ARMADA BROTHERS">
+                                    <input class="uppercase normaliseOrganisationName" id="CompanyName_ProposedCompanyName" name="CompanyName.ProposedCompanyName" type="text" value="MEXICAN ARMADA">
 
 <label class="visuallyhidden" for="CompanyName_NewNameLegalElementId">Legal element</label><select id="CompanyName_NewNameLegalElementId" name="CompanyName.NewNameLegalElementId" style="max-width:12em;"><option value="">Select legal element...</option>
 <option selected="selected" value="1" selected>PTY LTD</option>
@@ -130,7 +130,7 @@ layout: default
                 <img src="{{ site.baseurl }}/img/ico-tick-green.png" alt="Success" style="width: 50px !important;">
         </div>
         <div class="result-cell cell-detail">
-            <h3>MEXICAN ARMADA BROTHERS PTY LTD</h3>
+            <h3>MEXICAN ARMADA PTY LTD</h3>
 
 <blockquote>The name is available to be used as a business name.</blockquote>        </div>
         <div class="result-cell cell-action">
@@ -152,7 +152,7 @@ layout: default
 
 <div style="display: none">
     <input id="ApplicationId" name="ApplicationId" type="hidden" value="10303">
-    <input id="DomainSearchName" name="DomainSearchName" type="hidden" value="MEXICAN ARMADA BROTHERS">
+    <input id="DomainSearchName" name="DomainSearchName" type="hidden" value="MEXICAN ARMADA">
 </div>
 <div class="grid-row clearfix">
     <script type="text/javascript" src="/scripts/pages/shared/domainname.js?v=636463591900468037"></script>
@@ -180,7 +180,7 @@ layout: default
                 <img src="{{ site.baseurl }}/img/ico-tick-green.png" alt="Success" style="width: 50px !important;">
         </div>
         <div class="result-cell cell-detail">
-            <h3>MEXICAN ARMADA BROTHERS PTY LTD</h3>
+            <h3>MEXICAN ARMADA PTY LTD</h3>
 
 <blockquote>The name is available to be used as a business name.</blockquote>
 
@@ -282,7 +282,7 @@ layout: default
 			<img src="{{ site.baseurl }}/img/ico-tick-green.png" alt="Success" style="width: 50px !important">
         </div>
         <div class="result-cell cell-detail" style="padding-bottom: 20px;">
-            <h2>MEXICAN ARMADA BROTHERS PTY LTD <a class="cd-btn help" href="#help-businessnameaddedavailable"><span>Help - Name available</span></a></h2>
+            <h2>MEXICAN ARMADA PTY LTD <a class="cd-btn help" href="#help-businessnameaddedavailable"><span>Help - Name available</span></a></h2>
             
 Company name added.
         </div>
@@ -299,7 +299,7 @@ Company name added.
 				<img src="{{ site.baseurl }}/img/ico-tick-green.png" alt="Success" style="width: 50px !important">
 			</div>
 			<div class="result-cell cell-detail">
-				<h2>REGULAR BROTHERS <a class="cd-btn help" href="#help-businessnameaddedavailable"><span>Help - Name available</span></a></h2>
+				<h2>TWO BROTHERS <a class="cd-btn help" href="#help-businessnameaddedavailable"><span>Help - Name available</span></a></h2>
 				
 	Business name added. <blockquote>The name is available to be used as a business name.</blockquote>
 			</div>
@@ -339,7 +339,7 @@ Company name added.
             <div class="form-row">
     <p>
         <label for="bn-text-input">Search for a business name<span class="visuallyhidden"> - text will convert to uppercase</span></label><br>
-        <input class="uppercase enter-click-button normaliseOrganisationName" id="bn-text-input" name="BusinessNames.BusinessNameSearchText" type="text" value="REGULAR BROTHERS">
+        <input class="uppercase enter-click-button normaliseOrganisationName" id="bn-text-input" name="BusinessNames.BusinessNameSearchText" type="text" value="TWO BROTHERS">
         <button class="btn btn-inline ajax-button" data-ajax-target="ajax-container-for-businessname" data-busy-message="Searching for business name" id="check-bn-btn" name="7KVIUXqyFVicyHfSkLCbUitSRob4nBqS5ycImFOd6Gg=" type="button" value="__cvg__sQN7pFoSVr1LCdQaudROkoWHh18VkNBHpFh0k1WgLcZJY57idkp+lIc3+zyqSGEJ">Check</button>
         <br>
         <span class="field-note">Text entered here will convert to uppercase letters.</span>
@@ -354,7 +354,7 @@ Company name added.
 						<img src="{{ site.baseurl }}/img/ico-tick-green.png" alt="Success" style="width: 50px !important">
 					</div>
 					<div class="result-cell cell-detail">
-						<h2>REGULAR BROTHERS</h2>
+						<h2>TWO BROTHERS</h2>
 
 		<blockquote>The name is available to be used as a business name.</blockquote>            </div>
 					<div class="result-cell cell-action">
