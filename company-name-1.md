@@ -49,6 +49,7 @@ layout: default
             <p><span class="validation-red">*</span> indicates areas that need to be checked.</p>
             <script type="text/javascript">
                 $(document).ready(function() {
+					scrollToAndFocus("#section-heading-1");
                     if ($("#validationSummary").hasClass("validation-summary-errors")) {
                         scrollToAndFocus('#validationSummaryAnchor');
                     }
