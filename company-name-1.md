@@ -68,7 +68,8 @@ layout: default
 
 
     <div class="sub-section-container sub-section-done" role="region" aria-labelledby="section-heading-1">
-        <h2 id="section-heading-1">Company name<span class="visuallyhidden"> (completed section)</span></h2>
+        <h2 id="section-heading-1">Company name<span class="visuallyhidden"> (completed section)</span>
+		<span style="float: right; margin-right: 20px; font-family: open_sanslight; font-size: .75em;"><span style="color: green" class="fa fa-check"></span> GET SCHWIFTY PTY LTD</span></h2>
     </div>
     <div class="sub-section-container sub-section-open" role="region" aria-labelledby="section-heading-2">
         <h2 id="section-heading-2">Business Name<span class="visuallyhidden"> (current section)</span></h2>
