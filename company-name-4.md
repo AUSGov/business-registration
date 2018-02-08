@@ -160,7 +160,7 @@ layout: default-no-footer
                 <img src="{{ site.baseurl }}/img/ico-tick-green.png" alt="Success" style="width: 50px !important;">
         </div>
         <div class="result-cell cell-detail">
-            <h3>BIRD PERSON PTY LTD</h3>
+            <h2>BIRD PERSON PTY LTD</h2>
 
 <blockquote>The name is available to be used as a business name.</blockquote>        </div>
         <div class="result-cell cell-action">
