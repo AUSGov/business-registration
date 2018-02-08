@@ -537,7 +537,6 @@ layout: default-no-footer
 		$("#add-companyname-btn").click(function() {
 			$("#co-search-results").hide();
 			$("#co-name-added").show();
-			$("#reg-phoenix").show();
 			$("#new-name-warning").show();
 			$("#next-bn-btn").attr("disabled", false);
 			$("#next-btn-2").attr("disabled", false);
