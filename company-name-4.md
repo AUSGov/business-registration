@@ -117,7 +117,7 @@ layout: default-no-footer
                 </div>
             </div>
 					<div id="create-name" class="grid-row clearfix" style="display: none;">
-			<h3>Company name and legal element</h3>
+			<h3>Add Company name</h3>
                     <div id="enter-co-name" class="col11 last padding-bottom-1">
 						<div id="reservation-no" class="grid-row" style="display: none;">
 							<div>
@@ -250,7 +250,7 @@ layout: default-no-footer
 			</div>
 		</div>
 		<div id="business-names" style="display: none;">
-			<h3>Business names</h3>
+			<h3>Add Business names</h3>
 			<div id="names-added" style="display: none;">
 				<div class="cart-container">
 					<div id="reg-phoenix" class="result-row fade-in fade-in-inherit">
@@ -354,6 +354,9 @@ layout: default-no-footer
 </main>
 <script>
 	$(document).ready(function() {
+		$("html, body").animate({
+			scrollTop: $("#section-heading-1").offset().top
+		}, 200);
 		$("input[name=name-type]").click(function() {
 			resetState();
 			var id = $(this)[0].id;
