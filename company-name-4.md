@@ -466,6 +466,7 @@ layout: default-no-footer
 		$("#reg-tip, #business-names, #add-bn-question, #new-name-warning, #co-search-results, #names-added, #co-name-added, #reservation-no, #create-name").hide();
 		$("#enter-co-name").show();
 		$("input[name=bn-question]").removeAttr("checked");
+		$("#added-co-name").html("BIRD PERSON PTY LTD");
 		$("#bn-text-input").val("PHOENIX PERSON");
 	}
 
