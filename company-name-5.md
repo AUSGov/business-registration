@@ -280,7 +280,7 @@ layout: default-no-footer
              </div>
 			<div id="co-use-acn">
 				<h3>Legal element</h3>
-				<p>You will use the ACN we issue you as your Company name. Select the legal element details to be included with your name.</p>
+				<p>You will use the ACN we issue you with as your Company name. Select the legal element details to be included with your name.</p>
 				<div class="grid-row">
 					 <div class="col11 last padding-bottom-1">
 							<div class="grid-row">
