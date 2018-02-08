@@ -442,6 +442,9 @@ layout: default-no-footer
 				$.unblockUI();
 				$("#input-bn").hide();
 				$("#bn-checked").show();
+				$("html, body").animate({
+					scrollTop: $("#business-names").offset().top
+				}, 200);
 			}, 3500);
 		});
 		$("#add-bn-btn").click(function() {
