@@ -83,7 +83,7 @@ layout: default-no-footer
 					What name will you use for your Company? <a class="cd-btn help" href="#help-companyname"><span>Help - Company name</span></a>
 				</legend>
 				<div class="grid-row">
-					<p>Do you have a proposed company name, or a name you have previously reserved with the Australian Securities and Investments Commission (ASIC)? Enter the details here. Alternatively, you can choose to use the Australian Company Number as your Company name once it has been issued.</p>
+					<p>If you have a proposed company name, or a name you have previously reserved with the Australian Securities and Investments Commission (ASIC) you can enter the details here. Alternatively, you can choose to use the Australian Company Number (ACN) as your Company name once it has been issued.</p>
 				</div>
 				<div class="grid-row">
 					<div class="col12 custom-controls">
