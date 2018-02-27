@@ -80,10 +80,10 @@ layout: default-no-footer
 		<div class="sub-section-content">
 			<fieldset id="fieldsetBusinessEntityTypes" class="col12 required margin-bottom-075">
 				<legend class="larger">
-					What name will you use for your Company? <a class="cd-btn help" href="#help-companyname"><span>Help - Company name</span></a>
+					What name will you use for your company? <a class="cd-btn help" href="#help-companyname"><span>Help - Company name</span></a>
 				</legend>
 				<div class="grid-row">
-					<p>If you have a proposed company name, or a name you have previously reserved with the Australian Securities and Investments Commission (ASIC) you can use that name. Alternatively, you can choose to use the Australian Company Number (ACN) as your Company name once it has been issued.</p>
+					<p>Choose <strong>one</strong> of the buttons below to either use:</p>
 				</div>
 				<div class="grid-row">
 					<div class="col12 custom-controls">
