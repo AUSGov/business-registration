@@ -84,6 +84,11 @@ layout: default-no-footer
 				</legend>
 				<div class="grid-row">
 					<p>Choose <strong>one</strong> of the buttons below to either use:</p>
+					<ul>
+					<li>a name you&apos;ve chosen to create a new company name</li>
+					<li>a name that you&apos;ve already reserved with the Australian Securities &amp; Investments Commission (ASIC), or</li>
+					<li>your Australian Company Number (ACN) once it has been issued.</li>
+					</ul>
 				</div>
 				<div class="grid-row">
 					<div class="col12 custom-controls">
