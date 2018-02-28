@@ -96,6 +96,21 @@ layout: default-no-footer
 							<input class="ajax-radio" id="have-name" name="name-type" type="radio" value="1">
 							<label for="have-name" id="entitytype_ind_lbl">
 								Create a new name <a class="cd-btn help" href="#help-entitlemententitytypeind"><span>Help - Create a new name</span></a>
+								<br>lp" href="#help-companyname"><span>Help - Company name</span></a>				</legend>
+				<div class="grid-row">
+					<p>Choose <strong>one</strong> of the buttons below to either use:</p>
+					<ul>
+					<li>a name you&apos;ve chosen to create a new company name</li>
+					<li>a name that you&apos;ve already reserved with the Australian Securities &amp; Investments Commission (ASIC), or</li>
+					<li>your Australian Company Number (ACN) once it has been issued.</li>
+					</ul>
+				</div>
+				<div class="grid-row">
+					<div class="col12 custom-controls">
+						<p>
+							<input class="ajax-radio" id="have-name" name="name-type" type="radio" value="1">
+							<label for="have-name" id="entitytype_ind_lbl">
+								Create a new name <a class="cd-btn help" href="#help-entitlemententitytypeind"><span>Help - Create a new name</span></a>
 								<br><span class="field-note">If you choose a new name we'll first check to see whether the name is available. A name may be unavailable because it is already registered or reserved by another company, the same as a registered business name, or unacceptable under the <em>Corporations Act 2001</em>.</span>
 							</label>
 						</p>
@@ -107,7 +122,7 @@ layout: default-no-footer
 							<input class="ajax-radio" id="use-reserved" name="name-type" type="radio" value="2">
 							<label for="use-reserved" id="entitytype_ptr_lbl">
 								Use a reserved name <a class="cd-btn help" href="#help-entitlemententitytypeptr"><span>Help - Partnership</span></a>
-								<br><span class="field-note">Choose this option if you've already reserved your company name with the Australian Securities & Investments Commission (ASIC) and have received a Reservation Notice. You will be prompted for the name and reservation number included on the notice.</span>
+								<br><span class="field-note">Select this option if you've already reserved your company name with the Australian Securities &amp; Investments Commission (ASIC) and have received a reservation notice. We'll ask you to provide the name and reservation number included on the notice.</span>
 							</label>
 						</p>
 					</div>
@@ -118,7 +133,7 @@ layout: default-no-footer
 							<input class="ajax-radio" id="use-acn" name="name-type" type="radio" value="3">
 							<label for="use-acn" id="entitytype_trt_lbl">
 								Use the ACN <a class="cd-btn help" href="#help-entitlemententitytypetrt"><span>Help - Trust</span></a>
-								<br><span class="field-note">If you don't want to create a name, you can simply use your Australian Company Number (ACN) as the company name. Your ACN will be issued when your company is successfully registered.</span>
+								<br><span class="field-note">If you don't want to create a name, you can use your Australian Company Number (ACN) as your company name. Your ACN will be issued when your company is successfully registered.</span>
 							</label>
 						</p>
 					</div>
