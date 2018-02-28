@@ -96,7 +96,7 @@ layout: default-no-footer
 							<input class="ajax-radio" id="have-name" name="name-type" type="radio" value="1">
 							<label for="have-name" id="entitytype_ind_lbl">
 								Create a new name <a class="cd-btn help" href="#help-entitlemententitytypeind"><span>Help - Create a new name</span></a>
-								<br><span class="field-note">Select this option if you have a chosen name. We'll check if it's available on the next screen. A name may be unavailable because it is:<br><span class="dot-point">the same as a business name</span><br><span class="dot-point">already registered or reserved by another company</span><br><span class="dot-point">unacceptable under the Corporations Act 2001.</span>
+								<br><span class="field-note">Select this option if you have a chosen name. We'll check if it's available on the next screen. A name may be unavailable because it is:<br><span class="dot-point">the same as a business name</span><br><span class="dot-point">already registered or reserved by another company</span><br><span class="dot-point">unacceptable under the Corporations Act 2001.</span></span>
 							</label>
 						</p>
 					</div>
