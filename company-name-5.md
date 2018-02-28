@@ -127,7 +127,7 @@ layout: default-no-footer
 			<div class="controls-container">
 				<div class="controls-content">
 					<button class="btn cancel" name="wNjv11HSL2eBWG4934fyzQ==" id="prev-btn-1" type="button" value="__cvg__3Vm2adfQYvusabNtBnBi9w==">Previous</button>
-					<button class="btn btn-default next" disabled="disabled" id="next-btn-1" type="button" value="">Save and continue</button>
+					<button class="btn btn-default next" disabled="disabled" id="next-btn-1" type="button" value="">Next</button>
 				</div>
 			</div>
 		</div>
