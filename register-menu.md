@@ -12,7 +12,7 @@ layout: default
 	<div style="min-height: 350px;">
 		<div id="regos">
 			<fieldset class="custom-controls">
-				<legend class="larger has-help">I am currently registered for:</legend>
+				<legend class="larger has-help">Where are you up to with your registrations?</legend>
 				<div class="grid-row">
 					<div class="col11">
 						<p>
