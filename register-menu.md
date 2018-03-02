@@ -6,7 +6,7 @@ layout: default
 <h1 id="heading" tabindex="-1" style="text-align: center; color: #3179b5; padding-bottom: 0;">{{ page.title }}</h1>
 <p style="text-align: center; margin-bottom: 2em;">Your business and tax registrations in one place.</p>
 
-<div style="width: 700px; margin: 0 auto;">
+<div style="width: 650px; margin: 0 auto;">
 	<h2>What would you like to do?</h2>
 	<p>First tell us about your current status, then select what you'd like to do next.</p>
 	<div style="min-height: 350px;">
@@ -45,6 +45,14 @@ layout: default
 						</p>
 					</div>
 				</div>
+				<div class="grid-row">
+					<div class="col11">
+						<p>
+							<input class="no-margin" type="radio" name="myreg" id="opt-application" />
+							<label class="no-margin" for="opt-application">I've submitted an application</label>
+						</p>
+					</div>
+				</div>
 			</fieldset>
 		</div>
 		<div id="no-regs" style="display: none;">
@@ -56,12 +64,8 @@ layout: default
 						<label for="apply">apply for an ABN, business name, company, TFN or taxes.</label>
 					</p>
 					<p>
-						<input id="check" name="noregs" type="radio">
-						<label for="check">check on the progress of my existing application.</label>
-					</p>
-					<p>
 						<input id="helpme" name="noregs" type="radio">
-						<label for="helpme">I&apos;m not sure, help me decide.</label>
+						<label for="helpme">I&apos;m not sure what registrations I need, help me decide.</label>
 					</p>
 				</div>
 			</fieldset>
@@ -83,14 +87,6 @@ layout: default
 						<label for="applyauskey">apply for an administrator AUSkey.</label>
 					</p>
 					<p>
-						<input id="checktax" name="haveabn" type="radio" />
-						<label for="checktax">check the progress of your tax registrations.</label>
-					</p>
-					<p>
-						<input id="checkbnakey" name="haveabn" type="radio" />
-						<label for="checkbnakey">check the progress of a business name or AUSkey application.</label>
-					</p>
-					<p>
 						<input id="helptax" name="haveabn" type="radio" />
 						<label for="helptax">I'm not sure which tax registrations I need, help me decide.</label>
 					</p>
@@ -105,11 +101,6 @@ layout: default
 						<input id="applybn2" name="abnref" class="showhide-trigger" type="radio">
 						<label for="applybn2">apply for a business name.</label>
 					</p>
-					<p>
-						<input id="check2" name="abnref" type="radio">
-						<label for="check2">check on the progress of my existing application.</label>
-					</p>
-
 				</div>
 			</fieldset>
 		</div>
@@ -125,11 +116,29 @@ layout: default
 						<input id="applytfn" name="abnref" class="showhide-trigger" type="radio">
 						<label for="applytfn">apply for a business Tax File Number (TFN).</label>
 					</p>
+				</div>
+			</fieldset>
+		</div>
+		<div id="check-existing" style="display: none;">
+			<fieldset class="col12 custom-controls">
+				<legend class="larger">I don't need an ABN, and I want to:</legend>
+				<div class="col12 last">
 					<p>
-						<input id="check3" name="abnref" type="radio">
-						<label for="check3">check on the progress of my existing application.</label>
+						<input id="check1" name="checkexisting" type="radio">
+						<label for="check1">check on the progress of my new business application.</label>
 					</p>
-
+					<p>
+						<input id="check2" name="checkexisting" type="radio">
+						<label for="check2">check on the progress of my administrator AUSkey application.</label>
+					</p>
+					<p>
+						<input id="check3" name="checkexisting" type="radio">
+						<label for="check3">check on the progress of my addition tax registrations.</label>
+					</p>
+					<p>
+						<input id="check4" name="checkexisting" type="radio">
+						<label for="check4">check on the progress of my additional AUSkeys.</label>
+					</p>
 				</div>
 			</fieldset>
 		</div>
@@ -150,7 +159,7 @@ layout: default
 
 	$(document).ready(function () {
 		
-		$("#no-regs, #have-abn, #abn-ref, #no-abn").find("input[type=radio]").click(function() {
+		$("#no-regs, #have-abn, #abn-ref, #no-abn, #check-existing").find("input[type=radio]").click(function() {
 			$("#btnContinue").removeAttr("disabled");
 		})
 		
@@ -194,10 +203,19 @@ layout: default
 			//}, 200);
 		});
 		
+		$("#opt-application").click(function() {
+			$("#regos").fadeOut('fast', function() {
+				$("#check-existing").fadeIn('fast');
+			});
+			//$("html, body").animate({
+			//	scrollTop: $("#no-abn").offset().top
+			//}, 200);
+		});
+		
 		$("#btnPrevious").click(function() {
-			$("#no-regs:visible, #have-abn:visible, #abn-ref:visible, #no-abn:visible").fadeOut("fast", function() {
+			$("#no-regs:visible, #have-abn:visible, #abn-ref:visible, #no-abn:visible, #check-existing:visible").fadeOut("fast", function() {
 				$("#regos").fadeIn('fast');
-				$("#regos, #no-regs, #have-abn, #abn-ref, #no-abn").find("input[type=radio]:checked").removeAttr("checked");
+				$("#regos, #no-regs, #have-abn, #abn-ref, #no-abn, #check-existing").find("input[type=radio]:checked").removeAttr("checked");
 			});
 			$("#btnContinue, #btnPrevious").attr("disabled", true);
 
