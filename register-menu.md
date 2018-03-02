@@ -6,7 +6,7 @@ layout: default
 <h1 id="heading" tabindex="-1" style="text-align: center; color: #3179b5; padding-bottom: 0;">{{ page.title }}</h1>
 <p style="text-align: center; margin-bottom: 2em;">Your business and tax registrations in one place.</p>
 
-<div style="width: 650px; margin: 0 auto;">
+<div style="width: 700px; margin: 0 auto;">
 	<h2>What would you like to do?</h2>
 	<p>First tell us about your current status, then select what you'd like to do next.</p>
 	<div style="min-height: 350px;">
