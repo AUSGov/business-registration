@@ -31,7 +31,7 @@ tr.current td {
 			<tr>
 				<td>Daily Tasks</td>
 				<td style="color: green; font-weight: bold">Active</td>
-				<td>Nothing scheduled</td>
+				<td>No outages scheduled</td>
 				<td></td>
 			</tr>
 			<tr>
@@ -43,13 +43,13 @@ tr.current td {
 			<tr>
 				<td>Notification Processor</td>
 				<td style="color: green; font-weight: bold">Active</td>
-				<td>Nothing scheduled</td>
+				<td>No outages scheduled</td>
 				<td></td>
 			</tr>
 			<tr>
 				<td>Payment Status</td>
 				<td style="color: green; font-weight: bold">Active</td>
-				<td>Nothing scheduled</td>
+				<td>No outages scheduled</td>
 				<td></td>
 			</tr>
 		</tbody>
