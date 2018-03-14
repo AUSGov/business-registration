@@ -124,7 +124,7 @@ tr.current td {
 		</tbody>
 	</table>
 	<div style="width: 100%">
-		<p id="show-more" style="float: right; margin: 0 20px; font-weight: bold; cursor: pointer; display: none;">more...</p>
+		<p id="show-more" style="float: right; margin: 0 20px 20px; font-weight: bold; cursor: pointer; display: none;">more...</p>
 		<button id="add-new" class="btn btn-small btn-default" style="margin-bottom: 1em;">Add new schedule</button>
 	</div>
 </div>
