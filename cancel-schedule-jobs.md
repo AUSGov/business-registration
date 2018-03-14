@@ -54,7 +54,7 @@ tr.current td {
 			</tr>
 		</tbody>
 	</table>
-	<h2>Cancellation schedule</h2>
+	<h2>Cancellation schedule <button class="btn btn-small" style="float: right; font-size: 0.6em">View past schedules</button></h2>
 	<table style="margin-bottom: 0.5em;">
 		<thead class="">
 			<tr>
