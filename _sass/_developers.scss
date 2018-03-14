@@ -356,6 +356,25 @@ button.ico-edit {
     }
 }
 
+button.ico-remove {
+	float: right;
+	font-size: 1rem !important;
+	color: #fff;
+	padding: 7px !important;
+	padding-left: 30px !important;
+	margin-left: 2px;
+	font-weight: normal !important;
+	background: url(../img/sprite-trash.png) 2px 2px no-repeat #444;
+	background-size: 25px;
+	border-radius: 25px;
+	border-color: #999;		
+
+	&:hover, &:focus {
+		background: url(../img/sprite-trash.png) 2px 2px no-repeat #000;
+		background-size: 25px;
+	}
+}
+
 /* 
     RF: Any dependencies related to external libraries (ie: jQuery UI) will need to be checked here when these components are refactored to meet WCAG and usability requirements.
     For example, if jQuery UI is not used for date picker, time picker or file upload then the following classes can be removed. 
