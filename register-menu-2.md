@@ -89,11 +89,11 @@ layout: default
 				<div class="col12 last">
 					<p>
 						<input id="apply" name="noregs" class="showhide-trigger" data-linkto="register" type="radio">
-						<label for="apply">apply for an ABN, business name, company, TFN or taxes.</label>
+						<label for="apply">apply for an ABN, business name, company, TFN or taxes</label>
 					</p>
 					<p>
 						<input id="helpme" name="noregs" data-linkto="help-me-decide/eligibility" type="radio">
-						<label for="helpme">I&apos;m not sure what registrations I need, help me decide.</label>
+						<label for="helpme">I&apos;m not sure what registrations I need, help me decide</label>
 					</p>
 				</div>
 			</fieldset>
@@ -104,19 +104,19 @@ layout: default
 				<div class="grid-row">
 					<p>
 						<input id="addtaxes" name="haveabn" data-linkto="existing/tax-roles" type="radio" />
-						<label for="addtaxes">apply for GST, PAYG withholding or other taxes.</label>
+						<label for="addtaxes">apply for GST, PAYG withholding or other taxes</label>
 					</p>
 					<p>
 						<input id="applybn" name="haveabn" data-linkto="haveabn-bn" type="radio" />
-						<label for="applybn">apply for a business name.</label>
+						<label for="applybn">apply for a business name</label>
 					</p>
 					<p>
 						<input id="applyauskey" name="haveabn" data-linkto="auskey-new" type="radio" />
-						<label for="applyauskey">apply for an administrator AUSkey.</label>
+						<label for="applyauskey">apply for an administrator AUSkey</label>
 					</p>
 					<p>
 						<input id="helptax" name="haveabn" data-linkto="help-me-decide/eligibility" type="radio" />
-						<label for="helptax">I'm not sure which tax registrations I need, help me decide.</label>
+						<label for="helptax">I'm not sure which tax registrations I need, help me decide</label>
 					</p>
 				</div>
 			</fieldset>
@@ -127,7 +127,7 @@ layout: default
 				<div class="col12 last">
 					<p>
 						<input id="applybn2" name="abnref" class="showhide-trigger" type="radio">
-						<label for="applybn2">apply for a business name.</label>
+						<label for="applybn2">apply for a business name</label>
 					</p>
 				</div>
 			</fieldset>
@@ -140,15 +140,15 @@ layout: default
 				<div class="col12 last">
 					<p>
 						<input id="applybn3" name="dontneed" data-linkto="cocos-bn" type="radio">
-						<label for="applybn3">I operate only on Christmas or Cocos Island.</label>
+						<label for="applybn3">I operate only on Christmas or Cocos Island</label>
 					</p>
 					<p>
 						<input id="applytfn" name="dontneed" data-linkto="joint-venture-bn" type="radio">
-						<label for="applytfn">I'm applying as a joint venture (all partners have an ABN).</label>
+						<label for="applytfn">I'm applying as a joint venture (all partners have an ABN)</label>
 					</p>
 					<p>
 						<input id="needabn" name="dontneed" onclick="$('#btnPrevious').click();" type="radio">
-						<label for="needabn">Neither of these apply, take me back.</label>
+						<label for="needabn">Neither of these apply, take me back</label>
 					</p>
 				</div>
 			</fieldset>
@@ -184,19 +184,19 @@ layout: default
 				<div class="col12 last">
 					<p>
 						<input id="check1" name="checkexisting" data-linkto="existing/b2c-login.html?dest=dashboard-b2c" type="radio">
-						<label for="check1">new business registrations.</label>
+						<label for="check1">new business registrations</label>
 					</p>
 					<p>
 						<input id="check2" name="checkexisting" data-linkto="existing/aba-login.html?dest=dashboard" type="radio">
-						<label for="check2">additional tax registrations.</label>
+						<label for="check2">additional tax registrations</label>
 					</p>
 					<p>
 						<input id="check3" name="checkexisting" data-linkto="existing/b2c-login.html?dest=dashboard-b2c" type="radio">
-						<label for="check3">administrator AUSkey application.</label>
+						<label for="check3">administrator AUSkey application</label>
 					</p>
 					<p>
 						<input id="check4" name="checkexisting" data-linkto="existing/aba-login.html?dest=dashboard" type="radio">
-						<label for="check4">additional AUSkeys application.</label>
+						<label for="check4">additional AUSkeys application</label>
 					</p>
 				</div>
 			</fieldset>
