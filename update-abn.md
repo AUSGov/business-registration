@@ -55,7 +55,7 @@ layout: default-no-footer
 <div id="BusinessNameDetails_BusinessNameEntitlement">
 
     <div class="confirmation">
-		<p>Details of your ABN is listed in the following table. Choose from the options below to update your details with the Australian Business Register (ABR).</p>
+		<p>The details of your ABN are listed in the following table. Choose from the options below to update your details with the Australian Business Register (ABR).</p>
 		<table>
 			<tbody>
 				<tr>

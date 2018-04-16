@@ -60,7 +60,7 @@ layout: default
 				<div class="grid-row">
 					<div class="col11">
 						<p>
-							<input class="no-margin" type="radio" data-dest="" name="myreg" id="opt-inactive" />
+							<input class="no-margin" type="radio" data-dest="inactive-abn" name="myreg" id="opt-inactive" />
 							<label class="no-margin" for="opt-inactive">I have an ABN, but it&apos;s inactive</label>
 						</p>
 					</div>
@@ -121,6 +121,21 @@ layout: default
 				</div>
 			</fieldset>
 		</div>
+		<div id="inactive-abn" data-parent="regos" style="display: none;">
+			<fieldset id="fieldsetInactiveAbn" class="col12 custom-controls">
+				<legend class="larger">I want to re-commence my business</legend>
+				<div class="col12 last">
+					<p>
+						<input id="reactivate" name="inactiveabn" class="showhide-trigger" data-linkto="" type="radio">
+						<label for="reactivate">with the same legal structure</label>
+					</p>
+					<p>
+						<input id="newabn" name="inactiveabn" data-linkto="register?type=abn" type="radio">
+						<label for="newabn">with a different legal structure</label>
+					</p>
+				</div>
+			</fieldset>
+		</div>
 		<div id="abn-ref" data-parent="regos" style="display: none;">
 			<fieldset class="col12 custom-controls">
 				<legend class="larger">I have an ABN reference number, and I want to:</legend>
@@ -158,7 +173,7 @@ layout: default
 				<legend class="larger">I want to update my details with:</legend>
 				<div class="col12 last">
 					<p>
-						<input id="update-abn" name="reg-update" class="showhide-trigger" data-linkto="existing/aba-login?dest=../update-abn" type="radio">
+						<input id="update-abn" name="reg-update" class="showhide-trigger" data-dest="abn-update" type="radio">
 						<label for="update-abn">Australian Business Register (ABR)<br><span class="field-note">Update details associated with your ABN registration.</span></label>
 					</p>
 					<p>
@@ -174,8 +189,29 @@ layout: default
 						<label for="apply-for-auskey">I don't have an AUSkey, I want to apply for one<br><span class="field-note">You need Governement credentials, such as an AUSkey to be able to review and make changes to your business registrations.</span></label>
 					</p>
 				</div>
-				
-				
+			</fieldset>
+		</div>
+		<div id="abn-update" data-parent="update-details" style="display: none;">
+			<fieldset class="col12 custom-controls">
+				<legend class="larger">I want to:</legend>
+				<div class="col12 last">
+					<p>
+						<input id="updateabn1" name="updateabn" class="showhide-trigger" data-linkto="existing/aba-login?dest=../update-abn" type="radio">
+						<label for="updateabn1">update my ABN details</label>
+					</p>
+				</div>
+				<div class="col12 last">
+					<p>
+						<input id="updateabn2" name="updateabn" class="showhide-trigger" data-linkto="existing/aba-login?dest=../cancel-abn" type="radio">
+						<label for="updateabn2">cancel my ABN</label>
+					</p>
+				</div>
+				<div class="col12 last">
+					<p>
+						<input id="updateabn3" name="updateabn" data-linkto="auskey-new" type="radio">
+						<label for="updateabn3">I don't have an AUSkey, I want to apply for one<br><span class="field-note">You need Governement credentials, such as an AUSkey to be able to review and make changes to your business registrations.</span></label>
+					</p>
+				</div>
 			</fieldset>
 		</div>
 		<div id="check-existing" data-parent="reg-or-check" style="display: none;">
