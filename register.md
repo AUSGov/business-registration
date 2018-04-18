@@ -3,8 +3,10 @@ title: Business registration
 layout: default
 ---
 <h1 id="heading" tabindex="-1">{{ page.title }}</h1>
-<p class="intro"><strong>Welcome to the Australian Government Business Registration Service.</strong></p>
-<p>Here you can apply for your key business and tax registrations in one place.<a class="cd-btn help" href="#"><span>more information</span></a></p>
+<p><strong>Welcome to the Australian Government Business Registration Service.</strong> <br>Here you can apply for your key business and tax registrations in one place.</p>
+<p><strong>Are you new to business? </strong>To help you get started, see business.gov.au's <a href="https://www.business.gov.au/Info/Plan-and-Start/Templates-and-tools/Checklists/Starting-your-business-checklist" target="_blank">Starting your business checklist <span class="visuallyhidden">(opens in new window)</span></a> and download a <a href="https://www.business.gov.au/info/plan-and-start/templates-and-tools/business-plan-template-and-guide" target="_blank">business plan template <span class="visuallyhidden">(opens in new window)</span></a>.</p>
+<a class="cd-btn help" href="#help-selectregistrationsdescription"><span>Help - Select registrations</span></a>
+<p></p>
 <div id="select-registrations" class="sub-section-container sub-section-open">
 	<h2>Select registrations</h2>
 	<div class="sub-section-content">
@@ -71,25 +73,23 @@ layout: default
 	</div>
 </div>
 <div class="sub-section-container">
-	<h2>Information you should have already</h2>
+	<h2>Information you'll need</h2>
 	<div class="sub-section-content">
-		<p>You've selected:</p>
-		<ul style="list-style: none">
-			<li><img src="img/ico-tick-green.png" style="width: 22px; margin-right: 5px; float: left" alt="selected"> Australian Business Number (ABN)</li>
-			<li><img src="img/ico-tick-green.png" style="width: 22px; margin-right: 5px; float: left" alt="selected"> Business Name</li>
-			<li><img src="img/ico-tick-green.png" style="width: 22px; margin-right: 5px; float: left" alt="selected"> Goods and Services Tax (GST)</li>
-			<li><img src="img/ico-tick-green.png" style="width: 22px; margin-right: 5px; float: left" alt="selected"> Pay as you go withholding (PAYG)</li>
-			<li><img src="img/ico-tick-green.png" style="width: 22px; margin-right: 5px; float: left" alt="selected"> Fringe Benefits Tax (FBT)</li>
-		</ul>
-		<p>To apply for these registrations, you should have the following information ready:</p>
-		<ul>
-			<li>Your proposed business name</li>
-			<li>Names and addresses of all business associates</li>
-			<li>Your individual Tax File Number (TFN) to confirm your identity</li>
-		</ul>
-		<div class="registration-tip">
+		<div>
+			<p>For the registrations you've selected above, you'll need to provide:</p> 
+			<ul>
+				<li>name and contact details of the applicant</li>
+				<li>address and contact details of the business or organisation</li>
+				<li>details of each person or organisation associated with the business (e.g. partner, director, secretary or shareholder)</li>
+				<li>tax agent number (if you wish to use an agent)</li>
+
+				<li>ABN reference number (if you have an unfinished application)</li>
+				<li>details of business activities</li>
+				<li>tax file number (optional for ABN)</li>                    <li>proof of identity information such as name, address and birth details</li>
+				<li>business structure</li> 
+			</ul>
 			<h3>Don't have all the information handy?</h3>
-			<p>Don't worry, you can start filling in the form and finish it later once you have all the information. To return to your saved application, select "login" from the profile menu on the top right hand of the screen.</p>
+			<p>No problem! You can start the form now, save what you've done, and come back later once you have all the information. You'll have up to <strong>28 days</strong> to submit your application before it's deleted.</p> 
 		</div>
 		<div class="controls-container">
 			<div class="controls-content">
