@@ -85,11 +85,11 @@ layout: default
 		</div>
 		<div id="no-regs" data-parent="regos" style="display: none;">
 			<fieldset id="fieldsetAbn" class="col12 custom-controls">
-				<legend class="larger">I don't have any business registrations, and I want to:</legend>
+				<legend class="larger">Apply for business registrations</legend>
 				<div class="col12 last">
 					<p>
 						<input id="apply" name="noregs" class="showhide-trigger" data-linkto="register" type="radio">
-						<label for="apply">apply for an ABN, business name, company, TFN or taxes</label>
+						<label for="apply">I know which registrations I need, let me choose</label>
 					</p>
 					<p>
 						<input id="helpme" name="noregs" data-linkto="help-me-decide/eligibility" type="radio">
@@ -109,6 +109,10 @@ layout: default
 					<p>
 						<input id="applybn" name="haveabn" data-linkto="haveabn-bn" type="radio" />
 						<label for="applybn">apply for a business name</label>
+					</p>
+					<p>
+						<input id="applytfn" name="haveabn" data-linkto="haveabn-tfn" type="radio" />
+						<label for="applytfn">apply for a business Tax File Number (TFN)</label>
 					</p>
 					<p>
 						<input id="applyauskey" name="haveabn" data-linkto="auskey-new" type="radio" />
