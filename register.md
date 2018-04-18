@@ -15,6 +15,10 @@ layout: default
 					<label class="has-help" for="abn">Australian Business Number (ABN)&nbsp;<a class="cd-btn help" href="#"><span>more information</span></a></label>
 				</p>
 				<p>
+					<input id="co" type="checkbox" value="co">
+					<label for="co">Australian Company and Company name&nbsp;<a class="cd-btn help" href="#"><span>more information</span></a></label>
+				</p>
+				<p>
 					<input id="bn" type="checkbox" value="bn">
 					<label class="has-help" for="bn">Business Name</label>
 				</p>
@@ -23,16 +27,8 @@ layout: default
 					<label for="gst">Goods and Services Tax (GST)&nbsp;<a class="cd-btn help" href="#"><span>more information</span></a></label>
 				</p>
 				<p>
-					<input id="co" type="checkbox" value="co">
-					<label for="co">Australian Company&nbsp;<a class="cd-btn help" href="#"><span>more information</span></a></label>
-				</p>
-				<p>
 					<input id="payg" type="checkbox" value="payg">
 					<label class="has-help" for="payg">Pay as you go (PAYG) withholding&nbsp;<a class="cd-btn help" href="#"><span>more information</span></a></label>
-				</p>
-				<p>
-					<input id="tfn" type="checkbox" value="tfn">
-					<label class="has-help" for="tfn">Business Tax File Number (TFN)&nbsp;<a class="cd-btn help" href="#"><span>more information</span></a></label>
 				</p>
 			</div><!-- col -->
 			<div class="col6 last">
@@ -54,15 +50,21 @@ layout: default
 				</p>
 				<p>
 					<input id="auskey" type="checkbox" value="auskey">
-					<label for="auskey">Business login&nbsp;<a class="cd-btn help" href="#"><span>more information</span></a></label>
+					<label for="auskey">AUSkey&nbsp;<a class="cd-btn help" href="#"><span>more information</span></a></label>
 				</p>
 			</div><!-- col -->
 		</div><!-- grid-row -->
-		<div class="registration-tip">
+				<div class="registration-tip">
 			<h3>Not sure?</h3>
-			<p>Not sure what registrations you need for your business? We can help you work it out.</p>
-			<p><a href="help-me-decide/eligibility.html">Help me decide</a>.</p>
-		</div><!-- big-help-box -->
+			<p>If you <strong>already have an ABN</strong> and just want to apply for:</p>
+			<ul><li>a tax registration, please visit the <a href="#" target="_blank">Apply for tax registrations</a> page.</li>
+			<li>an AUSkey login, please visit the <a href="#" target="_blank">Apply for AUSkey login</a> page.</li></ul>
+			<strong>Not sure what registrations you need?</strong> We can help you work it out.
+			<p>
+				<a href="help-me-decide/eligibility.html">Help me decide</a>
+			</p>
+		</div>
+
 		<div class="controls-content">
 			<button type="button" id="start-applying" class="btn btn-default next">Next</button>
 		</div><!-- controls-content -->
