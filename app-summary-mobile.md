@@ -438,7 +438,7 @@ layout: default
 		</div>
 	</div>
 </div>
-<div class="dashboard-container" id="5264">
+<!-- <div class="dashboard-container" id="5264">
     <table>
         <caption>
             Application reference: <strong>#1710-AA-5263-L</strong><br>
@@ -536,7 +536,7 @@ layout: default
 </tr></tbody>
     </table>
     <div class="referrer"></div>
-</div></div>
+</div></div> -->
 
     <!-- div id="pager" class="card" style="">
         <div class="grid-row">
