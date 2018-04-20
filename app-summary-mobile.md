@@ -112,6 +112,10 @@ layout: default
 		margin-top: 0;
 		display: block !important;
 	}
+	
+	div.show-content div.last span.fa-plus-square:before {
+		content: "\f146";
+	}
 
 @media only screen and (max-width: 768px) {
 	.hide-medium {
@@ -327,7 +331,7 @@ layout: default
 				<p>Receipt number: 00733546</p>
 			</div>
 			<div class="col3 last">
-				<p><span class="fa fa-plus-square" style="color: #367ab3; float: right;"></span><a href="#">Payment details</a></p>
+				<p><span class="fa fa-plus-square" style="color: #367ab3; float: right;"></span><a href="javascript:void(0)">Payment details</a></p>
 			</div>
 		</div>
 		<div class="dashboard-item-row extra" style="display: none">
@@ -352,7 +356,7 @@ layout: default
 				<p>Here is your ABN: <span class="abn2">20974019828</span> <button class="btn btn-copy">Copy</button></p>
 			</div>
 			<div class="col3 last">
-				<p><span class="fa fa-plus-square" style="color: #367ab3; float: right;"></span><a href="#">Successful</a></p>
+				<p><span class="fa fa-plus-square" style="color: #367ab3; float: right;"></span><a href="javascript:void(0)">Successful</a></p>
 			</div>
 		</div>
 		<div class="dashboard-item-row extra" style="display: none">
@@ -386,7 +390,7 @@ layout: default
 				<p>SASQUATCH CAFE &amp; CREDIT UNION</p>
 			</div>
 			<div class="col3 last">
-				<p><span class="fa fa-plus-square" style="color: #367ab3; float: right;"></span><a href="#">Registered</a></p>
+				<p><span class="fa fa-plus-square" style="color: #367ab3; float: right;"></span><a href="javascript:void(0)">Registered</a></p>
 			</div>
 		</div>
 		<div class="dashboard-item-row extra" style="display: none;">
@@ -419,7 +423,7 @@ layout: default
 				<p>Other licences and registrations you may need</p>
 			</div>
 			<div class="col3 last">
-				<p><span class="fa fa-plus-square" style="color: #367ab3; float: right;"></span><a href="#">Read more</a></p>
+				<p><span class="fa fa-plus-square" style="color: #367ab3; float: right;"></span><a href="javascript:void(0)">Read more</a></p>
 			</div>
 		</div>
 		<div class="dashboard-item-row next-steps" style="display: none;">
