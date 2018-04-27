@@ -145,7 +145,7 @@ layout: default
 				<legend class="larger">I have an ABN reference number, and I want to:</legend>
 				<div class="col12 last">
 					<p>
-						<input id="applybn2" name="abnref" class="showhide-trigger" data-linkto="existing/aba-login?dest=../abnref-bn" type="radio">
+						<input id="applybn2" name="abnref" class="showhide-trigger" data-linkto="abnref-bn" type="radio">
 						<label for="applybn2">apply for a business name</label>
 					</p>
 				</div>
