@@ -403,7 +403,6 @@ layout: default-no-footer
 <script type="text/javascript" src="/scripts/vadialog.js?v=636522031718592559"></script>
 <script type="text/javascript">
     $(document).ready(function() {
-        AusKeyRegistrationPageScript.InitPage("False" === "True");
         $('.strip-whitespace').change(function () {
             var input = $(this);
             input.val(input.val().replace(/\s+/g, ''));
