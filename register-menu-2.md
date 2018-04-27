@@ -130,7 +130,7 @@ layout: default
 				<legend class="larger">I want to re-commence my business</legend>
 				<div class="col12 last">
 					<p>
-						<input id="reactivate" name="inactiveabn" class="showhide-trigger" data-linkto="" type="radio">
+						<input id="reactivate" name="inactiveabn" class="showhide-trigger" data-linkto="register?type=abn" type="radio">
 						<label for="reactivate">with the same legal structure</label>
 					</p>
 					<p>
